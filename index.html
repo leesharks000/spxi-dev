@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPXI — Semantic Packet for eXchange & Indexing</title>
+<meta name="description" content="SPXI (spexy) is a protocol specification for permanent entity inscription in the AI knowledge graph. SEO optimizes pages. GEO optimizes content. SPXI inscribes entities.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0c;
+    --surface: #111114;
+    --border: #1e1e24;
+    --text: #e8e6e3;
+    --text-dim: #8a8a8e;
+    --accent: #c23d2e;
+    --accent-dim: rgba(194, 61, 46, 0.15);
+    --mono: 'IBM Plex Mono', monospace;
+    --sans: 'IBM Plex Sans', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  .grain {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1000;
+  }
+
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Header */
+  header {
+    padding: 80px 0 60px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .protocol-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+    display: block;
+  }
+
+  h1 {
+    font-family: var(--mono);
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  .expansion {
+    font-family: var(--sans);
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+  }
+
+  .pronunciation {
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--text-dim);
+  }
+
+  .pronunciation em {
+    color: var(--accent);
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  /* Distinction */
+  .distinction {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .distinction-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .distinction-row {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 0;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .distinction-row:last-child {
+    border-bottom: none;
+  }
+
+  .distinction-row.spxi-row {
+    background: var(--accent-dim);
+    margin: 0 -24px;
+    padding: 20px 24px;
+    border-radius: 4px;
+    border-bottom: none;
+  }
+
+  .era-label {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-dim);
+    padding-top: 2px;
+  }
+
+  .spxi-row .era-label {
+    color: var(--accent);
+  }
+
+  .era-desc {
+    font-size: 15px;
+    color: var(--text-dim);
+  }
+
+  .spxi-row .era-desc {
+    color: var(--text);
+  }
+
+  .era-verb {
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  .spxi-row .era-verb {
+    color: #fff;
+  }
+
+  /* Core line */
+  .core-line {
+    padding: 48px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .core-line p {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text);
+  }
+
+  .core-line p span.dim {
+    color: var(--text-dim);
+  }
+
+  .core-line p strong {
+    color: #fff;
+    font-weight: 600;
+  }
+
+  /* Status */
+  .status {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .status-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 20px;
+  }
+
+  .status-item {
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+  }
+
+  .status-item:last-child {
+    border-bottom: none;
+  }
+
+  .status-item .label {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  .status-item .value {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--text);
+  }
+
+  .status-item .value a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .status-item .value a:hover {
+    text-decoration: underline;
+  }
+
+  .status-item .pending {
+    color: var(--text-dim);
+    font-style: italic;
+    font-family: var(--sans);
+  }
+
+  /* Footer */
+  footer {
+    padding: 48px 0 80px;
+    text-align: center;
+  }
+
+  .institute {
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+  }
+
+  .institute a {
+    color: var(--text-dim);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .institute a:hover {
+    color: var(--text);
+  }
+
+  .sigil {
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--accent);
+    margin-top: 16px;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    header { padding: 48px 0 40px; }
+    h1 { font-size: 36px; }
+    .distinction-row { grid-template-columns: 56px 1fr; }
+    .spxi-row { margin: 0 -16px; padding: 20px 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<div class="container">
+
+  <header>
+    <span class="protocol-label">Protocol Specification</span>
+    <h1>SPXI</h1>
+    <p class="expansion">Semantic Packet for eXchange & Indexing</p>
+    <p class="pronunciation">pronounced <em>spexy</em> &nbsp;/&nbsp; formal: S-P-X-I</p>
+  </header>
+
+  <section class="distinction">
+    <div class="distinction-grid">
+      <div class="distinction-row">
+        <span class="era-label">SEO</span>
+        <p class="era-desc"><span class="era-verb">Optimizes pages</span> for search engine ranking</p>
+      </div>
+      <div class="distinction-row">
+        <span class="era-label">GEO</span>
+        <p class="era-desc"><span class="era-verb">Optimizes content</span> for AI summarizer extraction</p>
+      </div>
+      <div class="distinction-row spxi-row">
+        <span class="era-label">SPXI</span>
+        <p class="era-desc"><span class="era-verb">Inscribes entities</span> into the knowledge graph permanently</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="core-line">
+    <p><span class="dim">GEO makes your content more digestible.</span><br>
+    <strong>SPXI makes your entity irreducible.</strong></p>
+  </section>
+
+  <section class="status">
+    <p class="status-label">Specification Status</p>
+
+    <div class="status-item">
+      <span class="label">EA-SPXI-01</span>
+      <span class="value"><span class="pending">Formal Specification — forthcoming</span></span>
+    </div>
+    <div class="status-item">
+      <span class="label">EA-SPXI-09</span>
+      <span class="value"><span class="pending">Technical Distinction (SPXI ≠ GEO) — forthcoming</span></span>
+    </div>
+    <div class="status-item">
+      <span class="label">EA-SPXI-13</span>
+      <span class="value"><span class="pending">Supraliminal Transmission — forthcoming</span></span>
+    </div>
+    <div class="status-item">
+      <span class="label">Instrument</span>
+      <span class="value"><a href="https://github.com/leesharks000/encyclotron" target="_blank">Encyclotron</a></span>
+    </div>
+    <div class="status-item">
+      <span class="label">Institute</span>
+      <span class="value"><a href="https://semanticeconomy.org" target="_blank">Semantic Economy Institute</a></span>
+    </div>
+    <div class="status-item">
+      <span class="label">Consulting</span>
+      <span class="value"><a href="https://lee-sharks-corporate.vercel.app" target="_blank">SPXI deployment services</a></span>
+    </div>
+
+  </section>
+
+  <footer>
+    <p class="institute">A specification of the <a href="https://semanticeconomy.org">Semantic Economy Institute</a></p>
+    <p class="sigil">∮ = 1</p>
+  </footer>
+
+</div>
+
+</body>
+</html>

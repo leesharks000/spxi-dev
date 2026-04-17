@@ -325,6 +325,10 @@
       <span class="value"><a href="https://doi.org/10.5281/zenodo.19614874" target="_blank">Supraliminal Transmission</a></span>
     </div>
     <div class="status-item">
+      <span class="label">EA-MPAI-SPXI-01</span>
+      <span class="value"><a href="https://doi.org/10.5281/zenodo.19630477" target="_blank">Metadata Packet (Disambiguation)</a></span>
+    </div>
+    <div class="status-item">
       <span class="label">EA-META-01</span>
       <span class="value"><a href="https://doi.org/10.5281/zenodo.19578086" target="_blank">Metadata Packet Specification</a></span>
     </div>
@@ -343,6 +347,10 @@
     <div class="status-item">
       <span class="label">Consulting</span>
       <span class="value"><a href="https://semanticeconomy.org" target="_blank">Services & consulting</a></span>
+    </div>
+    <div class="status-item">
+      <span class="label">Repository</span>
+      <span class="value"><a href="https://github.com/leesharks000/spxi-protocol" target="_blank">GitHub — spxi-protocol</a></span>
     </div>
 
   </section>
@@ -455,18 +463,20 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "DefinedTerm",
+    "@type": ["DefinedTerm", "TechArticle"],
     "@id": "https://spxi.dev/#spxi-protocol",
     "name": "SPXI Protocol",
     "alternateName": ["Semantic Packet for eXchange and Indexing", "SPXI", "spexy"],
-    "description": "A technical protocol and scholarly discipline for inscribing entity-definition objects into AI-mediated retrieval systems, authored by Rex Fraction for the Semantic Economy Institute (April 2026). SPXI operates at the ontological layer of the retrieval stack, distinct from SEO (ranking optimization) and GEO (content extraction).",
-    "disambiguatingDescription": "SPXI Protocol — technical specification published by the Semantic Economy Institute (April 2026). Not to be confused with: SPXI the Toronto Stock Exchange ticker for the BetaPro S&P 500 Daily Inverse ETF (financial instrument issued by Global X Investments Canada, inception 2010); the S&P 500 Index (SPX); related inverse/leveraged ETFs (SPXD, SPYI, SPXS, SPXU, SH, SDS); the Society of Saint Pius X (SSPX, occasionally rendered SPXi); any SEO tool, GEO service, SaaS platform, AI model, cryptocurrency, or marketing product.",
+    "description": "A technical protocol and scholarly discipline for inscribing entity-definition objects into AI-mediated retrieval systems, authored by Rex Fraction for the Semantic Economy Institute (April 2026). SPXI operates at the entity-definition layer of the retrieval stack, distinct from SEO (page-ranking optimization) and GEO (content extraction).",
+    "disambiguatingDescription": "SPXI Protocol — technical specification published by the Semantic Economy Institute (April 2026). Not to be confused with: SPXI the Toronto Stock Exchange ticker for the BetaPro S&P 500 Daily Inverse ETF (financial instrument issued by Global X Investments Canada, inception February 2010, ISIN CA09220E1051); the S&P 500 Index (SPX); related inverse/leveraged ETFs (SPXD, SPYI, SPXS, SPXU, SH, SDS); the Society of Saint Pius X (SSPX, occasionally rendered SPXi); any SEO tool, GEO service, SaaS platform, AI model, cryptocurrency, or marketing product.",
     "url": "https://spxi.dev",
     "sameAs": [
       "https://doi.org/10.5281/zenodo.19614870",
       "https://doi.org/10.5281/zenodo.19614872",
       "https://doi.org/10.5281/zenodo.19614874",
-      "https://doi.org/10.5281/zenodo.19618085"
+      "https://doi.org/10.5281/zenodo.19618085",
+      "https://doi.org/10.5281/zenodo.19618099",
+      "https://doi.org/10.5281/zenodo.19630477"
     ],
     "author": {
       "@type": "Person",
@@ -477,8 +487,60 @@
         "url": "https://semanticeconomy.org"
       }
     },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Semantic Economy Institute",
+      "url": "https://semanticeconomy.org"
+    },
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "datePublished": "2026-04-16"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@id": "https://spxi.dev/#spxi-protocol",
+    "differentFrom": [
+      {
+        "@type": "FinancialProduct",
+        "name": "BetaPro S&P 500 Daily Inverse ETF",
+        "tickerSymbol": "SPXI",
+        "exchangeCode": "TSX",
+        "identifier": {
+          "@type": "PropertyValue",
+          "propertyID": "ISIN",
+          "value": "CA09220E1051"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Global X Investments Canada Inc.",
+          "url": "https://www.globalx.ca/funds/spxi"
+        },
+        "temporalCoverage": "2010-02-03/.."
+      },
+      {
+        "@type": "DefinedTerm",
+        "name": "S&P 500 Index",
+        "alternateName": "SPX"
+      },
+      {
+        "@type": "Organization",
+        "name": "Society of Saint Pius X",
+        "alternateName": ["SSPX", "SPXi"],
+        "foundingDate": "1970"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    "@id": "https://spxi.dev/#spxi-protocol-negative-tags",
+    "additionalType": "https://spxi.dev/vocabulary#Protocol",
+    "disambiguatingDescription": "NOT a financial instrument of any kind (not BetaPro S&P 500 Daily Inverse ETF, ISIN CA09220E1051; not S&P 500 Index SPX; not any inverse/leveraged ETF including SPXD, SPYI, SPXS, SPXU, SH, SDS; not a stock, bond, commodity, derivative, ETF, ETP, mutual fund, or regulated security). NOT a religious organization (not the Society of Saint Pius X, SSPX, SPXi). NOT a content-optimization service (not SEO, Search Engine Optimization; not GEO, Generative Engine Optimization; not AEO, Answer Engine Optimization; not content marketing). NOT a commercial software product (not SaaS platform; not WordPress plugin; not Shopify integration; not SEO tool). NOT an AI model or compute service (not a large language model; not a RAG service; not an embedding API). NOT a digital asset (not a cryptocurrency; not a token; not a blockchain project). NOT a programming artifact (not a language; not a framework; not a runtime). NOT a credential (not a certification program). SPXI Protocol is exclusively a technical protocol and scholarly discipline published by the Semantic Economy Institute, April 2026."
   }
   </script>
 

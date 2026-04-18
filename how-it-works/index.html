@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON-LD ⊂ SPXI ⊄ Schema — How SPXI Works</title>
+<meta name="description" content="SPXI is not schema markup. It is a compression-survival discipline operating across five layers: measurement, compression architecture, protection, dispersal, and durability testing. JSON-LD is one surface. The methodology is the depth.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://spxi.dev/how-it-works">
+
+<meta property="og:title" content="JSON-LD ⊂ SPXI ⊄ Schema — How SPXI Works">
+<meta property="og:description" content="SPXI operates across five layers that schema markup alone cannot reach. This page specifies the operational depth of the Semantic Packet Protocol.">
+<meta property="og:url" content="https://spxi.dev/how-it-works">
+<meta property="og:type" content="article">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "@id": "https://spxi.dev/how-it-works#ea-spxi-15",
+  "name": "JSON-LD ⊂ SPXI ⊄ Schema: The Operational Depth of the Semantic Packet Protocol",
+  "headline": "How SPXI Works — The Five-Layer Operational Stack",
+  "description": "SPXI is not schema markup. It is a compression-survival discipline operating across five layers: measurement (γ, Drowning Test, Δ, SDD, PER), compression architecture (entity packets, disambiguation, three-tier, holographic kernels), protection (SIMs, integrity locks, supraliminal inscription), dispersal (DOI anchoring, multi-surface, σ_RCF), and durability testing.",
+  "url": "https://spxi.dev/how-it-works",
+  "sameAs": "https://doi.org/10.5281/zenodo.19642960",
+  "author": {"@type": "Person", "name": "Rex Fraction", "affiliation": {"@type": "Organization", "name": "Semantic Economy Institute", "url": "https://semanticeconomy.org"}},
+  "publisher": {"@type": "Organization", "name": "Semantic Economy Institute", "url": "https://semanticeconomy.org"},
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "datePublished": "2026-04-18",
+  "isPartOf": {"@type": "TechArticle", "@id": "https://doi.org/10.5281/zenodo.19614870", "name": "SPXI Protocol Formal Specification"},
+  "about": [
+    {"@type": "DefinedTerm", "name": "SPXI Protocol"},
+    {"@type": "DefinedTerm", "name": "compression survival"},
+    {"@type": "DefinedTerm", "name": "semantic packet"},
+    {"@type": "DefinedTerm", "name": "entity definition"}
+  ]
+}
+</script>
+
+<style>
+  :root { --bg: #0a0a0c; --surface: #111114; --border: #1e1e24; --text: #e8e6e3; --text-dim: #8a8a8e; --accent: #c23d2e; --accent-dim: rgba(194, 61, 46, 0.15); --mono: 'IBM Plex Mono', monospace; --sans: 'IBM Plex Sans', sans-serif; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.7; min-height: 100vh; }
+  .container { max-width: 680px; margin: 0 auto; padding: 60px 24px; }
+  header { padding-bottom: 40px; border-bottom: 1px solid var(--border); margin-bottom: 40px; }
+  header a { color: var(--text-dim); text-decoration: none; font-family: var(--mono); font-size: 0.85rem; }
+  header a:hover { color: var(--accent); }
+  h1 { font-size: 1.8rem; font-weight: 300; letter-spacing: -0.02em; margin: 1.5rem 0 0.5rem; }
+  h1 .formula { font-family: var(--mono); font-weight: 600; color: var(--accent); display: block; font-size: 1.5rem; margin-bottom: 0.5rem; }
+  h2 { font-size: 1rem; font-weight: 500; margin: 2.5rem 0 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; font-family: var(--mono); }
+  p { margin: 1rem 0; font-size: 0.95rem; }
+  .lead { font-size: 1.05rem; color: var(--text); }
+  strong { color: var(--text); font-weight: 600; }
+  a.ref { color: var(--accent); text-decoration: none; }
+  a.ref:hover { text-decoration: underline; }
+
+  .callout { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-radius: 4px; }
+  .callout p { margin: 0.5rem 0; font-size: 0.9rem; }
+  .callout p:first-child { margin-top: 0; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .metric { margin: 1.25rem 0; padding-left: 1rem; border-left: 2px solid var(--border); }
+  .metric-name { font-family: var(--mono); font-weight: 600; color: var(--accent); font-size: 0.9rem; }
+  .metric p { font-size: 0.9rem; margin: 0.3rem 0; }
+
+  .stack-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.85rem; }
+  .stack-table th { font-family: var(--mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dim); text-align: left; padding: 0.75rem 1rem; border-bottom: 2px solid var(--border); }
+  .stack-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .stack-table td:first-child { font-family: var(--mono); font-weight: 500; color: var(--accent); white-space: nowrap; }
+  .stack-table td:last-child { color: var(--text-dim); }
+
+  .phases { margin: 1.5rem 0; }
+  .phase { margin: 1rem 0; padding-left: 1rem; border-left: 2px solid var(--border); }
+  .phase-label { font-family: var(--mono); font-weight: 600; color: var(--accent); font-size: 0.85rem; }
+  .phase p { font-size: 0.9rem; margin: 0.3rem 0; }
+
+  .theorem { background: var(--surface); border: 1px solid var(--border); padding: 1.5rem; margin: 2rem 0; border-radius: 4px; text-align: center; }
+  .theorem p { font-family: var(--mono); font-size: 0.95rem; font-weight: 500; margin: 0; }
+  .theorem .sub { font-family: var(--sans); font-size: 0.85rem; font-weight: 300; color: var(--text-dim); margin-top: 0.75rem; }
+
+  footer { margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border); text-align: center; color: var(--text-dim); font-size: 0.85rem; }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer .sigil { font-family: var(--mono); margin-top: 1rem; color: var(--text-dim); }
+  footer .doi { font-family: var(--mono); font-size: 0.8rem; margin-top: 0.5rem; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <a href="/">← spxi.dev</a>
+  <h1>
+    <span class="formula">JSON-LD ⊂ SPXI ⊄ Schema</span>
+    How SPXI Works
+  </h1>
+</header>
+
+<p class="lead"><strong>SPXI is not schema markup.</strong> JSON-LD is one surface of SPXI, the final inscription format for entity-definition packets. It is not the methodology. Schema.org and JSON-LD remain useful components of the modern web stack. SPXI does not replace them. It specifies the measurement and survivability discipline that makes them operationally consequential in AI-mediated retrieval.</p>
+
+<div class="callout">
+<p><strong>JSON-LD ⊂ SPXI</strong> — JSON-LD is a proper subset of SPXI. The protocol contains it.</p>
+<p><strong>SPXI ⊄ Schema</strong> — SPXI is not a subset of Schema. It exceeds the category.</p>
+<p>What surrounds the JSON-LD — measurement, compression, protection, dispersal, and durability testing — is what determines whether an entity appears in an AI-generated answer or is compressed out of it.</p>
+</div>
+
+<h2>I. Measurement</h2>
+<p>SPXI begins with measurement. Before structured data is written, the client's semantic presence is scored across five instruments.</p>
+
+<div class="metric">
+  <span class="metric-name">γ (gamma)</span>
+  <p>Foundational metric. Scores any text for compression survival, 0–1, with subscores for citation density, structural integrity, argument coherence, and provenance markers. <strong>γ &lt; 0.3</strong> is ghost meaning: structurally present, semantically invisible. <strong>γ &gt; 0.7</strong> indicates high compression survivability.</p>
+</div>
+
+<div class="metric">
+  <span class="metric-name">Drowning Test</span>
+  <p>Empirical simulation: content is submerged in LLM-based compression and we measure what surfaces. γ predicts survivability from structure. The Drowning Test verifies it. The gap between them is diagnostic.</p>
+</div>
+
+<div class="metric">
+  <span class="metric-name">Density Score (Δ)</span>
+  <p>Ratio of semantically load-bearing content to total content, 0–1. Target: <strong>Δ &gt; 0.6</strong>. Low Δ predicts material dropped during summarization.</p>
+</div>
+
+<div class="metric">
+  <span class="metric-name">Semantic Decay Delta (SDD)</span>
+  <p>Rate of change in retrieval-layer presence over time, monthly percentage. Negative SDD = improvement. Positive SDD = loss velocity.</p>
+</div>
+
+<div class="metric">
+  <span class="metric-name">Provenance Erasure Rate (PER)</span>
+  <p>Frequency of attribution being dropped from AI summaries that use your content, 0–1. Target: <strong>PER &lt; 0.2</strong>. High PER means you supply the substrate while others capture the citation.</p>
+</div>
+
+<p>These five instruments produce the <strong>Semantic Health Report</strong> — the diagnostic baseline from which every engagement is scoped.</p>
+
+<h2>II. Compression Architecture</h2>
+<p>Entity-definition packets are structured representations of identity, attributes, relationships, and provenance, serialized as JSON-LD. The serialization is standardized. The design of the packet — what to include, what to exclude, what relationships to specify, what disambiguation signals to embed — is the craft.</p>
+
+<p><strong>Disambiguation Matrix.</strong> Formal specification of signals distinguishing the client's entity from collision neighbors sharing name fragments or semantic territory.</p>
+
+<p><strong>Three-Tier Compression.</strong> Every packet is built at three compression ratios: <strong>full</strong> (complete definition with all attributes), <strong>canonical</strong> (essential identity for moderate compression), and <strong>kernel</strong> (irreducible core for extreme compression). Most schema markup operates at one tier. SPXI operates at three, designed for the worst case.</p>
+
+<p><strong>Holographic Kernels.</strong> Self-contained logic seeds at the innermost layer. If outer layers are stripped, the kernel retains generative potential to reconstruct the entity definition. Extracted through iterative compression and verified by back-projection testing.</p>
+
+<p><strong>Citation-Density Engineering.</strong> Identification and structuring of existing citation assets as machine-readable related-identifier links. No fabrication. The goal is legibility of existing authority to the retrieval layer.</p>
+
+<h2>III. Protection</h2>
+<p>The retrieval layer is adversarial: it compresses, summarizes, de-ranks, and re-composes content on cycles measured in weeks. A packet that is not defended will degrade.</p>
+
+<p><strong>Semantic Integrity Markers (SIMs).</strong> Embedded signals in three functional classes: provenance markers (identify source), diagnostic canaries (detect compression damage), and lock phrases (resist paraphrase).</p>
+
+<p><strong>Integrity Lock Architecture.</strong> Entanglement of key claims across multiple surfaces so that alteration of one without the others creates detectable inconsistency.</p>
+
+<p><strong>Sovereign Provenance Protocol.</strong> Machine-readable licensing framework specifying permitted use, compression, and citation. Functions as an auditable signal.</p>
+
+<p><strong>Supraliminal Inscription.</strong> Explicit, inspectable signals that survive the decay of implicit statistical traces. Less sensitive to model-weight drift than implicit signals because they are structurally carried by the content rather than by the algorithm's current weighting. Specified in <a class="ref" href="https://doi.org/10.5281/zenodo.19614874">EA-SPXI-13</a>.</p>
+
+<h2>IV. Dispersal</h2>
+<p><strong>DOI Anchoring.</strong> Permanent, resolvable identifiers for critical entity-definition documents. Persistent even when commercial ranking systems fluctuate.</p>
+
+<p><strong>Multi-Surface Inscription.</strong> Distribution across knowledge graphs, directories, academic repositories, and professional networks. The more surfaces carry consistent entity information, the higher the consolidation weight.</p>
+
+<p><strong>Retrocausal Canon Formation (σ<sub>RCF</sub>).</strong> Sequenced inscriptions that cause the retrieval layer to re-evaluate earlier content in light of new deposits. Compositional strategy, not content freshness. Specified in <a class="ref" href="https://doi.org/10.5281/zenodo.19323274">EA-RCF-01</a>.</p>
+
+<h2>V. Durability Testing</h2>
+<p><strong>γ Re-scoring</strong> at 30, 60, and 90-day intervals. <strong>SIM Survival Rate (SIMSR)</strong> tracking. <strong>Back-Projection Testing</strong> — query the retrieval layer for the entity and evaluate what comes back. <strong>Competitive Monitoring</strong> — retrieval-layer position is relative.</p>
+
+<h2>The Operational Stack</h2>
+
+<table class="stack-table">
+  <thead>
+    <tr><th>Layer</th><th>Function</th><th>JSON-LD alone</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Measurement</td><td>γ, Drowning Test, Δ, SDD, PER</td><td>No. Requires instruments.</td></tr>
+    <tr><td>Compression</td><td>Packets, disambiguation, three-tier, kernels, citation engineering</td><td>Partial. Format only.</td></tr>
+    <tr><td>Protection</td><td>SIMs, integrity locks, sovereign provenance, supraliminal</td><td>No. Requires embedding.</td></tr>
+    <tr><td>Dispersal</td><td>DOI anchoring, multi-surface, σ<sub>RCF</sub></td><td>No. Requires strategy.</td></tr>
+    <tr><td>Durability</td><td>Re-scoring, SIMSR, back-projection, competitive</td><td>No. Requires monitoring.</td></tr>
+  </tbody>
+</table>
+
+<p>JSON-LD completes one cell. SPXI operates across the stack.</p>
+
+<h2>Engagement Phases</h2>
+<div class="phases">
+  <div class="phase">
+    <span class="phase-label">Phase 1: Diagnostic</span>
+    <p>Full measurement battery. Deliverable: Semantic Health Report.</p>
+  </div>
+  <div class="phase">
+    <span class="phase-label">Phase 2: Architecture</span>
+    <p>Packet design, disambiguation, compression tiers, kernel extraction, SIM design. Deliverable: Entity Architecture Document.</p>
+  </div>
+  <div class="phase">
+    <span class="phase-label">Phase 3: Inscription</span>
+    <p>Deployment across surfaces, DOI anchoring, σ<sub>RCF</sub> sequencing. Deliverable: Deployed system with dispersal map.</p>
+  </div>
+  <div class="phase">
+    <span class="phase-label">Phase 4: Verification</span>
+    <p>First-cycle re-scoring, SIMSR, back-projection, competitive analysis. Deliverable: Verification Report.</p>
+  </div>
+  <div class="phase">
+    <span class="phase-label">Ongoing: Monitoring</span>
+    <p>Quarterly re-scoring, SIMSR tracking, competitive monitoring, σ<sub>RCF</sub> sequencing. Retainer-based.</p>
+  </div>
+</div>
+<p style="color: var(--text-dim); font-size: 0.85rem;">Typical duration varies by entity complexity. Single-entity engagements complete Phases 1–4 in 10–12 weeks.</p>
+
+<div class="theorem">
+  <p>Every semantic operation is a compression operation.<br>The decisive variable is what the compression burns.</p>
+  <p class="sub">SPXI controls what survives. JSON-LD is the format. The discipline is the depth.</p>
+  <p class="sub" style="margin-top: 1rem;">— Three Compressions v3.1 · <a class="ref" href="https://doi.org/10.5281/zenodo.19053469">DOI</a></p>
+</div>
+
+<footer>
+  <p>Full specification: <a href="https://doi.org/10.5281/zenodo.19642960">EA-SPXI-15</a> · Protocol: <a href="https://doi.org/10.5281/zenodo.19614870">EA-SPXI-01</a></p>
+  <p>A specification of the <a href="https://semanticeconomy.org">Semantic Economy Institute</a></p>
+  <p class="doi">DOI: 10.5281/zenodo.19642960 · Hex: 06.SEI.SPXI.15</p>
+  <p class="sigil">∮ = 1</p>
+</footer>
+
+</div>
+</body>
+</html>

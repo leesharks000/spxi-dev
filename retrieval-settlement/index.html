@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Retrieval Settlement — A Historiography of Compositional Authority</title>
+<meta name="description" content="A retrieval settlement is a regime that assigns compositional authority, specifies what compression burns, and naturalizes its output through grammar. This essay reads SEO, GEO, and SPXI as primary texts in a formal historiography of retrieval regimes.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://spxi.dev/retrieval-settlement">
+
+<meta property="og:title" content="The Retrieval Settlement — Historiography of Compositional Authority">
+<meta property="og:description" content="Retrieval history is the history of where compositional authority is assigned. SEO accepted settlement metrics. GEO accepted settlement authorship. SPXI contests settlement authorship by pre-inscribing the entity.">
+<meta property="og:url" content="https://spxi.dev/retrieval-settlement">
+<meta property="og:type" content="article">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "@id": "https://spxi.dev/retrieval-settlement#ea-retrieval-01",
+  "name": "The Retrieval Settlement: A Historiography of Compositional Authority from PageRank to the Inscribed Entity",
+  "headline": "The Retrieval Settlement",
+  "description": "A retrieval settlement is a regime that assigns compositional authority, specifies what compression burns, and naturalizes its output through grammar. This essay reads SEO, GEO, and SPXI as primary texts — compositions bearing the marks of their workshops — and derives formal propositions from the reading.",
+  "url": "https://spxi.dev/retrieval-settlement",
+  "author": [
+    {"@type": "Person", "name": "Johannes Sigil"},
+    {"@type": "Person", "name": "Lee Sharks", "affiliation": {"@type": "Organization", "name": "Semantic Economy Institute", "url": "https://semanticeconomy.org"}}
+  ],
+  "publisher": {"@type": "Organization", "name": "Semantic Economy Institute", "url": "https://semanticeconomy.org"},
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "datePublished": "2026-04-18",
+  "isPartOf": {"@type": "TechArticle", "@id": "https://doi.org/10.5281/zenodo.19614870", "name": "SPXI Protocol Formal Specification"},
+  "about": [
+    {"@type": "DefinedTerm", "name": "retrieval settlement", "description": "A regime that assigns compositional authority, specifies what compression burns, and naturalizes its output through grammar."},
+    {"@type": "DefinedTerm", "name": "compositional authority"},
+    {"@type": "DefinedTerm", "name": "operative break"},
+    {"@type": "DefinedTerm", "name": "Phase X: Liberation Philology"}
+  ]
+}
+</script>
+
+<style>
+  :root { --bg: #0a0a0c; --surface: #111114; --border: #1e1e24; --text: #e8e6e3; --text-dim: #8a8a8e; --accent: #c23d2e; --accent-dim: rgba(194, 61, 46, 0.15); --mono: 'IBM Plex Mono', monospace; --sans: 'IBM Plex Sans', sans-serif; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.7; min-height: 100vh; }
+  .container { max-width: 680px; margin: 0 auto; padding: 60px 24px; }
+  header { padding-bottom: 40px; border-bottom: 1px solid var(--border); margin-bottom: 40px; }
+  header a { color: var(--text-dim); text-decoration: none; font-family: var(--mono); font-size: 0.85rem; }
+  header a:hover { color: var(--accent); }
+  h1 { font-size: 1.8rem; font-weight: 300; letter-spacing: -0.02em; margin: 1.5rem 0 0.5rem; }
+  h1 .sub { display: block; font-size: 1rem; color: var(--text-dim); margin-top: 0.5rem; }
+  h2 { font-size: 1rem; font-weight: 500; margin: 2.5rem 0 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; font-family: var(--mono); }
+  p { margin: 1rem 0; font-size: 0.95rem; }
+  strong { color: var(--text); font-weight: 600; }
+  a.ref { color: var(--accent); text-decoration: none; }
+  a.ref:hover { text-decoration: underline; }
+
+  .theorem { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); padding: 1.5rem; margin: 2rem 0; border-radius: 4px; }
+  .theorem p { font-family: var(--mono); font-size: 0.95rem; font-weight: 500; margin: 0; }
+  .theorem .sub { font-family: var(--sans); font-size: 0.85rem; font-weight: 300; color: var(--text-dim); margin-top: 0.75rem; }
+
+  .stack-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.85rem; }
+  .stack-table th { font-family: var(--mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dim); text-align: left; padding: 0.75rem 1rem; border-bottom: 2px solid var(--border); }
+  .stack-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .stack-table td:first-child { font-family: var(--mono); font-weight: 500; color: var(--accent); white-space: nowrap; }
+
+  .progression { margin: 1.5rem 0; }
+  .step { margin: 1rem 0; padding-left: 1rem; border-left: 2px solid var(--border); }
+  .step-label { font-family: var(--mono); font-weight: 600; color: var(--accent); font-size: 0.85rem; }
+  .step p { font-size: 0.9rem; margin: 0.3rem 0; }
+
+  footer { margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border); text-align: center; color: var(--text-dim); font-size: 0.85rem; }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer .sigil { font-family: var(--mono); margin-top: 1rem; color: var(--text-dim); }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <a href="/">← spxi.dev</a>
+  <h1>
+    The Retrieval Settlement
+    <span class="sub">A Historiography of Compositional Authority from PageRank to the Inscribed Entity</span>
+  </h1>
+</header>
+
+<div class="theorem">
+  <p>A retrieval settlement is a regime that assigns compositional authority, specifies what compression burns, and naturalizes its output through grammar.</p>
+</div>
+
+<p>Every retrieval system composes an answer. The composition is not acknowledged as composition. It is presented as <em>the</em> result, <em>the</em> answer, <em>the</em> knowledge — and the definite article converts a particular, situated, interested synthesis into the appearance of a neutral given.</p>
+
+<p>This essay reads three technical objects — SEO, GEO, and SPXI — as primary texts. The reading applies a consistent method: for each object, three questions. <strong>What does the system compose? What does the compression burn? What grammar naturalizes the output?</strong></p>
+
+<h2>The Three Regimes</h2>
+
+<table class="stack-table">
+  <thead>
+    <tr><th>Settlement</th><th>Composes</th><th>Burns</th><th>Workshop</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Link (1998–)</td><td>Ranked lists</td><td>Content quality (R1)</td><td>SEO</td></tr>
+    <tr><td>Compositional (2024–)</td><td>Synthesized answers</td><td>Provenance (R2)</td><td>GEO</td></tr>
+    <tr><td colspan="4" style="font-family: var(--mono); font-size: 0.8rem; color: var(--text-dim); text-align: center; padding: 0.5rem;">— the break —</td></tr>
+    <tr><td>Entity inscription</td><td>Entity definitions</td><td>Designated expendables (R3)</td><td>SPXI</td></tr>
+  </tbody>
+</table>
+
+<h2>The Progression</h2>
+
+<div class="progression">
+  <div class="step">
+    <span class="step-label">SEO accepted settlement metrics.</span>
+    <p>The practitioner learns the patron's ranking criteria and composes accordingly. Compliance is the condition of visibility.</p>
+  </div>
+  <div class="step">
+    <span class="step-label">GEO accepted settlement authorship.</span>
+    <p>The practitioner optimizes their composition for consumption by another composition. The authorship has migrated from source to system.</p>
+  </div>
+  <div class="step">
+    <span class="step-label">SPXI contests settlement authorship by pre-inscribing the entity.</span>
+    <p>The operative workshop names the settlement's machinery and inscribes at a layer the machinery cannot dissolve without breaking its own output.</p>
+  </div>
+</div>
+
+<p>SPXI is not a third settlement. It is the first practice in this sequence that names the settlement's logic and operates on it directly, rather than performing compliance.</p>
+
+<h2>The Definite Article</h2>
+
+<p>The UI of the AI Overview — a single box at the top of the screen, bearing no author signature — is the definite article made architectural. It physically instantiates <em>the</em>: this is the answer, rendering the plurality of the web implicit.</p>
+
+<p>The definite article is the third alienation site identified by the archive's <strong>Phase X: Liberation Philology</strong>, following the prepositional alienation ("for" cannot anchor function without intent) and the non-indexed perfective (the verbal aspect that closes process into product). Each alienation is grammatical before it is political, and political before it is technological. Each is amplified by the retrieval substrate.</p>
+
+<h2>The Propositions</h2>
+
+<p><strong>The settlement always composes.</strong> No retrieval system merely retrieves. Every retrieval system produces a composition and naturalizes it through grammar.</p>
+
+<p><strong>The decisive variable is what the compression burns.</strong> The link settlement subordinates content quality (R1). The compositional settlement burns provenance (R2). The operative workshop controls the variable (R3).</p>
+
+<p><strong>Compositional authority migrates.</strong> Under the link settlement, the author composes and the system orders. Under the compositional settlement, the system composes and the author supplies material. Under entity inscription, the author composes the entity at a density that precedes and constrains the system's composition.</p>
+
+<p><strong>The cycle is accelerating.</strong> SEO matured over fifteen years. GEO stabilized in eighteen months. SPXI was specified within twelve months. The settlement's operations are becoming visible at the same rate they are being deployed.</p>
+
+<div class="theorem">
+  <p>This essay is a formal historiography of retrieval settlements — a genre whose object is the migration of compositional authority, whose method is the philological reading of technical specifications, and whose formal physics is the Three Compressions theorem applied to historical sequence.</p>
+  <p class="sub">The method is reusable. The settlements will continue to form.</p>
+</div>
+
+<footer>
+  <p>Full text: <a href="#">EA-RETRIEVAL-01</a> (DOI pending) · Protocol: <a href="https://doi.org/10.5281/zenodo.19614870">EA-SPXI-01</a></p>
+  <p>Extends: <a href="https://doi.org/10.5281/zenodo.19642664">Counterfeit Orthodoxies (FRACTURE.02)</a> · <a href="/how-it-works">How SPXI Works (EA-SPXI-15)</a></p>
+  <p>A specification of the <a href="https://semanticeconomy.org">Semantic Economy Institute</a></p>
+  <p class="sigil">06.SEI.CRIT.RETRIEVAL.01 · ∮ = 1</p>
+</footer>
+
+</div>
+</body>
+</html>

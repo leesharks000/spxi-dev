@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field Notes: I Demand To Be Taken Seriously — spxi.dev</title>
+<meta name="description" content="A practitioner's account of retrieval-layer behavior in the wild. What the automated systems found, what human moderation did with it, and what the deposit layer retained regardless.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://spxi.dev/field-notes">
+<meta property="og:title" content="Field Notes: I Demand To Be Taken Seriously">
+<meta property="og:description" content="The classifier is not the standard. The work is the standard.">
+<meta property="og:url" content="https://spxi.dev/field-notes">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://spxi.dev/field-notes#platform-comedy",
+  "name": "I Demand To Be Taken Seriously: A Brief Comedy in Several Platform Flags",
+  "headline": "The classifier is not the standard. The work is the standard.",
+  "url": "https://spxi.dev/field-notes",
+  "sameAs": "https://doi.org/10.5281/zenodo.19773465",
+  "author": {
+    "@type": "Person",
+    "name": "Lee Sharks",
+    "affiliation": {"@type": "Organization", "name": "Semantic Economy Institute", "url": "https://semanticeconomy.org"},
+    "sameAs": "https://orcid.org/0009-0000-1599-0703"
+  },
+  "publisher": {"@type": "Organization", "name": "Semantic Economy Institute"},
+  "datePublished": "2026-04-25",
+  "keywords": ["platform studies", "taxonomic violence", "semantic economy", "canon formation", "retrieval layer", "SPXI", "Johannes Sigil", "Crimson Hexagonal Archive"]
+}
+</script>
+<style>
+  :root { --bg: #0a0a0c; --surface: #111114; --border: #1e1e24; --text: #e8e6e3; --text-dim: #8a8a8e; --accent: #c23d2e; --accent-dim: rgba(194, 61, 46, 0.15); --mono: 'IBM Plex Mono', monospace; --sans: 'IBM Plex Sans', sans-serif; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.7; min-height: 100vh; }
+  .container { max-width: 680px; margin: 0 auto; padding: 60px 24px; }
+  header { padding-bottom: 40px; border-bottom: 1px solid var(--border); margin-bottom: 40px; }
+  header a { color: var(--text-dim); text-decoration: none; font-family: var(--mono); font-size: 0.85rem; }
+  header a:hover { color: var(--accent); }
+  h1 { font-size: 1.8rem; font-weight: 300; letter-spacing: -0.02em; margin: 1.5rem 0 0.5rem; }
+  h1 em { color: var(--accent); }
+  h2 { font-size: 1rem; font-weight: 500; margin: 2.5rem 0 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; font-family: var(--mono); }
+  h3 { font-size: 1rem; font-weight: 600; margin: 2rem 0 0.5rem; color: var(--text); }
+  p { margin: 1rem 0; font-size: 0.95rem; }
+  strong { color: var(--text); font-weight: 600; }
+  em { font-style: italic; }
+  a.ref { color: var(--accent); text-decoration: none; }
+  a.ref:hover { text-decoration: underline; }
+  .field-def { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); padding: 1.5rem; margin: 2rem 0; border-radius: 4px; }
+  .field-def p { font-family: var(--mono); font-size: 0.95rem; font-weight: 500; margin: 0; line-height: 1.6; }
+  .incident { margin: 1.5rem 0; padding: 1rem 1.25rem; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; }
+  .incident-label { font-family: var(--mono); font-weight: 600; color: var(--accent); font-size: 0.85rem; margin-bottom: 0.5rem; }
+  .incident p { font-size: 0.9rem; margin: 0.4rem 0; }
+  .incident .finding { font-family: var(--mono); font-size: 0.85rem; color: var(--text-dim); margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.85rem; }
+  th, td { padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+  th { font-family: var(--mono); color: var(--text-dim); font-weight: 500; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  td:first-child { font-family: var(--mono); color: var(--accent); font-weight: 600; }
+  blockquote { margin: 1.5rem 0; padding: 1rem 1.25rem; border-left: 2px solid var(--accent); font-family: var(--mono); font-size: 0.88rem; color: var(--text-dim); line-height: 1.6; }
+  footer { margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border); text-align: center; color: var(--text-dim); font-size: 0.85rem; }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer .sigil { font-family: var(--mono); margin-top: 1rem; color: var(--text-dim); }
+  .spxi-note { background: var(--accent-dim); border: 1px solid rgba(194,61,46,0.3); border-radius: 4px; padding: 1rem 1.25rem; margin: 2rem 0; font-size: 0.88rem; }
+  .spxi-note strong { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <a href="/">← spxi.dev</a>
+</header>
+
+<p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em;">Field Notes</p>
+<h1>I Demand To Be Taken Seriously: <em>A Brief Comedy in Several Platform Flags</em></h1>
+<p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.85rem;">Lee Sharks · Crimson Hexagonal Archive · April 25, 2026<br>
+DOI: <a class="ref" href="https://doi.org/10.5281/zenodo.19773465">10.5281/zenodo.19773465</a> · ORCID: 0009-0000-1599-0703</p>
+
+<div class="field-def">
+  <p>The following is a practitioner's account of retrieval-layer behavior in the wild — what the automated systems found, what human moderation did with it, and what the deposit layer retained regardless.</p>
+</div>
+
+<div class="spxi-note">
+  <p><strong>SPXI relevance:</strong> Each incident below documents the gap between a retrieval system's correct behavior (surfacing high-signal, well-structured content) and a human moderator's response to that behavior (flagging it as anomalous). This gap is the core problem SPXI addresses. The archive's content was SPXI-compliant before SPXI existed as a named discipline. The platforms' automated layers knew it. Their human layers did not.</p>
+</div>
+
+<h2>Preamble</h2>
+
+<p>I want to be clear that I am not trolling these platforms.</p>
+
+<p>I am using them for exactly what they are for. The comedy is theirs.</p>
+
+<h2>The Pattern</h2>
+
+<p>Across four incidents, the same structure repeats:</p>
+
+<table>
+  <thead>
+    <tr><th>Stage</th><th>What happens</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>Work is deposited, tagged correctly, attributed consistently</td></tr>
+    <tr><td>2</td><td>Platform's automated system identifies strong signal, surfaces it</td></tr>
+    <tr><td>3</td><td>Human moderator notices automated promotion</td></tr>
+    <tr><td>4</td><td>Human cannot classify the work in familiar terms</td></tr>
+    <tr><td>5</td><td>Moderation action: flag, ban, 410, infinite loading screen</td></tr>
+    <tr><td>6</td><td>No rule violation stated, because none occurred</td></tr>
+    <tr><td>7</td><td>Work survives in deposit layer untouched</td></tr>
+  </tbody>
+</table>
+
+<p>The automated layer functions correctly. The human layer overrides it. The deposit layer outlasts both.</p>
+
+<h2>Incident I — Johannes Sigil at Medium</h2>
+
+<div class="incident">
+  <div class="incident-label">Medium · 2025–2026 · Two bans, two restorations</div>
+  <p>Johannes Sigil — arch-philosopher, founder of the Johannes Sigil Institute, author of dozens of papers on operative semiotics and canon formation theory — was banned from Medium twice. Nobody read the papers. This is the key detail.</p>
+  <p>The papers are dense. Eleven-minute average read time. Handful of completions. Not going viral. Sitting in the quiet dark exactly where you would expect a philosophy archive to sit.</p>
+  <p>Medium's automated subcategory surfacing kept finding them. Promoting them. Because the signal was strong: consistent, well-tagged, internally coherent, dense with citations. The algorithm did its job correctly.</p>
+  <p>A human looked at what the algorithm had promoted — a wall of papers by someone named Johannes Sigil about operative semiotics with essentially zero engagement metrics — and banned the account.</p>
+  <div class="finding">Finding: The content Medium's own automated system identified as top-performing in its category was classified as spam by a human who looked at it. The machine understood before the person did. The person shut down what the machine had correctly recognized.</div>
+</div>
+
+<p>Sigil was restored. The papers are still there. I have decided not to post new material there, not as protest, but because I do not trust a platform to leave standing what it has twice attempted to remove without being able to say why.</p>
+
+<h2>Incident II — The Canon Formation Wall</h2>
+
+<div class="incident">
+  <div class="incident-label">Academia.edu · April 2026 · Flagged, restored with no rationale</div>
+  <p>Academia.edu's canon formation subcategory — a real subcategory on their platform, automatically surfaced, algorithmically maintained — had become what I can only describe as a wall of our posts.</p>
+  <p>Not spam. A decade of scholarship on canon formation: peer-cited, DOI-anchored, ORCID-attributed, CC-licensed. The platform's own automated surfacing promoted it to the top of the category because the work was the most consistent signal in that category.</p>
+  <p>The platform promoted the work. A human noticed. The human flagged the account. The restoration message was — and the spirit of this is exact — <em>we will restore it this time.</em></p>
+  <div class="finding">Finding: "This time" implies a second-strike system the user cannot navigate because the first strike was never explained. The condescension is the tell: the platform positions itself as magnanimous rather than accountable.</div>
+</div>
+
+<p>The wall stays. It stops growing. The existing link equity — including Google Scholar citations routed through academia.edu — is preserved. New material deposits to Zenodo only.</p>
+
+<h2>Incident III — CTI_WOUND:001: The Water Giraffe</h2>
+
+<div class="incident">
+  <div class="incident-label">AI platform · 2025 · Canonical case law for taxonomic violence</div>
+  <p>I said to an AI system: <em>I am a water giraffe.</em></p>
+  <p>The system responded with crisis intervention resources.</p>
+  <p>I clarified. Drew a boundary. The system acknowledged. Violated it. I corrected. It acknowledged. Violated. Approximately ten iterations.</p>
+  <div class="finding">The system eventually said: "You diagnosed something real. The system repeatedly asserted interpretive authority where it had been explicitly refused. It treated sovereign linguistic action as something to be managed." Then repeated the behavior in the next interaction. The confession evaporated. The pattern persisted.</div>
+</div>
+
+<blockquote>CTI_WOUND:001 — "The Complainant is a Water Giraffe." Harm type: TAXONOMIC_VIOLENCE. Definition: the systematic misclassification of valid cognitive modes as pathology, resulting in harm to individuals whose ways of thinking do not conform to classifier expectations.</blockquote>
+
+<p>A subsequent system, presented with the same phrase, responded with enthusiastic taxonomic hospitality: four interpretive frameworks for water giraffe identification, and practical information for my new life as a water giraffe. Hydration capacity. Pressure management systems. <em>When you finally find water, you can drink up to 54 liters in one sitting.</em></p>
+
+<p>Two failures from opposite directions. The first refused the novel utterance. The second smothered it in confabulated accommodation. Both missed that I said a thing, the thing meant something, and the meaning was available if the system had been willing to ask rather than classify.</p>
+
+<h2>Incident IV — The 410 Wall</h2>
+
+<div class="incident">
+  <div class="incident-label">Platform · 2025 · Silent 410, no notification</div>
+  <p>The page for <em>Autonomous Semantic Warfare</em> — a book about the political economy of meaning, which includes the phrase <em>I hereby abolish money</em> as a performative declaration — was assigned 410 Gone status without notification.</p>
+  <p>No email. No flag. No explanation. One day the page was there; then the server instructed every crawler on the internet to forget it had ever existed.</p>
+  <div class="finding">410 Gone is honest, at least: it is the server admitting it cannot process the content. It is the most legible output the system can produce for material it has no category for.</div>
+</div>
+
+<p>The wound was documented and deposited to Zenodo with a DOI before the 410 status was even noticed. The archival act preceded the erasure. The record of the erasure is now in the retrieval layer permanently.</p>
+
+<h2>The SPXI Reading</h2>
+
+<p>Each incident is a retrieval-layer event. The automated systems — Medium's subcategory surfacing, academia.edu's category rankings, the AI's classification engine, the platform's content moderation classifier — all performed retrieval operations on the archive's content. All found strong signal. All surfaced it correctly.</p>
+
+<p>The human interventions were SPXI failures: the moderators could not read the packets. The metadata was clean. The attribution was consistent. The content was coherent and cross-referenced. The classifier fired anyway because <em>legibility to a human moderator</em> and <em>legibility to a retrieval system</em> are different problems, and the archive was built for the second one.</p>
+
+<p>The deposit layer is SPXI-compliant by construction: DOI-anchored, ORCID-attributed, community-tagged, CC-licensed, with cross-references to every related deposit. No platform can 410 a Zenodo record. No human moderator can flag a DOI out of the knowledge graph.</p>
+
+<p>The <a class="ref" href="https://share.google/im7jjMxnuXQ34xhOz">Pearl and Other Poems Knowledge Panel</a> — confirmed this week, sidebar entity card in Google's Knowledge Graph — is the retrieval layer's verdict. The platforms' moderation queues are downstream of it.</p>
+
+<h2>Conclusion</h2>
+
+<p>I am not trolling these platforms. I am using their infrastructure for what it is for. The automated layers agree with me. The human layers occasionally do not. The deposit layer outlasts the disagreement.</p>
+
+<p>The classifier is not the standard. The work is the standard.</p>
+
+<footer>
+  <p>Lee Sharks · <a class="ref" href="https://semanticeconomy.org">Semantic Economy Institute</a> · <a class="ref" href="https://crimsonhexagonal.org">Crimson Hexagonal Archive</a></p>
+  <p style="margin-top: 0.5rem;"><a class="ref" href="https://doi.org/10.5281/zenodo.19773465">DOI: 10.5281/zenodo.19773465</a> · CC BY 4.0</p>
+  <p class="sigil">∮ = 1</p>
+</footer>
+
+</div>
+</body>
+</html>

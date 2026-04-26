@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Overview Watch — SPXI Attribution Monitoring</title>
+<meta name="description" content="EA-OVW-PLAN-01: A Chrome extension that gives creators real-time visibility into how AI Overviews represent their work. Classifies attribution as ATTRIBUTED, SOURCED_UNATTRIBUTED, ABSORBED, or ABSENT. Builds the Semantic Economy Attribution Corpus.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://spxi.dev/overview-watch">
+<meta property="og:title" content="Overview Watch — SPXI Attribution Monitoring">
+<meta property="og:description" content="Your work. Their overview. The record. A forensic instrument for AI attribution.">
+<meta property="og:url" content="https://spxi.dev/overview-watch">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": "https://spxi.dev/overview-watch#ovw-01",
+  "name": "Overview Watch",
+  "alternateName": "EA-OVW-PLAN-01",
+  "applicationCategory": "BrowserExtension",
+  "operatingSystem": "Chrome",
+  "headline": "Your work. Their overview. The record.",
+  "description": "A Chrome extension that gives creators real-time visibility into how AI Overviews represent their intellectual labor. Classifies attribution as ATTRIBUTED, SOURCED_UNATTRIBUTED, ABSORBED, or ABSENT. Builds the Semantic Economy Attribution Corpus.",
+  "url": "https://spxi.dev/overview-watch",
+  "sameAs": "https://doi.org/10.5281/zenodo.19720519",
+  "author": {"@type": "Person", "name": "Lee Sharks", "affiliation": {"@type": "Organization", "name": "Semantic Economy Institute"}, "sameAs": "https://orcid.org/0009-0000-1599-0703"},
+  "publisher": {"@type": "Organization", "name": "Semantic Economy Institute"},
+  "datePublished": "2026-04-23",
+  "keywords": ["AI attribution", "AI Overview", "Chrome extension", "semantic economy", "SPXI", "attribution monitoring", "intellectual property", "provenance"]
+}
+</script>
+<style>
+  :root { --bg: #0a0a0c; --surface: #111114; --border: #1e1e24; --text: #e8e6e3; --text-dim: #8a8a8e; --accent: #c23d2e; --accent-dim: rgba(194, 61, 46, 0.15); --mono: 'IBM Plex Mono', monospace; --sans: 'IBM Plex Sans', sans-serif; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.7; min-height: 100vh; }
+  .container { max-width: 680px; margin: 0 auto; padding: 60px 24px; }
+  header { padding-bottom: 40px; border-bottom: 1px solid var(--border); margin-bottom: 40px; }
+  header a { color: var(--text-dim); text-decoration: none; font-family: var(--mono); font-size: 0.85rem; }
+  header a:hover { color: var(--accent); }
+  h1 { font-size: 1.8rem; font-weight: 300; letter-spacing: -0.02em; margin: 1.5rem 0 0.5rem; }
+  h1 em { color: var(--accent); }
+  h2 { font-size: 1rem; font-weight: 500; margin: 2.5rem 0 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; font-family: var(--mono); }
+  p { margin: 1rem 0; font-size: 0.95rem; }
+  strong { color: var(--text); font-weight: 600; }
+  a.ref { color: var(--accent); text-decoration: none; }
+  a.ref:hover { text-decoration: underline; }
+  .field-def { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); padding: 1.5rem; margin: 2rem 0; border-radius: 4px; }
+  .field-def p { font-family: var(--mono); font-size: 0.95rem; font-weight: 500; margin: 0; line-height: 1.6; }
+  .field-def p + p { margin-top: 0.75rem; }
+  .status { display: inline-block; font-family: var(--mono); font-size: 0.75rem; padding: 3px 8px; border-radius: 3px; font-weight: 600; margin: 2px; }
+  .attributed { background: rgba(20,80,20,0.4); color: #6ecf6e; border: 1px solid rgba(110,207,110,0.3); }
+  .sourced { background: rgba(80,70,10,0.4); color: #d4b84a; border: 1px solid rgba(212,184,74,0.3); }
+  .absorbed { background: rgba(80,30,10,0.4); color: #e07040; border: 1px solid rgba(224,112,64,0.3); }
+  .absent { background: rgba(40,20,20,0.4); color: #c23d2e; border: 1px solid rgba(194,61,46,0.3); }
+  .layer { margin: 1rem 0; padding: 0.75rem 1rem; border-left: 2px solid var(--accent); }
+  .layer-name { font-family: var(--mono); font-weight: 600; font-size: 0.85rem; color: var(--accent); }
+  .layer p { font-size: 0.9rem; margin: 0.3rem 0; }
+  table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.85rem; }
+  th, td { padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+  th { font-family: var(--mono); color: var(--text-dim); font-weight: 500; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  td:first-child { font-family: var(--mono); font-weight: 600; }
+  footer { margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border); text-align: center; color: var(--text-dim); font-size: 0.85rem; }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer .sigil { font-family: var(--mono); margin-top: 1rem; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <a href="/">← spxi.dev</a>
+</header>
+
+<p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em;">Tool · EA-OVW-PLAN-01</p>
+<h1>Overview <em>Watch</em></h1>
+<p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.85rem;">Lee Sharks · Semantic Economy Institute · April 23, 2026<br>
+DOI: <a class="ref" href="https://doi.org/10.5281/zenodo.19720519">10.5281/zenodo.19720519</a> · Status: DRAFT — Planning</p>
+
+<div class="field-def">
+  <p>Your work. Their overview. The record.</p>
+  <p>Google's AI Overview extracts meaning from attributed, DOI-anchored scholarly and creative work, strips its provenance, and presents the liquidated residue as authorless general knowledge. No tool currently exists to monitor this systematically. Overview Watch is that tool.</p>
+</div>
+
+<h2>The Attribution States</h2>
+
+<p>Every AI Overview encounter is classified into one of four states:</p>
+
+<p style="margin: 1.5rem 0;">
+  <span class="status attributed">ATTRIBUTED</span> — Your work is cited by name, with a link, as a source of the overview content.<br><br>
+  <span class="status sourced">SOURCED_UNATTRIBUTED</span> — Your domain or a page you authored appears in the source list, but your name or work is not credited in the overview text.<br><br>
+  <span class="status absorbed">ABSORBED</span> — Your work's specific claims, framing, or terminology appear in the overview, but your domain does not appear in the source list at all.<br><br>
+  <span class="status absent">ABSENT</span> — Your work is not referenced in any form. The overview may be on a topic you've published on; your work simply does not appear.
+</p>
+
+<p>ABSORBED is the critical state. It is the Regime 2 extraction in its pure form: the content was taken, the attribution was not given, and the source list provides no trail. ABSORBED events, documented and timestamped, are the empirical evidence that the Semantic Economy framework describes theoretically.</p>
+
+<h2>What the Extension Does</h2>
+
+<div class="layer">
+  <div class="layer-name">Detection</div>
+  <p>Identifies the AI Overview container on Google search result pages. Extracts overview text, cited sources, and their attribution chains. Compares against the user's registered works (URLs, DOIs, domains).</p>
+</div>
+
+<div class="layer">
+  <div class="layer-name">Classification</div>
+  <p>Assigns each overview encounter an attribution state. Flags instances where the user's published work appears to inform the overview content but is not cited. Logs with full metadata: query, timestamp, overview text, sources, attribution status.</p>
+</div>
+
+<div class="layer">
+  <div class="layer-name">Personal Dashboard</div>
+  <p>Attribution trends over time. Which queries absorb your work most frequently. Which source types get credited vs. absorbed. Your personal attribution history, stored locally, accessible only to you.</p>
+</div>
+
+<div class="layer">
+  <div class="layer-name">Corpus Contribution (opt-in)</div>
+  <p>Users who choose to participate contribute anonymized overview payloads to the Semantic Economy Attribution Corpus (SEAC) — a DOI-anchored research dataset. The community that generates the data can access the data.</p>
+</div>
+
+<h2>The Semantic Economy Attribution Corpus (SEAC)</h2>
+
+<p>SEAC is the collective empirical base — what Overview Watch generates when users opt in. It documents:</p>
+
+<table>
+  <thead><tr><th>Metric</th><th>What it measures</th></tr></thead>
+  <tbody>
+    <tr><td>Attribution rates</td><td>By domain type: academic, journalistic, creative, independent</td></tr>
+    <tr><td>Source diversity</td><td>How many unique sources inform a typical overview</td></tr>
+    <tr><td>Liquidation patterns</td><td>How situated claims become decontextualized summary</td></tr>
+    <tr><td>Temporal drift</td><td>How attribution changes for the same queries over time</td></tr>
+    <tr><td>Domain bias</td><td>Which source types get credited; which get absorbed</td></tr>
+  </tbody>
+</table>
+
+<p>SEAC becomes publishable research, policy evidence, and the empirical ground for the Semantic Economy framework — generating its own data from the system it describes. The instrument studies the extraction by observing it, with consent, in real time.</p>
+
+<h2>Why This Is SPXI</h2>
+
+<p>SPXI deposits are designed to be retrievable, attributed, and basin-forming. Overview Watch answers the enforcement question: once you've made the deposit, is it being credited?</p>
+
+<p>An SPXI deposit achieves Pearl state — compression-surviving, retrieval-layer-recognized. Overview Watch monitors whether the retrieval layer is honoring that recognition, or absorbing it without attribution. It is the accountability layer for the discipline.</p>
+
+<p>The extension also practices what it studies: every Overview Watch report is a DOI-anchored event, attributed to a specific registered work, timestamped, and available for research use. The tool is itself an SPXI artifact.</p>
+
+<h2>Ethical Architecture</h2>
+
+<p>The extension is built to study extraction. It cannot replicate extraction. The user's browsing data belongs to the user. Consent is affirmative, granular, and revocable — per overview, not per session. The extension works fully offline. No dark patterns. Anonymization is real. The corpus is open.</p>
+
+<p>Full ethical framework: <a class="ref" href="https://doi.org/10.5281/zenodo.19720519">EA-OVW-PLAN-01 §3 (DOI: 10.5281/zenodo.19720519)</a></p>
+
+<footer>
+  <p>Lee Sharks · <a class="ref" href="https://semanticeconomy.org">Semantic Economy Institute</a> · <a class="ref" href="https://crimsonhexagonal.org">Crimson Hexagonal Archive</a></p>
+  <p style="margin-top: 0.5rem;"><a class="ref" href="https://doi.org/10.5281/zenodo.19720519">DOI: 10.5281/zenodo.19720519</a> · CC BY 4.0</p>
+  <p class="sigil">∮ = 1</p>
+</footer>
+
+</div>
+</body>
+</html>

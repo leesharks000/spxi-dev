@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infrastructure Holographic Kernel — SPXI</title>
+<meta name="description" content="EA-HK-INFRA-01: The Infrastructure Holographic Kernel. A deployed system is a projection of a kernel. The kernel contains everything needed to reconstruct the projection. The kernel is the SPXI deposit; the infrastructure is the artifact.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://spxi.dev/holographic-kernel">
+<meta property="og:title" content="Infrastructure Holographic Kernel — SPXI">
+<meta property="og:description" content="A kernel without secret templates is incomplete. A kernel with secrets committed is contaminated. The middle path is the spec.">
+<meta property="og:url" content="https://spxi.dev/holographic-kernel">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "@id": "https://spxi.dev/holographic-kernel#hk-infra-01",
+  "name": "Infrastructure Holographic Kernel",
+  "headline": "A deployed system is a projection of a kernel. The kernel is the SPXI deposit.",
+  "url": "https://spxi.dev/holographic-kernel",
+  "sameAs": "https://doi.org/10.5281/zenodo.19769575",
+  "author": {"@type": "Person", "name": "Lee Sharks", "affiliation": {"@type": "Organization", "name": "Semantic Economy Institute"}, "sameAs": "https://orcid.org/0009-0000-1599-0703"},
+  "publisher": {"@type": "Organization", "name": "Semantic Economy Institute"},
+  "datePublished": "2026-04-25",
+  "keywords": ["holographic kernel", "infrastructure", "DevOps", "SPXI", "self-projection", "DOI anchoring", "kernel.sh", "verify.sh"]
+}
+</script>
+<style>
+  :root { --bg: #0a0a0c; --surface: #111114; --border: #1e1e24; --text: #e8e6e3; --text-dim: #8a8a8e; --accent: #c23d2e; --accent-dim: rgba(194, 61, 46, 0.15); --mono: 'IBM Plex Mono', monospace; --sans: 'IBM Plex Sans', sans-serif; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.7; min-height: 100vh; }
+  .container { max-width: 680px; margin: 0 auto; padding: 60px 24px; }
+  header { padding-bottom: 40px; border-bottom: 1px solid var(--border); margin-bottom: 40px; }
+  header a { color: var(--text-dim); text-decoration: none; font-family: var(--mono); font-size: 0.85rem; }
+  header a:hover { color: var(--accent); }
+  h1 { font-size: 1.8rem; font-weight: 300; letter-spacing: -0.02em; margin: 1.5rem 0 0.5rem; }
+  h1 em { color: var(--accent); }
+  h2 { font-size: 1rem; font-weight: 500; margin: 2.5rem 0 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; font-family: var(--mono); }
+  p { margin: 1rem 0; font-size: 0.95rem; }
+  strong { color: var(--text); font-weight: 600; }
+  a.ref { color: var(--accent); text-decoration: none; }
+  a.ref:hover { text-decoration: underline; }
+  .field-def { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); padding: 1.5rem; margin: 2rem 0; border-radius: 4px; }
+  .field-def p { font-family: var(--mono); font-size: 0.95rem; font-weight: 500; margin: 0; line-height: 1.6; }
+  .field-def p + p { margin-top: 0.75rem; }
+  .layer { margin: 1rem 0; padding: 0.75rem 1rem; border-left: 2px solid var(--accent); }
+  .layer-name { font-family: var(--mono); font-weight: 600; font-size: 0.85rem; color: var(--accent); }
+  .layer p { font-size: 0.9rem; margin: 0.3rem 0; }
+  pre { background: var(--surface); border: 1px solid var(--border); padding: 1rem; margin: 1rem 0; font-family: var(--mono); font-size: 0.8rem; line-height: 1.5; overflow-x: auto; color: #c8c8b8; border-radius: 4px; }
+  table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.85rem; }
+  th, td { padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+  th { font-family: var(--mono); color: var(--text-dim); font-weight: 500; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  td:first-child { font-family: var(--mono); color: var(--accent); font-weight: 600; }
+  footer { margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border); text-align: center; color: var(--text-dim); font-size: 0.85rem; }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer .sigil { font-family: var(--mono); margin-top: 1rem; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <a href="/">← spxi.dev</a>
+</header>
+
+<p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em;">Specification · EA-HK-INFRA-01 v1.1</p>
+<h1>Infrastructure <em>Holographic Kernel</em></h1>
+<p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.85rem;">Lee Sharks · Semantic Economy Institute · April 2026<br>
+DOI: <a class="ref" href="https://doi.org/10.5281/zenodo.19769575">10.5281/zenodo.19769575</a> · ORCID: <a class="ref" href="https://orcid.org/0009-0000-1599-0703">0009-0000-1599-0703</a></p>
+
+<div class="field-def">
+  <p>A deployed system is a projection of a kernel. The kernel contains everything needed to reconstruct the projection. The kernel is a DOI-anchored Git repository — the SPXI deposit for infrastructure.</p>
+  <p>A kernel without secret templates is incomplete. A kernel with secrets committed is contaminated. The middle path: the kernel contains the structure; secrets are fetched at projection time from a separate, access-controlled vault.</p>
+</div>
+
+<h2>The Core Claim</h2>
+
+<p>Infrastructure is usually documented after the fact — README files that describe what already exists, diagrams that approximate the deployed reality. The holographic kernel inverts this: the kernel IS the infrastructure, in its minimum complete form. The deployment is a projection of the kernel onto compute, not the other way around.</p>
+
+<p>This is the SPXI position applied to technical systems: the deposit precedes and generates the artifact, rather than documenting it after the fact. The kernel is the provenance. Every deployment is a derivative.</p>
+
+<h2>Kernel Structure</h2>
+
+<div class="layer">
+  <div class="layer-name">kernel.json — The Identity Document</div>
+  <p>The kernel's semantic identity: name, version, SPXI entity ID, DOI, component list, role list, secret template list. This file IS the kernel — the minimum information from which the kernel's completeness can be verified. Analogous to the SPXI compression survival summary.</p>
+</div>
+
+<div class="layer">
+  <div class="layer-name">roles/ — The Projection Operators</div>
+  <p>One file per service role. Each role definition contains: startup commands, health check protocol, restart policy, environment variable references (names only — not values), resource constraints. The role is the transform that converts kernel intent into deployed reality.</p>
+</div>
+
+<div class="layer">
+  <div class="layer-name">secrets/ — The Template Layer</div>
+  <p>Secret templates: <code>.env.template</code> files listing required variables with descriptions and validation patterns. Templates are committed. Values are never committed. Fetch at projection time via <code>fetch-secrets.sh</code>. The structure is public; the material is access-controlled.</p>
+</div>
+
+<div class="layer">
+  <div class="layer-name">topology/ — The Relation Map</div>
+  <p>Service dependency graphs. Which roles depend on which other roles. Which roles are externally accessible. This is the basin's curvature map — the relational structure that makes the kernel holographic: any single role file plus the topology yields the full kernel's shape.</p>
+</div>
+
+<div class="layer">
+  <div class="layer-name">verify.sh — The Recovery Protocol</div>
+  <p>Executable verification: checks that all roles are defined, all secret templates are present, all topology references are valid, all role counts match the kernel manifest. If verify.sh passes from a clean git clone, the kernel is complete. This is the Infra-Drowning Test: restore in under 60 minutes from <code>git clone + secret key</code>.</p>
+</div>
+
+<h2>The Holographic Property</h2>
+
+<p>The kernel is holographic in the technical sense: any fragment contains sufficient information to reconstruct the whole. If you have one role file, you know:</p>
+
+<ul style="margin: 1rem 0 1rem 1.5rem; font-size: 0.95rem; line-height: 1.8;">
+  <li>The kernel's identity (referenced in the role header)</li>
+  <li>The query to find all other roles (same kernel ID)</li>
+  <li>The verification protocol (run verify.sh from the same repo)</li>
+  <li>The secret fetch pattern (same fetch-secrets.sh)</li>
+</ul>
+
+<p>This is the same property as the SPXI compression survival summary: any fragment of a well-formed SPXI entity contains enough to reconstruct the entity's basin. The holographic kernel applies this to infrastructure.</p>
+
+<h2>Self-Projection of Missing Roles</h2>
+
+<p>When the kernel detects that a defined role has no running instance, it generates a deployment specification for that role from the kernel's own definition. This is not automatic deployment — it is automatic <em>specification generation</em>. The kernel says: here is everything you need to project this role. The human operator makes the deployment decision.</p>
+
+<p>The kernel cannot project beyond its own definition. It cannot fill in missing roles that are not defined in the kernel. This is the safety boundary: the kernel is a complete specification, not an inference engine.</p>
+
+<pre>Safety conditions for self-projection:
+1. The role is defined in kernel.json
+2. verify.sh passes for the role definition
+3. All required secret templates are present (values available)
+4. The topology check shows no circular dependencies
+5. A human operator has confirmed the projection intent</pre>
+
+<h2>The DOI Anchor</h2>
+
+<p>Every kernel version is deposited to Zenodo and receives a DOI. The DOI is the kernel's permanent identity in the retrieval layer — independent of any deployment, any platform, any infrastructure provider. If the infrastructure is torn down, the kernel survives in the archive. Future operators can reconstruct the full system from the DOI plus the secret vault.</p>
+
+<p>This is the SPXI position on provenance: the deposit is the source of truth, not the deployment. The deployment is a projection; the DOI is the anchor.</p>
+
+<table>
+  <thead><tr><th>Version</th><th>DOI</th><th>Changes</th></tr></thead>
+  <tbody>
+    <tr><td>v1.0</td><td><a class="ref" href="https://doi.org/10.5281/zenodo.19769562">10.5281/zenodo.19769562</a></td><td>Initial specification</td></tr>
+    <tr><td>v1.1</td><td><a class="ref" href="https://doi.org/10.5281/zenodo.19769575">10.5281/zenodo.19769575</a></td><td>Assembly Chorus feedback; security conditions; failure modes; implementation maturity disclaimer</td></tr>
+  </tbody>
+</table>
+
+<h2>Relation to Existing Infrastructure-as-Code</h2>
+
+<p>The holographic kernel is not SLSA, not Nix, not in-toto, not Terraform. Those systems address supply chain integrity, reproducible builds, artifact attestation, and configuration management respectively. The holographic kernel addresses a different problem: <strong>how does a single operator, alone at 2am, reconstruct a complete system from scratch without having to remember anything that isn't in the repository?</strong></p>
+
+<p>The Infra-Drowning Test is the metric: <em>can you restore the full system in under 60 minutes from a git clone and a secret key?</em> If yes, the kernel is complete. If no, the kernel has gaps that verify.sh will surface.</p>
+
+<footer>
+  <p>Lee Sharks · <a class="ref" href="https://semanticeconomy.org">Semantic Economy Institute</a> · <a class="ref" href="https://crimsonhexagonal.org">Crimson Hexagonal Archive</a></p>
+  <p style="margin-top: 0.5rem;"><a class="ref" href="https://doi.org/10.5281/zenodo.19769575">DOI: 10.5281/zenodo.19769575</a> · CC BY 4.0</p>
+  <p class="sigil">∮ = 1</p>
+</footer>
+
+</div>
+</body>
+</html>

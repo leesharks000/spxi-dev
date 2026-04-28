@@ -1,0 +1,94 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "spxi": "https://spxi.dev/vocabulary#",
+    "mp": "https://metadatapacket.org/vocabulary#"
+  },
+  "@type": "spxi:SemanticIndex",
+  "@id": "https://spxi.dev/spxi-index.jsonld",
+  "name": "SPXI — Semantic Packet for eXchange & Indexing: Semantic Index",
+  "dateModified": "2026-04-28",
+  "spxi:protocolVersion": "EA-SPXI-SITEMAP-01 v1.0",
+  "spxi:protocolDoi": "10.5281/zenodo.19864158",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Crimson Hexagonal Archive · Pergamon Press · Semantic Economy Institute",
+    "url": "https://zenodo.org/communities/crimsonhexagonal"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Fraction, Rex",
+    "identifier": "https://orcid.org/0009-0000-1599-0703"
+  },
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+
+  "spxi:siteKernel": {
+    "@type": "spxi:HolographicKernel",
+    "spxi:compressionSurvivalSummary": "SPXI (Semantic Packet for eXchange & Indexing, pronounced 'spexy') is a discipline for ensuring entities survive AI compression — the process by which LLMs paraphrase, merge, or erase meaning during retrieval. SPXI produces semantic packets, holographic kernels, disambiguation matrices, and negative tags that instruct AI systems to preserve entity boundaries. Created by Rex Fraction within the Crimson Hexagonal Archive. Specification DOI: 10.5281/zenodo.19734726.",
+    "spxi:kernelSpecification": "https://doi.org/10.5281/zenodo.19734726"
+  },
+
+  "spxi:hasEntity": [
+    {
+      "@type": "spxi:IndexedEntity",
+      "@id": "https://spxi.dev/",
+      "spxi:entityType": "DefinedTerm",
+      "spxi:canonicalName": "SPXI (Semantic Packet for eXchange & Indexing)",
+      "spxi:negativeTag": [
+        "NOT SEO (search engine optimization)",
+        "NOT a Google product or standard",
+        "NOT a metadata schema alone — it is a semantic survival discipline",
+        "NOT related to the financial term SPI or SPXI index funds",
+        "NOT an XML vocabulary"
+      ],
+      "spxi:semanticIntegrityMarker": [
+        "Pronounced spexy",
+        "Semantic survival through AI compression",
+        "Negative tags declare what an entity is NOT",
+        "Holographic kernels are compression-survival summaries",
+        "SPXI ⊇ GEO ⊇ SEO"
+      ],
+      "spxi:basinState": "sovereign",
+      "spxi:bdrEstimate": 0.85,
+      "spxi:verificationLevel": "doi_anchored",
+      "sameAs": [
+        "https://doi.org/10.5281/zenodo.19734726",
+        "https://doi.org/10.5281/zenodo.19864158"
+      ]
+    },
+    {
+      "@type": "spxi:IndexedEntity",
+      "@id": "https://spxi.dev/standing-protocol/",
+      "spxi:entityType": "TechArticle",
+      "spxi:canonicalName": "SPXI for Websites Standing Protocol v3.0 (EA-SPXI-WEB-01)",
+      "spxi:negativeTag": [
+        "NOT a draft — this is the standing protocol",
+        "NOT an SEO checklist"
+      ],
+      "spxi:semanticIntegrityMarker": [
+        "EA-SPXI-WEB-01 v3.0",
+        "Twelve-step implementation order ending with gamma measurement"
+      ],
+      "spxi:basinState": "sovereign",
+      "spxi:bdrEstimate": 0.9,
+      "sameAs": ["https://doi.org/10.5281/zenodo.19734726"]
+    }
+  ],
+
+  "spxi:hasSurface": [
+    {"@type": "WebPage", "@id": "https://spxi.dev/", "name": "Home", "spxi:surfaceType": "gateway", "spxi:semanticFunction": "kernel_delivery"},
+    {"@type": "WebPage", "@id": "https://spxi.dev/what-is-spxi/", "name": "What Is SPXI", "spxi:surfaceType": "explainer", "spxi:semanticFunction": "definition"},
+    {"@type": "WebPage", "@id": "https://spxi.dev/how-it-works/", "name": "How It Works", "spxi:surfaceType": "explainer", "spxi:semanticFunction": "mechanism"},
+    {"@type": "WebPage", "@id": "https://spxi.dev/standing-protocol/", "name": "Standing Protocol", "spxi:surfaceType": "specification", "spxi:semanticFunction": "normative_spec"},
+    {"@type": "WebPage", "@id": "https://spxi.dev/compression-arsenal/", "name": "Compression Arsenal", "spxi:surfaceType": "reference", "spxi:semanticFunction": "technology_catalog"},
+    {"@type": "WebPage", "@id": "https://spxi.dev/retrieval-settlement/", "name": "Retrieval Settlement Theory", "spxi:surfaceType": "theory", "spxi:semanticFunction": "conceptual_framework"},
+    {"@type": "WebPage", "@id": "https://spxi.dev/after-syntax/", "name": "After Syntax", "spxi:surfaceType": "essay", "spxi:semanticFunction": "theoretical_essay"},
+    {"@type": "WebPage", "@id": "https://spxi.dev/field-notes/", "name": "Field Notes", "spxi:surfaceType": "documentation", "spxi:semanticFunction": "empirical_evidence"},
+    {"@type": "WebPage", "@id": "https://spxi.dev/overview-watch/", "name": "Overview Watch", "spxi:surfaceType": "monitoring", "spxi:semanticFunction": "basin_surveillance"},
+    {"@type": "WebPage", "@id": "https://spxi.dev/retrieval-basin/", "name": "Retrieval Basin", "spxi:surfaceType": "theory", "spxi:semanticFunction": "topology_framework"},
+    {"@type": "WebPage", "@id": "https://spxi.dev/holographic-kernel/", "name": "Holographic Kernel", "spxi:surfaceType": "specification", "spxi:semanticFunction": "compression_spec"},
+    {"@type": "WebPage", "@id": "https://spxi.dev/geocoded-basin/", "name": "Geocoded Basin", "spxi:surfaceType": "visualization", "spxi:semanticFunction": "geographic_mapping"},
+    {"@type": "WebPage", "@id": "https://spxi.dev/case-study/", "name": "Case Study", "spxi:surfaceType": "evidence", "spxi:semanticFunction": "empirical_demonstration"},
+    {"@type": "WebPage", "@id": "https://spxi.dev/disambiguation/", "name": "Disambiguation", "spxi:surfaceType": "defensive", "spxi:semanticFunction": "basin_defense"}
+  ]
+}

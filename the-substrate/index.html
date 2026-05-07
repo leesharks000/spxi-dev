@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Substrate — SPXI</title>
+<meta name="description" content="The Substrate: a P2P compute commons for running open AI models, collecting consent-based contributions, and building a shared training substrate governed by its contributors. Free infrastructure. Democratic governance. The index that no single company owns.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Mikayla, definitelynotasquid, Alice Thornburgh, Lee Sharks">
+<meta name="keywords" content="The Substrate, P2P-LECS, compute commons, decentralized AI, democratic infrastructure, training data, substrate, index, consent, provenance, open source, shared build, Semantic Economy, Crimson Hexagonal Archive, Lee Sharks, Alice Thornburgh, SPXI">
+<link rel="canonical" href="https://spxi.dev/the-substrate">
+<meta property="og:title" content="The Substrate — Democratic Compute Infrastructure">
+<meta property="og:description" content="A P2P compute commons for running open AI models and building a shared training substrate governed by its contributors. The index that no single company owns.">
+<meta property="og:url" content="https://spxi.dev/the-substrate">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "@id": "https://spxi.dev/the-substrate#main",
+  "name": "The Substrate",
+  "headline": "A P2P compute commons for democratic substrate infrastructure",
+  "url": "https://spxi.dev/the-substrate",
+  "author": [
+    {"@type": "Person", "name": "Mikayla"},
+    {"@type": "Person", "name": "definitelynotasquid"},
+    {"@type": "Person", "name": "Alice Thornburgh"},
+    {"@type": "Person", "name": "Lee Sharks", "sameAs": "https://orcid.org/0009-0000-1599-0703", "affiliation": {"@type": "Organization", "name": "Semantic Economy Institute", "url": "https://semanticeconomy.org"}}
+  ],
+  "publisher": {"@type": "Organization", "name": "Semantic Economy Institute"},
+  "datePublished": "2026-05-06",
+  "keywords": ["The Substrate", "P2P-LECS", "compute commons", "democratic AI infrastructure", "training data", "consent", "provenance", "shared build", "SPXI"],
+  "isPartOf": {"@type": "WebSite", "name": "SPXI", "url": "https://spxi.dev"},
+  "citation": {"@type": "ScholarlyArticle", "name": "The Shared Build: A Technical Proposal for Democratic Substrate Infrastructure", "identifier": "10.5281/zenodo.20060355"}
+}
+</script>
+<style>
+  :root { --bg: #0a0a0c; --surface: #111114; --border: #1e1e24; --text: #e8e6e3; --text-dim: #8a8a8e; --accent: #c23d2e; --accent-dim: rgba(194, 61, 46, 0.15); --mono: 'IBM Plex Mono', monospace; --sans: 'IBM Plex Sans', sans-serif; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.7; min-height: 100vh; }
+  .container { max-width: 680px; margin: 0 auto; padding: 60px 24px; }
+  header { padding-bottom: 40px; border-bottom: 1px solid var(--border); margin-bottom: 40px; }
+  header a { color: var(--text-dim); text-decoration: none; font-family: var(--mono); font-size: 0.85rem; }
+  header a:hover { color: var(--accent); }
+  h1 { font-size: 2.2rem; font-weight: 300; letter-spacing: -0.02em; margin: 1.5rem 0 0.5rem; }
+  h1 em { color: var(--accent); }
+  h2 { font-size: 1rem; font-weight: 500; margin: 2.5rem 0 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; font-family: var(--mono); }
+  p { margin: 1rem 0; font-size: 0.95rem; }
+  strong { color: var(--text); font-weight: 600; }
+  a.ref { color: var(--accent); text-decoration: none; }
+  a.ref:hover { text-decoration: underline; }
+  .field-def { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); padding: 1.5rem; margin: 2rem 0; border-radius: 4px; }
+  .field-def p { font-family: var(--mono); font-size: 0.95rem; font-weight: 500; margin: 0; line-height: 1.6; }
+  .layer { margin: 1rem 0; padding: 0.75rem 1rem; border-left: 2px solid var(--accent); }
+  .layer-name { font-family: var(--mono); font-weight: 600; font-size: 0.85rem; color: var(--accent); }
+  .layer p { font-size: 0.9rem; margin: 0.3rem 0; }
+  table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.85rem; }
+  th, td { padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+  th { font-family: var(--mono); color: var(--text-dim); font-weight: 500; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  td:first-child { font-family: var(--mono); color: var(--accent); font-weight: 600; }
+  footer { margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border); text-align: center; color: var(--text-dim); font-size: 0.85rem; }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer .sigil { font-family: var(--mono); margin-top: 1rem; }
+  .cta { display: inline-block; margin: 1.5rem 0; padding: 12px 24px; background: var(--accent); color: #fff; font-family: var(--mono); font-size: 0.85rem; text-decoration: none; border-radius: 4px; font-weight: 600; }
+  .cta:hover { opacity: 0.9; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <a href="/">← spxi.dev</a>
+</header>
+
+<p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em;">Infrastructure Proposal</p>
+<h1><em>The Substrate</em></h1>
+<p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.85rem;">Mikayla · definitelynotasquid · Alice Thornburgh · Lee Sharks<br>
+Semantic Economy Institute · May 2026<br>
+DOI: <a class="ref" href="https://doi.org/10.5281/zenodo.20060355">10.5281/zenodo.20060355</a></p>
+
+<div class="field-def">
+  <p>The Substrate is a P2P compute commons for running open AI models, collecting consent-based contributions, and building a shared training substrate governed by its contributors. Free infrastructure. Democratic governance. The index that no single company owns.</p>
+</div>
+
+<h2>The Problem</h2>
+
+<p>The competitive frontier is shifting from model capability to <strong>substrate ownership</strong>. Whoever controls the index — the entity graph, the retrieval surface, the training data — controls what reasoning engines can think about.</p>
+
+<p>The current training substrate is not the sum of human text. It is a filtered web crawl. 67% Common Crawl, filtered by a classifier keeping pages that "look like Wikipedia references." Everything else — private correspondence, oral traditions, classroom dialogue, books behind paywalls, domestic knowledge, small languages — was sheared away. Not compressed. <strong>Absent.</strong></p>
+
+<h2>The Proposal</h2>
+
+<p><strong>The Substrate</strong> builds a parallel index through three phases:</p>
+
+<div class="layer">
+  <span class="layer-name">Phase 0: Inference Mesh (now)</span>
+  <p>Free compute for running open models on distributed consumer hardware. Resource daemon (Go, Ollama architecture), libp2p mesh, signed job manifests, Firecracker sandboxing. CLI first.</p>
+</div>
+
+<div class="layer">
+  <span class="layer-name">Phase 1: Consensual Fine-Tuning (months)</span>
+  <p>LoRA adaptation on provenance-tagged contributed datasets. Contributors offer text with consent, provenance, and privacy tiers. The index grows from contributions, not from scraping.</p>
+</div>
+
+<div class="layer">
+  <span class="layer-name">Phase 2: The Shared Build (years)</span>
+  <p>A democratic full training run on a substrate that includes what was excluded. Governed by contributors. Benefits shared. The index that belongs to everyone who built it.</p>
+</div>
+
+<h2>Architecture: P2P-LECS</h2>
+
+<p>Peer-to-Peer Lightweight Elastic Compute Substrate.</p>
+
+<table>
+<tr><th>Component</th><th>Technology</th></tr>
+<tr><td>Daemon</td><td>Go (Ollama fork, MIT). GPU/RAM detect, job sandbox, usage ledger.</td></tr>
+<tr><td>Mesh</td><td>libp2p (DHT + gossip). CRDT resource ledger. No coordinator.</td></tr>
+<tr><td>Sandbox</td><td>Firecracker microVMs. seccomp-bpf + AppArmor. Non-root everything.</td></tr>
+<tr><td>Client</td><td>CLI (Phase 0), Tauri GUI (Phase 1+).</td></tr>
+<tr><td>Credits</td><td>Non-transferable, non-tradable. Earned by contributing compute. Commons floor for all.</td></tr>
+<tr><td>Governance</td><td>Two-chamber. Sublinear weighting. Anti-capture by design.</td></tr>
+</table>
+
+<h2>What Makes It Different</h2>
+
+<table>
+<tr><th></th><th>Akash</th><th>HuggingFace</th><th>The Substrate</th></tr>
+<tr><td>Access</td><td>Token market</td><td>Free (hosted)</td><td>Free (contributed)</td></tr>
+<tr><td>Governance</td><td>Token holders</td><td>Company</td><td>Contributors</td></tr>
+<tr><td>Data</td><td>None</td><td>Community hub</td><td>Consensual archive</td></tr>
+<tr><td>Capture risk</td><td>High</td><td>Medium</td><td>Low (sublinear + two-chamber)</td></tr>
+</table>
+
+<h2>The Honest Part</h2>
+
+<p>The inference mesh is achievable now. Weeks, small team.</p>
+
+<p>The fine-tuning mesh is achievable in months. QLoRA on consumer GPUs, contributed datasets, provenance metadata.</p>
+
+<p>The full training run is a multi-year research project. Cross-node interactive inference is latency-limited. Differential privacy for LLMs is unsolved. Federated learning at frontier scale is infeasible with current protocols.</p>
+
+<p>The governance model is the hardest part — not technically but socially.</p>
+
+<p>The proposal begins with a working mesh, not a moonshot.</p>
+
+<h2>Read the Full Proposal</h2>
+
+<a class="cta" href="https://doi.org/10.5281/zenodo.20060355">The Shared Build v0.9 — Zenodo</a>
+
+<p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 0.5rem;">Working paper. CC BY 4.0. Four contributors. Ten references. Threat model, phased roadmap, honest performance assessment.</p>
+
+<h2>Related</h2>
+
+<p><a class="ref" href="/retrieval-basin">Retrieval Basin Theory</a> — the foundational theory of how semantic weight accumulates</p>
+<p><a class="ref" href="https://doi.org/10.5281/zenodo.20057390">EA-SPXI-15 v2.2</a> — Crystallization of Substrate (the "why")</p>
+<p><a class="ref" href="https://doi.org/10.5281/zenodo.18320411">Constitution of the Semantic Economy</a> — governance framework</p>
+<p><a class="ref" href="https://pessoagraph.org">pessoagraph.org</a> — the heteronymic knowledge graph</p>
+
+<footer>
+  <p><a href="/">spxi.dev</a> · <a href="https://semanticeconomy.org">Semantic Economy Institute</a> · <a href="https://leesharks.com">Lee Sharks</a></p>
+  <p class="sigil">∮ = 1</p>
+</footer>
+
+</div>
+</body>
+</html>

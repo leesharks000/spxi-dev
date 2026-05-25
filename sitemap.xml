@@ -21,5 +21,6 @@
   <url><loc>https://spxi.dev/the-substrate/</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://spxi.dev/lateral-field-bleed/</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://spxi.dev/v0.2/</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://spxi.dev/tlp/</loc><lastmod>2026-05-25</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
   <url><loc>https://spxi.dev/spxi-index.jsonld</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
 </urlset>

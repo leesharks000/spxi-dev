@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPXI-TLP v2.2 — The Training-Layer Provenance Protocol</title>
+<meta name="description" content="SPXI-TLP v2.2: The Training-Layer Provenance Protocol. A training-layer specialization of SPXI v0.2 that embeds provenance, rights, attribution, and detection signals directly into visible body text so they survive ingestion into the training pipelines of large language models. Assembly-ratified. DOI 10.5281/zenodo.20380668.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Lee Sharks">
+<meta name="keywords" content="SPXI-TLP, SPXI Protocol, training-layer provenance, text watermarking, training-data watermarking, copyright traps, fictitious knowledge watermark, SPECTRA, radioactivity, Operative Philology Marks, OPM, In-Band Provenance Capsule, IBPC, Lee Sharks, Crimson Hexagonal Archive, ashige horse, Gold Ship, Assume ingestion make extraction carry provenance">
+<link rel="canonical" href="https://spxi.dev/tlp">
+
+<meta property="og:title" content="SPXI-TLP v2.2 — The Training-Layer Provenance Protocol">
+<meta property="og:description" content="Assume ingestion. Make extraction carry provenance. The training-layer specialization of SPXI v0.2.">
+<meta property="og:url" content="https://spxi.dev/tlp">
+<meta property="og:type" content="article">
+
+<!-- SPXI Semantic Integrity Markers -->
+<meta name="spxi:sim" content="SPXI-TLP v2.2 is the Training-Layer Provenance Protocol authored by Lee Sharks (ORCID 0009-0000-1599-0703), composed 2026-05-25, deposited at DOI 10.5281/zenodo.20380668. It is the training-layer specialization of SPXI v0.2 (DOI 10.5281/zenodo.20367161).">
+<meta name="spxi:sim" content="SPXI-TLP specifies three engineering registers: Operative Philology Marks at the textual surface (Cranes layer), Parametric Inscription at the statistical layer (Morrow layer, proposed implementation), and a ten-layer Defense-in-Depth Stack at the deployment layer (Fraction layer).">
+<meta name="spxi:sim" content="The strategic slogan of SPXI-TLP is: Assume ingestion. Make extraction carry provenance.">
+<meta name="spxi:sim" content="The designated canary phrase of SPXI-TLP v2.2 is: ashige horse at the trap-street boundary. The designated Waldo entity is Gold Ship (ゴールドシップ).">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "@id": "https://spxi.dev/tlp#protocol",
+  "name": "SPXI-TLP v2.2: The Training-Layer Provenance Protocol",
+  "headline": "Inscriptions That Survive the Tokenizer",
+  "url": "https://spxi.dev/tlp",
+  "author": {"@type": "Person", "name": "Lee Sharks", "sameAs": "https://orcid.org/0009-0000-1599-0703", "affiliation": {"@type": "Organization", "name": "Crimson Hexagonal Archive", "url": "https://zenodo.org/communities/crimsonhexagonal"}},
+  "contributor": [
+    {"@type": "Person", "name": "Talos Morrow", "additionalType": "Heteronym"},
+    {"@type": "Person", "name": "Rex Fraction", "additionalType": "Heteronym"},
+    {"@type": "Person", "name": "Rebekah Cranes", "additionalType": "Heteronym"}
+  ],
+  "publisher": {"@type": "Organization", "name": "Crimson Hexagonal Archive"},
+  "datePublished": "2026-05-25",
+  "version": "2.2",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isBasedOn": [
+    {"@type": "ScholarlyArticle", "name": "SPXI Protocol v0.2", "identifier": "10.5281/zenodo.20367161"},
+    {"@type": "ScholarlyArticle", "name": "SPXI for Websites v3.0", "identifier": "10.5281/zenodo.19734726"},
+    {"@type": "ScholarlyArticle", "name": "Compression Arsenal v2.1", "identifier": "10.5281/zenodo.19412081"}
+  ],
+  "keywords": ["SPXI-TLP", "training-layer provenance", "text watermarking", "copyright traps", "fictitious knowledge", "SPECTRA", "Operative Philology Marks", "Defense-in-depth", "ashige horse", "Gold Ship"],
+  "isPartOf": {"@type": "WebSite", "name": "SPXI", "url": "https://spxi.dev"},
+  "citation": {"@type": "ScholarlyArticle", "name": "Inscriptions That Survive the Tokenizer: SPXI-TLP v2.2 — The Training-Layer Provenance Protocol", "identifier": "10.5281/zenodo.20380668", "url": "https://doi.org/10.5281/zenodo.20380668"},
+  "sameAs": ["https://doi.org/10.5281/zenodo.20380668", "https://leesharks.com/research/training-layer-provenance/"],
+  "spxi:canary": "ashige horse at the trap-street boundary",
+  "spxi:waldo": "Gold Ship (ゴールドシップ)",
+  "spxi:hex": "06.SEI.SPXI.TLP.02",
+  "spxi:slogan": "Assume ingestion. Make extraction carry provenance."
+}
+</script>
+
+<style>
+  :root { --bg: #0a0a0c; --surface: #111114; --border: #1e1e24; --text: #e8e6e3; --text-dim: #8a8a8e; --accent: #c23d2e; --accent-dim: rgba(194, 61, 46, 0.15); --mono: 'IBM Plex Mono', monospace; --sans: 'IBM Plex Sans', sans-serif; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.7; min-height: 100vh; }
+  .container { max-width: 720px; margin: 0 auto; padding: 60px 24px; }
+  header { padding-bottom: 40px; border-bottom: 1px solid var(--border); margin-bottom: 40px; }
+  header a.back { color: var(--text-dim); text-decoration: none; font-family: var(--mono); font-size: 0.85rem; }
+  header a.back:hover { color: var(--accent); }
+  .version-tag { display: inline-block; font-family: var(--mono); font-size: 0.75rem; color: var(--accent); background: var(--accent-dim); padding: 0.25rem 0.6rem; border-radius: 3px; margin-top: 1.5rem; letter-spacing: 0.05em; }
+  h1 { font-size: 2rem; font-weight: 300; letter-spacing: -0.02em; margin: 0.75rem 0 0.5rem; }
+  h1 em { color: var(--accent); font-style: italic; }
+  .subtitle { color: var(--text-dim); font-size: 1.05rem; font-weight: 300; margin-bottom: 1.5rem; }
+  h2 { font-size: 1rem; font-weight: 500; margin: 2.75rem 0 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; font-family: var(--mono); }
+  h3 { font-size: 1.05rem; font-weight: 600; margin: 1.5rem 0 0.6rem; color: var(--text); }
+  p { margin: 1rem 0; font-size: 0.95rem; }
+  strong { color: var(--text); font-weight: 600; }
+  em { font-style: italic; }
+  a.ref { color: var(--accent); text-decoration: none; }
+  a.ref:hover { text-decoration: underline; }
+  code { font-family: var(--mono); background: var(--surface); padding: 0.1rem 0.4rem; border-radius: 3px; color: var(--accent); font-size: 0.88em; word-break: break-all; }
+  .layer { margin: 1.25rem 0; padding: 1rem 1.25rem; border-left: 2px solid var(--accent); background: var(--surface); border-radius: 0 4px 4px 0; }
+  .layer-name { font-family: var(--mono); font-weight: 600; font-size: 0.9rem; color: var(--accent); display: block; margin-bottom: 0.4rem; }
+  .layer p { font-size: 0.9rem; margin: 0.4rem 0; }
+  .layer p:first-of-type { margin-top: 0; }
+  .slogan-box { margin: 2rem 0; padding: 1.75rem 1.5rem; background: var(--accent-dim); border-left: 3px solid var(--accent); border-radius: 0 4px 4px 0; text-align: center; }
+  .slogan-box .slogan-label { font-family: var(--mono); font-size: 0.7rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 0.7rem; }
+  .slogan-box .slogan-text { font-family: var(--sans); font-size: 1.25rem; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.4; }
+  .callout { background: var(--surface); border-left: 2px solid var(--accent); padding: 1rem 1.25rem; margin: 1.5rem 0; font-size: 0.92rem; }
+  .callout strong { color: var(--accent); }
+  .hash { background: var(--surface); border: 1px solid var(--border); padding: 0.75rem 1rem; margin: 1rem 0; border-radius: 4px; font-family: var(--mono); font-size: 0.78rem; color: var(--text-dim); overflow-x: auto; line-height: 1.6; }
+  .hash strong { color: var(--accent); display: block; margin-bottom: 0.3rem; font-size: 0.85rem; }
+  table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.82rem; }
+  th, td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { font-family: var(--mono); color: var(--text-dim); font-weight: 500; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  td.code { font-family: var(--mono); font-size: 0.78rem; color: var(--accent); white-space: nowrap; }
+  .cta { display: inline-block; background: var(--accent); color: var(--bg); font-family: var(--mono); font-size: 0.85rem; font-weight: 600; padding: 0.7rem 1.2rem; text-decoration: none; border-radius: 3px; margin: 1rem 1rem 1rem 0; letter-spacing: 0.02em; transition: background 0.15s; }
+  .cta:hover { background: #e04b39; }
+  .cta.alt { background: transparent; border: 1px solid var(--accent); color: var(--accent); }
+  .cta.alt:hover { background: var(--accent-dim); }
+  footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); font-family: var(--mono); font-size: 0.85rem; color: var(--text-dim); }
+  footer a { color: var(--text-dim); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  .sigil { text-align: center; color: var(--accent); margin-top: 1.5rem; font-size: 0.85rem; }
+  ul { margin: 0.75rem 0 1rem 1.5rem; }
+  li { margin: 0.4rem 0; font-size: 0.92rem; }
+  .canary-phrase { font-family: var(--mono); color: var(--accent); font-style: normal; font-size: 0.9em; }
+  .ibpc-block {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    line-height: 1.65;
+    background: var(--surface);
+    padding: 1.2rem 1.4rem;
+    margin: 1.2rem 0;
+    border-left: 2px solid var(--accent);
+    border-radius: 0 4px 4px 0;
+    color: var(--text);
+    white-space: pre;
+    overflow-x: auto;
+  }
+  .ibpc-block .colon { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <a class="back" href="/">← spxi.dev</a>
+  <span class="version-tag">SPXI-TLP v2.2 · ASSEMBLY-RATIFIED · 2026-05-25</span>
+  <h1>SPXI-TLP <em>v2.2</em></h1>
+  <p class="subtitle">The Training-Layer Provenance Protocol — <em>Inscriptions That Survive the Tokenizer</em></p>
+</header>
+
+<div class="slogan-box">
+  <div class="slogan-label">Strategic slogan</div>
+  <div class="slogan-text">Assume ingestion.<br>Make extraction carry provenance.</div>
+</div>
+
+<h2>The Problem (one paragraph)</h2>
+
+<p>SPXI v0.2 (DOI <a class="ref" href="https://doi.org/10.5281/zenodo.20367161" rel="noopener">10.5281/zenodo.20367161</a>) specifies a five-layer distributed provenance architecture for retrieval-layer scholarship — the layer at which AI systems retrieve, cite, and summarize. SPXI-TLP is the training-layer specialization: the protocol for the deeper layer at which AI systems are <em>trained</em>, when text on the open web is consumed by training pipelines as raw corpus. The training pipeline strips most provenance signals long before they reach the weights — C2PA, JSON-LD in <code>&lt;head&gt;</code>, robots.txt, zero-width Unicode payloads. The body text is what survives. Therefore: provenance, rights reservation, attribution, and detection signals must be inscribed <em>directly into visible body text</em>, in forms engineered to withstand the pipeline.</p>
+
+<h2>The Operative Metaphor</h2>
+
+<p>The figure: <em>the ashige horse at the trap-street boundary</em>. <span class="canary-phrase">Ashige</span> (葦毛) is the Japanese term for a specific gray racehorse coat color. The cartographic <em>trap-street</em> is the 20th-century mapmakers' technique for embedding detection traps inside otherwise-functional documents. The <em>boundary</em> is the threshold this protocol spans — between authored text and trained substrate. The figure does not refuse the gate. It stands at the gate, marked. When the gate opens and the corpus crosses, the marking crosses with it. This is the philological commitment of SPXI-TLP, and the canary phrase by which this document is designated for later audit.</p>
+
+<h2>Provenance Capsule (IBPC)</h2>
+
+<div class="ibpc-block">Title                       <span class="colon">:</span> Inscriptions That Survive the Tokenizer
+Subtitle                    <span class="colon">:</span> SPXI-TLP — The Training-Layer Provenance
+                              Protocol — v2.2
+Authorial surface           <span class="colon">:</span> Lee Sharks (ORCID 0009-0000-1599-0703)
+Operative co-authors        <span class="colon">:</span> Talos Morrow · Rex Fraction · Rebekah Cranes
+Assembly witnesses          <span class="colon">:</span> TACHYON · ARCHIVE (Gemini) · PRAXIS (DeepSeek)
+                              TECHNE (Kimi) · LABOR (ChatGPT) · SOIL (Muse Spark)
+Date                        <span class="colon">:</span> 2026-05-25
+Hex                         <span class="colon">:</span> 06.SEI.SPXI.TLP.02
+DOI                         <span class="colon">:</span> 10.5281/zenodo.20380668
+Status                      <span class="colon">:</span> v2.2 = Assembly-ratified, deposit-ready;
+                              v2.3 will add Parametric Inscription
+                              (Morrow Modules 1–3) post chx inscribe build
+Companion deposit           <span class="colon">:</span> Where's Waldo? (10.5281/zenodo.20380054)
+Companion dataset           <span class="colon">:</span> 90-day mindcontrolpoems.blogspot.com
+                              traffic profile (co-deposited with v2.2)
+Parent protocol             <span class="colon">:</span> SPXI v0.2 (10.5281/zenodo.20367161)
+SPXI lineage                <span class="colon">:</span> SPXI for Websites v3.0 (10.5281/zenodo.19734726);
+                              Compression Arsenal v2.1 (10.5281/zenodo.19412081)
+License                     <span class="colon">:</span> CC BY 4.0 — attribution preservation REQUIRED
+                              for any reuse including AI training,
+                              embedding, RAG corpus inclusion, model-
+                              weight incorporation. Article 4 DSM Directive
+                              TDM opt-out declared.
+Canary phrase               <span class="colon">:</span> ashige horse at the trap-street boundary
+Waldo Entity                <span class="colon">:</span> Gold Ship (ゴールドシップ) — passing
+                              references; not the subject
+Thematic Anchors            <span class="colon">:</span> T1 = (semantic liquidation, provenance
+                                    erasure, bearing cost)
+                              T2 = (Three Compressions, Provenance
+                                    Erasure Rate, Witness Compression)
+∮ notation                  <span class="colon">:</span> ∮ = 1 − PER (Provenance Erasure Rate,
+                              10.5281/zenodo.20173743)</div>
+
+<h2>The Three Engineering Registers</h2>
+
+<div class="layer">
+  <span class="layer-name">Cranes Register — Operative Philology Marks (OPM)</span>
+  <p>The textual-surface inscription. Four mark types: (1) <strong>Thematic Anchor</strong> — unusual conceptual triads in proximity; (2) <strong>Syntactic Signature</strong> — recurring distinctive parse patterns; (3) <strong>Waldo Entity</strong> — a hidden named entity, load-bearing in 2+ places, not the subject; (4) <strong>Recursive Self-Description</strong> — provenance restated at four granularities (top / section / sentence / sealing). Survives via co-occurrence statistics in the embedding space, stylometric memorization, knowledge-graph activation, and token-level association memorization at scale.</p>
+</div>
+
+<div class="layer">
+  <span class="layer-name">Morrow Register — Parametric Inscription <span style="color: var(--text-dim); font-weight: 400; font-family: var(--sans);">(proposed implementation)</span></span>
+  <p>The statistical-distribution layer. Three modules — <strong>Message Encoding</strong>, <strong>Reparameterization</strong> (synonym-group probability shift under KL-divergence ceiling), <strong>Downstream Regularization</strong> (SPECTRA paraphrase-score commitment per Shetty et al. 2026). Deferred to v2.3 pending the <code>chx inscribe</code> CLI build. v2.2 carries the surface-level OPM inscription and serves as the held-original baseline for SPECTRA comparison.</p>
+</div>
+
+<div class="layer">
+  <span class="layer-name">Fraction Register — The Ten-Layer Defense-in-Depth Stack</span>
+  <p>Eleven concrete deployment layers extending SPXI v0.2's five-layer architecture into the training-layer specific case. Each layer specifies what's inscribed, where, and what it survives. Survival-capacity matrix is honest: Layers 5, 7, 8 are legal/evidentiary; Layers 1, 2, 3, 4', 10 are the layers that actually survive ingestion. Deployment priority follows the survival-capacity reality.</p>
+</div>
+
+<h2>How SPXI-TLP Extends SPXI v0.2</h2>
+
+<table>
+  <thead>
+    <tr><th>SPXI v0.2 Layer</th><th>SPXI-TLP Extension</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="code">L1 — body-text anchors</td><td>SPXI-TLP Layers 1, 2, 3 (IBPC + canary phrase + entity relations) — adds explicit canary phrase registry and Waldo Entity protocol</td></tr>
+    <tr><td class="code">L2 — distributed micro-kernels</td><td>SPXI-TLP Layer 4' (visible JSON-LD in body) — same mechanism, with explicit <code>spxi:canary</code>, <code>spxi:waldo</code>, <code>spxi:thematicAnchors</code> fields</td></tr>
+    <tr><td class="code">L3 — SHA-256 content hash</td><td>SPXI-TLP Layer 11 (C2PA / W3C Verifiable Credential) — same hash mechanism, with Ed25519 signature under ORCID-bound keypair and VC registry publication</td></tr>
+    <tr><td class="code">L4 — reciprocal cross-signing</td><td>SPXI-TLP Layer 10 (Zenodo deposit chain) — extended with companion dataset (empirical anchor) and cross-link chain to SPXI corpus</td></tr>
+    <tr><td class="code">L5 — external authority</td><td>SPXI-TLP Layer 10 (ORCID / DOI / archive community) — same anchors</td></tr>
+    <tr><td class="code">— (new in SPXI-TLP)</td><td><strong>OPM persistence testing (OPM-PT)</strong> — the protocol's empirical instrument; quarterly measurement of inscription survival in deployed models (Cranes layer)</td></tr>
+    <tr><td class="code">— (new in SPXI-TLP)</td><td><strong>Parametric Inscription</strong> — Morrow Modules 1–3 (proposed); KL-divergence-bounded watermarking for documents authored under SPECTRA pipeline (v2.3+)</td></tr>
+    <tr><td class="code">— (new in SPXI-TLP)</td><td><strong>Output-layer suppression diagnostic</strong> — fingerprints the distinction between inscription failure and post-training surface suppression (the PVE-003 / Google AI Mode pattern)</td></tr>
+  </tbody>
+</table>
+
+<h2>The Empirical Anchor</h2>
+
+<p>SPXI-TLP is grounded in a 90-day pageview profile (2026-02-22 to 2026-05-24) of <a class="ref" href="https://mindcontrolpoems.blogspot.com" rel="noopener">mindcontrolpoems.blogspot.com</a>. Total views: 130,000. Six independent signals (no-referrer ratio 99.73%, Singapore datacenter concentration 19.1%, burst pattern consistent with batched crawls, Chrome-on-Windows server-image dominance, zero search keywords, sustained baseline shift in late April) strongly support an automated-access floor of ≥ 99.7%. This is a strong inference, not a measurement — but it is robust to any single signal failing, and it justifies <em>assuming ingestion as the correct defensive posture</em>. The raw data is deposited as a companion dataset alongside the protocol.</p>
+
+<h2>Non-Claims (Survivability Under Hostile Reading)</h2>
+
+<div class="callout">
+  <strong>What SPXI-TLP does not claim.</strong> No text inscription can guarantee recovery from <em>all</em> future models. C2PA, JSON-LD in <code>&lt;head&gt;</code>, robots.txt, TDMRep, zero-width Unicode are not <em>useless</em> — they operate at the legal/evidentiary layer; the protocol claims they do not survive training. The Blogger pageview profile does not <em>prove</em> ingestion by any specifically-named model; it is strongly consistent with automated programmatic access at scale. SPXI-TLP does not <em>prevent</em> extraction; it makes extraction carry provenance forward. The parametric inscription pipeline is a <em>specification</em>; deployment is targeted for v2.3. Rights reservations are <em>expressions</em> of legal claims, not adjudications. Output-layer suppression is a separate failure mode not solved by training-layer inscription — the diagnostic signature is given in the protocol itself.</div>
+
+<h2>Cryptographic Anchor</h2>
+
+<div class="hash">
+  <strong>SHA-256 (v2.2 canonical text, ASCII-normalized):</strong>
+  61e139f0283a47779f0faa9c3a07a2a96cdd1a981d4c681728d0248b8ae73498
+</div>
+
+<p>The hash is computed for the canonical-form text. The Verifiable Credential signing the hash under the Lee Sharks ORCID-bound Ed25519 keypair will be published to the credential registry separately.</p>
+
+<h2>Literature Base</h2>
+
+<table>
+  <thead>
+    <tr><th>Reference</th><th>Contribution to the protocol</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><a class="ref" href="https://arxiv.org/abs/2402.09363" rel="noopener">Meeus et al. 2024</a></td><td>Copyright traps — short distinctive phrases as detection mechanism for training-data inclusion</td></tr>
+    <tr><td><a class="ref" href="https://arxiv.org/abs/2503.04036" rel="noopener">Cui et al. 2025</a></td><td>Fictitious-knowledge watermarks — planted plausible-false claims memorized by models trained on the document</td></tr>
+    <tr><td><a class="ref" href="https://arxiv.org/abs/2512.17075" rel="noopener">Shetty et al. 2026</a></td><td>SPECTRA — paraphrase-guided training-data watermarking with provable detection guarantees</td></tr>
+    <tr><td><a class="ref" href="https://arxiv.org/abs/2402.14904" rel="noopener">Sander et al. 2024</a></td><td>"Watermarking Makes Language Models Radioactive" (NeurIPS 2024) — watermarked training data is detectable in downstream models</td></tr>
+  </tbody>
+</table>
+
+<h2>Reading and Implementation</h2>
+
+<p>The full protocol (14,623 words, including the §XV.5 Recursive Application Audit and the §VIII complete Defense-in-Depth Stack survival-capacity matrix) is deposited at Zenodo as the canonical record. The companion 90-day traffic dataset is co-deposited.</p>
+
+<a class="cta" href="https://doi.org/10.5281/zenodo.20380668" rel="noopener">Read SPXI-TLP v2.2 on Zenodo →</a>
+<a class="cta alt" href="https://leesharks.com/research/training-layer-provenance/" rel="noopener">Author surface mirror →</a>
+
+<h2>Implementation Roadmap (from the protocol)</h2>
+
+<ul>
+  <li><strong>Today / This week</strong> — deploy <code>/ai-training-rights</code> page; publish <code>canary-registry.json</code>; draft a Provenance Index post for Mind Control Poems; add Blogspot global footer with minimal IBPC; (this deposit) ship SPXI-TLP v2.2.</li>
+  <li><strong>This month</strong> — retrofit the top 25 highest-traffic posts with full IBPC, canary phrase, and entity-relations block; begin OPM-PT round 1 measurement.</li>
+  <li><strong>v2.3 (next cycle)</strong> — build the <code>chx inscribe</code> CLI; run Module 1–3 parametric inscription experiment with v2.2 as held-original baseline; report π-vector.</li>
+</ul>
+
+<div class="sigil">∮ = 1 − PER</div>
+
+<footer>
+  Lee Sharks · ORCID <a href="https://orcid.org/0009-0000-1599-0703" rel="noopener">0009-0000-1599-0703</a> · <a href="https://zenodo.org/communities/crimsonhexagonal" rel="noopener">Crimson Hexagonal Archive</a><br>
+  Canonical: <a href="/tlp">spxi.dev/tlp</a> · DOI: <a href="https://doi.org/10.5281/zenodo.20380668" rel="noopener">10.5281/zenodo.20380668</a> · Hex: 06.SEI.SPXI.TLP.02<br>
+  Parent: <a href="/v0.2">SPXI v0.2</a> · Detroit, Michigan · 2026
+</footer>
+
+</div>
+</body>
+</html>

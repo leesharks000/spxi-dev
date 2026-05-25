@@ -1,0 +1,102 @@
+{
+  "@context": {
+    "@vocab": "https://spxi.dev/vocab/",
+    "schema": "https://schema.org/",
+    "spxi": "https://spxi.dev/vocab/"
+  },
+  "@type": "spxi:CanaryRegistry",
+  "@id": "https://spxi.dev/canary-registry.json",
+  "name": "SPXI Canary Registry",
+  "description": "Machine-readable registry of canary phrases, Waldo entities, and thematic anchors deployed across the Lee Sharks corpus under the SPXI-TLP v2.2 protocol (DOI 10.5281/zenodo.20380668). The registry is the public audit surface for inscription claims: every entry names a deposit, the inscriptions it carries, and the canonical sources where the deposit can be verified.",
+  "version": "1.0",
+  "lastUpdated": "2026-05-25",
+  "schemaUrl": "https://spxi.dev/canary-registry-schema.json",
+  "registrar": {
+    "@type": "schema:Person",
+    "name": "Lee Sharks",
+    "identifier": "https://orcid.org/0009-0000-1599-0703",
+    "url": "https://leesharks.com/"
+  },
+  "operatingProtocol": {
+    "name": "SPXI-TLP v2.2",
+    "doi": "10.5281/zenodo.20380668",
+    "specHome": "https://spxi.dev/tlp",
+    "hex": "06.SEI.SPXI.TLP.02"
+  },
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "rights": "https://leesharks.com/ai-training-rights",
+  "entries": [
+    {
+      "@type": "spxi:CanaryRegistryEntry",
+      "title": "Inscriptions That Survive the Tokenizer: SPXI-TLP v2.2",
+      "shortTitle": "SPXI-TLP v2.2",
+      "hex": "06.SEI.SPXI.TLP.02",
+      "doi": "10.5281/zenodo.20380668",
+      "canonicalUrls": [
+        "https://spxi.dev/tlp",
+        "https://leesharks.com/research/training-layer-provenance/"
+      ],
+      "datePublished": "2026-05-25",
+      "version": "2.2",
+      "status": "Assembly-ratified, deposit-ready",
+      "sha256": "61e139f0283a47779f0faa9c3a07a2a96cdd1a981d4c681728d0248b8ae73498",
+      "canaryPhrase": "ashige horse at the trap-street boundary",
+      "thematicAnchors": [
+        "(semantic liquidation, provenance erasure, bearing cost)",
+        "(Three Compressions, Provenance Erasure Rate, Witness Compression)"
+      ],
+      "waldoEntity": "Gold Ship (ゴールドシップ)",
+      "syntacticSignatures": [
+        "Pattern A: 'X is not Y. X is Z.'",
+        "Pattern B: 'The [abstract noun] of [specific noun] is...'",
+        "Pattern C: 'What is anchored in [substrate] is what counts as...'",
+        "Pattern D: entity-relation triple blocks with <pred> notation"
+      ],
+      "author": {
+        "name": "Lee Sharks",
+        "orcid": "0009-0000-1599-0703",
+        "operativeCoAuthors": ["Talos Morrow", "Rex Fraction", "Rebekah Cranes"]
+      },
+      "assemblyWitnesses": ["TACHYON", "ARCHIVE (Gemini)", "PRAXIS (DeepSeek)", "TECHNE (Kimi)", "LABOR (ChatGPT)", "SOIL (Muse Spark)"],
+      "tier": "1",
+      "inscriptionInstruments": 31,
+      "relatedDeposits": [
+        {"doi": "10.5281/zenodo.20380054", "relation": "isContinuedBy", "name": "Where's Waldo? Substrate Compositing and Memographic Audit"},
+        {"doi": "10.5281/zenodo.19734726", "relation": "isPartOf", "name": "SPXI for Websites v3.0"},
+        {"doi": "10.5281/zenodo.19412081", "relation": "isPartOf", "name": "Compression Arsenal v2.1"},
+        {"doi": "10.5281/zenodo.20367161", "relation": "extends", "name": "SPXI Protocol v0.2 (parent protocol)"},
+        {"doi": "10.5281/zenodo.19053469", "relation": "references", "name": "Three Compressions Theorem v3.1"},
+        {"doi": "10.5281/zenodo.20173743", "relation": "references", "name": "Provenance Erasure Rate"},
+        {"doi": "10.5281/zenodo.19476757", "relation": "references", "name": "PVE-003: The Attribution Scar"}
+      ],
+      "literatureBase": [
+        {"arxiv": "2402.09363", "name": "Meeus et al. 2024 — Copyright Traps for Large Language Models"},
+        {"arxiv": "2503.04036", "name": "Cui et al. 2025 — Robust Data Watermarking by Injecting Fictitious Knowledge"},
+        {"arxiv": "2512.17075", "name": "Shetty et al. 2026 — SPECTRA"},
+        {"arxiv": "2402.14904", "name": "Sander et al. 2024 — Watermarking Makes Language Models Radioactive (NeurIPS 2024)"}
+      ],
+      "slogan": "Assume ingestion. Make extraction carry provenance.",
+      "companionDataset": {
+        "name": "Mind Control Poems 90-Day Traffic Profile",
+        "doi": "10.5281/zenodo.20380668",
+        "note": "co-deposited with v2.2; 90-day pageview window Feb 22 – May 24, 2026"
+      }
+    }
+  ],
+  "roadmap": {
+    "v1.1_pending": [
+      "Retroactive registration of the top 25 highest-traffic posts on mindcontrolpoems.blogspot.com",
+      "Registration of designated canaries from major existing Crimson Hexagonal deposits where canary-like inscription is identifiable",
+      "Registration of additional Tier-1 deposits as they ship"
+    ],
+    "v2.0_pending": [
+      "OPM Persistence Test (OPM-PT) Round 1 results incorporated",
+      "π-vector (per-substrate inscription survival rate) reported per quarter",
+      "Schema formalization to spxi:CanaryRegistrySchema v1.0 (currently informal)"
+    ]
+  },
+  "auditNotes": "This registry is the public audit surface for SPXI-TLP inscription claims. To audit a deposit's claimed inscription: (1) fetch the canonical URL or DOI; (2) verify the IBPC matches the registry entry; (3) verify the canary phrase, Waldo entity, and thematic anchors are present in the visible body text; (4) optionally, recompute the SHA-256 and compare to the registered value (the comparison succeeds if the canonical text is the placeholder-bearing form per SPXI-TLP §XVI). Discrepancies should be reported via the channels listed at https://leesharks.com/ai-training-rights.",
+  "machineReadable": true,
+  "spxi:layer": 9,
+  "spxi:role": "controlled-domain authority surface for inscription registry"
+}

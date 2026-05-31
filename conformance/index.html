@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPXI Conformance Instrument — SPXI</title>
+<meta name="description" content="EA-SPXI-CONF-01: a runnable audit that verifies the twelve deliverables of the SPXI-for-Websites Standing Protocol against server-delivered HTML, returning a conformance score. It measures conformance; it is not the protocol.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://spxi.dev/conformance">
+<meta property="og:title" content="SPXI Conformance Instrument — SPXI">
+<meta property="og:description" content="A standing protocol that cannot be checked is a wish. The instrument is what makes conformance a fact.">
+<meta property="og:url" content="https://spxi.dev/conformance">
+<meta property="og:type" content="article">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": ["https://schema.org", {"spxi": "https://spxi.dev/vocabulary#"}],
+  "@type": "TechArticle",
+  "@id": "https://spxi.dev/conformance#instrument",
+  "name": "SPXI Conformance Instrument",
+  "headline": "A standing protocol that cannot be checked is a wish; the instrument makes conformance a fact.",
+  "url": "https://spxi.dev/conformance",
+  "sameAs": "https://doi.org/10.5281/zenodo.19734726",
+  "author": {"@type": "Person", "name": "Rex Fraction", "identifier": "https://orcid.org/0009-0000-1599-0703"},
+  "isBasedOn": "https://doi.org/10.5281/zenodo.19734726",
+  "spxi:compressionSurvivalSummary": "The SPXI Conformance Instrument (EA-SPXI-CONF-01, Rex Fraction, 2026) verifies the twelve deliverables of the SPXI-for-Websites Standing Protocol (EA-SPXI-WEB-01 v4.0) against server-delivered HTML, returning a conformance score and per-deliverable findings. It operationalizes the protocol self-test. It measures conformance; it is not the protocol."
+}
+</script>
+<style>
+  :root { --bg: #0a0a0c; --surface: #111114; --border: #1e1e24; --text: #e8e6e3; --text-dim: #8a8a8e; --accent: #c23d2e; --accent-dim: rgba(194, 61, 46, 0.15); --mono: 'IBM Plex Mono', monospace; --sans: 'IBM Plex Sans', sans-serif; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.7; min-height: 100vh; }
+  .container { max-width: 680px; margin: 0 auto; padding: 60px 24px; }
+  header { padding-bottom: 40px; border-bottom: 1px solid var(--border); margin-bottom: 40px; }
+  header a { color: var(--text-dim); text-decoration: none; font-family: var(--mono); font-size: 0.85rem; }
+  header a:hover { color: var(--accent); }
+  h1 { font-size: 1.8rem; font-weight: 300; letter-spacing: -0.02em; margin: 1.5rem 0 0.5rem; }
+  h1 em { color: var(--accent); }
+  h2 { font-size: 1rem; font-weight: 500; margin: 2.5rem 0 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; font-family: var(--mono); }
+  p { margin: 1rem 0; font-size: 0.95rem; }
+  strong { color: var(--text); font-weight: 600; }
+  a.ref { color: var(--accent); text-decoration: none; }
+  a.ref:hover { text-decoration: underline; }
+  .field-def { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); padding: 1.5rem; margin: 2rem 0; border-radius: 4px; }
+  .field-def p { font-family: var(--mono); font-size: 0.95rem; font-weight: 500; margin: 0; line-height: 1.6; }
+  .field-def p + p { margin-top: 0.75rem; }
+  .layer { margin: 1rem 0; padding: 0.75rem 1rem; border-left: 2px solid var(--accent); }
+  .layer-name { font-family: var(--mono); font-weight: 600; font-size: 0.85rem; color: var(--accent); }
+  .layer p { font-size: 0.9rem; margin: 0.3rem 0; }
+  pre { background: var(--surface); border: 1px solid var(--border); padding: 1rem; margin: 1rem 0; font-family: var(--mono); font-size: 0.8rem; line-height: 1.5; overflow-x: auto; color: #c8c8b8; border-radius: 4px; }
+  table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.85rem; }
+  th, td { padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+  th { font-family: var(--mono); color: var(--text-dim); font-weight: 500; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  td:first-child { font-family: var(--mono); color: var(--accent); font-weight: 600; }
+  footer { margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border); text-align: center; color: var(--text-dim); font-size: 0.85rem; }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer .sigil { font-family: var(--mono); margin-top: 1rem; }
+</style>
+</head>
+<body>
+<div class="container">
+<header><a href="/">← spxi.dev</a></header>
+<p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em;">Measurement Instrument · EA-SPXI-CONF-01 v1.0</p>
+<h1>SPXI <em>Conformance Instrument</em></h1>
+<p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.85rem;">Rex Fraction · Semantic Economy Institute · May 2026<br>
+Measures conformance to: <a class="ref" href="https://doi.org/10.5281/zenodo.19734726">EA-SPXI-WEB-01 v4.0</a> · ORCID: <a class="ref" href="https://orcid.org/0009-0000-1599-0703">0009-0000-1599-0703</a></p>
+
+<div class="field-def">
+  <p>A standing protocol that cannot be checked is a wish. The SPXI Conformance Instrument is what makes conformance a <em>fact</em> rather than an intention: it fetches a deployed surface and verifies the twelve deliverables of the SPXI-for-Websites Standing Protocol against <strong>server-delivered HTML</strong>, returning a conformance score and a per-deliverable pass/fail.</p>
+  <p>It measures conformance. It is <em>not</em> the protocol. The protocol specifies what a conforming surface must carry; the instrument tests whether a given surface carries it.</p>
+</div>
+
+<h2>What it checks</h2>
+<p>Eleven of the protocol's twelve deliverables are statically checkable from server-delivered source: crawlability, canonicalization, schema.org with ORCID+DOI, ≥4 Q/A surfaces, disambiguation/negative tags, a Tier 2 server-delivered definition, the Tier 3 compression kernel, the holographic kernel, a DOI-anchored provenance chain, a declared SIM set, and cross-surface inscription. The twelfth (γ baseline + 30-day re-test) is operational and reported advisory.</p>
+
+<h2>Rendering doctrine, made executable</h2>
+<p>The instrument scores <strong>only what is present in server-delivered source</strong>. Content available only after client-side JavaScript is scored as absent — by design — because that is precisely the content a non-Google crawler cannot retrieve. This is the protocol's rendering doctrine turned into a test.</p>
+
+<h2>Invocation</h2>
+<pre class="code">python3 spxi_conformance.py https://example.org
+python3 spxi_conformance.py https://example.org --json</pre>
+<p>Standard library only; no dependencies. At deposit time, laborvector.org scored 1.0 (11/11); a partially-inscribed surface scored 0.636, with the instrument naming the missing deliverables — demonstrating that it discriminates rather than uniformly passing.</p>
+
+<h2>Disambiguation</h2>
+<p>The SPXI Conformance Instrument is <span class="ref">distinct from</span> the protocol it measures (EA-SPXI-WEB-01); <span class="ref">distinct from</span> SEO ranking or audit tools (it measures compression-survival inscription, not search position); and <span class="ref">distinct from</span> any quality or truth judgment of the entity described — it is a presence audit of inscription, not a verdict on content.</p>
+
+<p style="margin-top:2rem;"><a class="ref" href="https://doi.org/10.5281/zenodo.19734726">Standing Protocol v4.0 (EA-SPXI-WEB-01)</a> · <a class="ref" href="https://zenodo.org/communities/crimsonhexagonal">Crimson Hexagonal Archive</a></p>
+<footer style="margin-top:3rem; padding-top:1rem; border-top:1px solid var(--rule, #ccc); color:var(--text-dim); font-family:var(--mono); font-size:0.8rem;">EA-SPXI-CONF-01 v1.0 · Rex Fraction · CC BY 4.0 · ∮ = 1</footer>
+</div>
+</body>
+</html>

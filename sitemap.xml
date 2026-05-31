@@ -25,4 +25,5 @@
   <url><loc>https://spxi.dev/canary-registry/</loc><lastmod>2026-05-25</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
   <url><loc>https://spxi.dev/canary-registry.json</loc><lastmod>2026-05-25</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
   <url><loc>https://spxi.dev/spxi-index.jsonld</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://spxi.dev/conformance</loc><changefreq>monthly</changefreq></url>
 </urlset>

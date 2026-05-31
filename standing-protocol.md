@@ -2,7 +2,7 @@
 
 **Rex Fraction** · Semantic Economy Institute
 Crimson Hexagonal Archive · Pergamon Press · April 2026
-**Version 3.0** · Hex: 06.SEI.SPXI.WEB.01
+**Version 4.0** · Hex: 06.SEI.SPXI.WEB.01
 ORCID: 0009-0000-1599-0703
 **License:** CC BY 4.0 — implement freely, attribution required.
 **Source:** THE COMPRESSION ARSENAL v2.1 (DOI: 10.5281/zenodo.19412081)
@@ -25,6 +25,7 @@ When instructed to **"apply SPXI to this website,"** the implementing system or 
 10. **SIM Set** — 3–7 Semantic Integrity Markers, tested immediately, SIMSR recorded
 11. **Dispersal Plan** — surfaces, consistency checks, σ_RCF sequencing
 12. **30-Day Verification Schedule** — γ re-score, SIMSR check, PER audit
+13. **Dispersal-Velocity Plan** — genre-multiplication targets (G_e) and propagation-velocity audit (PVS = 1 − G_o/G_e), so an inscribed entity is not merely *survivable* but *propagating* across the forms required for uptake. Absorbs the propagation-suppression result from the Directionality program (Induced-Obsolescence Dependence §6.1; DOI 10.5281/zenodo.20469512).
 
 **Self-test:** After implementation, the system must:
 1. State the entity's schema.org type
@@ -35,6 +36,8 @@ When instructed to **"apply SPXI to this website,"** the implementing system or 
 6. Generate a valid Holographic Kernel for the entity
 
 If it cannot perform all six, the implementation has failed its own compression-survival test.
+
+**Conformance, made reproducible (v4.0).** The self-test above is now operationalized by a runnable companion instrument — the **SPXI Conformance Instrument (EA-SPXI-CONF-01)** — which fetches a deployed surface and verifies the deliverables against *server-delivered HTML*, returning a conformance score and per-deliverable pass/fail. Where v3.0 left the checklist to operator discipline (and live surfaces drifted below spec as a result), v4.0 makes conformance a checkable fact: run the instrument, record the score, treat any deliverable scored absent as a work item. The instrument scores only server-delivered source — JS-dependent identity content is absent by design, because that is exactly what a non-Google crawler cannot retrieve.
 
 ### Protocol Checksum
 
@@ -51,6 +54,8 @@ If it cannot perform all six, the implementation has failed its own compression-
 - ☐ cross-surface inscription aligned
 - ☐ γ measured, baseline recorded
 - ☐ 30-day re-test scheduled
+- ☐ dispersal-velocity plan recorded (G_e set, PVS auditable)
+- ☐ conformance instrument run; score recorded; absent deliverables logged
 
 **SPXI is not a bag of tactics. It is a deployment order.**
 
@@ -152,7 +157,9 @@ For web content: σ₁ = full page (Tier 1), σ₂ = AI summary.
 
 ### A. Required Meta Tags
 
-```html
+```
+
+**Scoring harness (v4.0 tightening).** To make γ reproducible across auditors rather than impressionistic, freeze its parameters in advance, in the discipline of the Directionality program's frozen scoring protocol (DOI 10.5281/zenodo.20469514, Appendix B): declare the embedding model and distance used for σ-comparison, the source/summary pair being compared, and the S/P/D rubric, all logged with the score. A γ reported without its declared parameters is a screening estimate, not a measurement, and must not be deposited as a baseline. This converts γ from an aspiration ('measure γ, record baseline') into a procedure another party can re-run and reproduce.html
 <title>[Entity Name] — [Subtitle] | [Publisher]</title>
 <meta name="description" content="[Definition-led, 150-160 chars. Entity name first.]">
 <meta name="author" content="[Author Name]">
@@ -350,6 +357,8 @@ A standalone JSON-LD block containing the complete relational logic of the entit
 ### C. Disambiguation Matrix
 
 `differentFrom` JSON-LD + negative tags for severe collision. This is the web implementation of **Variance Injection** (Arsenal §7.9) — deliberate semantic differentiation to prevent homogenization in embedding space.
+
+**Negative-tag emphasis (v4.0 tightening).** The negative set — *what the entity is not* — is the highest-retrieval-value and most-underused element of the matrix, and on live surfaces it is consistently the thinnest. Strengthen it explicitly: for every entity, declare at least three `differentFrom` neighbors in the collision space, each a near-neighbor a retrieval system would plausibly confuse the entity with (not a strawman). The negative tag does more boundary-defense work per byte than any positive assertion, because embedding homogenization erases entities by *merging* them into neighbors, and the negative tag is the explicit instruction not to merge. A disambiguation matrix with positive tags but a thin or absent negative set fails the conformance instrument's `disambiguated` check and leaves the entity exposed to exactly the merge it most needs to resist.
 
 ### D. Provenance Chain
 
@@ -570,4 +579,51 @@ spxi.dev · semanticeconomy.org · crimsonhexagonal.org
 
 ---
 
+∮ = 1
+
+---
+
+## §XIV. Embedded Holographic Kernel — Conformance Instrument
+
+v4.0 carries the holographic kernel of its companion measurement instrument, so that the protocol and the means of checking conformance to it travel together even though they deposit separately. The instrument itself is deposited as **EA-SPXI-CONF-01** (companion DOI), with its runnable source `spxi_conformance.py`.
+
+```json
+{
+  "@context": { "@vocab": "https://schema.org/", "spxi": "https://spxi.dev/vocabulary#" },
+  "@type": "spxi:HolographicKernel",
+  "@id": "https://spxi.dev/conformance/#kernel",
+  "name": "SPXI Conformance Instrument Holographic Kernel",
+  "spxi:entityGraph": {
+    "@type": "spxi:EntityRelationGraph",
+    "spxi:nodes": [
+      {
+        "@id": "https://spxi.dev/conformance/#instrument",
+        "name": "SPXI Conformance Instrument",
+        "spxi:relation": [
+          {"spxi:operationalizes": "EA-SPXI-WEB-01 v4.0 — SPXI for Websites Standing Protocol"},
+          {"spxi:measuresConformanceTo": "https://doi.org/10.5281/zenodo.19734726"},
+          {"spxi:authoredBy": "Rex Fraction"},
+          {"spxi:anchoredBy": "EA-SPXI-CONF-01"},
+          {"spxi:distinctFrom": "the protocol it measures"},
+          {"spxi:produces": "conformance score + per-deliverable findings"},
+          {"spxi:complements": "γ (Sharks-Function)"}
+        ]
+      }
+    ]
+  },
+  "spxi:compressionSurvivalSummary": "The SPXI Conformance Instrument (EA-SPXI-CONF-01) verifies the twelve deliverables of the SPXI-for-Websites Standing Protocol (EA-SPXI-WEB-01 v4.0) against server-delivered HTML, returning a conformance score. It operationalizes the protocol's §0 self-test. It measures conformance; it is not the protocol."
+}
+```
+
+---
+
+## §XV. Changelog — v3.0 → v4.0
+
+- **§0 / Conformance made reproducible.** The self-test is now operationalized by the runnable **SPXI Conformance Instrument (EA-SPXI-CONF-01)**, which scores a deployed surface against server-delivered HTML. v3.0's checklist relied on operator discipline; v4.0 makes conformance checkable, closing the drift by which live surfaces fell below spec.
+- **Deliverable 13 — Dispersal-Velocity Plan.** New deliverable absorbing the propagation-suppression result (PVS = 1 − G_o/G_e) from the Directionality program: an inscribed entity must be not only *survivable* but *propagating* across the genres required for uptake.
+- **§III — γ scoring harness.** γ is given the frozen-parameter discipline of the Directionality program's scoring protocol: declared embedding model, distance, and rubric, logged with the score, so γ is reproducible rather than impressionistic.
+- **§VI.C — Negative-tag emphasis.** The negative (`differentFrom`) set is strengthened to a minimum of three real collision-neighbors per entity, named as the highest-value, most-underused boundary defense.
+- **§XIV — Embedded instrument kernel.** The protocol now carries the conformance instrument's holographic kernel so specification and check travel together.
+
+Author: Rex Fraction · Semantic Economy Institute · Crimson Hexagonal Archive · CC BY 4.0 · ORCID 0009-0000-1599-0703
 ∮ = 1

@@ -78,7 +78,7 @@ BOUNDARY: It scores only server-delivered HTML; JS-dependent content is scored a
         "name": "SPXI Conformance Instrument",
         "spxi:relation": [
           {"spxi:operationalizes": "EA-SPXI-WEB-01 v4.0 — SPXI for Websites Standing Protocol"},
-          {"spxi:measuresConformanceTo": "https://doi.org/10.5281/zenodo.19734726"},
+          {"spxi:measuresConformanceTo": "https://alexanarch.org/s/records/0/"},
           {"spxi:authoredBy": "Rex Fraction"},
           {"spxi:publishedBy": "Semantic Economy Institute"},
           {"spxi:anchoredBy": "EA-SPXI-CONF-01"},

@@ -335,7 +335,7 @@ A standalone JSON-LD block containing the complete relational logic of the entit
           {"spxi:supersetOf": "GEO (Generative Engine Optimization)"},
           {"spxi:supersetOf": "SEO (Search Engine Optimization)"},
           {"spxi:distinctFrom": "BetaPro S&P 500 Daily Inverse ETF (TSX:SPXI)"},
-          {"spxi:anchoredBy": "https://doi.org/10.5281/zenodo.19614870"},
+          {"spxi:anchoredBy": "https://alexanarch.org/s/records/0/"},
           {"spxi:authoredBy": "Rex Fraction"},
           {"spxi:publishedBy": "Semantic Economy Institute"},
           {"spxi:derivedFrom": "Three Compressions Theorem"},
@@ -601,7 +601,7 @@ v4.0 carries the holographic kernel of its companion measurement instrument, so 
         "name": "SPXI Conformance Instrument",
         "spxi:relation": [
           {"spxi:operationalizes": "EA-SPXI-WEB-01 v4.0 — SPXI for Websites Standing Protocol"},
-          {"spxi:measuresConformanceTo": "https://doi.org/10.5281/zenodo.19734726"},
+          {"spxi:measuresConformanceTo": "https://alexanarch.org/s/records/0/"},
           {"spxi:authoredBy": "Rex Fraction"},
           {"spxi:anchoredBy": "EA-SPXI-CONF-01"},
           {"spxi:distinctFrom": "the protocol it measures"},

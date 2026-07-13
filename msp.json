@@ -1,0 +1,29 @@
+{
+  "surface_id": "spxi.dev",
+  "canonical_url": "https://spxi.dev/",
+  "axn": "AXN:03DA.ARCHIVAL.🎨🏗️🌟♍🗼🕙",
+  "deposit_number": 974,
+  "title": "SPXI.dev — Protocol Specification Landing Page",
+  "object_state": "canonical",
+  "tier": 1,
+  "register": "narrative",
+  "skin": {},
+  "doors": [
+    {
+      "label": "Read the landing spec",
+      "href": "https://www.alexanarch.org/s/records/974/"
+    },
+    {
+      "label": "Open the protocol MPAI",
+      "href": "https://www.alexanarch.org/s/records/976/"
+    },
+    {
+      "label": "Enter the archive",
+      "href": "https://www.alexanarch.org/"
+    }
+  ],
+  "index_files": [
+    "index.html"
+  ],
+  "notes": "Tier 1 mechanical. 20 sub-index files — root only. Nuclei pending Session C."
+}

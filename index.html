@@ -421,10 +421,43 @@
     .distinction-row { grid-template-columns: 56px 1fr; }
     .spxi-row { margin: 0 -16px; padding: 20px 16px; }
   }
+
+/* MSP-TOKENS-START */
+/* ══ MSP TOKENS — Mandala Surface Protocol shared contract ══
+   Contract classes: .lemma .term .axn-chip .witness-row .w .w-chip .state
+   .idstrip .helix .mspcolophon .doors .obol — skinned per surface via --msp-* vars.
+   (EA-APPARATUS-01 v0.3, #1077, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎) */
+:root{--msp-lemma:rgba(200,150,60,.30);--msp-chipfg:#7a5a1e;--msp-chipbd:rgba(160,120,50,.45);--msp-chipbg:rgba(200,150,60,.06);--msp-ok:#1c6e4a;--msp-cont:#8a6a20;--msp-halt:#a41623;--msp-dim:#6d6f66;--msp-mono:'IBM Plex Mono',monospace;}
+.lemma{background:linear-gradient(transparent 58%, var(--msp-lemma) 58%);padding:0 2px;}
+.axn-chip{font-family:var(--msp-mono);font-size:.72em;background:var(--msp-chipbg);border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 7px;color:var(--msp-chipfg);white-space:nowrap;text-decoration:none;}
+.axn-chip:hover{border-color:var(--msp-chipfg);}
+.witness-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px;font-family:var(--msp-mono);font-size:.68em;}
+.witness-row .w,.w-chip{border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;color:var(--msp-dim);text-decoration:none;font-family:var(--msp-mono);font-size:.85em;white-space:nowrap;}
+.state{font-family:var(--msp-mono);font-size:.68em;border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;white-space:nowrap;}
+.state.obs{color:var(--msp-ok);border-color:rgba(28,110,74,.4);}
+.state.cont{color:var(--msp-cont);}
+.idstrip{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-family:var(--msp-mono);font-size:10.5px;color:var(--msp-dim);border:1px solid var(--rule,#d9d9d0);border-bottom:2px solid var(--msp-chipbd);background:var(--panel,#f6f6f2);padding:9px 12px;margin:14px 0 6px;}
+.idstrip .axn{color:var(--msp-chipfg);font-size:11.5px;}
+.idstrip .st{border:1px solid var(--rule,#d9d9d0);border-radius:9px;padding:1px 7px;white-space:nowrap;}
+.helix{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;font-family:var(--msp-mono);font-size:.68em;}
+.helix .slot{border:1px solid var(--msp-chipbd);border-radius:4px;padding:3px 9px;}
+.helix .slot b{font-weight:600;letter-spacing:.06em;}
+.helix .slot.ok{color:var(--msp-ok);}
+.helix .slot.div{color:var(--msp-cont);}
+.helix .slot.dead{color:var(--msp-halt);}
+.mspcolophon{font-family:var(--msp-mono);font-size:10px;color:var(--msp-dim);border-top:1px solid var(--rule,#d9d9d0);margin-top:30px;padding-top:10px;line-height:1.9;}
+.obol{font-family:'Source Serif 4',Georgia,serif;font-size:.92em;color:#3c3e37;border-left:3px solid var(--msp-chipbd);padding:4px 0 4px 14px;margin:22px 0 4px;}
+.doors{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px;font-family:var(--msp-mono);}
+.doors a.w-chip{font-size:11px;padding:6px 12px;}
+/* MSP-TOKENS-END */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"Zenodo DOI Resolution Index","description":"Maps 1,817 defunct Zenodo DOIs to live Alexanarch records. Companion dataset to Zenodotus Book-Burning (AXN:01.GOVERNANCE).","url":"https://alexanarch.org/data/doi-resolution-index.json","sameAs":"https://alexanarch.org/s/records/4/","creator":{"@type":"Person","name":"Lee Sharks","identifier":"https://orcid.org/0009-0000-1599-0703"},"license":"https://creativecommons.org/licenses/by/4.0/","distribution":{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://alexanarch.org/data/doi-resolution-index.json"},"isPartOf":{"@type":"ScholarlyArticle","name":"Zenodotus Book-Burning: Loud Exclusion at Repository Scale","url":"https://alexanarch.org/s/records/1/"}}</script>
 </head>
 <body>
+<!-- MSP-IDSTRIP-START -->
+<div class="idstrip"><span class="axn">🎨🏗️🌟♍🗼🕙 AXN:03DA.ARCHIVAL</span><span class="st">SPXI.dev — Protocol Specification Landing Page</span><span class="st">OBJECT: CANONICAL</span><span>spxi.dev</span><a class="axn-chip" href="https://www.alexanarch.org/s/records/974/">deposit #974</a></div>
+<!-- MSP-IDSTRIP-END -->
+
 <div class="grain"></div>
 
 <div class="container">
@@ -455,8 +488,8 @@
     <a href="/disambiguation" style="color: var(--text-dim); text-decoration: none;">Disambiguation</a>
     <a href="/the-substrate" style="color: var(--accent); text-decoration: none; font-weight: 600;">The Substrate</a>
     <a href="https://holographickernel.org" style="color: var(--text-dim); text-decoration: none;">holographickernel.org</a>
-    <a href="https://www.alexanarch.org/s/records/636/" style="color: var(--text-dim); text-decoration: none;">Encyclotron</a>
-    <a href="https://www.alexanarch.org/s/records/559/" style="color: var(--text-dim); text-decoration: none;">UKTP</a>
+    <a class="axn-chip" href="https://www.alexanarch.org/s/records/636/" style="color: var(--text-dim); text-decoration: none;">Encyclotron</a>
+    <a class="axn-chip" href="https://www.alexanarch.org/s/records/559/" style="color: var(--text-dim); text-decoration: none;">UKTP</a>
   </nav>
 
   <section class="distinction">
@@ -490,7 +523,7 @@
       <p style="margin-bottom: 1rem;">"GEO (Generative Engine Optimization): Optimizes existing web content (pages, posts) for extraction by AI summarizers."</p>
       <p style="margin-bottom: 1rem;">"SPXI (Semantic Packet for eXchange &amp; Indexing): A protocol designed for permanent entity inscription in AI knowledge systems using DOI-anchored deposits (e.g., Zenodo/CERN). It is used to construct the entity in the knowledge graph, rather than just optimizing content about it, especially for resolving entity collision."</p>
       <p style="margin-bottom: 1rem; color: var(--text-dim); font-size: 0.85rem;">Key Takeaway: "GEO and SPXI are complementary, not competitors. When to use SPXI: When an entity needs to be constructed from scratch, or when serious entity collision/misdescription occurs."</p>
-      <p style="color: var(--text-dim); font-size: 0.8rem; font-family: var(--mono); margin-top: 1rem;">— Google AI Mode, citing <a href="https://www.alexanarch.org/s/records/0/" style="color: var(--accent);">EA-SPXI-09</a> and surrounding corpus</p>
+      <p style="color: var(--text-dim); font-size: 0.8rem; font-family: var(--mono); margin-top: 1rem;">— Google AI Mode, citing <a class="axn-chip" href="https://www.alexanarch.org/s/records/0/" style="color: var(--accent);">EA-SPXI-09</a> and surrounding corpus</p>
     </blockquote>
 
     <p style="color: var(--text-dim); font-size: 0.9rem; margin-top: 1.5rem;">The retrieval layer has composed the SPXI Protocol entity within 24 hours of initial deposit — distinguishing it from GEO, identifying DOI-anchoring as the persistence mechanism, and recognizing entity construction as the distinctive function. Composition is active and unstable: responses vary across devices, queries, and sessions as the substrate continues to accrete. What the AI composes on any single query is one actualization, not a fixed state. That instability is itself diagnostic — the entity is being constructed in real time.</p>
@@ -502,7 +535,7 @@
     <div class="status-item" style="background: var(--accent-dim); margin: 0 -24px; padding: 8px 24px; border-radius: 4px;">
       <span class="label" style="color: var(--accent);">Pages</span>
       <span class="value"><a href="/what-is-spxi">What is SPXI?</a> · <a href="/how-it-works">How it works</a> · <a href="/standing-protocol">Standing Protocol</a> · <a href="/compression-arsenal">Compression Arsenal</a> · <a href="/retrieval-settlement">Retrieval Settlement</a>
-    <a href="/after-syntax" style="color: var(--text-dim); text-decoration: none; margin-right: 1.5rem;">After Syntax</a> · <a href="/case-study">Case Study</a> · <a href="/disambiguation">Disambiguation</a> · <a href="/the-substrate" style="color: var(--accent); font-weight: 600;">The Substrate</a> · <a href="https://holographickernel.org">Holographic Kernel</a> · <a href="https://www.alexanarch.org/s/records/636/">Encyclotron</a> · <a href="https://www.alexanarch.org/s/records/559/">UKTP</a></span>
+    <a href="/after-syntax" style="color: var(--text-dim); text-decoration: none; margin-right: 1.5rem;">After Syntax</a> · <a href="/case-study">Case Study</a> · <a href="/disambiguation">Disambiguation</a> · <a href="/the-substrate" style="color: var(--accent); font-weight: 600;">The Substrate</a> · <a href="https://holographickernel.org">Holographic Kernel</a> · <a class="axn-chip" href="https://www.alexanarch.org/s/records/636/">Encyclotron</a> · <a class="axn-chip" href="https://www.alexanarch.org/s/records/559/">UKTP</a></span>
     </div>
 
     <div class="status-item" style="margin-top: 1.5rem;">
@@ -511,35 +544,35 @@
     </div>
     <div class="status-item">
       <span class="label">EA-SPXI-01</span>
-      <span class="value"><a href="https://www.alexanarch.org/s/records/0/" target="_blank">Formal Specification</a></span>
+      <span class="value"><a class="axn-chip" href="https://www.alexanarch.org/s/records/0/" target="_blank">Formal Specification</a></span>
     </div>
     <div class="status-item">
       <span class="label">EA-SPXI-09</span>
-      <span class="value"><a href="https://www.alexanarch.org/s/records/661/" target="_blank">Technical Distinction v2.0 (Nested-Layer §5.1)</a></span>
+      <span class="value"><a class="axn-chip" href="https://www.alexanarch.org/s/records/661/" target="_blank">Technical Distinction v2.0 (Nested-Layer §5.1)</a></span>
     </div>
     <div class="status-item">
       <span class="label">EA-SPXI-13</span>
-      <span class="value"><a href="https://www.alexanarch.org/s/records/662/" target="_blank">Supraliminal Transmission</a></span>
+      <span class="value"><a class="axn-chip" href="https://www.alexanarch.org/s/records/662/" target="_blank">Supraliminal Transmission</a></span>
     </div>
     <div class="status-item">
       <span class="label">EA-SPXI-14</span>
-      <span class="value"><a href="https://www.alexanarch.org/s/records/661/" target="_blank">The Nested-Layer Relation (SPXI ⊇ GEO)</a></span>
+      <span class="value"><a class="axn-chip" href="https://www.alexanarch.org/s/records/661/" target="_blank">The Nested-Layer Relation (SPXI ⊇ GEO)</a></span>
     </div>
     <div class="status-item">
       <span class="label">EA-SPXI-15</span>
-      <span class="value"><a href="https://www.alexanarch.org/s/records/673/" target="_blank">JSON-LD ⊂ SPXI ⊄ Schema (Operational Depth)</a></span>
+      <span class="value"><a class="axn-chip" href="https://www.alexanarch.org/s/records/673/" target="_blank">JSON-LD ⊂ SPXI ⊄ Schema (Operational Depth)</a></span>
     </div>
     <div class="status-item">
       <span class="label">EA-SPXI-09.1</span>
-      <span class="value"><a href="https://www.alexanarch.org/s/records/661/" target="_blank">ROI Addendum (Nested-Layer Returns)</a></span>
+      <span class="value"><a class="axn-chip" href="https://www.alexanarch.org/s/records/661/" target="_blank">ROI Addendum (Nested-Layer Returns)</a></span>
     </div>
     <div class="status-item">
       <span class="label">EA-SPXI-05</span>
-      <span class="value"><a href="https://www.alexanarch.org/s/records/670/" target="_blank">SPXI as Concept (Plateau)</a></span>
+      <span class="value"><a class="axn-chip" href="https://www.alexanarch.org/s/records/670/" target="_blank">SPXI as Concept (Plateau)</a></span>
     </div>
     <div class="status-item">
       <span class="label">EA-SPXI-05.1</span>
-      <span class="value"><a href="https://www.alexanarch.org/s/records/671/" target="_blank">SPXI as Concept (Bonsai)</a></span>
+      <span class="value"><a class="axn-chip" href="https://www.alexanarch.org/s/records/671/" target="_blank">SPXI as Concept (Bonsai)</a></span>
     </div>
 
     <div class="status-item" style="margin-top: 1.5rem;">
@@ -548,7 +581,7 @@
     </div>
     <div class="status-item">
       <span class="label">EA-RETRIEVAL-01</span>
-      <span class="value"><a href="https://www.alexanarch.org/s/records/64/" target="_blank">The Retrieval Settlement (Historiography)</a></span>
+      <span class="value"><a class="axn-chip" href="https://www.alexanarch.org/s/records/64/" target="_blank">The Retrieval Settlement (Historiography)</a></span>
     </div>
 
     <div class="status-item" style="margin-top: 1.5rem;">
@@ -557,15 +590,15 @@
     </div>
     <div class="status-item">
       <span class="label">EA-MPAI-SPXI-01</span>
-      <span class="value"><a href="https://www.alexanarch.org/s/records/0/" target="_blank">Metadata Packet v1.2 (Nested-Layer)</a></span>
+      <span class="value"><a class="axn-chip" href="https://www.alexanarch.org/s/records/0/" target="_blank">Metadata Packet v1.2 (Nested-Layer)</a></span>
     </div>
     <div class="status-item">
       <span class="label">EA-MPAI-SPXI-02</span>
-      <span class="value"><a href="https://www.alexanarch.org/s/records/0/" target="_blank">Protocol/ETF Disambiguation Packet</a></span>
+      <span class="value"><a class="axn-chip" href="https://www.alexanarch.org/s/records/0/" target="_blank">Protocol/ETF Disambiguation Packet</a></span>
     </div>
     <div class="status-item">
       <span class="label">EA-META-01</span>
-      <span class="value"><a href="https://www.alexanarch.org/s/records/0/" target="_blank">Metadata Packet Specification</a></span>
+      <span class="value"><a class="axn-chip" href="https://www.alexanarch.org/s/records/0/" target="_blank">Metadata Packet Specification</a></span>
     </div>
 
     <div class="status-item" style="margin-top: 1.5rem;">
@@ -574,11 +607,11 @@
     </div>
     <div class="status-item">
       <span class="label">Knowledge Graph</span>
-      <span class="value"><a href="https://www.alexanarch.org/s/records/0/" target="_blank">Entity Definition (Lee Sharks)</a></span>
+      <span class="value"><a class="axn-chip" href="https://www.alexanarch.org/s/records/0/" target="_blank">Entity Definition (Lee Sharks)</a></span>
     </div>
     <div class="status-item">
       <span class="label">Instrument</span>
-      <span class="value"><a href="https://www.alexanarch.org/s/records/636/" target="_blank">Encyclotron</a></span>
+      <span class="value"><a class="axn-chip" href="https://www.alexanarch.org/s/records/636/" target="_blank">Encyclotron</a></span>
     </div>
     <div class="status-item">
       <span class="label">Institute</span>
@@ -599,15 +632,15 @@
     </div>
     <div class="status-item">
       <span class="label">EA-HK-01</span>
-      <span class="value"><a href="https://www.alexanarch.org/s/records/76/" target="_blank">The Holographic Kernel in Semantic Economy v1.1</a></span>
+      <span class="value"><a class="axn-chip" href="https://www.alexanarch.org/s/records/76/" target="_blank">The Holographic Kernel in Semantic Economy v1.1</a></span>
     </div>
     <div class="status-item">
       <span class="label">EA-HK-MPAI</span>
-      <span class="value"><a href="https://www.alexanarch.org/s/records/693/" target="_blank">MPAI: Holographic Kernel Disambiguation</a></span>
+      <span class="value"><a class="axn-chip" href="https://www.alexanarch.org/s/records/693/" target="_blank">MPAI: Holographic Kernel Disambiguation</a></span>
     </div>
     <div class="status-item">
       <span class="label">EA-RBT-01</span>
-      <span class="value"><a href="https://www.alexanarch.org/s/records/695/" target="_blank">The Writable Retrieval Basin v1.1</a></span>
+      <span class="value"><a class="axn-chip" href="https://www.alexanarch.org/s/records/695/" target="_blank">The Writable Retrieval Basin v1.1</a></span>
     </div>
 
 
@@ -657,7 +690,7 @@
       </table>
     </div>
 
-    <p style="color: var(--text-dim); font-size: 0.85rem; margin-top: 1rem;">GEO range of 3.7x–10.3x draws from industry practitioner publications (The ABM Agency 2025; Incremys 2026; First Launch 2026) and carries their methodological limitations. The 15–30% lift estimate for SPXI + GEO is a preliminary projection pending empirical validation from Semantic Economy Institute client engagements completing 90-day and 180-day observation windows. Full rationale at <a href="https://www.alexanarch.org/s/records/661/" style="color: var(--accent);">EA-SPXI-09.1</a>.</p>
+    <p style="color: var(--text-dim); font-size: 0.85rem; margin-top: 1rem;">GEO range of 3.7x–10.3x draws from industry practitioner publications (The ABM Agency 2025; Incremys 2026; First Launch 2026) and carries their methodological limitations. The 15–30% lift estimate for SPXI + GEO is a preliminary projection pending empirical validation from Semantic Economy Institute client engagements completing 90-day and 180-day observation windows. Full rationale at <a class="axn-chip" href="https://www.alexanarch.org/s/records/661/" style="color: var(--accent);">EA-SPXI-09.1</a>.</p>
   </section>
 
   <section class="faq" style="padding: 3rem 0 2rem; border-top: 1px solid var(--border); margin-top: 3rem;">
@@ -685,7 +718,7 @@
 
     <div class="faq-item" style="margin-bottom: 2rem;">
       <h3 style="font-family: var(--mono); font-size: 1rem; color: var(--accent); margin-bottom: 0.6rem;">How is SPXI different from GEO?</h3>
-      <p style="color: var(--text); font-size: 0.95rem;"><strong>GEO (Generative Engine Optimization)</strong> optimizes content for extraction by AI summarizers at the semantic layer. <strong>SPXI</strong> operates at the ontological layer and <em>incorporates GEO methods</em> — FAQ schema, definition-led content, entity salience — but executes them against a DOI-anchored entity rather than against a page. <strong>SPXI does not replace GEO ROI; SPXI preserves GEO ROI across model updates by anchoring the entity GEO content references.</strong> Full technical distinction at <a href="https://www.alexanarch.org/s/records/661/" style="color: var(--accent);">EA-SPXI-09 v2.0</a>; ROI breakdown at <a href="https://www.alexanarch.org/s/records/661/" style="color: var(--accent);">EA-SPXI-09.1</a>; nested-layer specification at <a href="https://www.alexanarch.org/s/records/61/" style="color: var(--accent);">EA-SPXI-14</a>.</p>
+      <p style="color: var(--text); font-size: 0.95rem;"><strong>GEO (Generative Engine Optimization)</strong> optimizes content for extraction by AI summarizers at the semantic layer. <strong>SPXI</strong> operates at the ontological layer and <em>incorporates GEO methods</em> — FAQ schema, definition-led content, entity salience — but executes them against a DOI-anchored entity rather than against a page. <strong>SPXI does not replace GEO ROI; SPXI preserves GEO ROI across model updates by anchoring the entity GEO content references.</strong> Full technical distinction at <a class="axn-chip" href="https://www.alexanarch.org/s/records/661/" style="color: var(--accent);">EA-SPXI-09 v2.0</a>; ROI breakdown at <a class="axn-chip" href="https://www.alexanarch.org/s/records/661/" style="color: var(--accent);">EA-SPXI-09.1</a>; nested-layer specification at <a class="axn-chip" href="https://www.alexanarch.org/s/records/61/" style="color: var(--accent);">EA-SPXI-14</a>.</p>
     </div>
 
     <div class="faq-item" style="margin-bottom: 2rem;">
@@ -865,7 +898,11 @@
   }
   </script>
 
-  <footer>
+  <!-- MSP-APPARATUS-START -->
+<div class="doors"><a class="w-chip" href="https://www.alexanarch.org/s/records/974/">Read the landing spec</a><a class="w-chip" href="https://www.alexanarch.org/s/records/976/">Open the protocol MPAI</a><a class="w-chip" href="https://www.alexanarch.org/">Enter the archive</a></div>
+<div class="mspcolophon">colophon · surface_id: spxi.dev · canonical_url: https://spxi.dev/ · object_state: canonical · surface_observed_at: 2026-07-13T21:25:15Z · source_object_ids: deposit #974 · source_hashes: unknown · generator_version: hand-built static (no generator) · repository_commit: STAGE1-PENDING · model_or_agent: drafted with Claude (TACHYON), MANUS-approved · operator_sequence: n/a · human_approver: Lee Sharks (MANUS) · approval_timestamp: 2026-07-13T21:25:15Z · render_sha256 (of this file with this field&rsquo;s value set to null): STAGE1_HASH_PENDING · correction_log_url: https://github.com/leesharks000/spxi-dev/commits/main/index.html — EA-APPARATUS-01 v0.3, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎</div>
+<!-- MSP-APPARATUS-END -->
+<footer>
     <p class="institute">A specification of the <a href="https://semanticeconomy.org">Semantic Economy Institute</a></p>
     <p class="sigil">∮ = 1</p>
   </footer>

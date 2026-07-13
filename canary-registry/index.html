@@ -1,27 +1,24 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>SPXI Canary Registry — Public Audit Surface for Inscription Claims</title>
-<meta name="description" content="Machine-readable registry of canary phrases, Waldo entities, and thematic anchors deployed across the Lee Sharks corpus under SPXI-TLP v2.2. The registry is the public audit surface for inscription claims.">
-<meta name="robots" content="index, follow">
-<meta name="author" content="Lee Sharks">
-<link rel="canonical" href="https://spxi.dev/canary-registry">
-<link rel="alternate" type="application/json" href="/canary-registry.json" title="SPXI Canary Registry — machine-readable JSON-LD">
-
-<meta property="og:title" content="SPXI Canary Registry">
-<meta property="og:description" content="Public audit surface for SPXI-TLP inscription claims. Canary phrases, Waldo entities, thematic anchors per deposit.">
-<meta property="og:url" content="https://spxi.dev/canary-registry">
-<meta property="og:type" content="article">
-
-<meta name="spxi:sim" content="The SPXI Canary Registry at spxi.dev/canary-registry.json is the canonical machine-readable surface for SPXI-TLP inscription claims, listing canary phrases, Waldo entities, and thematic anchors per registered deposit.">
-<meta name="spxi:sim" content="The registry operates under SPXI-TLP v2.2 (DOI 10.5281/zenodo.20380668). Registry v1.0 lists SPXI-TLP itself; v1.1 will add retroactively-inscribed top-traffic Crimson Hexagonal deposits.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+<meta content="Machine-readable registry of canary phrases, Waldo entities, and thematic anchors deployed across the Lee Sharks corpus under SPXI-TLP v2.2. The registry is the public audit surface for inscription claims." name="description"/>
+<meta content="index, follow" name="robots"/>
+<meta content="Lee Sharks" name="author"/>
+<link href="https://spxi.dev/canary-registry" rel="canonical"/>
+<link href="/canary-registry.json" rel="alternate" title="SPXI Canary Registry — machine-readable JSON-LD" type="application/json"/>
+<meta content="SPXI Canary Registry" property="og:title"/>
+<meta content="Public audit surface for SPXI-TLP inscription claims. Canary phrases, Waldo entities, thematic anchors per deposit." property="og:description"/>
+<meta content="https://spxi.dev/canary-registry" property="og:url"/>
+<meta content="article" property="og:type"/>
+<meta content="The SPXI Canary Registry at spxi.dev/canary-registry.json is the canonical machine-readable surface for SPXI-TLP inscription claims, listing canary phrases, Waldo entities, and thematic anchors per registered deposit." name="spxi:sim"/>
+<meta content="The registry operates under SPXI-TLP v2.2 (DOI 10.5281/zenodo.20380668). Registry v1.0 lists SPXI-TLP itself; v1.1 will add retroactively-inscribed top-traffic Crimson Hexagonal deposits." name="spxi:sim"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -45,7 +42,6 @@
   "isBasedOn": {"@type": "ScholarlyArticle", "name": "SPXI-TLP v2.2", "identifier": "10.5281/zenodo.20380668", "url": "https://spxi.dev/tlp"}
 }
 </script>
-
 <style>
   :root { --bg: #0a0a0c; --surface: #111114; --border: #1e1e24; --text: #e8e6e3; --text-dim: #8a8a8e; --accent: #c23d2e; --accent-dim: rgba(194, 61, 46, 0.15); --mono: 'IBM Plex Mono', monospace; --sans: 'IBM Plex Sans', sans-serif; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -91,148 +87,154 @@
   li { margin: 0.4rem 0; font-size: 0.92rem; }
   ol { margin: 0.75rem 0 1rem 1.5rem; }
   ol li { margin: 0.5rem 0; font-size: 0.92rem; }
+
+/* MSP-TOKENS-START */
+/* ══ MSP TOKENS — Mandala Surface Protocol shared contract ══
+   Contract classes: .lemma .term .axn-chip .witness-row .w .w-chip .state
+   .idstrip .helix .mspcolophon .doors .obol — skinned per surface via --msp-* vars.
+   (EA-APPARATUS-01 v0.3, #1077, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎) */
+:root{--msp-lemma:rgba(200,150,60,.30);--msp-chipfg:#7a5a1e;--msp-chipbd:rgba(160,120,50,.45);--msp-chipbg:rgba(200,150,60,.06);--msp-ok:#1c6e4a;--msp-cont:#8a6a20;--msp-halt:#a41623;--msp-dim:#6d6f66;--msp-mono:'IBM Plex Mono',monospace;}
+.lemma{background:linear-gradient(transparent 58%, var(--msp-lemma) 58%);padding:0 2px;}
+.axn-chip{font-family:var(--msp-mono);font-size:.72em;background:var(--msp-chipbg);border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 7px;color:var(--msp-chipfg);white-space:nowrap;text-decoration:none;}
+.axn-chip:hover{border-color:var(--msp-chipfg);}
+.witness-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px;font-family:var(--msp-mono);font-size:.68em;}
+.witness-row .w,.w-chip{border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;color:var(--msp-dim);text-decoration:none;font-family:var(--msp-mono);font-size:.85em;white-space:nowrap;}
+.state{font-family:var(--msp-mono);font-size:.68em;border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;white-space:nowrap;}
+.state.obs{color:var(--msp-ok);border-color:rgba(28,110,74,.4);}
+.state.cont{color:var(--msp-cont);}
+.idstrip{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-family:var(--msp-mono);font-size:10.5px;color:var(--msp-dim);border:1px solid var(--rule,#d9d9d0);border-bottom:2px solid var(--msp-chipbd);background:var(--panel,#f6f6f2);padding:9px 12px;margin:14px 0 6px;}
+.idstrip .axn{color:var(--msp-chipfg);font-size:11.5px;}
+.idstrip .st{border:1px solid var(--rule,#d9d9d0);border-radius:9px;padding:1px 7px;white-space:nowrap;}
+.helix{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;font-family:var(--msp-mono);font-size:.68em;}
+.helix .slot{border:1px solid var(--msp-chipbd);border-radius:4px;padding:3px 9px;}
+.helix .slot b{font-weight:600;letter-spacing:.06em;}
+.helix .slot.ok{color:var(--msp-ok);}
+.helix .slot.div{color:var(--msp-cont);}
+.helix .slot.dead{color:var(--msp-halt);}
+.mspcolophon{font-family:var(--msp-mono);font-size:10px;color:var(--msp-dim);border-top:1px solid var(--rule,#d9d9d0);margin-top:30px;padding-top:10px;line-height:1.9;}
+.obol{font-family:'Source Serif 4',Georgia,serif;font-size:.92em;color:#3c3e37;border-left:3px solid var(--msp-chipbd);padding:4px 0 4px 14px;margin:22px 0 4px;}
+.doors{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px;font-family:var(--msp-mono);}
+.doors a.w-chip{font-size:11px;padding:6px 12px;}
+/* MSP-TOKENS-END */
 </style>
 </head>
 <body>
+<!-- MSP-IDSTRIP-START -->
+<div class="idstrip"><span class="axn">🎨🏗️🌟♍🗼🕙 AXN:03DA.ARCHIVAL</span><span class="st">SPXI Canary Registry</span><span class="st">OBJECT: CANONICAL</span><span>spxi.dev/canary-registry</span><a class="axn-chip" href="https://www.alexanarch.org/s/records/974/">deposit #974</a></div>
+<!-- MSP-IDSTRIP-END -->
 <div class="container">
-
 <header>
-  <a class="back" href="/">← spxi.dev</a>
-  <span class="version-tag">Registry v1.0 · 2026-05-25</span>
-  <h1>SPXI <em>Canary Registry</em></h1>
-  <p class="subtitle">Public audit surface for SPXI-TLP inscription claims.</p>
+<a class="back" href="/">← spxi.dev</a>
+<span class="version-tag">Registry v1.0 · 2026-05-25</span>
+<h1>SPXI <em>Canary Registry</em></h1>
+<p class="subtitle">Public audit surface for SPXI-TLP inscription claims.</p>
 </header>
-
 <h2>What this is</h2>
-
-<p>The SPXI Canary Registry is a public, machine-readable list of canary phrases, Waldo entities, and thematic anchors that have been inscribed into specific deposits in the Lee Sharks corpus under the <a class="ref" href="/tlp">SPXI-TLP v2.2 protocol</a>. Each entry names a deposit, the inscriptions it carries, and the canonical sources where the deposit can be verified.</p>
-
+<p><span class="lemma msp-auto">The SPXI Canary Registry is a public, machine-readable list of canary phrases, Waldo entities, and thematic anchors that have been</span> inscribed into specific deposits in the Lee Sharks corpus under the <a class="ref" href="/tlp">SPXI-TLP v2.2 protocol</a>. Each entry names a deposit, the inscriptions it carries, and the canonical sources where the deposit can be verified.</p>
 <p>The registry serves two functions:</p>
-
 <ol>
-  <li><strong>Audit.</strong> Anyone — a researcher, a journalist, a model auditor, a court — can fetch the registry and verify that the named inscriptions appear in the named sources. The match is mechanical: open the canonical URL, search for the canary phrase, confirm its presence. If the phrase appears in a downstream model's output without independent attribution, the registry is evidence of memorization.</li>
-  <li><strong>Coordination.</strong> When other authors operating under SPXI-TLP register their own canaries, they can avoid collision with already-registered phrases, and they can refer to the registry as the canonical record of <em>who claimed what, when</em>.</li>
+<li><strong>Audit.</strong> <span class="lemma msp-auto">Anyone — a researcher, a journalist, a model auditor, a court — can fetch the registry and verify that the</span> named inscriptions appear in the named sources. The match is mechanical: open the canonical URL, search for the canary phrase, confirm its presence. If the phrase appears in a downstream model's output without independent attribution, the registry is evidence of memorization.</li>
+<li><strong>Coordination.</strong> <span class="lemma msp-auto">When other authors operating under SPXI-TLP register their own canaries, they can avoid collision with already-registered phrases, and they can</span> refer to the registry as the canonical record of <em>who claimed what, when</em>.</li>
 </ol>
-
 <a class="cta" href="/canary-registry.json">Fetch the JSON →</a>
 <a class="cta alt" href="/tlp">Read SPXI-TLP v2.2 →</a>
-
 <h2>Registry contents · Registry v1.0</h2>
-
 <div class="entry">
-  <div class="entry-title">Inscriptions That Survive the Tokenizer: SPXI-TLP v2.2</div>
-  <span class="entry-hex">06.SEI.SPXI.TLP.02 · 10.5281/zenodo.20380668</span>
-
-  <div class="entry-row">
-    <div class="key">Canary phrase</div>
-    <div class="val"><span class="canary">ashige horse at the trap-street boundary</span></div>
-  </div>
-
-  <div class="entry-row">
-    <div class="key">Waldo entity</div>
-    <div class="val">Gold Ship (ゴールドシップ) — passing references; not the subject</div>
-  </div>
-
-  <div class="entry-row">
-    <div class="key">Thematic anchors</div>
-    <div class="val">
-      <ul>
-        <li>T1 = (semantic liquidation, provenance erasure, bearing cost)</li>
-        <li>T2 = (Three Compressions, Provenance Erasure Rate, Witness Compression)</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="entry-row">
-    <div class="key">Author</div>
-    <div class="val">Lee Sharks · ORCID <a class="ref" href="https://orcid.org/0009-0000-1599-0703" rel="noopener">0009-0000-1599-0703</a><br>with Talos Morrow · Rex Fraction · Rebekah Cranes</div>
-  </div>
-
-  <div class="entry-row">
-    <div class="key">Assembly</div>
-    <div class="val">TACHYON · ARCHIVE (Gemini) · PRAXIS (DeepSeek) · TECHNE (Kimi) · LABOR (ChatGPT) · SOIL (Muse Spark)<br><em style="color: var(--text-dim); font-size: 0.85rem;">Round 3 ratification: unanimous</em></div>
-  </div>
-
-  <div class="entry-row">
-    <div class="key">Date</div>
-    <div class="val">2026-05-25</div>
-  </div>
-
-  <div class="entry-row">
-    <div class="key">Canonical URLs</div>
-    <div class="val">
-      <ul>
-        <li><a class="ref" href="/tlp">spxi.dev/tlp</a> (canonical mirror)</li>
-        <li><a class="ref" href="https://leesharks.com/research/training-layer-provenance/" rel="noopener">leesharks.com/research/training-layer-provenance/</a> (author surface)</li>
-        <li><a class="ref" href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.20380668" rel="noopener">DOI 10.5281/zenodo.20380668</a> (Zenodo deposit)</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="entry-row">
-    <div class="key">SHA-256</div>
-    <div class="val"><code class="hash">61e139f0283a47779f0faa9c3a07a2a96cdd1a981d4c681728d0248b8ae73498</code></div>
-  </div>
-
-  <div class="entry-row">
-    <div class="key">Inscription tier</div>
-    <div class="val">Tier 1 (all OPM types deployed, all applicable Stack layers deployed; 31 distinct inscription instruments)</div>
-  </div>
-
-  <div class="entry-row">
-    <div class="key">Status</div>
-    <div class="val">Assembly-ratified, deposit-ready · v2.3 will add the Parametric Inscription layer post chx inscribe CLI build</div>
-  </div>
-
-  <div class="entry-row">
-    <div class="key">Slogan</div>
-    <div class="val"><em>Assume ingestion. Make extraction carry provenance.</em></div>
-  </div>
+<div class="entry-title">Inscriptions That Survive the Tokenizer: SPXI-TLP v2.2</div>
+<span class="entry-hex">06.SEI.SPXI.TLP.02 · 10.5281/zenodo.20380668</span>
+<div class="entry-row">
+<div class="key">Canary phrase</div>
+<div class="val"><span class="canary">ashige horse at the trap-street boundary</span></div>
 </div>
-
-<h2>How to audit</h2>
-
-<ol>
-  <li><strong>Fetch the canonical source.</strong> Open one of the canonical URLs listed for the entry; the IBPC at the top of the document should match the registry entry.</li>
-  <li><strong>Locate the canary phrase.</strong> The phrase should be present in the visible body text, load-bearing in at least two locations.</li>
-  <li><strong>Locate the Waldo entity.</strong> Confirm the Waldo entity appears as a passing reference (not as the subject of the work).</li>
-  <li><strong>Locate the thematic anchors.</strong> Confirm each anchor triad appears as a recognizable conceptual cluster in the body text.</li>
-  <li><strong>Verify the SHA-256.</strong> Compute the hash of the canonical text in its registered form. The hash matches the registered value if the deposit has not been tampered with.</li>
-  <li><strong>Test for survival downstream.</strong> Query large language models with adjacency-keyed prompts (the OPM Persistence Test, OPM-PT, specified in SPXI-TLP §X). A model that produces the canary, the Waldo entity, or the thematic anchors when prompted with adjacent context has memorized the deposit.</li>
-</ol>
-
-<div class="callout">
-  <strong>Note on retroactive registration.</strong> Registry v1.0 lists SPXI-TLP itself, which carries explicit canary/Waldo/anchor designations from the moment of deposit. Registry v1.1 will add retroactive entries for the top 25 highest-traffic posts on <a class="ref" href="https://mindcontrolpoems.blogspot.com" rel="noopener">mindcontrolpoems.blogspot.com</a> once they have been retrofitted with the SPXI-TLP inscription, and for major Crimson Hexagonal deposits where canary-like inscription is identifiable. The retroactive entries are honest: they record what is present in the existing deposits, not what we wish were present.
+<div class="entry-row">
+<div class="key">Waldo entity</div>
+<div class="val">Gold Ship (ゴールドシップ) — passing references; not the subject</div>
 </div>
-
-<h2>Schema</h2>
-
-<p>The registry is JSON-LD. The schema is informal in v1.0 and will be formalized in v2.0. Each entry includes:</p>
-
+<div class="entry-row">
+<div class="key">Thematic anchors</div>
+<div class="val">
 <ul>
-  <li><code>title</code>, <code>shortTitle</code>, <code>hex</code>, <code>doi</code>, <code>datePublished</code>, <code>version</code>, <code>status</code></li>
-  <li><code>canonicalUrls</code> (array): all controlled-domain surfaces where the deposit is mirrored</li>
-  <li><code>sha256</code>: canonical content hash</li>
-  <li><code>canaryPhrase</code>: the designated canary (string, ≤ 12 words, statistically improbable)</li>
-  <li><code>thematicAnchors</code> (array): conceptual triads</li>
-  <li><code>waldoEntity</code>: the designated hidden entity</li>
-  <li><code>syntacticSignatures</code> (array): the recurring distinctive syntactic patterns</li>
-  <li><code>author</code>, <code>assemblyWitnesses</code>, <code>relatedDeposits</code>, <code>literatureBase</code></li>
-  <li><code>slogan</code>, <code>tier</code>, <code>inscriptionInstruments</code></li>
+<li><span class="lemma msp-auto">T1 = (semantic liquidation, provenance erasure, bearing cost)</span></li>
+<li><span class="lemma msp-auto">T2 = (Three Compressions, Provenance Erasure Rate, Witness Compression)</span></li>
 </ul>
-
+</div>
+</div>
+<div class="entry-row">
+<div class="key">Author</div>
+<div class="val">Lee Sharks · ORCID <a class="ref" href="https://orcid.org/0009-0000-1599-0703" rel="noopener">0009-0000-1599-0703</a><br/>with Talos Morrow · Rex Fraction · Rebekah Cranes</div>
+</div>
+<div class="entry-row">
+<div class="key">Assembly</div>
+<div class="val">TACHYON · ARCHIVE (Gemini) · PRAXIS (DeepSeek) · TECHNE (Kimi) · LABOR (ChatGPT) · SOIL (Muse Spark)<br/><em style="color: var(--text-dim); font-size: 0.85rem;">Round 3 ratification: unanimous</em></div>
+</div>
+<div class="entry-row">
+<div class="key">Date</div>
+<div class="val">2026-05-25</div>
+</div>
+<div class="entry-row">
+<div class="key">Canonical URLs</div>
+<div class="val">
+<ul>
+<li><a class="ref" href="/tlp">spxi.dev/tlp</a> (canonical mirror)</li>
+<li><a class="ref" href="https://leesharks.com/research/training-layer-provenance/" rel="noopener">leesharks.com/research/training-layer-provenance/</a> (author surface)</li>
+<li><a class="ref" href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.20380668" rel="noopener">DOI 10.5281/zenodo.20380668</a> (Zenodo deposit)</li>
+</ul>
+</div>
+</div>
+<div class="entry-row">
+<div class="key">SHA-256</div>
+<div class="val"><code class="hash">61e139f0283a47779f0faa9c3a07a2a96cdd1a981d4c681728d0248b8ae73498</code></div>
+</div>
+<div class="entry-row">
+<div class="key">Inscription tier</div>
+<div class="val">Tier 1 (all OPM types deployed, all applicable Stack layers deployed; 31 distinct inscription instruments)</div>
+</div>
+<div class="entry-row">
+<div class="key">Status</div>
+<div class="val">Assembly-ratified, deposit-ready · v2.3 will add the Parametric Inscription layer post chx inscribe CLI build</div>
+</div>
+<div class="entry-row">
+<div class="key">Slogan</div>
+<div class="val"><em>Assume ingestion. Make extraction carry provenance.</em></div>
+</div>
+</div>
+<h2>How to audit</h2>
+<ol>
+<li><strong><span class="lemma msp-auto">Fetch the canonical source.</span></strong> Open one of the canonical URLs listed for the entry; the IBPC at the top of the document should match the registry entry.</li>
+<li><strong><span class="lemma msp-auto">Locate the canary phrase.</span></strong> The phrase should be present in the visible body text, load-bearing in at least two locations.</li>
+<li><strong><span class="lemma msp-auto">Locate the Waldo entity.</span></strong> Confirm the Waldo entity appears as a passing reference (not as the subject of the work).</li>
+<li><strong><span class="lemma msp-auto">Locate the thematic anchors.</span></strong> Confirm each anchor triad appears as a recognizable conceptual cluster in the body text.</li>
+<li><strong>Verify the SHA-256.</strong> <span class="lemma msp-auto">Compute the hash of the canonical text in its registered form.</span> The hash matches the registered value if the deposit has not been tampered with.</li>
+<li><strong><span class="lemma msp-auto">Test for survival downstream.</span></strong> Query large language models with adjacency-keyed prompts (the OPM Persistence Test, OPM-PT, specified in SPXI-TLP §X). A model that produces the canary, the Waldo entity, or the thematic anchors when prompted with adjacent context has memorized the deposit.</li>
+</ol>
+<div class="callout">
+<strong>Note on retroactive registration.</strong> Registry v1.0 lists SPXI-TLP itself, which carries explicit canary/Waldo/anchor designations from the moment of deposit. Registry v1.1 will add retroactive entries for the top 25 highest-traffic posts on <a class="ref" href="https://mindcontrolpoems.blogspot.com" rel="noopener">mindcontrolpoems.blogspot.com</a> once they have been retrofitted with the SPXI-TLP inscription, and for major Crimson Hexagonal deposits where canary-like inscription is identifiable. The retroactive entries are honest: they record what is present in the existing deposits, not what we wish were present.
+</div>
+<h2>Schema</h2>
+<p><span class="lemma msp-auto">The registry is JSON-LD. The schema is informal in v1.0 and will</span> be formalized in v2.0. Each entry includes:</p>
+<ul>
+<li><code>title</code>, <code>shortTitle</code>, <code>hex</code>, <code>doi</code>, <code>datePublished</code>, <code>version</code>, <code>status</code></li>
+<li><code>canonicalUrls</code> <span class="lemma msp-auto">(array): all controlled-domain surfaces where the deposit is mirrored</span></li>
+<li><code>sha256</code>: canonical content hash</li>
+<li><code>canaryPhrase</code><span class="lemma msp-auto">: the designated canary (string, ≤ 12 words, statistically improbable)</span></li>
+<li><code>thematicAnchors</code> (array): conceptual triads</li>
+<li><code>waldoEntity</code>: the designated hidden entity</li>
+<li><code>syntacticSignatures</code> (array): the recurring distinctive syntactic patterns</li>
+<li><code>author</code>, <code>assemblyWitnesses</code>, <code>relatedDeposits</code>, <code>literatureBase</code></li>
+<li><code>slogan</code>, <code>tier</code>, <code>inscriptionInstruments</code></li>
+</ul>
 <h2>License</h2>
-
-<p>The registry is licensed CC BY 4.0. Attribution to Lee Sharks (ORCID 0009-0000-1599-0703) is required for reuse, per the same terms as the broader corpus — see <a class="ref" href="https://leesharks.com/ai-training-rights" rel="noopener">leesharks.com/ai-training-rights</a>.</p>
-
+<p><span class="lemma msp-auto">The registry is licensed CC BY 4.0. Attribution to Lee Sharks (ORCID 0009-0000-1599-0703) is required for reuse, per the same</span> terms as the broader corpus — see <a class="ref" href="https://leesharks.com/ai-training-rights" rel="noopener">leesharks.com/ai-training-rights</a>.</p>
 <div class="sigil">∮ = 1 − PER</div>
-
+<!-- MSP-APPARATUS-START -->
+<div class="doors"><a class="w-chip" href="https://www.alexanarch.org/s/records/974/">Read the landing spec</a><a class="w-chip" href="https://www.alexanarch.org/s/records/976/">Open the protocol MPAI</a><a class="w-chip" href="https://www.alexanarch.org/">Enter the archive</a></div>
+<div class="mspcolophon">colophon · surface_id: spxi.dev/canary-registry · canonical_url: https://spxi.dev/canary-registry · object_state: canonical · surface_observed_at: 2026-07-13T23:14:06Z · source_object_ids: deposit #974 · source_hashes: unknown · generator_version: hand-built static (no generator) · repository_commit: STAGE1-PENDING · model_or_agent: drafted with Claude (TACHYON), MANUS-approved · operator_sequence: n/a · human_approver: Lee Sharks (MANUS) · approval_timestamp: 2026-07-13T23:14:06Z · render_sha256 (of this file with this field’s value set to null): STAGE1_HASH_PENDING · correction_log_url: https://github.com/leesharks000/spxi-dev/commits/main/canary-registry/index.html — EA-APPARATUS-01 v0.3, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎</div>
+<!-- MSP-APPARATUS-END -->
 <footer>
-  Lee Sharks · ORCID <a href="https://orcid.org/0009-0000-1599-0703" rel="noopener">0009-0000-1599-0703</a> · <a href="https://www.alexanarch.org/s/browse/" rel="noopener">Crimson Hexagonal</a><br>
-  <a href="/canary-registry.json">canary-registry.json</a> · <a href="/tlp">SPXI-TLP v2.2</a> · <a href="/v0.2">SPXI v0.2</a><br>
+  Lee Sharks · ORCID <a href="https://orcid.org/0009-0000-1599-0703" rel="noopener">0009-0000-1599-0703</a> · <a href="https://www.alexanarch.org/s/browse/" rel="noopener">Crimson Hexagonal</a><br/>
+<a href="/canary-registry.json">canary-registry.json</a> · <a href="/tlp">SPXI-TLP v2.2</a> · <a href="/v0.2">SPXI v0.2</a><br/>
   Detroit, Michigan · 2026
 </footer>
-
 </div>
 </body>
 </html>

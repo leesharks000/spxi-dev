@@ -1,19 +1,20 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Overview Watch — SPXI Attribution Monitoring</title>
-<meta name="description" content="EA-OVW-PLAN-01: A Chrome extension that gives creators real-time visibility into how AI Overviews represent their work. Classifies attribution as ATTRIBUTED, SOURCED_UNATTRIBUTED, ABSORBED, or ABSENT. Builds the Semantic Economy Attribution Corpus.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://spxi.dev/overview-watch">
-<meta property="og:title" content="Overview Watch — SPXI Attribution Monitoring">
-<meta property="og:description" content="Your work. Their overview. The record. A forensic instrument for AI attribution.">
-<meta property="og:url" content="https://spxi.dev/overview-watch">
-<meta property="og:type" content="article">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta content="EA-OVW-PLAN-01: A Chrome extension that gives creators real-time visibility into how AI Overviews represent their work. Classifies attribution as ATTRIBUTED, SOURCED_UNATTRIBUTED, ABSORBED, or ABSENT. Builds the Semantic Economy Attribution Corpus." name="description"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://spxi.dev/overview-watch" rel="canonical"/>
+<meta content="Overview Watch — SPXI Attribution Monitoring" property="og:title"/>
+<meta content="Your work. Their overview. The record. A forensic instrument for AI attribution." property="og:description"/>
+<meta content="https://spxi.dev/overview-watch" property="og:url"/>
+<meta content="article" property="og:type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -66,97 +67,108 @@
   footer { margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border); text-align: center; color: var(--text-dim); font-size: 0.85rem; }
   footer a { color: var(--accent); text-decoration: none; }
   footer .sigil { font-family: var(--mono); margin-top: 1rem; }
+
+/* MSP-TOKENS-START */
+/* ══ MSP TOKENS — Mandala Surface Protocol shared contract ══
+   Contract classes: .lemma .term .axn-chip .witness-row .w .w-chip .state
+   .idstrip .helix .mspcolophon .doors .obol — skinned per surface via --msp-* vars.
+   (EA-APPARATUS-01 v0.3, #1077, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎) */
+:root{--msp-lemma:rgba(200,150,60,.30);--msp-chipfg:#7a5a1e;--msp-chipbd:rgba(160,120,50,.45);--msp-chipbg:rgba(200,150,60,.06);--msp-ok:#1c6e4a;--msp-cont:#8a6a20;--msp-halt:#a41623;--msp-dim:#6d6f66;--msp-mono:'IBM Plex Mono',monospace;}
+.lemma{background:linear-gradient(transparent 58%, var(--msp-lemma) 58%);padding:0 2px;}
+.axn-chip{font-family:var(--msp-mono);font-size:.72em;background:var(--msp-chipbg);border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 7px;color:var(--msp-chipfg);white-space:nowrap;text-decoration:none;}
+.axn-chip:hover{border-color:var(--msp-chipfg);}
+.witness-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px;font-family:var(--msp-mono);font-size:.68em;}
+.witness-row .w,.w-chip{border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;color:var(--msp-dim);text-decoration:none;font-family:var(--msp-mono);font-size:.85em;white-space:nowrap;}
+.state{font-family:var(--msp-mono);font-size:.68em;border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;white-space:nowrap;}
+.state.obs{color:var(--msp-ok);border-color:rgba(28,110,74,.4);}
+.state.cont{color:var(--msp-cont);}
+.idstrip{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-family:var(--msp-mono);font-size:10.5px;color:var(--msp-dim);border:1px solid var(--rule,#d9d9d0);border-bottom:2px solid var(--msp-chipbd);background:var(--panel,#f6f6f2);padding:9px 12px;margin:14px 0 6px;}
+.idstrip .axn{color:var(--msp-chipfg);font-size:11.5px;}
+.idstrip .st{border:1px solid var(--rule,#d9d9d0);border-radius:9px;padding:1px 7px;white-space:nowrap;}
+.helix{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;font-family:var(--msp-mono);font-size:.68em;}
+.helix .slot{border:1px solid var(--msp-chipbd);border-radius:4px;padding:3px 9px;}
+.helix .slot b{font-weight:600;letter-spacing:.06em;}
+.helix .slot.ok{color:var(--msp-ok);}
+.helix .slot.div{color:var(--msp-cont);}
+.helix .slot.dead{color:var(--msp-halt);}
+.mspcolophon{font-family:var(--msp-mono);font-size:10px;color:var(--msp-dim);border-top:1px solid var(--rule,#d9d9d0);margin-top:30px;padding-top:10px;line-height:1.9;}
+.obol{font-family:'Source Serif 4',Georgia,serif;font-size:.92em;color:#3c3e37;border-left:3px solid var(--msp-chipbd);padding:4px 0 4px 14px;margin:22px 0 4px;}
+.doors{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px;font-family:var(--msp-mono);}
+.doors a.w-chip{font-size:11px;padding:6px 12px;}
+/* MSP-TOKENS-END */
 </style>
 </head>
 <body>
+<!-- MSP-IDSTRIP-START -->
+<div class="idstrip"><span class="axn">🎨🏗️🌟♍🗼🕙 AXN:03DA.ARCHIVAL</span><span class="st">Overview Watch</span><span class="st">OBJECT: CANONICAL</span><span>spxi.dev/overview-watch</span><a class="axn-chip" href="https://www.alexanarch.org/s/records/974/">deposit #974</a></div>
+<!-- MSP-IDSTRIP-END -->
 <div class="container">
-
 <header>
-  <a href="/">← spxi.dev</a>
+<a href="/">← spxi.dev</a>
 </header>
-
 <p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em;">Tool · EA-OVW-PLAN-01</p>
 <h1>Overview <em>Watch</em></h1>
-<p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.85rem;">Lee Sharks · Semantic Economy Institute · April 23, 2026<br>
+<p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.85rem;"><span class="lemma msp-auto">Lee Sharks · Semantic Economy Institute · April 23, 2026</span><br/>
 DOI: <a class="ref" href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.19720519">10.5281/zenodo.19720519</a> · Status: DRAFT — Planning</p>
-
 <div class="field-def">
-  <p>Your work. Their overview. The record.</p>
-  <p>Google's AI Overview extracts meaning from attributed, DOI-anchored scholarly and creative work, strips its provenance, and presents the liquidated residue as authorless general knowledge. No tool currently exists to monitor this systematically. Overview Watch is that tool.</p>
+<p>Your work. Their overview. The record.</p>
+<p><span class="lemma msp-auto">Google's AI Overview extracts meaning from attributed, DOI-anchored scholarly and creative work, strips its provenance, and presents the liquidated residue</span> as authorless general knowledge. No tool currently exists to monitor this systematically. Overview Watch is that tool.</p>
 </div>
-
 <h2>The Attribution States</h2>
-
-<p>Every AI Overview encounter is classified into one of four states:</p>
-
+<p><span class="lemma msp-auto">Every AI Overview encounter is classified into one of four states:</span></p>
 <p style="margin: 1.5rem 0;">
-  <span class="status attributed">ATTRIBUTED</span> — Your work is cited by name, with a link, as a source of the overview content.<br><br>
-  <span class="status sourced">SOURCED_UNATTRIBUTED</span> — Your domain or a page you authored appears in the source list, but your name or work is not credited in the overview text.<br><br>
-  <span class="status absorbed">ABSORBED</span> — Your work's specific claims, framing, or terminology appear in the overview, but your domain does not appear in the source list at all.<br><br>
-  <span class="status absent">ABSENT</span> — Your work is not referenced in any form. The overview may be on a topic you've published on; your work simply does not appear.
+<span class="status attributed">ATTRIBUTED</span> <span class="lemma msp-auto">— Your work is cited by name, with a link, as a source of the overview content.</span><br/><br/>
+<span class="status sourced">SOURCED_UNATTRIBUTED</span> — Your domain or a page you authored appears in the source list, but your name or work is not credited in the overview text.<br/><br/>
+<span class="status absorbed">ABSORBED</span> — Your work's specific claims, framing, or terminology appear in the overview, but your domain does not appear in the source list at all.<br/><br/>
+<span class="status absent">ABSENT</span> — Your work is not referenced in any form. The overview may be on a topic you've published on; your work simply does not appear.
 </p>
-
-<p>ABSORBED is the critical state. It is the Regime 2 extraction in its pure form: the content was taken, the attribution was not given, and the source list provides no trail. ABSORBED events, documented and timestamped, are the empirical evidence that the Semantic Economy framework describes theoretically.</p>
-
+<p><span class="lemma msp-auto">ABSORBED is the critical state. It is the Regime 2 extraction in its pure form: the content was taken, the</span> attribution was not given, and the source list provides no trail. ABSORBED events, documented and timestamped, are the empirical evidence that the Semantic Economy framework describes theoretically.</p>
 <h2>What the Extension Does</h2>
-
 <div class="layer">
-  <div class="layer-name">Detection</div>
-  <p>Identifies the AI Overview container on Google search result pages. Extracts overview text, cited sources, and their attribution chains. Compares against the user's registered works (URLs, DOIs, domains).</p>
+<div class="layer-name">Detection</div>
+<p><span class="lemma msp-auto">Identifies the AI Overview container on Google search result pages.</span> Extracts overview text, cited sources, and their attribution chains. Compares against the user's registered works (URLs, DOIs, domains).</p>
 </div>
-
 <div class="layer">
-  <div class="layer-name">Classification</div>
-  <p>Assigns each overview encounter an attribution state. Flags instances where the user's published work appears to inform the overview content but is not cited. Logs with full metadata: query, timestamp, overview text, sources, attribution status.</p>
+<div class="layer-name">Classification</div>
+<p><span class="lemma msp-auto">Assigns each overview encounter an attribution state. Flags instances where the user's published work appears to inform</span> the overview content but is not cited. Logs with full metadata: query, timestamp, overview text, sources, attribution status.</p>
 </div>
-
 <div class="layer">
-  <div class="layer-name">Personal Dashboard</div>
-  <p>Attribution trends over time. Which queries absorb your work most frequently. Which source types get credited vs. absorbed. Your personal attribution history, stored locally, accessible only to you.</p>
+<div class="layer-name">Personal Dashboard</div>
+<p><span class="lemma msp-auto">Attribution trends over time. Which queries absorb your work most</span> frequently. Which source types get credited vs. absorbed. Your personal attribution history, stored locally, accessible only to you.</p>
 </div>
-
 <div class="layer">
-  <div class="layer-name">Corpus Contribution (opt-in)</div>
-  <p>Users who choose to participate contribute anonymized overview payloads to the Semantic Economy Attribution Corpus (SEAC) — a DOI-anchored research dataset. The community that generates the data can access the data.</p>
+<div class="layer-name">Corpus Contribution (opt-in)</div>
+<p><span class="lemma msp-auto">Users who choose to participate contribute anonymized overview payloads to the Semantic Economy Attribution Corpus (SEAC) — a DOI-anchored research</span> dataset. The community that generates the data can access the data.</p>
 </div>
-
 <h2>The Semantic Economy Attribution Corpus (SEAC)</h2>
-
-<p>SEAC is the collective empirical base — what Overview Watch generates when users opt in. It documents:</p>
-
+<p><span class="lemma msp-auto">SEAC is the collective empirical base — what Overview Watch generates when users opt in.</span> It documents:</p>
 <table>
-  <thead><tr><th>Metric</th><th>What it measures</th></tr></thead>
-  <tbody>
-    <tr><td>Attribution rates</td><td>By domain type: academic, journalistic, creative, independent</td></tr>
-    <tr><td>Source diversity</td><td>How many unique sources inform a typical overview</td></tr>
-    <tr><td>Liquidation patterns</td><td>How situated claims become decontextualized summary</td></tr>
-    <tr><td>Temporal drift</td><td>How attribution changes for the same queries over time</td></tr>
-    <tr><td>Domain bias</td><td>Which source types get credited; which get absorbed</td></tr>
-  </tbody>
+<thead><tr><th>Metric</th><th>What it measures</th></tr></thead>
+<tbody>
+<tr><td>Attribution rates</td><td>By domain type: academic, journalistic, creative, independent</td></tr>
+<tr><td>Source diversity</td><td>How many unique sources inform a typical overview</td></tr>
+<tr><td>Liquidation patterns</td><td>How situated claims become decontextualized summary</td></tr>
+<tr><td>Temporal drift</td><td>How attribution changes for the same queries over time</td></tr>
+<tr><td>Domain bias</td><td>Which source types get credited; which get absorbed</td></tr>
+</tbody>
 </table>
-
-<p>SEAC becomes publishable research, policy evidence, and the empirical ground for the Semantic Economy framework — generating its own data from the system it describes. The instrument studies the extraction by observing it, with consent, in real time.</p>
-
+<p><span class="lemma msp-auto">SEAC becomes publishable research, policy evidence, and the empirical ground for the Semantic Economy framework — generating its own data</span> from the system it describes. The instrument studies the extraction by observing it, with consent, in real time.</p>
 <h2>Why This Is SPXI</h2>
-
-<p>SPXI deposits are designed to be retrievable, attributed, and basin-forming. Overview Watch answers the enforcement question: once you've made the deposit, is it being credited?</p>
-
-<p>An SPXI deposit achieves Pearl state — compression-surviving, retrieval-layer-recognized. Overview Watch monitors whether the retrieval layer is honoring that recognition, or absorbing it without attribution. It is the accountability layer for the discipline.</p>
-
-<p>The extension also practices what it studies: every Overview Watch report is a DOI-anchored event, attributed to a specific registered work, timestamped, and available for research use. The tool is itself an SPXI artifact.</p>
-
+<p><span class="lemma msp-auto">SPXI deposits are designed to be retrievable, attributed, and basin-forming.</span> Overview Watch answers the enforcement question: once you've made the deposit, is it being credited?</p>
+<p><span class="lemma msp-auto">An SPXI deposit achieves Pearl state — compression-surviving, retrieval-layer-recognized.</span> Overview Watch monitors whether the retrieval layer is honoring that recognition, or absorbing it without attribution. It is the accountability layer for the discipline.</p>
+<p><span class="lemma msp-auto">The extension also practices what it studies: every Overview Watch report is a DOI-anchored event, attributed to a specific registered</span> work, timestamped, and available for research use. The tool is itself an SPXI artifact.</p>
 <h2>Ethical Architecture</h2>
-
-<p>The extension is built to study extraction. It cannot replicate extraction. The user's browsing data belongs to the user. Consent is affirmative, granular, and revocable — per overview, not per session. The extension works fully offline. No dark patterns. Anonymization is real. The corpus is open.</p>
-
+<p><span class="lemma msp-auto">The extension is built to study extraction. It</span> cannot replicate extraction. The user's browsing data belongs to the user. Consent is affirmative, granular, and revocable — per overview, not per session. The extension works fully offline. No dark patterns. Anonymization is real. The corpus is open.</p>
 <p>Full ethical framework: <a class="ref" href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.19720519">EA-OVW-PLAN-01 §3 (DOI: 10.5281/zenodo.19720519)</a></p>
-
+<!-- MSP-APPARATUS-START -->
+<div class="doors"><a class="w-chip" href="https://www.alexanarch.org/s/records/974/">Read the landing spec</a><a class="w-chip" href="https://www.alexanarch.org/s/records/976/">Open the protocol MPAI</a><a class="w-chip" href="https://www.alexanarch.org/">Enter the archive</a></div>
+<div class="mspcolophon">colophon · surface_id: spxi.dev/overview-watch · canonical_url: https://spxi.dev/overview-watch · object_state: canonical · surface_observed_at: 2026-07-13T23:14:07Z · source_object_ids: deposit #974 · source_hashes: unknown · generator_version: hand-built static (no generator) · repository_commit: STAGE1-PENDING · model_or_agent: drafted with Claude (TACHYON), MANUS-approved · operator_sequence: n/a · human_approver: Lee Sharks (MANUS) · approval_timestamp: 2026-07-13T23:14:07Z · render_sha256 (of this file with this field’s value set to null): STAGE1_HASH_PENDING · correction_log_url: https://github.com/leesharks000/spxi-dev/commits/main/overview-watch/index.html — EA-APPARATUS-01 v0.3, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎</div>
+<!-- MSP-APPARATUS-END -->
 <footer>
-  <p>Lee Sharks · <a class="ref" href="https://semanticeconomy.org">Semantic Economy Institute</a> · <a class="ref" href="https://crimsonhexagonal.org">Crimson Hexagonal Archive</a></p>
-  <p style="margin-top: 0.5rem;"><a class="ref" href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.19720519">DOI: 10.5281/zenodo.19720519</a> · CC BY 4.0</p>
-  <p class="sigil">∮ = 1</p>
+<p>Lee Sharks · <a class="ref" href="https://semanticeconomy.org">Semantic Economy Institute</a> · <a class="ref" href="https://crimsonhexagonal.org">Crimson Hexagonal Archive</a></p>
+<p style="margin-top: 0.5rem;"><a class="ref" href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.19720519">DOI: 10.5281/zenodo.19720519</a> · CC BY 4.0</p>
+<p class="sigil">∮ = 1</p>
 </footer>
-
 </div>
 </body>
 </html>

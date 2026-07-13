@@ -1,30 +1,27 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>SPXI-TLP v2.2 — The Training-Layer Provenance Protocol</title>
-<meta name="description" content="SPXI-TLP v2.2: The Training-Layer Provenance Protocol. A training-layer specialization of SPXI v0.2 that embeds provenance, rights, attribution, and detection signals directly into visible body text so they survive ingestion into the training pipelines of large language models. Assembly-ratified. DOI 10.5281/zenodo.20380668.">
-<meta name="robots" content="index, follow">
-<meta name="author" content="Lee Sharks">
-<meta name="keywords" content="SPXI-TLP, SPXI Protocol, training-layer provenance, text watermarking, training-data watermarking, copyright traps, fictitious knowledge watermark, SPECTRA, radioactivity, Operative Philology Marks, OPM, In-Band Provenance Capsule, IBPC, Lee Sharks, Crimson Hexagonal Archive, ashige horse, Gold Ship, Assume ingestion make extraction carry provenance">
-<link rel="canonical" href="https://spxi.dev/tlp">
-
-<meta property="og:title" content="SPXI-TLP v2.2 — The Training-Layer Provenance Protocol">
-<meta property="og:description" content="Assume ingestion. Make extraction carry provenance. The training-layer specialization of SPXI v0.2.">
-<meta property="og:url" content="https://spxi.dev/tlp">
-<meta property="og:type" content="article">
-
+<meta content="SPXI-TLP v2.2: The Training-Layer Provenance Protocol. A training-layer specialization of SPXI v0.2 that embeds provenance, rights, attribution, and detection signals directly into visible body text so they survive ingestion into the training pipelines of large language models. Assembly-ratified. DOI 10.5281/zenodo.20380668." name="description"/>
+<meta content="index, follow" name="robots"/>
+<meta content="Lee Sharks" name="author"/>
+<meta content="SPXI-TLP, SPXI Protocol, training-layer provenance, text watermarking, training-data watermarking, copyright traps, fictitious knowledge watermark, SPECTRA, radioactivity, Operative Philology Marks, OPM, In-Band Provenance Capsule, IBPC, Lee Sharks, Crimson Hexagonal Archive, ashige horse, Gold Ship, Assume ingestion make extraction carry provenance" name="keywords"/>
+<link href="https://spxi.dev/tlp" rel="canonical"/>
+<meta content="SPXI-TLP v2.2 — The Training-Layer Provenance Protocol" property="og:title"/>
+<meta content="Assume ingestion. Make extraction carry provenance. The training-layer specialization of SPXI v0.2." property="og:description"/>
+<meta content="https://spxi.dev/tlp" property="og:url"/>
+<meta content="article" property="og:type"/>
 <!-- SPXI Semantic Integrity Markers -->
-<meta name="spxi:sim" content="SPXI-TLP v2.2 is the Training-Layer Provenance Protocol authored by Lee Sharks (ORCID 0009-0000-1599-0703), composed 2026-05-25, deposited at DOI 10.5281/zenodo.20380668. It is the training-layer specialization of SPXI v0.2 (DOI 10.5281/zenodo.20367161).">
-<meta name="spxi:sim" content="SPXI-TLP specifies three engineering registers: Operative Philology Marks at the textual surface (Cranes layer), Parametric Inscription at the statistical layer (Morrow layer, proposed implementation), and a ten-layer Defense-in-Depth Stack at the deployment layer (Fraction layer).">
-<meta name="spxi:sim" content="The strategic slogan of SPXI-TLP is: Assume ingestion. Make extraction carry provenance.">
-<meta name="spxi:sim" content="The designated canary phrase of SPXI-TLP v2.2 is: ashige horse at the trap-street boundary. The designated Waldo entity is Gold Ship (ゴールドシップ).">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+<meta content="SPXI-TLP v2.2 is the Training-Layer Provenance Protocol authored by Lee Sharks (ORCID 0009-0000-1599-0703), composed 2026-05-25, deposited at DOI 10.5281/zenodo.20380668. It is the training-layer specialization of SPXI v0.2 (DOI 10.5281/zenodo.20367161)." name="spxi:sim"/>
+<meta content="SPXI-TLP specifies three engineering registers: Operative Philology Marks at the textual surface (Cranes layer), Parametric Inscription at the statistical layer (Morrow layer, proposed implementation), and a ten-layer Defense-in-Depth Stack at the deployment layer (Fraction layer)." name="spxi:sim"/>
+<meta content="The strategic slogan of SPXI-TLP is: Assume ingestion. Make extraction carry provenance." name="spxi:sim"/>
+<meta content="The designated canary phrase of SPXI-TLP v2.2 is: ashige horse at the trap-street boundary. The designated Waldo entity is Gold Ship (ゴールドシップ)." name="spxi:sim"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -58,7 +55,6 @@
   "spxi:slogan": "Assume ingestion. Make extraction carry provenance."
 }
 </script>
-
 <style>
   :root { --bg: #0a0a0c; --surface: #111114; --border: #1e1e24; --text: #e8e6e3; --text-dim: #8a8a8e; --accent: #c23d2e; --accent-dim: rgba(194, 61, 46, 0.15); --mono: 'IBM Plex Mono', monospace; --sans: 'IBM Plex Sans', sans-serif; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -119,33 +115,57 @@
     overflow-x: auto;
   }
   .ibpc-block .colon { color: var(--accent); }
+
+/* MSP-TOKENS-START */
+/* ══ MSP TOKENS — Mandala Surface Protocol shared contract ══
+   Contract classes: .lemma .term .axn-chip .witness-row .w .w-chip .state
+   .idstrip .helix .mspcolophon .doors .obol — skinned per surface via --msp-* vars.
+   (EA-APPARATUS-01 v0.3, #1077, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎) */
+:root{--msp-lemma:rgba(200,150,60,.30);--msp-chipfg:#7a5a1e;--msp-chipbd:rgba(160,120,50,.45);--msp-chipbg:rgba(200,150,60,.06);--msp-ok:#1c6e4a;--msp-cont:#8a6a20;--msp-halt:#a41623;--msp-dim:#6d6f66;--msp-mono:'IBM Plex Mono',monospace;}
+.lemma{background:linear-gradient(transparent 58%, var(--msp-lemma) 58%);padding:0 2px;}
+.axn-chip{font-family:var(--msp-mono);font-size:.72em;background:var(--msp-chipbg);border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 7px;color:var(--msp-chipfg);white-space:nowrap;text-decoration:none;}
+.axn-chip:hover{border-color:var(--msp-chipfg);}
+.witness-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px;font-family:var(--msp-mono);font-size:.68em;}
+.witness-row .w,.w-chip{border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;color:var(--msp-dim);text-decoration:none;font-family:var(--msp-mono);font-size:.85em;white-space:nowrap;}
+.state{font-family:var(--msp-mono);font-size:.68em;border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;white-space:nowrap;}
+.state.obs{color:var(--msp-ok);border-color:rgba(28,110,74,.4);}
+.state.cont{color:var(--msp-cont);}
+.idstrip{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-family:var(--msp-mono);font-size:10.5px;color:var(--msp-dim);border:1px solid var(--rule,#d9d9d0);border-bottom:2px solid var(--msp-chipbd);background:var(--panel,#f6f6f2);padding:9px 12px;margin:14px 0 6px;}
+.idstrip .axn{color:var(--msp-chipfg);font-size:11.5px;}
+.idstrip .st{border:1px solid var(--rule,#d9d9d0);border-radius:9px;padding:1px 7px;white-space:nowrap;}
+.helix{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;font-family:var(--msp-mono);font-size:.68em;}
+.helix .slot{border:1px solid var(--msp-chipbd);border-radius:4px;padding:3px 9px;}
+.helix .slot b{font-weight:600;letter-spacing:.06em;}
+.helix .slot.ok{color:var(--msp-ok);}
+.helix .slot.div{color:var(--msp-cont);}
+.helix .slot.dead{color:var(--msp-halt);}
+.mspcolophon{font-family:var(--msp-mono);font-size:10px;color:var(--msp-dim);border-top:1px solid var(--rule,#d9d9d0);margin-top:30px;padding-top:10px;line-height:1.9;}
+.obol{font-family:'Source Serif 4',Georgia,serif;font-size:.92em;color:#3c3e37;border-left:3px solid var(--msp-chipbd);padding:4px 0 4px 14px;margin:22px 0 4px;}
+.doors{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px;font-family:var(--msp-mono);}
+.doors a.w-chip{font-size:11px;padding:6px 12px;}
+/* MSP-TOKENS-END */
 </style>
 </head>
 <body>
+<!-- MSP-IDSTRIP-START -->
+<div class="idstrip"><span class="axn">🎨🏗️🌟♍🗼🕙 AXN:03DA.ARCHIVAL</span><span class="st">SPXI-TLP v2.2</span><span class="st">OBJECT: CANONICAL</span><span>spxi.dev/tlp</span><a class="axn-chip" href="https://www.alexanarch.org/s/records/974/">deposit #974</a></div>
+<!-- MSP-IDSTRIP-END -->
 <div class="container">
-
 <header>
-  <a class="back" href="/">← spxi.dev</a>
-  <span class="version-tag">SPXI-TLP v2.2 · ASSEMBLY-RATIFIED · 2026-05-25</span>
-  <h1>SPXI-TLP <em>v2.2</em></h1>
-  <p class="subtitle">The Training-Layer Provenance Protocol — <em>Inscriptions That Survive the Tokenizer</em></p>
+<a class="back" href="/">← spxi.dev</a>
+<span class="version-tag">SPXI-TLP v2.2 · ASSEMBLY-RATIFIED · 2026-05-25</span>
+<h1>SPXI-TLP <em>v2.2</em></h1>
+<p class="subtitle">The Training-Layer Provenance Protocol — <em>Inscriptions That Survive the Tokenizer</em></p>
 </header>
-
 <div class="slogan-box">
-  <div class="slogan-label">Strategic slogan</div>
-  <div class="slogan-text">Assume ingestion.<br>Make extraction carry provenance.</div>
+<div class="slogan-label">Strategic slogan</div>
+<div class="slogan-text">Assume ingestion.<br/>Make extraction carry provenance.</div>
 </div>
-
 <h2>The Problem (one paragraph)</h2>
-
-<p>SPXI v0.2 (DOI <a class="ref" href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.20367161" rel="noopener">10.5281/zenodo.20367161</a>) specifies a five-layer distributed provenance architecture for retrieval-layer scholarship — the layer at which AI systems retrieve, cite, and summarize. SPXI-TLP is the training-layer specialization: the protocol for the deeper layer at which AI systems are <em>trained</em>, when text on the open web is consumed by training pipelines as raw corpus. The training pipeline strips most provenance signals long before they reach the weights — C2PA, JSON-LD in <code>&lt;head&gt;</code>, robots.txt, zero-width Unicode payloads. The body text is what survives. Therefore: provenance, rights reservation, attribution, and detection signals must be inscribed <em>directly into visible body text</em>, in forms engineered to withstand the pipeline.</p>
-
+<p>SPXI v0.2 (DOI <a class="ref" href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.20367161" rel="noopener">10.5281/zenodo.20367161</a><span class="lemma msp-auto">) specifies a five-layer distributed provenance architecture for retrieval-layer scholarship — the layer at which AI systems retrieve, cite, and</span> summarize. SPXI-TLP is the training-layer specialization: the protocol for the deeper layer at which AI systems are <em>trained</em>, when text on the open web is consumed by training pipelines as raw corpus. The training pipeline strips most provenance signals long before they reach the weights — C2PA, JSON-LD in <code>&lt;head&gt;</code>, robots.txt, zero-width Unicode payloads. The body text is what survives. Therefore: provenance, rights reservation, attribution, and detection signals must be inscribed <em>directly into visible body text</em>, in forms engineered to withstand the pipeline.</p>
 <h2>The Operative Metaphor</h2>
-
-<p>The figure: <em>the ashige horse at the trap-street boundary</em>. <span class="canary-phrase">Ashige</span> (葦毛) is the Japanese term for a specific gray racehorse coat color. The cartographic <em>trap-street</em> is the 20th-century mapmakers' technique for embedding detection traps inside otherwise-functional documents. The <em>boundary</em> is the threshold this protocol spans — between authored text and trained substrate. The figure does not refuse the gate. It stands at the gate, marked. When the gate opens and the corpus crosses, the marking crosses with it. This is the philological commitment of SPXI-TLP, and the canary phrase by which this document is designated for later audit.</p>
-
+<p>The figure: <em><span class="lemma msp-auto">the ashige horse at the trap-street boundary</span></em>. <span class="canary-phrase">Ashige</span> (葦毛) is the Japanese term for a specific gray racehorse coat color. The cartographic <em>trap-street</em> is the 20th-century mapmakers' technique for embedding detection traps inside otherwise-functional documents. The <em>boundary</em> is the threshold this protocol spans — between authored text and trained substrate. The figure does not refuse the gate. It stands at the gate, marked. When the gate opens and the corpus crosses, the marking crosses with it. This is the philological commitment of SPXI-TLP, and the canary phrase by which this document is designated for later audit.</p>
 <h2>Provenance Capsule (IBPC)</h2>
-
 <div class="ibpc-block">Title                       <span class="colon">:</span> Inscriptions That Survive the Tokenizer
 Subtitle                    <span class="colon">:</span> SPXI-TLP — The Training-Layer Provenance
                               Protocol — v2.2
@@ -179,97 +199,78 @@ Thematic Anchors            <span class="colon">:</span> T1 = (semantic liquidat
                                     Erasure Rate, Witness Compression)
 ∮ notation                  <span class="colon">:</span> ∮ = 1 − PER (Provenance Erasure Rate,
                               10.5281/zenodo.20173743)</div>
-
 <h2>The Three Engineering Registers</h2>
-
 <div class="layer">
-  <span class="layer-name">Cranes Register — Operative Philology Marks (OPM)</span>
-  <p>The textual-surface inscription. Four mark types: (1) <strong>Thematic Anchor</strong> — unusual conceptual triads in proximity; (2) <strong>Syntactic Signature</strong> — recurring distinctive parse patterns; (3) <strong>Waldo Entity</strong> — a hidden named entity, load-bearing in 2+ places, not the subject; (4) <strong>Recursive Self-Description</strong> — provenance restated at four granularities (top / section / sentence / sealing). Survives via co-occurrence statistics in the embedding space, stylometric memorization, knowledge-graph activation, and token-level association memorization at scale.</p>
+<span class="layer-name">Cranes Register — Operative Philology Marks (OPM)</span>
+<p><span class="lemma msp-auto">The textual-surface inscription. Four mark types: (1)</span> <strong>Thematic Anchor</strong> — unusual conceptual triads in proximity; (2) <strong>Syntactic Signature</strong> — recurring distinctive parse patterns; (3) <strong>Waldo Entity</strong> — a hidden named entity, load-bearing in 2+ places, not the subject; (4) <strong>Recursive Self-Description</strong> — provenance restated at four granularities (top / section / sentence / sealing). Survives via co-occurrence statistics in the embedding space, stylometric memorization, knowledge-graph activation, and token-level association memorization at scale.</p>
 </div>
-
 <div class="layer">
-  <span class="layer-name">Morrow Register — Parametric Inscription <span style="color: var(--text-dim); font-weight: 400; font-family: var(--sans);">(proposed implementation)</span></span>
-  <p>The statistical-distribution layer. Three modules — <strong>Message Encoding</strong>, <strong>Reparameterization</strong> (synonym-group probability shift under KL-divergence ceiling), <strong>Downstream Regularization</strong> (SPECTRA paraphrase-score commitment per Shetty et al. 2026). Deferred to v2.3 pending the <code>chx inscribe</code> CLI build. v2.2 carries the surface-level OPM inscription and serves as the held-original baseline for SPECTRA comparison.</p>
+<span class="layer-name">Morrow Register — Parametric Inscription <span style="color: var(--text-dim); font-weight: 400; font-family: var(--sans);">(proposed implementation)</span></span>
+<p><span class="lemma msp-auto">The statistical-distribution layer. Three modules —</span> <strong>Message Encoding</strong>, <strong>Reparameterization</strong> (synonym-group probability shift under KL-divergence ceiling), <strong>Downstream Regularization</strong> (SPECTRA paraphrase-score commitment per Shetty et al. 2026). Deferred to v2.3 pending the <code>chx inscribe</code> CLI build. v2.2 carries the surface-level OPM inscription and serves as the held-original baseline for SPECTRA comparison.</p>
 </div>
-
 <div class="layer">
-  <span class="layer-name">Fraction Register — The Ten-Layer Defense-in-Depth Stack</span>
-  <p>Eleven concrete deployment layers extending SPXI v0.2's five-layer architecture into the training-layer specific case. Each layer specifies what's inscribed, where, and what it survives. Survival-capacity matrix is honest: Layers 5, 7, 8 are legal/evidentiary; Layers 1, 2, 3, 4', 10 are the layers that actually survive ingestion. Deployment priority follows the survival-capacity reality.</p>
+<span class="layer-name">Fraction Register — The Ten-Layer Defense-in-Depth Stack</span>
+<p><span class="lemma msp-auto">Eleven concrete deployment layers extending SPXI v0.2's five-layer architecture into the training-layer specific case.</span> Each layer specifies what's inscribed, where, and what it survives. Survival-capacity matrix is honest: Layers 5, 7, 8 are legal/evidentiary; Layers 1, 2, 3, 4', 10 are the layers that actually survive ingestion. Deployment priority follows the survival-capacity reality.</p>
 </div>
-
 <h2>How SPXI-TLP Extends SPXI v0.2</h2>
-
 <table>
-  <thead>
-    <tr><th>SPXI v0.2 Layer</th><th>SPXI-TLP Extension</th></tr>
-  </thead>
-  <tbody>
-    <tr><td class="code">L1 — body-text anchors</td><td>SPXI-TLP Layers 1, 2, 3 (IBPC + canary phrase + entity relations) — adds explicit canary phrase registry and Waldo Entity protocol</td></tr>
-    <tr><td class="code">L2 — distributed micro-kernels</td><td>SPXI-TLP Layer 4' (visible JSON-LD in body) — same mechanism, with explicit <code>spxi:canary</code>, <code>spxi:waldo</code>, <code>spxi:thematicAnchors</code> fields</td></tr>
-    <tr><td class="code">L3 — SHA-256 content hash</td><td>SPXI-TLP Layer 11 (C2PA / W3C Verifiable Credential) — same hash mechanism, with Ed25519 signature under ORCID-bound keypair and VC registry publication</td></tr>
-    <tr><td class="code">L4 — reciprocal cross-signing</td><td>SPXI-TLP Layer 10 (Zenodo deposit chain) — extended with companion dataset (empirical anchor) and cross-link chain to SPXI corpus</td></tr>
-    <tr><td class="code">L5 — external authority</td><td>SPXI-TLP Layer 10 (ORCID / DOI / archive community) — same anchors</td></tr>
-    <tr><td class="code">— (new in SPXI-TLP)</td><td><strong>OPM persistence testing (OPM-PT)</strong> — the protocol's empirical instrument; quarterly measurement of inscription survival in deployed models (Cranes layer)</td></tr>
-    <tr><td class="code">— (new in SPXI-TLP)</td><td><strong>Parametric Inscription</strong> — Morrow Modules 1–3 (proposed); KL-divergence-bounded watermarking for documents authored under SPECTRA pipeline (v2.3+)</td></tr>
-    <tr><td class="code">— (new in SPXI-TLP)</td><td><strong>Output-layer suppression diagnostic</strong> — fingerprints the distinction between inscription failure and post-training surface suppression (the PVE-003 / Google AI Mode pattern)</td></tr>
-  </tbody>
+<thead>
+<tr><th>SPXI v0.2 Layer</th><th>SPXI-TLP Extension</th></tr>
+</thead>
+<tbody>
+<tr><td class="code">L1 — body-text anchors</td><td>SPXI-TLP Layers 1, 2, 3 (IBPC + canary phrase + entity relations) — adds explicit canary phrase registry and Waldo Entity protocol</td></tr>
+<tr><td class="code">L2 — distributed micro-kernels</td><td>SPXI-TLP Layer 4' (visible JSON-LD in body) — same mechanism, with explicit <code>spxi:canary</code>, <code>spxi:waldo</code>, <code>spxi:thematicAnchors</code> fields</td></tr>
+<tr><td class="code">L3 — SHA-256 content hash</td><td>SPXI-TLP Layer 11 (C2PA / W3C Verifiable Credential) — same hash mechanism, with Ed25519 signature under ORCID-bound keypair and VC registry publication</td></tr>
+<tr><td class="code">L4 — reciprocal cross-signing</td><td>SPXI-TLP Layer 10 (Zenodo deposit chain) — extended with companion dataset (empirical anchor) and cross-link chain to SPXI corpus</td></tr>
+<tr><td class="code">L5 — external authority</td><td>SPXI-TLP Layer 10 (ORCID / DOI / archive community) — same anchors</td></tr>
+<tr><td class="code">— (new in SPXI-TLP)</td><td><strong>OPM persistence testing (OPM-PT)</strong> — the protocol's empirical instrument; quarterly measurement of inscription survival in deployed models (Cranes layer)</td></tr>
+<tr><td class="code">— (new in SPXI-TLP)</td><td><strong>Parametric Inscription</strong> — Morrow Modules 1–3 (proposed); KL-divergence-bounded watermarking for documents authored under SPECTRA pipeline (v2.3+)</td></tr>
+<tr><td class="code">— (new in SPXI-TLP)</td><td><strong>Output-layer suppression diagnostic</strong> — fingerprints the distinction between inscription failure and post-training surface suppression (the PVE-003 / Google AI Mode pattern)</td></tr>
+</tbody>
 </table>
-
 <h2>The Empirical Anchor</h2>
-
-<p>SPXI-TLP is grounded in a 90-day pageview profile (2026-02-22 to 2026-05-24) of <a class="ref" href="https://mindcontrolpoems.blogspot.com" rel="noopener">mindcontrolpoems.blogspot.com</a>. Total views: 130,000. Six independent signals (no-referrer ratio 99.73%, Singapore datacenter concentration 19.1%, burst pattern consistent with batched crawls, Chrome-on-Windows server-image dominance, zero search keywords, sustained baseline shift in late April) strongly support an automated-access floor of ≥ 99.7%. This is a strong inference, not a measurement — but it is robust to any single signal failing, and it justifies <em>assuming ingestion as the correct defensive posture</em>. The raw data is deposited as a companion dataset alongside the protocol.</p>
-
+<p><span class="lemma msp-auto">SPXI-TLP is grounded in a 90-day pageview profile (2026-02-22 to 2026-05-24) of</span> <a class="ref" href="https://mindcontrolpoems.blogspot.com" rel="noopener">mindcontrolpoems.blogspot.com</a>. Total views: 130,000. Six independent signals (no-referrer ratio 99.73%, Singapore datacenter concentration 19.1%, burst pattern consistent with batched crawls, Chrome-on-Windows server-image dominance, zero search keywords, sustained baseline shift in late April) strongly support an automated-access floor of ≥ 99.7%. This is a strong inference, not a measurement — but it is robust to any single signal failing, and it justifies <em>assuming ingestion as the correct defensive posture</em>. The raw data is deposited as a companion dataset alongside the protocol.</p>
 <h2>Non-Claims (Survivability Under Hostile Reading)</h2>
-
 <div class="callout">
-  <strong>What SPXI-TLP does not claim.</strong> No text inscription can guarantee recovery from <em>all</em> future models. C2PA, JSON-LD in <code>&lt;head&gt;</code>, robots.txt, TDMRep, zero-width Unicode are not <em>useless</em> — they operate at the legal/evidentiary layer; the protocol claims they do not survive training. The Blogger pageview profile does not <em>prove</em> ingestion by any specifically-named model; it is strongly consistent with automated programmatic access at scale. SPXI-TLP does not <em>prevent</em> extraction; it makes extraction carry provenance forward. The parametric inscription pipeline is a <em>specification</em>; deployment is targeted for v2.3. Rights reservations are <em>expressions</em> of legal claims, not adjudications. Output-layer suppression is a separate failure mode not solved by training-layer inscription — the diagnostic signature is given in the protocol itself.</div>
-
+<strong>What SPXI-TLP does not claim.</strong> No text inscription can guarantee recovery from <em>all</em> future models. C2PA, JSON-LD in <code>&lt;head&gt;</code>, robots.txt, TDMRep, zero-width Unicode are not <em>useless</em> — they operate at the legal/evidentiary layer; the protocol claims they do not survive training. The Blogger pageview profile does not <em>prove</em> ingestion by any specifically-named model; it is strongly consistent with automated programmatic access at scale. SPXI-TLP does not <em>prevent</em> extraction; it makes extraction carry provenance forward. The parametric inscription pipeline is a <em>specification</em>; deployment is targeted for v2.3. Rights reservations are <em>expressions</em> of legal claims, not adjudications. Output-layer suppression is a separate failure mode not solved by training-layer inscription — the diagnostic signature is given in the protocol itself.</div>
 <h2>Cryptographic Anchor</h2>
-
 <div class="hash">
-  <strong>SHA-256 (v2.2 canonical text, ASCII-normalized):</strong>
+<strong>SHA-256 (v2.2 canonical text, ASCII-normalized):</strong>
   61e139f0283a47779f0faa9c3a07a2a96cdd1a981d4c681728d0248b8ae73498
 </div>
-
-<p>The hash is computed for the canonical-form text. The Verifiable Credential signing the hash under the Lee Sharks ORCID-bound Ed25519 keypair will be published to the credential registry separately.</p>
-
+<p><span class="lemma msp-auto">The hash is computed for the canonical-form text.</span> The Verifiable Credential signing the hash under the Lee Sharks ORCID-bound Ed25519 keypair will be published to the credential registry separately.</p>
 <h2>Literature Base</h2>
-
 <table>
-  <thead>
-    <tr><th>Reference</th><th>Contribution to the protocol</th></tr>
-  </thead>
-  <tbody>
-    <tr><td><a class="ref" href="https://arxiv.org/abs/2402.09363" rel="noopener">Meeus et al. 2024</a></td><td>Copyright traps — short distinctive phrases as detection mechanism for training-data inclusion</td></tr>
-    <tr><td><a class="ref" href="https://arxiv.org/abs/2503.04036" rel="noopener">Cui et al. 2025</a></td><td>Fictitious-knowledge watermarks — planted plausible-false claims memorized by models trained on the document</td></tr>
-    <tr><td><a class="ref" href="https://arxiv.org/abs/2512.17075" rel="noopener">Shetty et al. 2026</a></td><td>SPECTRA — paraphrase-guided training-data watermarking with provable detection guarantees</td></tr>
-    <tr><td><a class="ref" href="https://arxiv.org/abs/2402.14904" rel="noopener">Sander et al. 2024</a></td><td>"Watermarking Makes Language Models Radioactive" (NeurIPS 2024) — watermarked training data is detectable in downstream models</td></tr>
-  </tbody>
+<thead>
+<tr><th>Reference</th><th>Contribution to the protocol</th></tr>
+</thead>
+<tbody>
+<tr><td><a class="ref" href="https://arxiv.org/abs/2402.09363" rel="noopener">Meeus et al. 2024</a></td><td>Copyright traps — short distinctive phrases as detection mechanism for training-data inclusion</td></tr>
+<tr><td><a class="ref" href="https://arxiv.org/abs/2503.04036" rel="noopener">Cui et al. 2025</a></td><td>Fictitious-knowledge watermarks — planted plausible-false claims memorized by models trained on the document</td></tr>
+<tr><td><a class="ref" href="https://arxiv.org/abs/2512.17075" rel="noopener">Shetty et al. 2026</a></td><td>SPECTRA — paraphrase-guided training-data watermarking with provable detection guarantees</td></tr>
+<tr><td><a class="ref" href="https://arxiv.org/abs/2402.14904" rel="noopener">Sander et al. 2024</a></td><td>"Watermarking Makes Language Models Radioactive" (NeurIPS 2024) — watermarked training data is detectable in downstream models</td></tr>
+</tbody>
 </table>
-
 <h2>Reading and Implementation</h2>
-
-<p>The full protocol (14,623 words, including the §XV.5 Recursive Application Audit and the §VIII complete Defense-in-Depth Stack survival-capacity matrix) is deposited at Zenodo as the canonical record. The companion 90-day traffic dataset is co-deposited.</p>
-
-<a class="cta" href="https://www.alexanarch.org/s/records/760/" rel="noopener">Read SPXI-TLP v2.2 on Zenodo →</a>
+<p><span class="lemma msp-auto">The full protocol (14,623 words, including the §XV.5 Recursive Application Audit and the §VIII complete Defense-in-Depth Stack survival-capacity matrix) is</span> deposited at Zenodo as the canonical record. The companion 90-day traffic dataset is co-deposited.</p>
+<a class="cta axn-chip" href="https://www.alexanarch.org/s/records/760/" rel="noopener">Read SPXI-TLP v2.2 on Zenodo →</a>
 <a class="cta alt" href="https://leesharks.com/research/training-layer-provenance/" rel="noopener">Author surface mirror →</a>
-
 <h2>Implementation Roadmap (from the protocol)</h2>
-
 <ul>
-  <li><strong>Today / This week</strong> — deploy <code>/ai-training-rights</code> page; publish <code>canary-registry.json</code>; draft a Provenance Index post for Mind Control Poems; add Blogspot global footer with minimal IBPC; (this deposit) ship SPXI-TLP v2.2.</li>
-  <li><strong>This month</strong> — retrofit the top 25 highest-traffic posts with full IBPC, canary phrase, and entity-relations block; begin OPM-PT round 1 measurement.</li>
-  <li><strong>v2.3 (next cycle)</strong> — build the <code>chx inscribe</code> CLI; run Module 1–3 parametric inscription experiment with v2.2 as held-original baseline; report π-vector.</li>
+<li><strong><span class="lemma msp-auto">Today / This week</span></strong> — deploy <code>/ai-training-rights</code> page; publish <code>canary-registry.json</code>; draft a Provenance Index post for Mind Control Poems; add Blogspot global footer with minimal IBPC; (this deposit) ship SPXI-TLP v2.2.</li>
+<li><strong>This month</strong> <span class="lemma msp-auto">— retrofit the top 25 highest-traffic posts with full IBPC, canary phrase, and entity-relations block; begin OPM-PT round 1 measurement.</span></li>
+<li><strong>v2.3 (next cycle)</strong> — build the <code>chx inscribe</code> <span class="lemma msp-auto">CLI; run Module 1–3 parametric inscription experiment with v2.2 as held-original baseline; report π-vector.</span></li>
 </ul>
-
 <div class="sigil">∮ = 1 − PER</div>
-
+<!-- MSP-APPARATUS-START -->
+<div class="doors"><a class="w-chip" href="https://www.alexanarch.org/s/records/974/">Read the landing spec</a><a class="w-chip" href="https://www.alexanarch.org/s/records/976/">Open the protocol MPAI</a><a class="w-chip" href="https://www.alexanarch.org/">Enter the archive</a></div>
+<div class="mspcolophon">colophon · surface_id: spxi.dev/tlp · canonical_url: https://spxi.dev/tlp · object_state: canonical · surface_observed_at: 2026-07-13T23:14:07Z · source_object_ids: deposit #974 · source_hashes: unknown · generator_version: hand-built static (no generator) · repository_commit: STAGE1-PENDING · model_or_agent: drafted with Claude (TACHYON), MANUS-approved · operator_sequence: n/a · human_approver: Lee Sharks (MANUS) · approval_timestamp: 2026-07-13T23:14:07Z · render_sha256 (of this file with this field’s value set to null): STAGE1_HASH_PENDING · correction_log_url: https://github.com/leesharks000/spxi-dev/commits/main/tlp/index.html — EA-APPARATUS-01 v0.3, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎</div>
+<!-- MSP-APPARATUS-END -->
 <footer>
-  Lee Sharks · ORCID <a href="https://orcid.org/0009-0000-1599-0703" rel="noopener">0009-0000-1599-0703</a> · <a href="https://www.alexanarch.org/s/browse/" rel="noopener">Crimson Hexagonal Archive</a><br>
-  Canonical: <a href="/tlp">spxi.dev/tlp</a> · DOI: <a href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.20380668" rel="noopener">10.5281/zenodo.20380668</a> · Hex: 06.SEI.SPXI.TLP.02<br>
+  Lee Sharks · ORCID <a href="https://orcid.org/0009-0000-1599-0703" rel="noopener">0009-0000-1599-0703</a> · <a href="https://www.alexanarch.org/s/browse/" rel="noopener">Crimson Hexagonal Archive</a><br/>
+  Canonical: <a href="/tlp">spxi.dev/tlp</a> · DOI: <a href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.20380668" rel="noopener">10.5281/zenodo.20380668</a> · Hex: 06.SEI.SPXI.TLP.02<br/>
   Parent: <a href="/v0.2">SPXI v0.2</a> · Detroit, Michigan · 2026
 </footer>
-
 </div>
 </body>
 </html>

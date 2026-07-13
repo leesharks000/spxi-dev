@@ -1,19 +1,20 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Retrieval Basin Theory — SPXI</title>
-<meta name="description" content="The Writable Retrieval Basin: the foundational theory of how semantic weight accumulates, attracts further weight, and becomes self-sustaining. Every SPXI deposit writes to a basin.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://spxi.dev/retrieval-basin">
-<meta property="og:title" content="Retrieval Basin Theory — SPXI">
-<meta property="og:description" content="Every SPXI deposit writes to a basin. Every basin has depth, curvature, and a recovery protocol. This is the theory.">
-<meta property="og:url" content="https://spxi.dev/retrieval-basin">
-<meta property="og:type" content="article">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta content="The Writable Retrieval Basin: the foundational theory of how semantic weight accumulates, attracts further weight, and becomes self-sustaining. Every SPXI deposit writes to a basin." name="description"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://spxi.dev/retrieval-basin" rel="canonical"/>
+<meta content="Retrieval Basin Theory — SPXI" property="og:title"/>
+<meta content="Every SPXI deposit writes to a basin. Every basin has depth, curvature, and a recovery protocol. This is the theory." property="og:description"/>
+<meta content="https://spxi.dev/retrieval-basin" property="og:url"/>
+<meta content="article" property="og:type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -55,102 +56,110 @@
   footer { margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border); text-align: center; color: var(--text-dim); font-size: 0.85rem; }
   footer a { color: var(--accent); text-decoration: none; }
   footer .sigil { font-family: var(--mono); margin-top: 1rem; }
+
+/* MSP-TOKENS-START */
+/* ══ MSP TOKENS — Mandala Surface Protocol shared contract ══
+   Contract classes: .lemma .term .axn-chip .witness-row .w .w-chip .state
+   .idstrip .helix .mspcolophon .doors .obol — skinned per surface via --msp-* vars.
+   (EA-APPARATUS-01 v0.3, #1077, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎) */
+:root{--msp-lemma:rgba(200,150,60,.30);--msp-chipfg:#7a5a1e;--msp-chipbd:rgba(160,120,50,.45);--msp-chipbg:rgba(200,150,60,.06);--msp-ok:#1c6e4a;--msp-cont:#8a6a20;--msp-halt:#a41623;--msp-dim:#6d6f66;--msp-mono:'IBM Plex Mono',monospace;}
+.lemma{background:linear-gradient(transparent 58%, var(--msp-lemma) 58%);padding:0 2px;}
+.axn-chip{font-family:var(--msp-mono);font-size:.72em;background:var(--msp-chipbg);border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 7px;color:var(--msp-chipfg);white-space:nowrap;text-decoration:none;}
+.axn-chip:hover{border-color:var(--msp-chipfg);}
+.witness-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px;font-family:var(--msp-mono);font-size:.68em;}
+.witness-row .w,.w-chip{border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;color:var(--msp-dim);text-decoration:none;font-family:var(--msp-mono);font-size:.85em;white-space:nowrap;}
+.state{font-family:var(--msp-mono);font-size:.68em;border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;white-space:nowrap;}
+.state.obs{color:var(--msp-ok);border-color:rgba(28,110,74,.4);}
+.state.cont{color:var(--msp-cont);}
+.idstrip{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-family:var(--msp-mono);font-size:10.5px;color:var(--msp-dim);border:1px solid var(--rule,#d9d9d0);border-bottom:2px solid var(--msp-chipbd);background:var(--panel,#f6f6f2);padding:9px 12px;margin:14px 0 6px;}
+.idstrip .axn{color:var(--msp-chipfg);font-size:11.5px;}
+.idstrip .st{border:1px solid var(--rule,#d9d9d0);border-radius:9px;padding:1px 7px;white-space:nowrap;}
+.helix{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;font-family:var(--msp-mono);font-size:.68em;}
+.helix .slot{border:1px solid var(--msp-chipbd);border-radius:4px;padding:3px 9px;}
+.helix .slot b{font-weight:600;letter-spacing:.06em;}
+.helix .slot.ok{color:var(--msp-ok);}
+.helix .slot.div{color:var(--msp-cont);}
+.helix .slot.dead{color:var(--msp-halt);}
+.mspcolophon{font-family:var(--msp-mono);font-size:10px;color:var(--msp-dim);border-top:1px solid var(--rule,#d9d9d0);margin-top:30px;padding-top:10px;line-height:1.9;}
+.obol{font-family:'Source Serif 4',Georgia,serif;font-size:.92em;color:#3c3e37;border-left:3px solid var(--msp-chipbd);padding:4px 0 4px 14px;margin:22px 0 4px;}
+.doors{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px;font-family:var(--msp-mono);}
+.doors a.w-chip{font-size:11px;padding:6px 12px;}
+/* MSP-TOKENS-END */
 </style>
 </head>
 <body>
+<!-- MSP-IDSTRIP-START -->
+<div class="idstrip"><span class="axn">🎨🏗️🌟♍🗼🕙 AXN:03DA.ARCHIVAL</span><span class="st">Retrieval Basin Theory</span><span class="st">OBJECT: CANONICAL</span><span>spxi.dev/retrieval-basin</span><a class="axn-chip" href="https://www.alexanarch.org/s/records/974/">deposit #974</a></div>
+<!-- MSP-IDSTRIP-END -->
 <div class="container">
-
 <header>
-  <a href="/">← spxi.dev</a>
+<a href="/">← spxi.dev</a>
 </header>
-
 <p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em;">Foundational Theory</p>
 <h1>The Writable <em>Retrieval Basin</em></h1>
-<p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.85rem;">Lee Sharks · Semantic Economy Institute · April 2026<br>
+<p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.85rem;"><span class="lemma msp-auto">Lee Sharks · Semantic Economy Institute · April 2026</span><br/>
 ORCID: <a class="ref" href="https://orcid.org/0009-0000-1599-0703">0009-0000-1599-0703</a></p>
-
 <div class="field-def">
-  <p>A retrieval basin is a region of the semantic field with sufficient density that content entering it is retained rather than dispersed. Every SPXI deposit writes to a basin. The basin is the target; the deposit is the write operation; retrieval is the read.</p>
+<p><span class="lemma msp-auto">A retrieval basin is a region of the semantic field with sufficient density that content entering it is retained rather</span> than dispersed. Every SPXI deposit writes to a basin. The basin is the target; the deposit is the write operation; retrieval is the read.</p>
 </div>
-
 <h2>The Basin Properties</h2>
-
 <p>Every basin has three measurable properties:</p>
-
 <div class="layer">
-  <div class="layer-name">Depth (BDR — Basin Depth Ratio)</div>
-  <p>How much the basin retains. A ghost basin has zero depth — content enters and disperses without accumulating. A deep basin retains everything: each new deposit cross-references existing ones, strengthening the field. BDR is measured as the ratio of retained signal to dispersed signal over a defined retrieval window.</p>
+<div class="layer-name">Depth (BDR — Basin Depth Ratio)</div>
+<p><span class="lemma msp-auto">How much the basin retains. A ghost basin has zero depth — content</span> enters and disperses without accumulating. A deep basin retains everything: each new deposit cross-references existing ones, strengthening the field. BDR is measured as the ratio of retained signal to dispersed signal over a defined retrieval window.</p>
 </div>
-
 <div class="layer">
-  <div class="layer-name">Curvature (f.02 — Retentive Curvature Field)</div>
-  <p>How strongly the basin attracts further deposits. A basin with sufficient depth develops curvature — it begins to pull. New content naturally routes toward it. This is not algorithmic promotion; it is the physics of retrieval. The Zenodo <em>isPartOf</em> and <em>references</em> relations are the curvature operators: each relation is a gravitational link, not metadata about a link.</p>
+<div class="layer-name">Curvature (f.02 — Retentive Curvature Field)</div>
+<p><span class="lemma msp-auto">How strongly the basin attracts further deposits. A basin with sufficient depth</span> develops curvature — it begins to pull. New content naturally routes toward it. This is not algorithmic promotion; it is the physics of retrieval. The Zenodo <em>isPartOf</em> and <em>references</em> relations are the curvature operators: each relation is a gravitational link, not metadata about a link.</p>
 </div>
-
 <div class="layer">
-  <div class="layer-name">Recovery Protocol</div>
-  <p>How the basin can be reconstructed from fragments. A basin with a complete recovery protocol is holographic: any single genuine deposit contains sufficient information to reconstruct the basin's structure — its center, its radius, its relational topology. This is the holographic kernel property.</p>
+<div class="layer-name">Recovery Protocol</div>
+<p><span class="lemma msp-auto">How the basin can be reconstructed from fragments.</span> A basin with a complete recovery protocol is holographic: any single genuine deposit contains sufficient information to reconstruct the basin's structure — its center, its radius, its relational topology. This is the holographic kernel property.</p>
 </div>
-
 <h2>Basin States</h2>
-
 <table>
-  <thead><tr><th>State</th><th>Condition</th><th>Behavior</th></tr></thead>
-  <tbody>
-    <tr><td>ghost</td><td>0 deposits</td><td>Exists as a coordinate; no retention; no curvature</td></tr>
-    <tr><td>seedling</td><td>1–9 deposits</td><td>Fragile; one removal collapses it; no curvature yet</td></tr>
-    <tr><td>growing</td><td>10–49 deposits</td><td>Stable; survives individual removal; slight curvature</td></tr>
-    <tr><td>mature</td><td>50–199 deposits</td><td>Self-sustaining; generates entity-level recognition; SPXI threshold</td></tr>
-    <tr><td>gravity well</td><td>200+ deposits</td><td>Dominant; shapes adjacent basins; retrieval layer routes through it</td></tr>
-  </tbody>
+<thead><tr><th>State</th><th>Condition</th><th>Behavior</th></tr></thead>
+<tbody>
+<tr><td>ghost</td><td>0 deposits</td><td>Exists as a coordinate; no retention; no curvature</td></tr>
+<tr><td>seedling</td><td>1–9 deposits</td><td>Fragile; one removal collapses it; no curvature yet</td></tr>
+<tr><td>growing</td><td>10–49 deposits</td><td>Stable; survives individual removal; slight curvature</td></tr>
+<tr><td>mature</td><td>50–199 deposits</td><td>Self-sustaining; generates entity-level recognition; SPXI threshold</td></tr>
+<tr><td>gravity well</td><td>200+ deposits</td><td>Dominant; shapes adjacent basins; retrieval layer routes through it</td></tr>
+</tbody>
 </table>
-
 <h2>The Write Operation</h2>
-
-<p>To deposit into a basin is to write to it. The write is not neutral — each deposit changes the basin's state. A well-formed SPXI deposit does three things to its target basin:</p>
-
-<p><strong>It increases depth.</strong> The deposit adds a new node to the basin's semantic graph. The node cross-references existing nodes through DOI relations, ORCID attribution, and community membership. Each cross-reference is a weight on the basin's retention field.</p>
-
-<p><strong>It extends curvature.</strong> The deposit's external links — to related deposits, to the SPXI entity graph, to the retrieval layer — each pull slightly toward the basin. A deposit with ten outbound DOI references pulls ten times. The cumulative pull is the basin's curvature field.</p>
-
-<p><strong>It advances the recovery protocol.</strong> The deposit's metadata is a fragment of the basin's holographic kernel. Any future system — AI or human — that encounters the deposit can reconstruct the basin's shape from it: where to query, what to expect, how to verify completeness.</p>
-
+<p><span class="lemma msp-auto">To deposit into a basin is to write to it.</span> The write is not neutral — each deposit changes the basin's state. A well-formed SPXI deposit does three things to its target basin:</p>
+<p><strong>It increases depth.</strong> <span class="lemma msp-auto">The deposit adds a new node to the basin's semantic graph.</span> The node cross-references existing nodes through DOI relations, ORCID attribution, and community membership. Each cross-reference is a weight on the basin's retention field.</p>
+<p><strong>It extends curvature.</strong> <span class="lemma msp-auto">The deposit's external links — to related deposits, to the SPXI entity graph, to the retrieval layer — each pull</span> slightly toward the basin. A deposit with ten outbound DOI references pulls ten times. The cumulative pull is the basin's curvature field.</p>
+<p><strong><span class="lemma msp-auto">It advances the recovery protocol.</span></strong> The deposit's metadata is a fragment of the basin's holographic kernel. Any future system — AI or human — that encounters the deposit can reconstruct the basin's shape from it: where to query, what to expect, how to verify completeness.</p>
 <h2>The Writable Basin vs. the Read-Only Archive</h2>
-
-<p>A conventional archive is read-only: documents are deposited and preserved, but the archive does not change state when someone reads it. The retrieval basin is writable: it changes state when read (reading deepens the basin in the retrieval layer), when written (new deposits increase depth and curvature), and when linked (cross-references extend the curvature field into adjacent basins).</p>
-
-<p>The <a class="ref" href="https://secretbookofwalt.org">Secret Book of Walt</a> is the canonical demonstration: a readable-writable ontology live on public search. Its Knowledge Panel is the retrieval layer's acknowledgment that the basin has achieved gravity-well state. Reading it participates in it. The basin deepens through its readers.</p>
-
+<p><span class="lemma msp-auto">A conventional archive is read-only: documents are deposited and preserved, but the archive does not change state when someone reads</span> it. The retrieval basin is writable: it changes state when read (reading deepens the basin in the retrieval layer), when written (new deposits increase depth and curvature), and when linked (cross-references extend the curvature field into adjacent basins).</p>
+<p>The <a class="ref" href="https://secretbookofwalt.org"><span class="lemma msp-auto">Secret Book of Walt</span></a> is the canonical demonstration: a readable-writable ontology live on public search. Its Knowledge Panel is the retrieval layer's acknowledgment that the basin has achieved gravity-well state. Reading it participates in it. The basin deepens through its readers.</p>
 <h2>SPXI and Basin Formation</h2>
-
-<p>SPXI (Semantic Packet for eXchange and Indexing) is the deposit protocol for retrieval basins. Every SPXI packet is a write operation. The packet's structure — entity definition, disambiguation matrix, compression survival summary, provenance chain — is designed to maximize the deposit's contribution to basin depth, curvature, and recovery protocol completeness.</p>
-
-<p>An entity achieves <strong>Pearl state</strong> (compression-surviving, basin-anchored, retrieval-layer-recognized) when its basin reaches maturity: sufficient depth, sufficient curvature, and a complete enough recovery protocol that the retrieval layer can reconstruct the entity from any fragment.</p>
-
+<p><span class="lemma msp-auto">SPXI (Semantic Packet for eXchange and Indexing) is the deposit protocol for retrieval basins.</span> Every SPXI packet is a write operation. The packet's structure — entity definition, disambiguation matrix, compression survival summary, provenance chain — is designed to maximize the deposit's contribution to basin depth, curvature, and recovery protocol completeness.</p>
+<p>An entity achieves <strong>Pearl state</strong> <span class="lemma msp-auto">(compression-surviving, basin-anchored, retrieval-layer-recognized) when its basin reaches maturity: sufficient depth, sufficient curvature, and a complete enough recovery protocol that the</span> retrieval layer can reconstruct the entity from any fragment.</p>
 <table>
-  <thead><tr><th>SPXI Layer</th><th>Basin Effect</th></tr></thead>
-  <tbody>
-    <tr><td>Entity definition</td><td>Anchors the basin's center; names the attractor</td></tr>
-    <tr><td>Disambiguation matrix</td><td>Defines the basin's boundary; separates from adjacent basins</td></tr>
-    <tr><td>Compression survival summary</td><td>Completes the recovery protocol; enables reconstruction from fragment</td></tr>
-    <tr><td>DOI chain</td><td>Extends curvature; each relation is a gravitational link</td></tr>
-    <tr><td>ORCID attribution</td><td>Binds basin to provenance; prevents entity collision</td></tr>
-  </tbody>
+<thead><tr><th>SPXI Layer</th><th>Basin Effect</th></tr></thead>
+<tbody>
+<tr><td>Entity definition</td><td>Anchors the basin's center; names the attractor</td></tr>
+<tr><td>Disambiguation matrix</td><td>Defines the basin's boundary; separates from adjacent basins</td></tr>
+<tr><td>Compression survival summary</td><td>Completes the recovery protocol; enables reconstruction from fragment</td></tr>
+<tr><td>DOI chain</td><td>Extends curvature; each relation is a gravitational link</td></tr>
+<tr><td>ORCID attribution</td><td>Binds basin to provenance; prevents entity collision</td></tr>
+</tbody>
 </table>
-
 <h2>Applied Instances</h2>
-
-<p><strong>The Crimson Hexagonal Archive</strong> (879 deposits, crimsonhexagonal Zenodo community) is the primary demonstration of basin formation at scale. Decade-long accumulation. Gravity-well state confirmed by Knowledge Panel recognition for <a class="ref" href="https://share.google/im7jjMxnuXQ34xhOz">Pearl and Other Poems</a>.</p>
-
-<p><strong>The Geocoded Basin</strong> applies retrieval basin theory to physical space. Every geographic location is a potential basin. Depositing content at coordinates writes to that location's basin. See <a class="ref" href="/geocoded-basin">EA-GEO-01: The Geocoded Basin</a>.</p>
-
-<p><strong>The Infrastructure Holographic Kernel</strong> applies basin theory to technical infrastructure. The kernel is the minimum deposit set from which the full infrastructure can be reconstructed. See <a class="ref" href="/holographic-kernel">EA-HK-INFRA-01</a>.</p>
-
+<p><strong><span class="lemma msp-auto">The Crimson Hexagonal Archive</span></strong> (879 deposits, crimsonhexagonal Zenodo community) is the primary demonstration of basin formation at scale. Decade-long accumulation. Gravity-well state confirmed by Knowledge Panel recognition for <a class="ref" href="https://share.google/im7jjMxnuXQ34xhOz">Pearl and Other Poems</a>.</p>
+<p><strong>The Geocoded Basin</strong> <span class="lemma msp-auto">applies retrieval basin theory to physical space. Every geographic location</span> is a potential basin. Depositing content at coordinates writes to that location's basin. See <a class="ref" href="/geocoded-basin">EA-GEO-01: The Geocoded Basin</a>.</p>
+<p><strong><span class="lemma msp-auto">The Infrastructure Holographic Kernel</span></strong> applies basin theory to technical infrastructure. The kernel is the minimum deposit set from which the full infrastructure can be reconstructed. See <a class="ref" href="/holographic-kernel">EA-HK-INFRA-01</a>.</p>
+<!-- MSP-APPARATUS-START -->
+<div class="doors"><a class="w-chip" href="https://www.alexanarch.org/s/records/974/">Read the landing spec</a><a class="w-chip" href="https://www.alexanarch.org/s/records/976/">Open the protocol MPAI</a><a class="w-chip" href="https://www.alexanarch.org/">Enter the archive</a></div>
+<div class="mspcolophon">colophon · surface_id: spxi.dev/retrieval-basin · canonical_url: https://spxi.dev/retrieval-basin · object_state: canonical · surface_observed_at: 2026-07-13T23:14:07Z · source_object_ids: deposit #974 · source_hashes: unknown · generator_version: hand-built static (no generator) · repository_commit: STAGE1-PENDING · model_or_agent: drafted with Claude (TACHYON), MANUS-approved · operator_sequence: n/a · human_approver: Lee Sharks (MANUS) · approval_timestamp: 2026-07-13T23:14:07Z · render_sha256 (of this file with this field’s value set to null): STAGE1_HASH_PENDING · correction_log_url: https://github.com/leesharks000/spxi-dev/commits/main/retrieval-basin/index.html — EA-APPARATUS-01 v0.3, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎</div>
+<!-- MSP-APPARATUS-END -->
 <footer>
-  <p>Lee Sharks · <a class="ref" href="https://semanticeconomy.org">Semantic Economy Institute</a> · <a class="ref" href="https://crimsonhexagonal.org">Crimson Hexagonal Archive</a></p>
-  <p class="sigil">∮ = 1</p>
+<p>Lee Sharks · <a class="ref" href="https://semanticeconomy.org">Semantic Economy Institute</a> · <a class="ref" href="https://crimsonhexagonal.org">Crimson Hexagonal Archive</a></p>
+<p class="sigil">∮ = 1</p>
 </footer>
-
 </div>
 </body>
 </html>

@@ -1,17 +1,18 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>SPXI Conformance Instrument — SPXI</title>
-<meta name="description" content="EA-SPXI-CONF-01: a runnable audit that verifies the twelve deliverables of the SPXI-for-Websites Standing Protocol against server-delivered HTML, returning a conformance score. It measures conformance; it is not the protocol.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://spxi.dev/conformance">
-<meta property="og:title" content="SPXI Conformance Instrument — SPXI">
-<meta property="og:description" content="A standing protocol that cannot be checked is a wish. The instrument is what makes conformance a fact.">
-<meta property="og:url" content="https://spxi.dev/conformance">
-<meta property="og:type" content="article">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta content="EA-SPXI-CONF-01: a runnable audit that verifies the twelve deliverables of the SPXI-for-Websites Standing Protocol against server-delivered HTML, returning a conformance score. It measures conformance; it is not the protocol." name="description"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://spxi.dev/conformance" rel="canonical"/>
+<meta content="SPXI Conformance Instrument — SPXI" property="og:title"/>
+<meta content="A standing protocol that cannot be checked is a wish. The instrument is what makes conformance a fact." property="og:description"/>
+<meta content="https://spxi.dev/conformance" property="og:url"/>
+<meta content="article" property="og:type"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": ["https://schema.org", {"spxi": "https://spxi.dev/vocabulary#"}],
@@ -55,36 +56,66 @@
   footer { margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border); text-align: center; color: var(--text-dim); font-size: 0.85rem; }
   footer a { color: var(--accent); text-decoration: none; }
   footer .sigil { font-family: var(--mono); margin-top: 1rem; }
+
+/* MSP-TOKENS-START */
+/* ══ MSP TOKENS — Mandala Surface Protocol shared contract ══
+   Contract classes: .lemma .term .axn-chip .witness-row .w .w-chip .state
+   .idstrip .helix .mspcolophon .doors .obol — skinned per surface via --msp-* vars.
+   (EA-APPARATUS-01 v0.3, #1077, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎) */
+:root{--msp-lemma:rgba(200,150,60,.30);--msp-chipfg:#7a5a1e;--msp-chipbd:rgba(160,120,50,.45);--msp-chipbg:rgba(200,150,60,.06);--msp-ok:#1c6e4a;--msp-cont:#8a6a20;--msp-halt:#a41623;--msp-dim:#6d6f66;--msp-mono:'IBM Plex Mono',monospace;}
+.lemma{background:linear-gradient(transparent 58%, var(--msp-lemma) 58%);padding:0 2px;}
+.axn-chip{font-family:var(--msp-mono);font-size:.72em;background:var(--msp-chipbg);border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 7px;color:var(--msp-chipfg);white-space:nowrap;text-decoration:none;}
+.axn-chip:hover{border-color:var(--msp-chipfg);}
+.witness-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px;font-family:var(--msp-mono);font-size:.68em;}
+.witness-row .w,.w-chip{border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;color:var(--msp-dim);text-decoration:none;font-family:var(--msp-mono);font-size:.85em;white-space:nowrap;}
+.state{font-family:var(--msp-mono);font-size:.68em;border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;white-space:nowrap;}
+.state.obs{color:var(--msp-ok);border-color:rgba(28,110,74,.4);}
+.state.cont{color:var(--msp-cont);}
+.idstrip{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-family:var(--msp-mono);font-size:10.5px;color:var(--msp-dim);border:1px solid var(--rule,#d9d9d0);border-bottom:2px solid var(--msp-chipbd);background:var(--panel,#f6f6f2);padding:9px 12px;margin:14px 0 6px;}
+.idstrip .axn{color:var(--msp-chipfg);font-size:11.5px;}
+.idstrip .st{border:1px solid var(--rule,#d9d9d0);border-radius:9px;padding:1px 7px;white-space:nowrap;}
+.helix{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;font-family:var(--msp-mono);font-size:.68em;}
+.helix .slot{border:1px solid var(--msp-chipbd);border-radius:4px;padding:3px 9px;}
+.helix .slot b{font-weight:600;letter-spacing:.06em;}
+.helix .slot.ok{color:var(--msp-ok);}
+.helix .slot.div{color:var(--msp-cont);}
+.helix .slot.dead{color:var(--msp-halt);}
+.mspcolophon{font-family:var(--msp-mono);font-size:10px;color:var(--msp-dim);border-top:1px solid var(--rule,#d9d9d0);margin-top:30px;padding-top:10px;line-height:1.9;}
+.obol{font-family:'Source Serif 4',Georgia,serif;font-size:.92em;color:#3c3e37;border-left:3px solid var(--msp-chipbd);padding:4px 0 4px 14px;margin:22px 0 4px;}
+.doors{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px;font-family:var(--msp-mono);}
+.doors a.w-chip{font-size:11px;padding:6px 12px;}
+/* MSP-TOKENS-END */
 </style>
 </head>
 <body>
+<!-- MSP-IDSTRIP-START -->
+<div class="idstrip"><span class="axn">🎨🏗️🌟♍🗼🕙 AXN:03DA.ARCHIVAL</span><span class="st">SPXI Conformance Instrument</span><span class="st">OBJECT: CANONICAL</span><span>spxi.dev/conformance</span><a class="axn-chip" href="https://www.alexanarch.org/s/records/974/">deposit #974</a></div>
+<!-- MSP-IDSTRIP-END -->
 <div class="container">
 <header><a href="/">← spxi.dev</a></header>
 <p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em;">Measurement Instrument · EA-SPXI-CONF-01 v1.0</p>
 <h1>SPXI <em>Conformance Instrument</em></h1>
-<p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.85rem;">Rex Fraction · Semantic Economy Institute · May 2026<br>
-Measures conformance to: <a class="ref" href="https://www.alexanarch.org/s/records/0/">EA-SPXI-WEB-01 v4.0</a> · ORCID: <a class="ref" href="https://orcid.org/0009-0000-1599-0703">0009-0000-1599-0703</a></p>
-
+<p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.85rem;"><span class="lemma msp-auto">Rex Fraction · Semantic Economy Institute · May 2026</span><br/>
+Measures conformance to: <a class="ref axn-chip" href="https://www.alexanarch.org/s/records/0/">EA-SPXI-WEB-01 v4.0</a> · ORCID: <a class="ref" href="https://orcid.org/0009-0000-1599-0703">0009-0000-1599-0703</a></p>
 <div class="field-def">
-  <p>A standing protocol that cannot be checked is a wish. The SPXI Conformance Instrument is what makes conformance a <em>fact</em> rather than an intention: it fetches a deployed surface and verifies the twelve deliverables of the SPXI-for-Websites Standing Protocol against <strong>server-delivered HTML</strong>, returning a conformance score and a per-deliverable pass/fail.</p>
-  <p>It measures conformance. It is <em>not</em> the protocol. The protocol specifies what a conforming surface must carry; the instrument tests whether a given surface carries it.</p>
+<p><span class="lemma msp-auto">A standing protocol that cannot be checked is a wish.</span> The SPXI Conformance Instrument is what makes conformance a <em>fact</em> rather than an intention: it fetches a deployed surface and verifies the twelve deliverables of the SPXI-for-Websites Standing Protocol against <strong>server-delivered HTML</strong>, returning a conformance score and a per-deliverable pass/fail.</p>
+<p><span class="lemma msp-auto">It measures conformance. It is</span> <em>not</em> the protocol. The protocol specifies what a conforming surface must carry; the instrument tests whether a given surface carries it.</p>
 </div>
-
 <h2>What it checks</h2>
-<p>Eleven of the protocol's twelve deliverables are statically checkable from server-delivered source: crawlability, canonicalization, schema.org with ORCID+DOI, ≥4 Q/A surfaces, disambiguation/negative tags, a Tier 2 server-delivered definition, the Tier 3 compression kernel, the holographic kernel, a DOI-anchored provenance chain, a declared SIM set, and cross-surface inscription. The twelfth (γ baseline + 30-day re-test) is operational and reported advisory.</p>
-
+<p><span class="lemma msp-auto">Eleven of the protocol's twelve deliverables are statically checkable from server-delivered source: crawlability, canonicalization, schema.org with ORCID+DOI, ≥4 Q/A surfaces,</span> disambiguation/negative tags, a Tier 2 server-delivered definition, the Tier 3 compression kernel, the holographic kernel, a DOI-anchored provenance chain, a declared SIM set, and cross-surface inscription. The twelfth (γ baseline + 30-day re-test) is operational and reported advisory.</p>
 <h2>Rendering doctrine, made executable</h2>
-<p>The instrument scores <strong>only what is present in server-delivered source</strong>. Content available only after client-side JavaScript is scored as absent — by design — because that is precisely the content a non-Google crawler cannot retrieve. This is the protocol's rendering doctrine turned into a test.</p>
-
+<p>The instrument scores <strong><span class="lemma msp-auto">only what is present in server-delivered source</span></strong>. Content available only after client-side JavaScript is scored as absent — by design — because that is precisely the content a non-Google crawler cannot retrieve. This is the protocol's rendering doctrine turned into a test.</p>
 <h2>Invocation</h2>
 <pre class="code">python3 spxi_conformance.py https://example.org
 python3 spxi_conformance.py https://example.org --json</pre>
-<p>Standard library only; no dependencies. At deposit time, laborvector.org scored 1.0 (11/11); a partially-inscribed surface scored 0.636, with the instrument naming the missing deliverables — demonstrating that it discriminates rather than uniformly passing.</p>
-
+<p><span class="lemma msp-auto">Standard library only; no dependencies. At deposit time, laborvector.org scored 1.0 (11/11); a partially-inscribed surface scored 0.636, with the instrument</span> naming the missing deliverables — demonstrating that it discriminates rather than uniformly passing.</p>
 <h2>Disambiguation</h2>
-<p>The SPXI Conformance Instrument is <span class="ref">distinct from</span> the protocol it measures (EA-SPXI-WEB-01); <span class="ref">distinct from</span> SEO ranking or audit tools (it measures compression-survival inscription, not search position); and <span class="ref">distinct from</span> any quality or truth judgment of the entity described — it is a presence audit of inscription, not a verdict on content.</p>
-
-<p style="margin-top:2rem;"><a class="ref" href="https://www.alexanarch.org/s/records/173/">Standing Protocol v4.0 (EA-SPXI-WEB-01)</a> · <a class="ref" href="https://www.alexanarch.org/s/browse/">Crimson Hexagonal Archive</a></p>
+<p><span class="lemma msp-auto">The SPXI Conformance Instrument is</span> <span class="ref">distinct from</span> the protocol it measures (EA-SPXI-WEB-01); <span class="ref">distinct from</span> SEO ranking or audit tools (it measures compression-survival inscription, not search position); and <span class="ref">distinct from</span> any quality or truth judgment of the entity described — it is a presence audit of inscription, not a verdict on content.</p>
+<p style="margin-top:2rem;"><a class="ref axn-chip" href="https://www.alexanarch.org/s/records/173/"><span class="lemma msp-auto">Standing Protocol v4.0 (EA-SPXI-WEB-01)</span></a> · <a class="ref" href="https://www.alexanarch.org/s/browse/">Crimson Hexagonal Archive</a></p>
+<!-- MSP-APPARATUS-START -->
+<div class="doors"><a class="w-chip" href="https://www.alexanarch.org/s/records/974/">Read the landing spec</a><a class="w-chip" href="https://www.alexanarch.org/s/records/976/">Open the protocol MPAI</a><a class="w-chip" href="https://www.alexanarch.org/">Enter the archive</a></div>
+<div class="mspcolophon">colophon · surface_id: spxi.dev/conformance · canonical_url: https://spxi.dev/conformance · object_state: canonical · surface_observed_at: 2026-07-13T23:14:07Z · source_object_ids: deposit #974 · source_hashes: unknown · generator_version: hand-built static (no generator) · repository_commit: STAGE1-PENDING · model_or_agent: drafted with Claude (TACHYON), MANUS-approved · operator_sequence: n/a · human_approver: Lee Sharks (MANUS) · approval_timestamp: 2026-07-13T23:14:07Z · render_sha256 (of this file with this field’s value set to null): STAGE1_HASH_PENDING · correction_log_url: https://github.com/leesharks000/spxi-dev/commits/main/conformance/index.html — EA-APPARATUS-01 v0.3, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎</div>
+<!-- MSP-APPARATUS-END -->
 <footer style="margin-top:3rem; padding-top:1rem; border-top:1px solid var(--rule, #ccc); color:var(--text-dim); font-family:var(--mono); font-size:0.8rem;">EA-SPXI-CONF-01 v1.0 · Rex Fraction · CC BY 4.0 · ∮ = 1</footer>
 </div>
 </body>

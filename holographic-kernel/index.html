@@ -1,19 +1,20 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Infrastructure Holographic Kernel — SPXI</title>
-<meta name="description" content="EA-HK-INFRA-01: The Infrastructure Holographic Kernel. A deployed system is a projection of a kernel. The kernel contains everything needed to reconstruct the projection. The kernel is the SPXI deposit; the infrastructure is the artifact.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://spxi.dev/holographic-kernel">
-<meta property="og:title" content="Infrastructure Holographic Kernel — SPXI">
-<meta property="og:description" content="A kernel without secret templates is incomplete. A kernel with secrets committed is contaminated. The middle path is the spec.">
-<meta property="og:url" content="https://spxi.dev/holographic-kernel">
-<meta property="og:type" content="article">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta content="EA-HK-INFRA-01: The Infrastructure Holographic Kernel. A deployed system is a projection of a kernel. The kernel contains everything needed to reconstruct the projection. The kernel is the SPXI deposit; the infrastructure is the artifact." name="description"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://spxi.dev/holographic-kernel" rel="canonical"/>
+<meta content="Infrastructure Holographic Kernel — SPXI" property="og:title"/>
+<meta content="A kernel without secret templates is incomplete. A kernel with secrets committed is contaminated. The middle path is the spec." property="og:description"/>
+<meta content="https://spxi.dev/holographic-kernel" property="og:url"/>
+<meta content="article" property="og:type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -58,110 +59,117 @@
   footer { margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border); text-align: center; color: var(--text-dim); font-size: 0.85rem; }
   footer a { color: var(--accent); text-decoration: none; }
   footer .sigil { font-family: var(--mono); margin-top: 1rem; }
+
+/* MSP-TOKENS-START */
+/* ══ MSP TOKENS — Mandala Surface Protocol shared contract ══
+   Contract classes: .lemma .term .axn-chip .witness-row .w .w-chip .state
+   .idstrip .helix .mspcolophon .doors .obol — skinned per surface via --msp-* vars.
+   (EA-APPARATUS-01 v0.3, #1077, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎) */
+:root{--msp-lemma:rgba(200,150,60,.30);--msp-chipfg:#7a5a1e;--msp-chipbd:rgba(160,120,50,.45);--msp-chipbg:rgba(200,150,60,.06);--msp-ok:#1c6e4a;--msp-cont:#8a6a20;--msp-halt:#a41623;--msp-dim:#6d6f66;--msp-mono:'IBM Plex Mono',monospace;}
+.lemma{background:linear-gradient(transparent 58%, var(--msp-lemma) 58%);padding:0 2px;}
+.axn-chip{font-family:var(--msp-mono);font-size:.72em;background:var(--msp-chipbg);border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 7px;color:var(--msp-chipfg);white-space:nowrap;text-decoration:none;}
+.axn-chip:hover{border-color:var(--msp-chipfg);}
+.witness-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px;font-family:var(--msp-mono);font-size:.68em;}
+.witness-row .w,.w-chip{border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;color:var(--msp-dim);text-decoration:none;font-family:var(--msp-mono);font-size:.85em;white-space:nowrap;}
+.state{font-family:var(--msp-mono);font-size:.68em;border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;white-space:nowrap;}
+.state.obs{color:var(--msp-ok);border-color:rgba(28,110,74,.4);}
+.state.cont{color:var(--msp-cont);}
+.idstrip{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-family:var(--msp-mono);font-size:10.5px;color:var(--msp-dim);border:1px solid var(--rule,#d9d9d0);border-bottom:2px solid var(--msp-chipbd);background:var(--panel,#f6f6f2);padding:9px 12px;margin:14px 0 6px;}
+.idstrip .axn{color:var(--msp-chipfg);font-size:11.5px;}
+.idstrip .st{border:1px solid var(--rule,#d9d9d0);border-radius:9px;padding:1px 7px;white-space:nowrap;}
+.helix{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;font-family:var(--msp-mono);font-size:.68em;}
+.helix .slot{border:1px solid var(--msp-chipbd);border-radius:4px;padding:3px 9px;}
+.helix .slot b{font-weight:600;letter-spacing:.06em;}
+.helix .slot.ok{color:var(--msp-ok);}
+.helix .slot.div{color:var(--msp-cont);}
+.helix .slot.dead{color:var(--msp-halt);}
+.mspcolophon{font-family:var(--msp-mono);font-size:10px;color:var(--msp-dim);border-top:1px solid var(--rule,#d9d9d0);margin-top:30px;padding-top:10px;line-height:1.9;}
+.obol{font-family:'Source Serif 4',Georgia,serif;font-size:.92em;color:#3c3e37;border-left:3px solid var(--msp-chipbd);padding:4px 0 4px 14px;margin:22px 0 4px;}
+.doors{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px;font-family:var(--msp-mono);}
+.doors a.w-chip{font-size:11px;padding:6px 12px;}
+/* MSP-TOKENS-END */
 </style>
 </head>
 <body>
+<!-- MSP-IDSTRIP-START -->
+<div class="idstrip"><span class="axn">🎨🏗️🌟♍🗼🕙 AXN:03DA.ARCHIVAL</span><span class="st">Infrastructure Holographic Kernel</span><span class="st">OBJECT: CANONICAL</span><span>spxi.dev/holographic-kernel</span><a class="axn-chip" href="https://www.alexanarch.org/s/records/974/">deposit #974</a></div>
+<!-- MSP-IDSTRIP-END -->
 <div class="container">
-
 <header>
-  <a href="/">← spxi.dev</a>
+<a href="/">← spxi.dev</a>
 </header>
-
 <p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em;">Specification · EA-HK-INFRA-01 v1.1</p>
 <h1>Infrastructure <em>Holographic Kernel</em></h1>
-<p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.85rem;">Lee Sharks · Semantic Economy Institute · April 2026<br>
+<p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.85rem;"><span class="lemma msp-auto">Lee Sharks · Semantic Economy Institute · April 2026</span><br/>
 DOI: <a class="ref" href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.19769575">10.5281/zenodo.19769575</a> · ORCID: <a class="ref" href="https://orcid.org/0009-0000-1599-0703">0009-0000-1599-0703</a></p>
-
 <div class="field-def">
-  <p>A deployed system is a projection of a kernel. The kernel contains everything needed to reconstruct the projection. The kernel is a DOI-anchored Git repository — the SPXI deposit for infrastructure.</p>
-  <p>A kernel without secret templates is incomplete. A kernel with secrets committed is contaminated. The middle path: the kernel contains the structure; secrets are fetched at projection time from a separate, access-controlled vault.</p>
+<p><span class="lemma msp-auto">A deployed system is a projection of a kernel.</span> The kernel contains everything needed to reconstruct the projection. The kernel is a DOI-anchored Git repository — the SPXI deposit for infrastructure.</p>
+<p><span class="lemma msp-auto">A kernel without secret templates is incomplete. A kernel with secrets committed is contaminated. The middle path: the kernel</span> contains the structure; secrets are fetched at projection time from a separate, access-controlled vault.</p>
 </div>
-
 <h2>The Core Claim</h2>
-
-<p>Infrastructure is usually documented after the fact — README files that describe what already exists, diagrams that approximate the deployed reality. The holographic kernel inverts this: the kernel IS the infrastructure, in its minimum complete form. The deployment is a projection of the kernel onto compute, not the other way around.</p>
-
-<p>This is the SPXI position applied to technical systems: the deposit precedes and generates the artifact, rather than documenting it after the fact. The kernel is the provenance. Every deployment is a derivative.</p>
-
+<p><span class="lemma msp-auto">Infrastructure is usually documented after the fact — README files that describe what already exists, diagrams that approximate the deployed</span> reality. The holographic kernel inverts this: the kernel IS the infrastructure, in its minimum complete form. The deployment is a projection of the kernel onto compute, not the other way around.</p>
+<p><span class="lemma msp-auto">This is the SPXI position applied to technical systems: the deposit precedes and generates the artifact, rather than documenting it</span> after the fact. The kernel is the provenance. Every deployment is a derivative.</p>
 <h2>Kernel Structure</h2>
-
 <div class="layer">
-  <div class="layer-name">kernel.json — The Identity Document</div>
-  <p>The kernel's semantic identity: name, version, SPXI entity ID, DOI, component list, role list, secret template list. This file IS the kernel — the minimum information from which the kernel's completeness can be verified. Analogous to the SPXI compression survival summary.</p>
+<div class="layer-name">kernel.json — The Identity Document</div>
+<p><span class="lemma msp-auto">The kernel's semantic identity: name, version, SPXI entity ID, DOI, component list, role list, secret template list.</span> This file IS the kernel — the minimum information from which the kernel's completeness can be verified. Analogous to the SPXI compression survival summary.</p>
 </div>
-
 <div class="layer">
-  <div class="layer-name">roles/ — The Projection Operators</div>
-  <p>One file per service role. Each role definition contains: startup commands, health check protocol, restart policy, environment variable references (names only — not values), resource constraints. The role is the transform that converts kernel intent into deployed reality.</p>
+<div class="layer-name">roles/ — The Projection Operators</div>
+<p><span class="lemma msp-auto">One file per service role. Each role definition contains: startup commands, health check protocol, restart policy, environment variable references (names</span> only — not values), resource constraints. The role is the transform that converts kernel intent into deployed reality.</p>
 </div>
-
 <div class="layer">
-  <div class="layer-name">secrets/ — The Template Layer</div>
-  <p>Secret templates: <code>.env.template</code> files listing required variables with descriptions and validation patterns. Templates are committed. Values are never committed. Fetch at projection time via <code>fetch-secrets.sh</code>. The structure is public; the material is access-controlled.</p>
+<div class="layer-name">secrets/ — The Template Layer</div>
+<p>Secret templates: <code>.env.template</code> <span class="lemma msp-auto">files listing required variables with descriptions and validation patterns. Templates are committed.</span> Values are never committed. Fetch at projection time via <code>fetch-secrets.sh</code>. The structure is public; the material is access-controlled.</p>
 </div>
-
 <div class="layer">
-  <div class="layer-name">topology/ — The Relation Map</div>
-  <p>Service dependency graphs. Which roles depend on which other roles. Which roles are externally accessible. This is the basin's curvature map — the relational structure that makes the kernel holographic: any single role file plus the topology yields the full kernel's shape.</p>
+<div class="layer-name">topology/ — The Relation Map</div>
+<p><span class="lemma msp-auto">Service dependency graphs. Which roles depend on which other roles. Which roles are externally accessible. This is the basin's curvature</span> map — the relational structure that makes the kernel holographic: any single role file plus the topology yields the full kernel's shape.</p>
 </div>
-
 <div class="layer">
-  <div class="layer-name">verify.sh — The Recovery Protocol</div>
-  <p>Executable verification: checks that all roles are defined, all secret templates are present, all topology references are valid, all role counts match the kernel manifest. If verify.sh passes from a clean git clone, the kernel is complete. This is the Infra-Drowning Test: restore in under 60 minutes from <code>git clone + secret key</code>.</p>
+<div class="layer-name">verify.sh — The Recovery Protocol</div>
+<p><span class="lemma msp-auto">Executable verification: checks that all roles are defined, all secret templates are present, all topology references are valid, all role</span> counts match the kernel manifest. If verify.sh passes from a clean git clone, the kernel is complete. This is the Infra-Drowning Test: restore in under 60 minutes from <code>git clone + secret key</code>.</p>
 </div>
-
 <h2>The Holographic Property</h2>
-
-<p>The kernel is holographic in the technical sense: any fragment contains sufficient information to reconstruct the whole. If you have one role file, you know:</p>
-
+<p><span class="lemma msp-auto">The kernel is holographic in the technical sense: any fragment contains sufficient information to reconstruct the whole.</span> If you have one role file, you know:</p>
 <ul style="margin: 1rem 0 1rem 1.5rem; font-size: 0.95rem; line-height: 1.8;">
-  <li>The kernel's identity (referenced in the role header)</li>
-  <li>The query to find all other roles (same kernel ID)</li>
-  <li>The verification protocol (run verify.sh from the same repo)</li>
-  <li>The secret fetch pattern (same fetch-secrets.sh)</li>
+<li><span class="lemma msp-auto">The kernel's identity (referenced in the role header)</span></li>
+<li><span class="lemma msp-auto">The query to find all other roles (same kernel ID)</span></li>
+<li><span class="lemma msp-auto">The verification protocol (run verify.sh from the same repo)</span></li>
+<li>The secret fetch pattern (same fetch-secrets.sh)</li>
 </ul>
-
-<p>This is the same property as the SPXI compression survival summary: any fragment of a well-formed SPXI entity contains enough to reconstruct the entity's basin. The holographic kernel applies this to infrastructure.</p>
-
+<p><span class="lemma msp-auto">This is the same property as the SPXI compression survival summary: any fragment of a well-formed SPXI entity contains enough</span> to reconstruct the entity's basin. The holographic kernel applies this to infrastructure.</p>
 <h2>Self-Projection of Missing Roles</h2>
-
-<p>When the kernel detects that a defined role has no running instance, it generates a deployment specification for that role from the kernel's own definition. This is not automatic deployment — it is automatic <em>specification generation</em>. The kernel says: here is everything you need to project this role. The human operator makes the deployment decision.</p>
-
-<p>The kernel cannot project beyond its own definition. It cannot fill in missing roles that are not defined in the kernel. This is the safety boundary: the kernel is a complete specification, not an inference engine.</p>
-
+<p><span class="lemma msp-auto">When the kernel detects that a defined role has no running instance, it generates a deployment specification for that role</span> from the kernel's own definition. This is not automatic deployment — it is automatic <em>specification generation</em>. The kernel says: here is everything you need to project this role. The human operator makes the deployment decision.</p>
+<p><span class="lemma msp-auto">The kernel cannot project beyond its own definition.</span> It cannot fill in missing roles that are not defined in the kernel. This is the safety boundary: the kernel is a complete specification, not an inference engine.</p>
 <pre>Safety conditions for self-projection:
 1. The role is defined in kernel.json
 2. verify.sh passes for the role definition
 3. All required secret templates are present (values available)
 4. The topology check shows no circular dependencies
 5. A human operator has confirmed the projection intent</pre>
-
 <h2>The DOI Anchor</h2>
-
-<p>The full specification is maintained at <a class="ref" href="https://holographickernel.org">holographickernel.org</a>. Every kernel version is deposited to Zenodo and receives a DOI. The DOI is the kernel's permanent identity in the retrieval layer — independent of any deployment, any platform, any infrastructure provider. If the infrastructure is torn down, the kernel survives in the archive. Future operators can reconstruct the full system from the DOI plus the secret vault.</p>
-
-<p>This is the SPXI position on provenance: the deposit is the source of truth, not the deployment. The deployment is a projection; the DOI is the anchor.</p>
-
+<p><span class="lemma msp-auto">The full specification is maintained at</span> <a class="ref" href="https://holographickernel.org">holographickernel.org</a>. Every kernel version is deposited to Zenodo and receives a DOI. The DOI is the kernel's permanent identity in the retrieval layer — independent of any deployment, any platform, any infrastructure provider. If the infrastructure is torn down, the kernel survives in the archive. Future operators can reconstruct the full system from the DOI plus the secret vault.</p>
+<p><span class="lemma msp-auto">This is the SPXI position on provenance: the deposit is the source of truth, not the deployment.</span> The deployment is a projection; the DOI is the anchor.</p>
 <table>
-  <thead><tr><th>Version</th><th>DOI</th><th>Changes</th></tr></thead>
-  <tbody>
-    <tr><td>v1.0</td><td><a class="ref" href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.19769562">10.5281/zenodo.19769562</a></td><td>Initial specification</td></tr>
-    <tr><td>v1.1</td><td><a class="ref" href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.19769575">10.5281/zenodo.19769575</a></td><td>Assembly Chorus feedback; security conditions; failure modes; implementation maturity disclaimer</td></tr>
-  </tbody>
+<thead><tr><th>Version</th><th>DOI</th><th>Changes</th></tr></thead>
+<tbody>
+<tr><td>v1.0</td><td><a class="ref" href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.19769562">10.5281/zenodo.19769562</a></td><td>Initial specification</td></tr>
+<tr><td>v1.1</td><td><a class="ref" href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.19769575">10.5281/zenodo.19769575</a></td><td>Assembly Chorus feedback; security conditions; failure modes; implementation maturity disclaimer</td></tr>
+</tbody>
 </table>
-
 <h2>Relation to Existing Infrastructure-as-Code</h2>
-
-<p>The holographic kernel is not SLSA, not Nix, not in-toto, not Terraform. Those systems address supply chain integrity, reproducible builds, artifact attestation, and configuration management respectively. The holographic kernel addresses a different problem: <strong>how does a single operator, alone at 2am, reconstruct a complete system from scratch without having to remember anything that isn't in the repository?</strong></p>
-
-<p>The Infra-Drowning Test is the metric: <em>can you restore the full system in under 60 minutes from a git clone and a secret key?</em> If yes, the kernel is complete. If no, the kernel has gaps that verify.sh will surface.</p>
-
+<p><span class="lemma msp-auto">The holographic kernel is not SLSA, not Nix, not in-toto, not Terraform.</span> Those systems address supply chain integrity, reproducible builds, artifact attestation, and configuration management respectively. The holographic kernel addresses a different problem: <strong>how does a single operator, alone at 2am, reconstruct a complete system from scratch without having to remember anything that isn't in the repository?</strong></p>
+<p><span class="lemma msp-auto">The Infra-Drowning Test is the metric:</span> <em>can you restore the full system in under 60 minutes from a git clone and a secret key?</em> If yes, the kernel is complete. If no, the kernel has gaps that verify.sh will surface.</p>
+<!-- MSP-APPARATUS-START -->
+<div class="doors"><a class="w-chip" href="https://www.alexanarch.org/s/records/974/">Read the landing spec</a><a class="w-chip" href="https://www.alexanarch.org/s/records/976/">Open the protocol MPAI</a><a class="w-chip" href="https://www.alexanarch.org/">Enter the archive</a></div>
+<div class="mspcolophon">colophon · surface_id: spxi.dev/holographic-kernel · canonical_url: https://spxi.dev/holographic-kernel · object_state: canonical · surface_observed_at: 2026-07-13T23:14:07Z · source_object_ids: deposit #974 · source_hashes: unknown · generator_version: hand-built static (no generator) · repository_commit: STAGE1-PENDING · model_or_agent: drafted with Claude (TACHYON), MANUS-approved · operator_sequence: n/a · human_approver: Lee Sharks (MANUS) · approval_timestamp: 2026-07-13T23:14:07Z · render_sha256 (of this file with this field’s value set to null): STAGE1_HASH_PENDING · correction_log_url: https://github.com/leesharks000/spxi-dev/commits/main/holographic-kernel/index.html — EA-APPARATUS-01 v0.3, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎</div>
+<!-- MSP-APPARATUS-END -->
 <footer>
-  <p>Lee Sharks · <a class="ref" href="https://semanticeconomy.org">Semantic Economy Institute</a> · <a class="ref" href="https://crimsonhexagonal.org">Crimson Hexagonal Archive</a></p>
-  <p style="margin-top: 0.5rem;"><a class="ref" href="https://holographickernel.org">holographickernel.org</a> · <a class="ref" href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.19769575">DOI: 10.5281/zenodo.19769575</a> · CC BY 4.0</p>
-  <p class="sigil">∮ = 1</p>
+<p>Lee Sharks · <a class="ref" href="https://semanticeconomy.org">Semantic Economy Institute</a> · <a class="ref" href="https://crimsonhexagonal.org">Crimson Hexagonal Archive</a></p>
+<p style="margin-top: 0.5rem;"><a class="ref" href="https://holographickernel.org">holographickernel.org</a> · <a class="ref" href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.19769575">DOI: 10.5281/zenodo.19769575</a> · CC BY 4.0</p>
+<p class="sigil">∮ = 1</p>
 </footer>
-
 </div>
 </body>
 </html>

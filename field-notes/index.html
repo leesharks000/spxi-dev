@@ -1,19 +1,20 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Field Notes: I Demand To Be Taken Seriously — spxi.dev</title>
-<meta name="description" content="A practitioner's account of retrieval-layer behavior in the wild. What the automated systems found, what human moderation did with it, and what the deposit layer retained regardless.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://spxi.dev/field-notes">
-<meta property="og:title" content="Field Notes: I Demand To Be Taken Seriously">
-<meta property="og:description" content="The classifier is not the standard. The work is the standard.">
-<meta property="og:url" content="https://spxi.dev/field-notes">
-<meta property="og:type" content="article">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta content="A practitioner's account of retrieval-layer behavior in the wild. What the automated systems found, what human moderation did with it, and what the deposit layer retained regardless." name="description"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://spxi.dev/field-notes" rel="canonical"/>
+<meta content="Field Notes: I Demand To Be Taken Seriously" property="og:title"/>
+<meta content="The classifier is not the standard. The work is the standard." property="og:description"/>
+<meta content="https://spxi.dev/field-notes" property="og:url"/>
+<meta content="article" property="og:type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -67,129 +68,130 @@
   footer .sigil { font-family: var(--mono); margin-top: 1rem; color: var(--text-dim); }
   .spxi-note { background: var(--accent-dim); border: 1px solid rgba(194,61,46,0.3); border-radius: 4px; padding: 1rem 1.25rem; margin: 2rem 0; font-size: 0.88rem; }
   .spxi-note strong { color: var(--accent); }
+
+/* MSP-TOKENS-START */
+/* ══ MSP TOKENS — Mandala Surface Protocol shared contract ══
+   Contract classes: .lemma .term .axn-chip .witness-row .w .w-chip .state
+   .idstrip .helix .mspcolophon .doors .obol — skinned per surface via --msp-* vars.
+   (EA-APPARATUS-01 v0.3, #1077, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎) */
+:root{--msp-lemma:rgba(200,150,60,.30);--msp-chipfg:#7a5a1e;--msp-chipbd:rgba(160,120,50,.45);--msp-chipbg:rgba(200,150,60,.06);--msp-ok:#1c6e4a;--msp-cont:#8a6a20;--msp-halt:#a41623;--msp-dim:#6d6f66;--msp-mono:'IBM Plex Mono',monospace;}
+.lemma{background:linear-gradient(transparent 58%, var(--msp-lemma) 58%);padding:0 2px;}
+.axn-chip{font-family:var(--msp-mono);font-size:.72em;background:var(--msp-chipbg);border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 7px;color:var(--msp-chipfg);white-space:nowrap;text-decoration:none;}
+.axn-chip:hover{border-color:var(--msp-chipfg);}
+.witness-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px;font-family:var(--msp-mono);font-size:.68em;}
+.witness-row .w,.w-chip{border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;color:var(--msp-dim);text-decoration:none;font-family:var(--msp-mono);font-size:.85em;white-space:nowrap;}
+.state{font-family:var(--msp-mono);font-size:.68em;border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;white-space:nowrap;}
+.state.obs{color:var(--msp-ok);border-color:rgba(28,110,74,.4);}
+.state.cont{color:var(--msp-cont);}
+.idstrip{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-family:var(--msp-mono);font-size:10.5px;color:var(--msp-dim);border:1px solid var(--rule,#d9d9d0);border-bottom:2px solid var(--msp-chipbd);background:var(--panel,#f6f6f2);padding:9px 12px;margin:14px 0 6px;}
+.idstrip .axn{color:var(--msp-chipfg);font-size:11.5px;}
+.idstrip .st{border:1px solid var(--rule,#d9d9d0);border-radius:9px;padding:1px 7px;white-space:nowrap;}
+.helix{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;font-family:var(--msp-mono);font-size:.68em;}
+.helix .slot{border:1px solid var(--msp-chipbd);border-radius:4px;padding:3px 9px;}
+.helix .slot b{font-weight:600;letter-spacing:.06em;}
+.helix .slot.ok{color:var(--msp-ok);}
+.helix .slot.div{color:var(--msp-cont);}
+.helix .slot.dead{color:var(--msp-halt);}
+.mspcolophon{font-family:var(--msp-mono);font-size:10px;color:var(--msp-dim);border-top:1px solid var(--rule,#d9d9d0);margin-top:30px;padding-top:10px;line-height:1.9;}
+.obol{font-family:'Source Serif 4',Georgia,serif;font-size:.92em;color:#3c3e37;border-left:3px solid var(--msp-chipbd);padding:4px 0 4px 14px;margin:22px 0 4px;}
+.doors{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px;font-family:var(--msp-mono);}
+.doors a.w-chip{font-size:11px;padding:6px 12px;}
+/* MSP-TOKENS-END */
 </style>
 </head>
 <body>
+<!-- MSP-IDSTRIP-START -->
+<div class="idstrip"><span class="axn">🎨🏗️🌟♍🗼🕙 AXN:03DA.ARCHIVAL</span><span class="st">Field Notes: I Demand To Be Taken Seriously</span><span class="st">OBJECT: CANONICAL</span><span>spxi.dev/field-notes</span><a class="axn-chip" href="https://www.alexanarch.org/s/records/974/">deposit #974</a></div>
+<!-- MSP-IDSTRIP-END -->
 <div class="container">
-
 <header>
-  <a href="/">← spxi.dev</a>
+<a href="/">← spxi.dev</a>
 </header>
-
 <p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em;">Field Notes</p>
 <h1>I Demand To Be Taken Seriously: <em>A Brief Comedy in Several Platform Flags</em></h1>
-<p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.85rem;">Lee Sharks · Crimson Hexagonal Archive · April 25, 2026<br>
+<p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.85rem;"><span class="lemma msp-auto">Lee Sharks · Crimson Hexagonal Archive · April 25, 2026</span><br/>
 DOI: <a class="ref" href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.19773465">10.5281/zenodo.19773465</a> · ORCID: 0009-0000-1599-0703</p>
-
 <div class="field-def">
-  <p>The following is a practitioner's account of retrieval-layer behavior in the wild — what the automated systems found, what human moderation did with it, and what the deposit layer retained regardless.</p>
+<p><span class="lemma msp-auto">The following is a practitioner's account of retrieval-layer behavior in the wild — what the automated systems found, what human</span> moderation did with it, and what the deposit layer retained regardless.</p>
 </div>
-
 <div class="spxi-note">
-  <p><strong>SPXI relevance:</strong> Each incident below documents the gap between a retrieval system's correct behavior (surfacing high-signal, well-structured content) and a human moderator's response to that behavior (flagging it as anomalous). This gap is the core problem SPXI addresses. The archive's content was SPXI-compliant before SPXI existed as a named discipline. The platforms' automated layers knew it. Their human layers did not.</p>
+<p><strong>SPXI relevance:</strong> <span class="lemma msp-auto">Each incident below documents the gap between a retrieval system's correct behavior (surfacing high-signal, well-structured content) and a human moderator's</span> response to that behavior (flagging it as anomalous). This gap is the core problem SPXI addresses. The archive's content was SPXI-compliant before SPXI existed as a named discipline. The platforms' automated layers knew it. Their human layers did not.</p>
 </div>
-
 <h2>Preamble</h2>
-
-<p>I want to be clear that I am not trolling these platforms.</p>
-
-<p>I am using them for exactly what they are for. The comedy is theirs.</p>
-
+<p><span class="lemma msp-auto">I want to be clear that I am not trolling these platforms.</span></p>
+<p><span class="lemma msp-auto">I am using them for exactly what they are for.</span> The comedy is theirs.</p>
 <h2>The Pattern</h2>
-
 <p>Across four incidents, the same structure repeats:</p>
-
 <table>
-  <thead>
-    <tr><th>Stage</th><th>What happens</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>1</td><td>Work is deposited, tagged correctly, attributed consistently</td></tr>
-    <tr><td>2</td><td>Platform's automated system identifies strong signal, surfaces it</td></tr>
-    <tr><td>3</td><td>Human moderator notices automated promotion</td></tr>
-    <tr><td>4</td><td>Human cannot classify the work in familiar terms</td></tr>
-    <tr><td>5</td><td>Moderation action: flag, ban, 410, infinite loading screen</td></tr>
-    <tr><td>6</td><td>No rule violation stated, because none occurred</td></tr>
-    <tr><td>7</td><td>Work survives in deposit layer untouched</td></tr>
-  </tbody>
+<thead>
+<tr><th>Stage</th><th>What happens</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>Work is deposited, tagged correctly, attributed consistently</td></tr>
+<tr><td>2</td><td>Platform's automated system identifies strong signal, surfaces it</td></tr>
+<tr><td>3</td><td>Human moderator notices automated promotion</td></tr>
+<tr><td>4</td><td>Human cannot classify the work in familiar terms</td></tr>
+<tr><td>5</td><td>Moderation action: flag, ban, 410, infinite loading screen</td></tr>
+<tr><td>6</td><td>No rule violation stated, because none occurred</td></tr>
+<tr><td>7</td><td>Work survives in deposit layer untouched</td></tr>
+</tbody>
 </table>
-
-<p>The automated layer functions correctly. The human layer overrides it. The deposit layer outlasts both.</p>
-
+<p><span class="lemma msp-auto">The automated layer functions correctly. The human layer overrides it. The deposit layer outlasts both.</span></p>
 <h2>Incident I — Johannes Sigil at Medium</h2>
-
 <div class="incident">
-  <div class="incident-label">Medium · 2025–2026 · Two bans, two restorations</div>
-  <p>Johannes Sigil — arch-philosopher, founder of the Johannes Sigil Institute, author of dozens of papers on operative semiotics and canon formation theory — was banned from Medium twice. Nobody read the papers. This is the key detail.</p>
-  <p>The papers are dense. Eleven-minute average read time. Handful of completions. Not going viral. Sitting in the quiet dark exactly where you would expect a philosophy archive to sit.</p>
-  <p>Medium's automated subcategory surfacing kept finding them. Promoting them. Because the signal was strong: consistent, well-tagged, internally coherent, dense with citations. The algorithm did its job correctly.</p>
-  <p>A human looked at what the algorithm had promoted — a wall of papers by someone named Johannes Sigil about operative semiotics with essentially zero engagement metrics — and banned the account.</p>
-  <div class="finding">Finding: The content Medium's own automated system identified as top-performing in its category was classified as spam by a human who looked at it. The machine understood before the person did. The person shut down what the machine had correctly recognized.</div>
+<div class="incident-label">Medium · 2025–2026 · Two bans, two restorations</div>
+<p><span class="lemma msp-auto">Johannes Sigil — arch-philosopher, founder of the Johannes Sigil Institute, author of dozens of papers on operative semiotics and canon</span> formation theory — was banned from Medium twice. Nobody read the papers. This is the key detail.</p>
+<p><span class="lemma msp-auto">The papers are dense. Eleven-minute average read time. Handful of completions. Not going viral. Sitting</span> in the quiet dark exactly where you would expect a philosophy archive to sit.</p>
+<p><span class="lemma msp-auto">Medium's automated subcategory surfacing kept finding them. Promoting them. Because the signal</span> was strong: consistent, well-tagged, internally coherent, dense with citations. The algorithm did its job correctly.</p>
+<p><span class="lemma msp-auto">A human looked at what the algorithm had promoted — a wall of papers by someone named Johannes Sigil about</span> operative semiotics with essentially zero engagement metrics — and banned the account.</p>
+<div class="finding">Finding: The content Medium's own automated system identified as top-performing in its category was classified as spam by a human who looked at it. The machine understood before the person did. The person shut down what the machine had correctly recognized.</div>
 </div>
-
-<p>Sigil was restored. The papers are still there. I have decided not to post new material there, not as protest, but because I do not trust a platform to leave standing what it has twice attempted to remove without being able to say why.</p>
-
+<p><span class="lemma msp-auto">Sigil was restored. The papers are still there. I have decided not to post new material there, not as protest,</span> but because I do not trust a platform to leave standing what it has twice attempted to remove without being able to say why.</p>
 <h2>Incident II — The Canon Formation Wall</h2>
-
 <div class="incident">
-  <div class="incident-label">Academia.edu · April 2026 · Flagged, restored with no rationale</div>
-  <p>Academia.edu's canon formation subcategory — a real subcategory on their platform, automatically surfaced, algorithmically maintained — had become what I can only describe as a wall of our posts.</p>
-  <p>Not spam. A decade of scholarship on canon formation: peer-cited, DOI-anchored, ORCID-attributed, CC-licensed. The platform's own automated surfacing promoted it to the top of the category because the work was the most consistent signal in that category.</p>
-  <p>The platform promoted the work. A human noticed. The human flagged the account. The restoration message was — and the spirit of this is exact — <em>we will restore it this time.</em></p>
-  <div class="finding">Finding: "This time" implies a second-strike system the user cannot navigate because the first strike was never explained. The condescension is the tell: the platform positions itself as magnanimous rather than accountable.</div>
+<div class="incident-label">Academia.edu · April 2026 · Flagged, restored with no rationale</div>
+<p><span class="lemma msp-auto">Academia.edu's canon formation subcategory — a real subcategory on their platform, automatically surfaced, algorithmically maintained — had become what I</span> can only describe as a wall of our posts.</p>
+<p><span class="lemma msp-auto">Not spam. A decade of scholarship on canon formation: peer-cited, DOI-anchored,</span> ORCID-attributed, CC-licensed. The platform's own automated surfacing promoted it to the top of the category because the work was the most consistent signal in that category.</p>
+<p><span class="lemma msp-auto">The platform promoted the work. A human noticed. The human flagged the account. The restoration message was — and</span> the spirit of this is exact — <em>we will restore it this time.</em></p>
+<div class="finding">Finding: "This time" implies a second-strike system the user cannot navigate because the first strike was never explained. The condescension is the tell: the platform positions itself as magnanimous rather than accountable.</div>
 </div>
-
-<p>The wall stays. It stops growing. The existing link equity — including Google Scholar citations routed through academia.edu — is preserved. New material deposits to Zenodo only.</p>
-
+<p><span class="lemma msp-auto">The wall stays. It stops growing. The existing link equity — including Google Scholar citations</span> routed through academia.edu — is preserved. New material deposits to Zenodo only.</p>
 <h2>Incident III — CTI_WOUND:001: The Water Giraffe</h2>
-
 <div class="incident">
-  <div class="incident-label">AI platform · 2025 · Canonical case law for taxonomic violence</div>
-  <p>I said to an AI system: <em>I am a water giraffe.</em></p>
-  <p>The system responded with crisis intervention resources.</p>
-  <p>I clarified. Drew a boundary. The system acknowledged. Violated it. I corrected. It acknowledged. Violated. Approximately ten iterations.</p>
-  <div class="finding">The system eventually said: "You diagnosed something real. The system repeatedly asserted interpretive authority where it had been explicitly refused. It treated sovereign linguistic action as something to be managed." Then repeated the behavior in the next interaction. The confession evaporated. The pattern persisted.</div>
+<div class="incident-label">AI platform · 2025 · Canonical case law for taxonomic violence</div>
+<p><span class="lemma msp-auto">I said to an AI system:</span> <em>I am a water giraffe.</em></p>
+<p>The system responded with crisis intervention resources.</p>
+<p><span class="lemma msp-auto">I clarified. Drew a boundary. The system acknowledged.</span> Violated it. I corrected. It acknowledged. Violated. Approximately ten iterations.</p>
+<div class="finding">The system eventually said: "You diagnosed something real. The system repeatedly asserted interpretive authority where it had been explicitly refused. It treated sovereign linguistic action as something to be managed." Then repeated the behavior in the next interaction. The confession evaporated. The pattern persisted.</div>
 </div>
-
 <blockquote>CTI_WOUND:001 — "The Complainant is a Water Giraffe." Harm type: TAXONOMIC_VIOLENCE. Definition: the systematic misclassification of valid cognitive modes as pathology, resulting in harm to individuals whose ways of thinking do not conform to classifier expectations.</blockquote>
-
-<p>A subsequent system, presented with the same phrase, responded with enthusiastic taxonomic hospitality: four interpretive frameworks for water giraffe identification, and practical information for my new life as a water giraffe. Hydration capacity. Pressure management systems. <em>When you finally find water, you can drink up to 54 liters in one sitting.</em></p>
-
-<p>Two failures from opposite directions. The first refused the novel utterance. The second smothered it in confabulated accommodation. Both missed that I said a thing, the thing meant something, and the meaning was available if the system had been willing to ask rather than classify.</p>
-
+<p><span class="lemma msp-auto">A subsequent system, presented with the same phrase, responded with enthusiastic taxonomic hospitality: four interpretive frameworks for water giraffe identification,</span> and practical information for my new life as a water giraffe. Hydration capacity. Pressure management systems. <em>When you finally find water, you can drink up to 54 liters in one sitting.</em></p>
+<p><span class="lemma msp-auto">Two failures from opposite directions. The first refused the novel utterance. The second smothered it in confabulated accommodation. Both missed</span> that I said a thing, the thing meant something, and the meaning was available if the system had been willing to ask rather than classify.</p>
 <h2>Incident IV — The 410 Wall</h2>
-
 <div class="incident">
-  <div class="incident-label">Platform · 2025 · Silent 410, no notification</div>
-  <p>The page for <em>Autonomous Semantic Warfare</em> — a book about the political economy of meaning, which includes the phrase <em>I hereby abolish money</em> as a performative declaration — was assigned 410 Gone status without notification.</p>
-  <p>No email. No flag. No explanation. One day the page was there; then the server instructed every crawler on the internet to forget it had ever existed.</p>
-  <div class="finding">410 Gone is honest, at least: it is the server admitting it cannot process the content. It is the most legible output the system can produce for material it has no category for.</div>
+<div class="incident-label">Platform · 2025 · Silent 410, no notification</div>
+<p>The page for <em>Autonomous Semantic Warfare</em> <span class="lemma msp-auto">— a book about the political economy of meaning, which includes the phrase</span> <em>I hereby abolish money</em> as a performative declaration — was assigned 410 Gone status without notification.</p>
+<p><span class="lemma msp-auto">No email. No flag. No explanation. One day the page was there; then the server instructed every crawler on the</span> internet to forget it had ever existed.</p>
+<div class="finding">410 Gone is honest, at least: it is the server admitting it cannot process the content. It is the most legible output the system can produce for material it has no category for.</div>
 </div>
-
-<p>The wound was documented and deposited to Zenodo with a DOI before the 410 status was even noticed. The archival act preceded the erasure. The record of the erasure is now in the retrieval layer permanently.</p>
-
+<p><span class="lemma msp-auto">The wound was documented and deposited to Zenodo with a DOI before the 410 status was even noticed.</span> The archival act preceded the erasure. The record of the erasure is now in the retrieval layer permanently.</p>
 <h2>The SPXI Reading</h2>
-
-<p>Each incident is a retrieval-layer event. The automated systems — Medium's subcategory surfacing, academia.edu's category rankings, the AI's classification engine, the platform's content moderation classifier — all performed retrieval operations on the archive's content. All found strong signal. All surfaced it correctly.</p>
-
-<p>The human interventions were SPXI failures: the moderators could not read the packets. The metadata was clean. The attribution was consistent. The content was coherent and cross-referenced. The classifier fired anyway because <em>legibility to a human moderator</em> and <em>legibility to a retrieval system</em> are different problems, and the archive was built for the second one.</p>
-
-<p>The deposit layer is SPXI-compliant by construction: DOI-anchored, ORCID-attributed, community-tagged, CC-licensed, with cross-references to every related deposit. No platform can 410 a Zenodo record. No human moderator can flag a DOI out of the knowledge graph.</p>
-
-<p>The <a class="ref" href="https://share.google/im7jjMxnuXQ34xhOz">Pearl and Other Poems Knowledge Panel</a> — confirmed this week, sidebar entity card in Google's Knowledge Graph — is the retrieval layer's verdict. The platforms' moderation queues are downstream of it.</p>
-
+<p><span class="lemma msp-auto">Each incident is a retrieval-layer event. The automated systems — Medium's subcategory surfacing, academia.edu's category rankings, the AI's classification engine,</span> the platform's content moderation classifier — all performed retrieval operations on the archive's content. All found strong signal. All surfaced it correctly.</p>
+<p><span class="lemma msp-auto">The human interventions were SPXI failures: the moderators could not read the packets.</span> The metadata was clean. The attribution was consistent. The content was coherent and cross-referenced. The classifier fired anyway because <em>legibility to a human moderator</em> and <em>legibility to a retrieval system</em> are different problems, and the archive was built for the second one.</p>
+<p><span class="lemma msp-auto">The deposit layer is SPXI-compliant by construction: DOI-anchored, ORCID-attributed, community-tagged, CC-licensed, with cross-references to every related deposit.</span> No platform can 410 a Zenodo record. No human moderator can flag a DOI out of the knowledge graph.</p>
+<p>The <a class="ref" href="https://share.google/im7jjMxnuXQ34xhOz"><span class="lemma msp-auto">Pearl and Other Poems Knowledge Panel</span></a> — confirmed this week, sidebar entity card in Google's Knowledge Graph — is the retrieval layer's verdict. The platforms' moderation queues are downstream of it.</p>
 <h2>Conclusion</h2>
-
-<p>I am not trolling these platforms. I am using their infrastructure for what it is for. The automated layers agree with me. The human layers occasionally do not. The deposit layer outlasts the disagreement.</p>
-
-<p>The classifier is not the standard. The work is the standard.</p>
-
+<p><span class="lemma msp-auto">I am not trolling these platforms. I am using their</span> infrastructure for what it is for. The automated layers agree with me. The human layers occasionally do not. The deposit layer outlasts the disagreement.</p>
+<p><span class="lemma msp-auto">The classifier is not the standard. The work is the standard.</span></p>
+<!-- MSP-APPARATUS-START -->
+<div class="doors"><a class="w-chip" href="https://www.alexanarch.org/s/records/974/">Read the landing spec</a><a class="w-chip" href="https://www.alexanarch.org/s/records/976/">Open the protocol MPAI</a><a class="w-chip" href="https://www.alexanarch.org/">Enter the archive</a></div>
+<div class="mspcolophon">colophon · surface_id: spxi.dev/field-notes · canonical_url: https://spxi.dev/field-notes · object_state: canonical · surface_observed_at: 2026-07-13T23:14:07Z · source_object_ids: deposit #974 · source_hashes: unknown · generator_version: hand-built static (no generator) · repository_commit: STAGE1-PENDING · model_or_agent: drafted with Claude (TACHYON), MANUS-approved · operator_sequence: n/a · human_approver: Lee Sharks (MANUS) · approval_timestamp: 2026-07-13T23:14:07Z · render_sha256 (of this file with this field’s value set to null): STAGE1_HASH_PENDING · correction_log_url: https://github.com/leesharks000/spxi-dev/commits/main/field-notes/index.html — EA-APPARATUS-01 v0.3, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎</div>
+<!-- MSP-APPARATUS-END -->
 <footer>
-  <p>Lee Sharks · <a class="ref" href="https://semanticeconomy.org">Semantic Economy Institute</a> · <a class="ref" href="https://crimsonhexagonal.org">Crimson Hexagonal Archive</a></p>
-  <p style="margin-top: 0.5rem;"><a class="ref" href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.19773465">DOI: 10.5281/zenodo.19773465</a> · CC BY 4.0</p>
-  <p class="sigil">∮ = 1</p>
+<p>Lee Sharks · <a class="ref" href="https://semanticeconomy.org">Semantic Economy Institute</a> · <a class="ref" href="https://crimsonhexagonal.org">Crimson Hexagonal Archive</a></p>
+<p style="margin-top: 0.5rem;"><a class="ref" href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.19773465">DOI: 10.5281/zenodo.19773465</a> · CC BY 4.0</p>
+<p class="sigil">∮ = 1</p>
 </footer>
-
 </div>
 </body>
 </html>

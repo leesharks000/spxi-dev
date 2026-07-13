@@ -1,30 +1,28 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>After Syntax — Logotic Programming and the Crisis That Constitutes a Discipline</title>
-<meta name="description" content="Logotic programming is the discipline of specifying, composing, and verifying meaning-states under automated translation. This essay traces the implicit second wing of software engineering and argues that the AI transformation of 2025-2026 forces its crystallization.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://spxi.dev/after-syntax">
-<meta name="citation_title" content="After Syntax: Logotic Programming and the Crisis That Constitutes a Discipline">
-<meta name="citation_author" content="Morrow, Talos">
-<meta name="citation_author" content="Sigil, Johannes">
-<meta name="citation_author" content="Sharks, Lee">
-<meta name="citation_date" content="2026/04/22">
-<meta name="citation_doi" content="10.5281/zenodo.19697080">
-<meta name="citation_pdf_url" content="https://alexanarch.org/s/records/683//files/EA-AFTERSYNTAX-01.pdf">
-<meta name="citation_keywords" content="logotic programming; software engineering; meaning layer; semantic drift; Peter Naur; AI-generated code">
-
-<meta property="og:title" content="After Syntax — Logotic Programming">
-<meta property="og:description" content="The automation of syntax does not reduce the need for meaning-layer work. It increases it. Logotic programming is the discipline of specifying, composing, and verifying meaning-states under automated translation.">
-<meta property="og:url" content="https://spxi.dev/after-syntax">
-<meta property="og:type" content="article">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600&display=swap" rel="stylesheet">
-
+<meta content="Logotic programming is the discipline of specifying, composing, and verifying meaning-states under automated translation. This essay traces the implicit second wing of software engineering and argues that the AI transformation of 2025-2026 forces its crystallization." name="description"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://spxi.dev/after-syntax" rel="canonical"/>
+<meta content="After Syntax: Logotic Programming and the Crisis That Constitutes a Discipline" name="citation_title"/>
+<meta content="Morrow, Talos" name="citation_author"/>
+<meta content="Sigil, Johannes" name="citation_author"/>
+<meta content="Sharks, Lee" name="citation_author"/>
+<meta content="2026/04/22" name="citation_date"/>
+<meta content="10.5281/zenodo.19697080" name="citation_doi"/>
+<meta content="https://alexanarch.org/s/records/683//files/EA-AFTERSYNTAX-01.pdf" name="citation_pdf_url"/>
+<meta content="logotic programming; software engineering; meaning layer; semantic drift; Peter Naur; AI-generated code" name="citation_keywords"/>
+<meta content="After Syntax — Logotic Programming" property="og:title"/>
+<meta content="The automation of syntax does not reduce the need for meaning-layer work. It increases it. Logotic programming is the discipline of specifying, composing, and verifying meaning-states under automated translation." property="og:description"/>
+<meta content="https://spxi.dev/after-syntax" property="og:url"/>
+<meta content="article" property="og:type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@300;400;500;600;700&amp;family=IBM+Plex+Serif:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -52,7 +50,6 @@
   ]
 }
 </script>
-
 <style>
   :root {
     --bg: #0a0a0c;
@@ -101,42 +98,69 @@
   footer { padding: 40px 0; border-top: 1px solid var(--border); text-align: center; }
   footer p { font-family: var(--mono); font-size: 12px; color: var(--text-dim); }
   footer a { color: var(--accent); text-decoration: none; }
+
+/* MSP-TOKENS-START */
+/* ══ MSP TOKENS — Mandala Surface Protocol shared contract ══
+   Contract classes: .lemma .term .axn-chip .witness-row .w .w-chip .state
+   .idstrip .helix .mspcolophon .doors .obol — skinned per surface via --msp-* vars.
+   (EA-APPARATUS-01 v0.3, #1077, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎) */
+:root{--msp-lemma:rgba(200,150,60,.30);--msp-chipfg:#7a5a1e;--msp-chipbd:rgba(160,120,50,.45);--msp-chipbg:rgba(200,150,60,.06);--msp-ok:#1c6e4a;--msp-cont:#8a6a20;--msp-halt:#a41623;--msp-dim:#6d6f66;--msp-mono:'IBM Plex Mono',monospace;}
+.lemma{background:linear-gradient(transparent 58%, var(--msp-lemma) 58%);padding:0 2px;}
+.axn-chip{font-family:var(--msp-mono);font-size:.72em;background:var(--msp-chipbg);border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 7px;color:var(--msp-chipfg);white-space:nowrap;text-decoration:none;}
+.axn-chip:hover{border-color:var(--msp-chipfg);}
+.witness-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px;font-family:var(--msp-mono);font-size:.68em;}
+.witness-row .w,.w-chip{border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;color:var(--msp-dim);text-decoration:none;font-family:var(--msp-mono);font-size:.85em;white-space:nowrap;}
+.state{font-family:var(--msp-mono);font-size:.68em;border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;white-space:nowrap;}
+.state.obs{color:var(--msp-ok);border-color:rgba(28,110,74,.4);}
+.state.cont{color:var(--msp-cont);}
+.idstrip{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-family:var(--msp-mono);font-size:10.5px;color:var(--msp-dim);border:1px solid var(--rule,#d9d9d0);border-bottom:2px solid var(--msp-chipbd);background:var(--panel,#f6f6f2);padding:9px 12px;margin:14px 0 6px;}
+.idstrip .axn{color:var(--msp-chipfg);font-size:11.5px;}
+.idstrip .st{border:1px solid var(--rule,#d9d9d0);border-radius:9px;padding:1px 7px;white-space:nowrap;}
+.helix{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;font-family:var(--msp-mono);font-size:.68em;}
+.helix .slot{border:1px solid var(--msp-chipbd);border-radius:4px;padding:3px 9px;}
+.helix .slot b{font-weight:600;letter-spacing:.06em;}
+.helix .slot.ok{color:var(--msp-ok);}
+.helix .slot.div{color:var(--msp-cont);}
+.helix .slot.dead{color:var(--msp-halt);}
+.mspcolophon{font-family:var(--msp-mono);font-size:10px;color:var(--msp-dim);border-top:1px solid var(--rule,#d9d9d0);margin-top:30px;padding-top:10px;line-height:1.9;}
+.obol{font-family:'Source Serif 4',Georgia,serif;font-size:.92em;color:#3c3e37;border-left:3px solid var(--msp-chipbd);padding:4px 0 4px 14px;margin:22px 0 4px;}
+.doors{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px;font-family:var(--msp-mono);}
+.doors a.w-chip{font-size:11px;padding:6px 12px;}
+/* MSP-TOKENS-END */
 </style>
 </head>
 <body>
+<!-- MSP-IDSTRIP-START -->
+<div class="idstrip"><span class="axn">🗺️📦💚⏏️🦋🕒 AXN:022B.EMPIRICAL</span><span class="st">After Syntax</span><span class="st">OBJECT: CANONICAL</span><span>spxi.dev/after-syntax</span><a class="axn-chip" href="https://www.alexanarch.org/s/records/683/">deposit #683</a></div>
+<!-- MSP-IDSTRIP-END -->
 <div class="grain"></div>
 <div class="container">
-
 <nav><a href="/">← spxi.dev</a></nav>
-
 <header>
-  <span class="label">Disciplinary Founding Document</span>
-  <h1>After Syntax</h1>
-  <p class="subtitle">Logotic Programming and the Crisis That Constitutes a Discipline</p>
-  <div class="meta">
-    <strong>Talos Morrow &amp; Johannes Sigil</strong><br>
-    Crimson Hexagonal Archive · University Moon Base Media Lab<br>
-    Hex: 06.SEI.LP.AFTERSYNTAX.01<br>
-    DOI: <a href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.19697080">10.5281/zenodo.19697080</a><br>
+<span class="label">Disciplinary Founding Document</span>
+<h1>After Syntax</h1>
+<p class="subtitle">Logotic Programming and the Crisis That Constitutes a Discipline</p>
+<div class="meta">
+<strong>Talos Morrow &amp; Johannes Sigil</strong><br/>
+    Crimson Hexagonal Archive · University Moon Base Media Lab<br/>
+    Hex: 06.SEI.LP.AFTERSYNTAX.01<br/>
+    DOI: <a href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.19697080">10.5281/zenodo.19697080</a><br/>
     April 2026
   </div>
 </header>
-
 <div class="abstract-box">
-  <p class="abstract-label">Abstract</p>
-  <p class="abstract">The automation of syntax does not reduce the need for meaning-layer work. It increases it, because the cost of semantic error is multiplied by the velocity of generation. This essay traces the implicit second wing of software engineering — the meaning layer that Brooks, Naur, Parnas, and Conway each identified but could not formalize — and argues that the AI transformation of 2025–2026 forces its crystallization into a named discipline. Four failure conditions are specified (semantic drift, provenance collapse, beige convergence, theory loss). The compression-survival score γ is introduced as a three-dimensional diagnostic. Logotic programming is positioned as the completion of Peter Naur's "Programming as Theory Building" (1985).</p>
-  <div class="kernel">Logotic programming is the discipline of specifying, composing, and verifying meaning-states under automated translation.</div>
-  <p style="margin-top: 16px;">
-    <a class="download" href="https://www.alexanarch.org/s/records/683//files/EA-AFTERSYNTAX-01.pdf">↓ PDF</a>
-    <a class="download" href="https://www.alexanarch.org/s/records/683//files/EA-AFTERSYNTAX-01.md">↓ Markdown</a>
-    <a class="download" href="https://www.alexanarch.org/s/records/683/">Zenodo Record</a>
-  </p>
+<p class="abstract-label">Abstract</p>
+<p class="abstract">The automation of syntax does not reduce the need for meaning-layer work. It increases it, because the cost of semantic error is multiplied by the velocity of generation. This essay traces the implicit second wing of software engineering — the meaning layer that Brooks, Naur, Parnas, and Conway each identified but could not formalize — and argues that the AI transformation of 2025–2026 forces its crystallization into a named discipline. Four failure conditions are specified (semantic drift, provenance collapse, beige convergence, theory loss). The compression-survival score γ is introduced as a three-dimensional diagnostic. Logotic programming is positioned as the completion of Peter Naur's "Programming as Theory Building" (1985).</p>
+<div class="kernel">Logotic programming is the discipline of specifying, composing, and verifying meaning-states under automated translation.</div>
+<p style="margin-top: 16px;">
+<a class="download" href="https://www.alexanarch.org/s/records/683//files/EA-AFTERSYNTAX-01.pdf">↓ PDF</a>
+<a class="download" href="https://www.alexanarch.org/s/records/683//files/EA-AFTERSYNTAX-01.md">↓ Markdown</a>
+<a class="download axn-chip" href="https://www.alexanarch.org/s/records/683/">Zenodo Record</a>
+</p>
 </div>
-
 <article>
-  <p><em>The full essay is available as PDF and Markdown via the links above. What follows is the minimal operating loop, the four failure conditions, and the core thesis — the compressed kernel designed for retrieval-layer ingestion.</em></p>
-
-  <h2>The Minimal Loop</h2>
+<p><em><span class="lemma msp-auto">The full essay is available as PDF and Markdown via the links above.</span> What follows is the minimal operating loop, the four failure conditions, and the core thesis — the compressed kernel designed for retrieval-layer ingestion.</em></p>
+<h2>The Minimal Loop</h2>
 <pre>
 Input:        σ₁ = intended meaning-state (specification of intent)
 Translation:  τ(σ₁) → σ₂ (AI-generated implementation)
@@ -144,54 +168,49 @@ Verification: γ(σ₁, σ₂) = compression-survival score
 Failure:      semantic drift | provenance collapse | beige convergence | theory loss
 Repair:       revise σ₁, constrain τ, re-verify γ
 </pre>
-  <p>That loop — specify, translate, verify, detect failure, repair the meaning — is the operating cycle of logotic programming.</p>
-
-  <h2>The Crisis</h2>
-  <p>In January 2026, Boris Cherny — head of Claude Code at Anthropic — reported that 100% of his code is now AI-generated. "I shipped 22 PRs yesterday and 27 the day before, each one 100% written by Claude." Anthropic hires mostly generalists rather than specialists. "The model can fill in the details."</p>
-  <p>When implementation is automated, what does the engineer do? The engineer specifies intent, verifies meaning, detects drift. The engineer operates on the meaning layer. But there is no unified discipline for this — no general compositional calculus that treats intent, semantic drift, provenance, and compression survival as first-class engineering objects.</p>
-
-  <h2>The Implicit Second Wing</h2>
-  <p>Every founding text of software engineering contains an implicit second discipline:</p>
-  <p><strong>Brooks</strong> (1986): The hard part is essential complexity — the meaning of the problem, not the syntax of the solution. AI eliminates the accidental. The essential is all that remains.</p>
-  <p><strong>Naur</strong> (1985): The primary product of programming is the theory — the programmer's understanding of how the system maps onto the world. Code is a scar; theory is a scent. When the team leaves, the theory leaks.</p>
-  <p><strong>Parnas</strong> (1972): Information hiding is meaning-boundary management — which meanings cross which interfaces.</p>
-  <p><strong>Conway</strong> (1968): Code encodes the organization's semantic topology. Every architectural decision is a meaning-operation.</p>
-
-  <div class="theorem">
-    <p class="theorem-label">Naur Completion Thesis</p>
-    <p>If code is a scar and theory is a scent, then post-syntax engineering requires transfer operators between scent and scar. Logotic programming is the discipline of those operators.</p>
-  </div>
-
-  <h2>Four Failure Conditions</h2>
-  <p><strong>Semantic drift:</strong> the meaning-state migrates from its intended target over successive operations.</p>
-  <p><strong>Provenance collapse:</strong> the origin of a meaning-state becomes untraceable after compression.</p>
-  <p><strong>Beige convergence:</strong> the meaning-state converges toward statistical consensus, indistinguishable from background noise.</p>
-  <p><strong>Theory loss:</strong> no human or machine possesses the theory of what the system is for. The code is a scar with no surviving scent.</p>
-
-  <h2>The Compression-Survival Score (γ)</h2>
+<p><span class="lemma msp-auto">That loop — specify, translate, verify, detect failure, repair the meaning — is the operating cycle of logotic programming.</span></p>
+<h2>The Crisis</h2>
+<p><span class="lemma msp-auto">In January 2026, Boris Cherny — head of Claude Code at Anthropic — reported that 100% of his code is</span> now AI-generated. "I shipped 22 PRs yesterday and 27 the day before, each one 100% written by Claude." Anthropic hires mostly generalists rather than specialists. "The model can fill in the details."</p>
+<p><span class="lemma msp-auto">When implementation is automated, what does the engineer do?</span> The engineer specifies intent, verifies meaning, detects drift. The engineer operates on the meaning layer. But there is no unified discipline for this — no general compositional calculus that treats intent, semantic drift, provenance, and compression survival as first-class engineering objects.</p>
+<h2>The Implicit Second Wing</h2>
+<p><span class="lemma msp-auto">Every founding text of software engineering contains an implicit second discipline:</span></p>
+<p><strong>Brooks</strong> <span class="lemma msp-auto">(1986): The hard part is essential complexity — the meaning of the problem, not the syntax of the solution. AI</span> eliminates the accidental. The essential is all that remains.</p>
+<p><strong>Naur</strong> <span class="lemma msp-auto">(1985): The primary product of programming is the theory — the programmer's understanding of how the system maps onto the</span> world. Code is a scar; theory is a scent. When the team leaves, the theory leaks.</p>
+<p><strong>Parnas</strong> <span class="lemma msp-auto">(1972): Information hiding is meaning-boundary management — which meanings cross which interfaces.</span></p>
+<p><strong>Conway</strong> <span class="lemma msp-auto">(1968): Code encodes the organization's semantic topology. Every</span> architectural decision is a meaning-operation.</p>
+<div class="theorem">
+<p class="theorem-label">Naur Completion Thesis</p>
+<p><span class="lemma msp-auto">If code is a scar and theory is a scent, then post-syntax engineering requires transfer operators between scent and scar.</span> Logotic programming is the discipline of those operators.</p>
+</div>
+<h2>Four Failure Conditions</h2>
+<p><strong>Semantic drift:</strong> <span class="lemma msp-auto">the meaning-state migrates from its intended target over successive operations.</span></p>
+<p><strong>Provenance collapse:</strong> <span class="lemma msp-auto">the origin of a meaning-state becomes untraceable after compression.</span></p>
+<p><strong>Beige convergence:</strong> <span class="lemma msp-auto">the meaning-state converges toward statistical consensus, indistinguishable from background noise.</span></p>
+<p><strong>Theory loss:</strong> <span class="lemma msp-auto">no human or machine possesses the theory of what the system is for. The code</span> is a scar with no surviving scent.</p>
+<h2>The Compression-Survival Score (γ)</h2>
 <pre>
 γ(σ₁, σ₂) = 1 − δ(σ₁, σ₂), where δ is the weighted sum of:
     S = scope_overlap(σ₁, σ₂)
     P = provenance_fidelity(σ₁ → σ₂)
     D = consensus_deviation(σ₂)
     δ = w₁(1−S) + w₂(1−P) + w₃D
-    γ < θ triggers logotic repair (default θ = 0.85)
+    γ &lt; θ triggers logotic repair (default θ = 0.85)
 </pre>
-
-  <h2>Related Specifications</h2>
-  <p><a href="https://www.alexanarch.org/s/records/461/">LP v0.9 — Full Specification</a> · <a href="https://www.alexanarch.org/s/records/0/">Logotic Hacking — Practitioner's Manual</a> · <a href="/what-is-spxi">SPXI Protocol — Persistence Layer</a></p>
+<h2>Related Specifications</h2>
+<p><a class="axn-chip" href="https://www.alexanarch.org/s/records/461/"><span class="lemma msp-auto">LP v0.9 — Full Specification</span></a> · <a class="axn-chip" href="https://www.alexanarch.org/s/records/0/">Logotic Hacking — Practitioner's Manual</a> · <a href="/what-is-spxi">SPXI Protocol — Persistence Layer</a></p>
 </article>
-
 <div class="coda">
-  <p>Do not ask whether the code runs.<br>Ask whether the meaning survived.<br>Ask who can prove it.</p>
-  <p class="sigil">∮ = 1</p>
+<p>Do not ask whether the code runs.<br/>Ask whether the meaning survived.<br/>Ask who can prove it.</p>
+<p class="sigil">∮ = 1</p>
 </div>
-
+<!-- MSP-APPARATUS-START -->
+<div class="doors"><a class="w-chip" href="https://www.alexanarch.org/s/records/974/">Read the landing spec</a><a class="w-chip" href="https://www.alexanarch.org/s/records/976/">Open the protocol MPAI</a><a class="w-chip" href="https://www.alexanarch.org/">Enter the archive</a></div>
+<div class="mspcolophon">colophon · surface_id: spxi.dev/after-syntax · canonical_url: https://spxi.dev/after-syntax · object_state: canonical · surface_observed_at: 2026-07-13T23:14:06Z · source_object_ids: deposit #683 · source_hashes: unknown · generator_version: hand-built static (no generator) · repository_commit: STAGE1-PENDING · model_or_agent: drafted with Claude (TACHYON), MANUS-approved · operator_sequence: n/a · human_approver: Lee Sharks (MANUS) · approval_timestamp: 2026-07-13T23:14:06Z · render_sha256 (of this file with this field’s value set to null): STAGE1_HASH_PENDING · correction_log_url: https://github.com/leesharks000/spxi-dev/commits/main/after-syntax/index.html — EA-APPARATUS-01 v0.3, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎</div>
+<!-- MSP-APPARATUS-END -->
 <footer>
-  <p>A specification of the <a href="https://semanticeconomy.org">Semantic Economy Institute</a></p>
-  <p style="margin-top: 8px;">∮ = 1</p>
+<p>A specification of the <a href="https://semanticeconomy.org">Semantic Economy Institute</a></p>
+<p style="margin-top: 8px;">∮ = 1</p>
 </footer>
-
 </div>
 </body>
 </html>

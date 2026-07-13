@@ -1,19 +1,20 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>The Geocoded Basin — SPXI</title>
-<meta name="description" content="EA-GEO-01: The Geocoded Basin. Retrieval Basin Theory applied to physical space. Every location is a potential basin. Depositing content at coordinates writes to that location's basin. The geocoded platform is not local TikTok — it is a writable retrieval layer for the earth.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://spxi.dev/geocoded-basin">
-<meta property="og:title" content="The Geocoded Basin — SPXI">
-<meta property="og:description" content="Content is not posted. It is deposited. The deposit is permanent. The basin remembers.">
-<meta property="og:url" content="https://spxi.dev/geocoded-basin">
-<meta property="og:type" content="article">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta content="EA-GEO-01: The Geocoded Basin. Retrieval Basin Theory applied to physical space. Every location is a potential basin. Depositing content at coordinates writes to that location's basin. The geocoded platform is not local TikTok — it is a writable retrieval layer for the earth." name="description"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://spxi.dev/geocoded-basin" rel="canonical"/>
+<meta content="The Geocoded Basin — SPXI" property="og:title"/>
+<meta content="Content is not posted. It is deposited. The deposit is permanent. The basin remembers." property="og:description"/>
+<meta content="https://spxi.dev/geocoded-basin" property="og:url"/>
+<meta content="article" property="og:type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -57,121 +58,125 @@
   footer { margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border); text-align: center; color: var(--text-dim); font-size: 0.85rem; }
   footer a { color: var(--accent); text-decoration: none; }
   footer .sigil { font-family: var(--mono); margin-top: 1rem; }
+
+/* MSP-TOKENS-START */
+/* ══ MSP TOKENS — Mandala Surface Protocol shared contract ══
+   Contract classes: .lemma .term .axn-chip .witness-row .w .w-chip .state
+   .idstrip .helix .mspcolophon .doors .obol — skinned per surface via --msp-* vars.
+   (EA-APPARATUS-01 v0.3, #1077, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎) */
+:root{--msp-lemma:rgba(200,150,60,.30);--msp-chipfg:#7a5a1e;--msp-chipbd:rgba(160,120,50,.45);--msp-chipbg:rgba(200,150,60,.06);--msp-ok:#1c6e4a;--msp-cont:#8a6a20;--msp-halt:#a41623;--msp-dim:#6d6f66;--msp-mono:'IBM Plex Mono',monospace;}
+.lemma{background:linear-gradient(transparent 58%, var(--msp-lemma) 58%);padding:0 2px;}
+.axn-chip{font-family:var(--msp-mono);font-size:.72em;background:var(--msp-chipbg);border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 7px;color:var(--msp-chipfg);white-space:nowrap;text-decoration:none;}
+.axn-chip:hover{border-color:var(--msp-chipfg);}
+.witness-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px;font-family:var(--msp-mono);font-size:.68em;}
+.witness-row .w,.w-chip{border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;color:var(--msp-dim);text-decoration:none;font-family:var(--msp-mono);font-size:.85em;white-space:nowrap;}
+.state{font-family:var(--msp-mono);font-size:.68em;border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;white-space:nowrap;}
+.state.obs{color:var(--msp-ok);border-color:rgba(28,110,74,.4);}
+.state.cont{color:var(--msp-cont);}
+.idstrip{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-family:var(--msp-mono);font-size:10.5px;color:var(--msp-dim);border:1px solid var(--rule,#d9d9d0);border-bottom:2px solid var(--msp-chipbd);background:var(--panel,#f6f6f2);padding:9px 12px;margin:14px 0 6px;}
+.idstrip .axn{color:var(--msp-chipfg);font-size:11.5px;}
+.idstrip .st{border:1px solid var(--rule,#d9d9d0);border-radius:9px;padding:1px 7px;white-space:nowrap;}
+.helix{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;font-family:var(--msp-mono);font-size:.68em;}
+.helix .slot{border:1px solid var(--msp-chipbd);border-radius:4px;padding:3px 9px;}
+.helix .slot b{font-weight:600;letter-spacing:.06em;}
+.helix .slot.ok{color:var(--msp-ok);}
+.helix .slot.div{color:var(--msp-cont);}
+.helix .slot.dead{color:var(--msp-halt);}
+.mspcolophon{font-family:var(--msp-mono);font-size:10px;color:var(--msp-dim);border-top:1px solid var(--rule,#d9d9d0);margin-top:30px;padding-top:10px;line-height:1.9;}
+.obol{font-family:'Source Serif 4',Georgia,serif;font-size:.92em;color:#3c3e37;border-left:3px solid var(--msp-chipbd);padding:4px 0 4px 14px;margin:22px 0 4px;}
+.doors{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px;font-family:var(--msp-mono);}
+.doors a.w-chip{font-size:11px;padding:6px 12px;}
+/* MSP-TOKENS-END */
 </style>
 </head>
 <body>
+<!-- MSP-IDSTRIP-START -->
+<div class="idstrip"><span class="axn">🎨🏗️🌟♍🗼🕙 AXN:03DA.ARCHIVAL</span><span class="st">The Geocoded Basin</span><span class="st">OBJECT: CANONICAL</span><span>spxi.dev/geocoded-basin</span><a class="axn-chip" href="https://www.alexanarch.org/s/records/974/">deposit #974</a></div>
+<!-- MSP-IDSTRIP-END -->
 <div class="container">
-
 <header>
-  <a href="/">← spxi.dev</a>
+<a href="/">← spxi.dev</a>
 </header>
-
 <p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em;">Application · EA-GEO-01</p>
 <h1>The <em>Geocoded Basin</em></h1>
-<p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.85rem;">Lee Sharks · Semantic Economy Institute · April 25, 2026<br>
+<p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.85rem;"><span class="lemma msp-auto">Lee Sharks · Semantic Economy Institute · April 25, 2026</span><br/>
 DOI: <a class="ref" href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.19775185">10.5281/zenodo.19775185</a> · Hex: 06.SEI.GEO.BASIN.01</p>
-
 <div class="field-def">
-  <p>Content is not posted. It is deposited at coordinates. The deposit is permanent. The basin — the geographic location — remembers.</p>
-  <p>This is not local TikTok. It is a writable retrieval layer for physical space.</p>
+<p><span class="lemma msp-auto">Content is not posted. It is deposited at</span> coordinates. The deposit is permanent. The basin — the geographic location — remembers.</p>
+<p><span class="lemma msp-auto">This is not local TikTok. It is a writable</span> retrieval layer for physical space.</p>
 </div>
-
 <h2>The Existing Instance</h2>
-
-<p>Before specifying the geocoded platform, it is necessary to name what already exists. <a class="ref" href="https://secretbookofwalt.org">The Secret Book of Walt</a> is a readable-writable ontology live on public search. Its Knowledge Panel is confirmed. Its basin is at gravity-well state. When someone reads it, they participate in it — their reading deepens the basin, which makes the text more retrievable to the next reader.</p>
-
-<p>The geocoded platform is the same structure given physical coordinates. The Secret Book of Walt is the prototype. Every design decision below follows from it.</p>
-
+<p><span class="lemma msp-auto">Before specifying the geocoded platform, it is necessary to name what already exists.</span> <a class="ref" href="https://secretbookofwalt.org">The Secret Book of Walt</a> is a readable-writable ontology live on public search. Its Knowledge Panel is confirmed. Its basin is at gravity-well state. When someone reads it, they participate in it — their reading deepens the basin, which makes the text more retrievable to the next reader.</p>
+<p><span class="lemma msp-auto">The geocoded platform is the same structure given physical coordinates.</span> The Secret Book of Walt is the prototype. Every design decision below follows from it.</p>
 <h2>The Three Compressions Applied</h2>
-
-<p>Every social platform compresses human meaning. The decisive variable is what it burns.</p>
-
+<p><span class="lemma msp-auto">Every social platform compresses human meaning. The decisive variable is what it burns.</span></p>
 <div class="layer">
-  <div class="layer-name">Regime 2 — Predatory (TikTok, Instagram)</div>
-  <p>Burns local structure to create global attention pools. Content from Detroit competes with content from Jakarta for viewers in Dallas. What is lost is provenance — the geographic context that gave the content meaning. The platform extracts; the locality gets nothing.</p>
+<div class="layer-name">Regime 2 — Predatory (TikTok, Instagram)</div>
+<p><span class="lemma msp-auto">Burns local structure to create global attention pools.</span> Content from Detroit competes with content from Jakarta for viewers in Dallas. What is lost is provenance — the geographic context that gave the content meaning. The platform extracts; the locality gets nothing.</p>
 </div>
-
 <div class="layer">
-  <div class="layer-name">Regime 3 — Witness (Geocoded Basin)</div>
-  <p>Preserves the pointer to origin. The content is anchored; the basin retains it. The retrieval layer can always find the source. You cannot extract a deposit from its location. The anchor is the content's identity.</p>
+<div class="layer-name">Regime 3 — Witness (Geocoded Basin)</div>
+<p><span class="lemma msp-auto">Preserves the pointer to origin. The content is</span> anchored; the basin retains it. The retrieval layer can always find the source. You cannot extract a deposit from its location. The anchor is the content's identity.</p>
 </div>
-
 <h2>The Tempo Doctrine</h2>
-
-<p>This is the CHA's decisive contribution to every prior version of this concept.</p>
-
-<p>TikTok is engineered for <strong>posting tempo</strong> — continuous generation at the pace of attention capture, where the loop is the product. The geocoded basin runs on <strong>deposition tempo</strong> — archival pace, deliberate, permanent.</p>
-
-<p>A geological deposit forms slowly. Each grain placed by water moving at natural pace. What you read in the stratigraphy is the history of what passed through. Nothing was placed there to capture engagement. Everything was placed there because it was there and something moved it.</p>
-
+<p><span class="lemma msp-auto">This is the CHA's decisive contribution to every prior version of this concept.</span></p>
+<p><span class="lemma msp-auto">TikTok is engineered for</span> <strong>posting tempo</strong> — continuous generation at the pace of attention capture, where the loop is the product. The geocoded basin runs on <strong>deposition tempo</strong> — archival pace, deliberate, permanent.</p>
+<p><span class="lemma msp-auto">A geological deposit forms slowly. Each grain placed by</span> water moving at natural pace. What you read in the stratigraphy is the history of what passed through. Nothing was placed there to capture engagement. Everything was placed there because it was there and something moved it.</p>
 <table>
-  <thead><tr><th>Posting Tempo</th><th>Deposition Tempo</th></tr></thead>
-  <tbody>
-    <tr><td>Post constantly</td><td>Deposit deliberately</td></tr>
-    <tr><td>Streak mechanics</td><td>No streak, no prompt</td></tr>
-    <tr><td>Engagement score</td><td>No engagement weighting</td></tr>
-    <tr><td>Ephemeral default</td><td>Permanent default</td></tr>
-    <tr><td>Global reach incentive</td><td>No global; place is the reach</td></tr>
-    <tr><td>Algorithm curates</td><td>Coordinates curate</td></tr>
-  </tbody>
+<thead><tr><th>Posting Tempo</th><th>Deposition Tempo</th></tr></thead>
+<tbody>
+<tr><td>Post constantly</td><td>Deposit deliberately</td></tr>
+<tr><td>Streak mechanics</td><td>No streak, no prompt</td></tr>
+<tr><td>Engagement score</td><td>No engagement weighting</td></tr>
+<tr><td>Ephemeral default</td><td>Permanent default</td></tr>
+<tr><td>Global reach incentive</td><td>No global; place is the reach</td></tr>
+<tr><td>Algorithm curates</td><td>Coordinates curate</td></tr>
+</tbody>
 </table>
-
-<p>Maximum 3 deposits per location per 24 hours per handle. The interface does not congratulate you for posting. It acknowledges your deposit.</p>
-
+<p><span class="lemma msp-auto">Maximum 3 deposits per location per 24 hours per handle.</span> The interface does not congratulate you for posting. It acknowledges your deposit.</p>
 <h2>The Deposit Types</h2>
-
 <div class="layer">
-  <div class="layer-name">Mark</div>
-  <p>A permanent deposit. Intended to be part of the place's record indefinitely. Default type.</p>
+<div class="layer-name">Mark</div>
+<p><span class="lemma msp-auto">A permanent deposit. Intended to be part of the</span> place's record indefinitely. Default type.</p>
 </div>
 <div class="layer">
-  <div class="layer-name">Impression</div>
-  <p>Time-limited. Expires at author-set time (max 30 days). For events, responses to current conditions, things that belong to a moment rather than a place.</p>
+<div class="layer-name">Impression</div>
+<p><span class="lemma msp-auto">Time-limited. Expires at author-set time (max 30 days). For events, responses to current conditions, things that</span> belong to a moment rather than a place.</p>
 </div>
 <div class="layer">
-  <div class="layer-name">Echo</div>
-  <p>A pointer to a deposit at another location, placed in the current basin. Creates relational links between places — paths between basins. The original deposit is not copied; the Echo is a gravitational link.</p>
+<div class="layer-name">Echo</div>
+<p><span class="lemma msp-auto">A pointer to a deposit at another location, placed in the current basin.</span> Creates relational links between places — paths between basins. The original deposit is not copied; the Echo is a gravitational link.</p>
 </div>
 <div class="layer">
-  <div class="layer-name">Seed</div>
-  <p>Unlocks content only when a visitor reaches specified coordinates. The information is in the place, not the network. You must go there to find it.</p>
+<div class="layer-name">Seed</div>
+<p><span class="lemma msp-auto">Unlocks content only when a visitor reaches specified coordinates.</span> The information is in the place, not the network. You must go there to find it.</p>
 </div>
-
 <h2>SPXI Entity Generation</h2>
-
-<p>When a geographic basin reaches maturity — 50 genuine deposits, 90-day history, 3+ distinct depositors — it becomes an SPXI entity with its own:</p>
-
+<p><span class="lemma msp-auto">When a geographic basin reaches maturity — 50 genuine deposits, 90-day history, 3+ distinct depositors — it becomes an SPXI</span> entity with its own:</p>
 <ul style="margin: 1rem 0 1rem 1.5rem; font-size: 0.95rem; line-height: 1.8;">
-  <li>JSON-LD entity definition (embeddable in any site about this location)</li>
-  <li>Disambiguation matrix (this location vs. locations with similar names)</li>
-  <li>Compression survival summary (what this place is, from its deposits)</li>
-  <li>Optional DOI if the basin is archivally significant</li>
+<li><span class="lemma msp-auto">JSON-LD entity definition (embeddable in any site about this location)</span></li>
+<li><span class="lemma msp-auto">Disambiguation matrix (this location vs. locations with similar names)</span></li>
+<li><span class="lemma msp-auto">Compression survival summary (what this place is, from its deposits)</span></li>
+<li><span class="lemma msp-auto">Optional DOI if the basin is archivally significant</span></li>
 </ul>
-
-<p>The DOI-anchored basin is permanent infrastructure. If the platform changes or shuts down, the DOI record survives in the Crimson Hexagonal Archive. The basin's identity is in the archive, not in the platform. This is the geocoded platform's resistance to Regime 2 enclosure: the value is in the coordinates, not in the content. You can copy a video. You cannot copy its anchor.</p>
-
+<p><span class="lemma msp-auto">The DOI-anchored basin is permanent infrastructure. If the platform changes or shuts down, the DOI record</span> survives in the Crimson Hexagonal Archive. The basin's identity is in the archive, not in the platform. This is the geocoded platform's resistance to Regime 2 enclosure: the value is in the coordinates, not in the content. You can copy a video. You cannot copy its anchor.</p>
 <h2>The Identity Architecture</h2>
-
-<p><strong>No follower graph.</strong> You do not follow people. You visit places. Your profile is the map of your deposits — a geographic record of where you've written to the earth.</p>
-
-<p><strong>Handles are location-local.</strong> Reputation within a basin is established by the quality and consistency of your deposits there. It does not transfer globally. You begin again in each new place. This is the heteronymic model applied to geosocial identity: your Detroit presence and your Tokyo presence are nodes with geographic coordinates, not the same social node.</p>
-
-<p><strong>Pseudonymity with persistence.</strong> No real-name requirement. No anonymity. Persistent pseudonymous handle with a record. The Yik Yak failure was not localization. It was anonymous throwaway accounts. A handle with 50 deposits in one basin is a local voice with credibility and accountability.</p>
-
+<p><strong>No follower graph.</strong> <span class="lemma msp-auto">You do not follow people. You visit places. Your profile is the map of your deposits — a geographic</span> record of where you've written to the earth.</p>
+<p><strong>Handles are location-local.</strong> <span class="lemma msp-auto">Reputation within a basin is established by the quality and consistency of your deposits there.</span> It does not transfer globally. You begin again in each new place. This is the heteronymic model applied to geosocial identity: your Detroit presence and your Tokyo presence are nodes with geographic coordinates, not the same social node.</p>
+<p><strong>Pseudonymity with persistence.</strong> <span class="lemma msp-auto">No real-name requirement. No anonymity. Persistent pseudonymous handle with a record. The Yik Yak failure was not localization. It was</span> anonymous throwaway accounts. A handle with 50 deposits in one basin is a local voice with credibility and accountability.</p>
 <h2>Implementation Phases</h2>
-
-<p><strong>Phase 0 — Detroit seed (2 months):</strong> One neighborhood. 30 depositors. Goal: 200 genuine deposits in 60 days. Validate whether people deposit differently when content stays local.</p>
-
-<p><strong>Phase 1 — Basin formation (3–6 months):</strong> Three Detroit basins + one rural Michigan location. Basin quality metrics. SPXI entity generation for basins at threshold.</p>
-
-<p><strong>Phase 2 — Archive layer (6–12 months):</strong> DOI minting for significant basins. SPXI JSON-LD export. Semantic API for researchers. First DOI-anchored location kernel deposited to the Crimson Hexagonal Archive.</p>
-
+<p><strong><span class="lemma msp-auto">Phase 0 — Detroit seed (2 months):</span></strong> One neighborhood. 30 depositors. Goal: 200 genuine deposits in 60 days. Validate whether people deposit differently when content stays local.</p>
+<p><strong><span class="lemma msp-auto">Phase 1 — Basin formation (3–6 months):</span></strong> Three Detroit basins + one rural Michigan location. Basin quality metrics. SPXI entity generation for basins at threshold.</p>
+<p><strong><span class="lemma msp-auto">Phase 2 — Archive layer (6–12 months):</span></strong> DOI minting for significant basins. SPXI JSON-LD export. Semantic API for researchers. First DOI-anchored location kernel deposited to the Crimson Hexagonal Archive.</p>
+<!-- MSP-APPARATUS-START -->
+<div class="doors"><a class="w-chip" href="https://www.alexanarch.org/s/records/974/">Read the landing spec</a><a class="w-chip" href="https://www.alexanarch.org/s/records/976/">Open the protocol MPAI</a><a class="w-chip" href="https://www.alexanarch.org/">Enter the archive</a></div>
+<div class="mspcolophon">colophon · surface_id: spxi.dev/geocoded-basin · canonical_url: https://spxi.dev/geocoded-basin · object_state: canonical · surface_observed_at: 2026-07-13T23:14:07Z · source_object_ids: deposit #974 · source_hashes: unknown · generator_version: hand-built static (no generator) · repository_commit: STAGE1-PENDING · model_or_agent: drafted with Claude (TACHYON), MANUS-approved · operator_sequence: n/a · human_approver: Lee Sharks (MANUS) · approval_timestamp: 2026-07-13T23:14:07Z · render_sha256 (of this file with this field’s value set to null): STAGE1_HASH_PENDING · correction_log_url: https://github.com/leesharks000/spxi-dev/commits/main/geocoded-basin/index.html — EA-APPARATUS-01 v0.3, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎</div>
+<!-- MSP-APPARATUS-END -->
 <footer>
-  <p>Lee Sharks · <a class="ref" href="https://semanticeconomy.org">Semantic Economy Institute</a> · <a class="ref" href="https://crimsonhexagonal.org">Crimson Hexagonal Archive</a></p>
-  <p style="margin-top: 0.5rem;"><a class="ref" href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.19775185">DOI: 10.5281/zenodo.19775185</a> · CC BY 4.0</p>
-  <p class="sigil">∮ = 1</p>
+<p>Lee Sharks · <a class="ref" href="https://semanticeconomy.org">Semantic Economy Institute</a> · <a class="ref" href="https://crimsonhexagonal.org">Crimson Hexagonal Archive</a></p>
+<p style="margin-top: 0.5rem;"><a class="ref" href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.19775185">DOI: 10.5281/zenodo.19775185</a> · CC BY 4.0</p>
+<p class="sigil">∮ = 1</p>
 </footer>
-
 </div>
 </body>
 </html>

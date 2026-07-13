@@ -1,23 +1,22 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>SPXI Protocol v0.2 — Five-Layer Distributed Provenance Architecture</title>
-<meta name="description" content="SPXI Protocol v0.2: a five-layer distributed provenance architecture (body-text inscription anchors, distributed micro-kernels, SHA-256 content hash registration, reciprocal cross-signing graph, external authority anchoring). Supersedes v0.1, which functioned as normative-signaling only. v0.2 makes provenance preservation operationally robust under adversarial extraction.">
-<meta name="robots" content="index, follow">
-<meta name="author" content="Lee Sharks">
-<meta name="keywords" content="SPXI Protocol v0.2, distributed provenance, five-layer architecture, holographic kernel, content hash, SHA-256, cross-signing graph, external authority anchoring, body-text inscription, micro-kernels, Provenance Erasure Rate, PER, Lee Sharks, Crimson Hexagonal Archive, Semantic Economy Institute, operative semiotics, defense in depth, ORCID, DOI, Wikidata, namespace declaration">
-<link rel="canonical" href="https://spxi.dev/v0.2">
-<meta property="og:title" content="SPXI Protocol v0.2 — Five-Layer Distributed Provenance Architecture">
-<meta property="og:description" content="Defense-in-depth provenance architecture: body-text inscription anchors, distributed micro-kernels, SHA-256 content hash, reciprocal cross-signing, external authority anchoring. Supersedes v0.1.">
-<meta property="og:url" content="https://spxi.dev/v0.2">
-<meta property="og:type" content="article">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+<meta content="SPXI Protocol v0.2: a five-layer distributed provenance architecture (body-text inscription anchors, distributed micro-kernels, SHA-256 content hash registration, reciprocal cross-signing graph, external authority anchoring). Supersedes v0.1, which functioned as normative-signaling only. v0.2 makes provenance preservation operationally robust under adversarial extraction." name="description"/>
+<meta content="index, follow" name="robots"/>
+<meta content="Lee Sharks" name="author"/>
+<meta content="SPXI Protocol v0.2, distributed provenance, five-layer architecture, holographic kernel, content hash, SHA-256, cross-signing graph, external authority anchoring, body-text inscription, micro-kernels, Provenance Erasure Rate, PER, Lee Sharks, Crimson Hexagonal Archive, Semantic Economy Institute, operative semiotics, defense in depth, ORCID, DOI, Wikidata, namespace declaration" name="keywords"/>
+<link href="https://spxi.dev/v0.2" rel="canonical"/>
+<meta content="SPXI Protocol v0.2 — Five-Layer Distributed Provenance Architecture" property="og:title"/>
+<meta content="Defense-in-depth provenance architecture: body-text inscription anchors, distributed micro-kernels, SHA-256 content hash, reciprocal cross-signing, external authority anchoring. Supersedes v0.1." property="og:description"/>
+<meta content="https://spxi.dev/v0.2" property="og:url"/>
+<meta content="article" property="og:type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -37,7 +36,6 @@
   "sameAs": ["https://alexanarch.org/s/records/0/"]
 }
 </script>
-
 <style>
   :root { --bg: #0a0a0c; --surface: #111114; --border: #1e1e24; --text: #e8e6e3; --text-dim: #8a8a8e; --accent: #c23d2e; --accent-dim: rgba(194, 61, 46, 0.15); --mono: 'IBM Plex Mono', monospace; --sans: 'IBM Plex Sans', sans-serif; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -81,57 +79,75 @@
   .sigil { text-align: center; color: var(--accent); margin-top: 1.5rem; font-size: 0.85rem; }
   ul { margin: 0.75rem 0 1rem 1.5rem; }
   li { margin: 0.4rem 0; font-size: 0.92rem; }
+
+/* MSP-TOKENS-START */
+/* ══ MSP TOKENS — Mandala Surface Protocol shared contract ══
+   Contract classes: .lemma .term .axn-chip .witness-row .w .w-chip .state
+   .idstrip .helix .mspcolophon .doors .obol — skinned per surface via --msp-* vars.
+   (EA-APPARATUS-01 v0.3, #1077, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎) */
+:root{--msp-lemma:rgba(200,150,60,.30);--msp-chipfg:#7a5a1e;--msp-chipbd:rgba(160,120,50,.45);--msp-chipbg:rgba(200,150,60,.06);--msp-ok:#1c6e4a;--msp-cont:#8a6a20;--msp-halt:#a41623;--msp-dim:#6d6f66;--msp-mono:'IBM Plex Mono',monospace;}
+.lemma{background:linear-gradient(transparent 58%, var(--msp-lemma) 58%);padding:0 2px;}
+.axn-chip{font-family:var(--msp-mono);font-size:.72em;background:var(--msp-chipbg);border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 7px;color:var(--msp-chipfg);white-space:nowrap;text-decoration:none;}
+.axn-chip:hover{border-color:var(--msp-chipfg);}
+.witness-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px;font-family:var(--msp-mono);font-size:.68em;}
+.witness-row .w,.w-chip{border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;color:var(--msp-dim);text-decoration:none;font-family:var(--msp-mono);font-size:.85em;white-space:nowrap;}
+.state{font-family:var(--msp-mono);font-size:.68em;border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;white-space:nowrap;}
+.state.obs{color:var(--msp-ok);border-color:rgba(28,110,74,.4);}
+.state.cont{color:var(--msp-cont);}
+.idstrip{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-family:var(--msp-mono);font-size:10.5px;color:var(--msp-dim);border:1px solid var(--rule,#d9d9d0);border-bottom:2px solid var(--msp-chipbd);background:var(--panel,#f6f6f2);padding:9px 12px;margin:14px 0 6px;}
+.idstrip .axn{color:var(--msp-chipfg);font-size:11.5px;}
+.idstrip .st{border:1px solid var(--rule,#d9d9d0);border-radius:9px;padding:1px 7px;white-space:nowrap;}
+.helix{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;font-family:var(--msp-mono);font-size:.68em;}
+.helix .slot{border:1px solid var(--msp-chipbd);border-radius:4px;padding:3px 9px;}
+.helix .slot b{font-weight:600;letter-spacing:.06em;}
+.helix .slot.ok{color:var(--msp-ok);}
+.helix .slot.div{color:var(--msp-cont);}
+.helix .slot.dead{color:var(--msp-halt);}
+.mspcolophon{font-family:var(--msp-mono);font-size:10px;color:var(--msp-dim);border-top:1px solid var(--rule,#d9d9d0);margin-top:30px;padding-top:10px;line-height:1.9;}
+.obol{font-family:'Source Serif 4',Georgia,serif;font-size:.92em;color:#3c3e37;border-left:3px solid var(--msp-chipbd);padding:4px 0 4px 14px;margin:22px 0 4px;}
+.doors{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px;font-family:var(--msp-mono);}
+.doors a.w-chip{font-size:11px;padding:6px 12px;}
+/* MSP-TOKENS-END */
 </style>
 </head>
 <body>
+<!-- MSP-IDSTRIP-START -->
+<div class="idstrip"><span class="axn">🎨🏗️🌟♍🗼🕙 AXN:03DA.ARCHIVAL</span><span class="st">SPXI Protocol v0.2</span><span class="st">OBJECT: CANONICAL</span><span>spxi.dev/v0.2</span><a class="axn-chip" href="https://www.alexanarch.org/s/records/974/">deposit #974</a></div>
+<!-- MSP-IDSTRIP-END -->
 <div class="container">
-
 <header>
-  <a class="back" href="/">← spxi.dev</a>
-  <span class="version-tag">v0.2 · CURRENT · 2026-05-24</span>
-  <h1>SPXI Protocol <em>v0.2</em></h1>
-  <p class="subtitle">Five-Layer Distributed Provenance Architecture for Coverage-Architecture Scholarship</p>
+<a class="back" href="/">← spxi.dev</a>
+<span class="version-tag">v0.2 · CURRENT · 2026-05-24</span>
+<h1>SPXI Protocol <em>v0.2</em></h1>
+<p class="subtitle">Five-Layer Distributed Provenance Architecture for Coverage-Architecture Scholarship</p>
 </header>
-
 <h2>The Strippability Problem</h2>
-
-<p>SPXI Protocol v0.1 — implicit in Crimson Hexagonal Archive deposits across 2026 Q1 and Q2 — placed a single holographic kernel at the head of each deposit, in HTML comment delimiters with a fenced JSON-LD block. The intent was machine-readable provenance metadata at canonical position. The operational reality, under realistic extraction conditions, was that a single regex pass removing HTML comments eliminated the kernel entirely. Standard preprocessing in AI synthesis pipelines strips HTML comments, fenced code blocks, leading metadata, and markdown formatting characters before passing text to downstream summarization. The v0.1 kernel did not survive any of these operations.</p>
-
-<p>v0.1 protected provenance only against <strong>cooperative readers</strong> — operators and tools that respected the SPXI Protocol and chose not to strip the kernel. Against <strong>non-cooperative readers</strong> (the dominant case in contemporary AI synthesis), v0.1 was functionally absent. v0.2 is the architectural response.</p>
-
+<p><span class="lemma msp-auto">SPXI Protocol v0.1 — implicit in Crimson Hexagonal Archive deposits across 2026 Q1 and Q2 — placed a single holographic</span> kernel at the head of each deposit, in HTML comment delimiters with a fenced JSON-LD block. The intent was machine-readable provenance metadata at canonical position. The operational reality, under realistic extraction conditions, was that a single regex pass removing HTML comments eliminated the kernel entirely. Standard preprocessing in AI synthesis pipelines strips HTML comments, fenced code blocks, leading metadata, and markdown formatting characters before passing text to downstream summarization. The v0.1 kernel did not survive any of these operations.</p>
+<p><span class="lemma msp-auto">v0.1 protected provenance only against</span> <strong>cooperative readers</strong> — operators and tools that respected the SPXI Protocol and chose not to strip the kernel. Against <strong>non-cooperative readers</strong> (the dominant case in contemporary AI synthesis), v0.1 was functionally absent. v0.2 is the architectural response.</p>
 <h2>The Five-Layer Architecture</h2>
-
-<p>v0.2 specifies a defense-in-depth architecture in which provenance markers are inscribed across multiple syntactic positions, content registrations, cross-deposit references, and external authority anchors. Stripping any single layer does not eliminate the document's provenance trail; the layers' failure modes are non-overlapping by design.</p>
-
+<p><span class="lemma msp-auto">v0.2 specifies a defense-in-depth architecture in which provenance markers are inscribed across multiple syntactic positions, content registrations, cross-deposit references, and</span> external authority anchors. Stripping any single layer does not eliminate the document's provenance trail; the layers' failure modes are non-overlapping by design.</p>
 <div class="layer">
-  <span class="layer-name">Layer 1 — Visible body-text inscription anchors</span>
-  <p>Per-section prose anchors naming operator, ORCID, and deposit short-title, embedded syntactically into the document body. Survives HTML comment stripping, code-block stripping, markdown stripping, front-matter stripping, partial truncation. Fails under aggressive paraphrase that rewrites the named entities.</p>
+<span class="layer-name">Layer 1 — Visible body-text inscription anchors</span>
+<p><span class="lemma msp-auto">Per-section prose anchors naming operator, ORCID, and deposit short-title, embedded syntactically into the document body.</span> Survives HTML comment stripping, code-block stripping, markdown stripping, front-matter stripping, partial truncation. Fails under aggressive paraphrase that rewrites the named entities.</p>
 </div>
-
 <div class="layer">
-  <span class="layer-name">Layer 2 — Distributed micro-kernels</span>
-  <p>Per-section fenced markdown JSON-LD fragments with redundant operator/deposit identification. Each fragment individually identifies the document; collectively they form a re-assemblable provenance trail. Survives HTML comment stripping, partial markdown stripping, leading-metadata stripping. Fails under aggressive fenced-code-block stripping.</p>
+<span class="layer-name">Layer 2 — Distributed micro-kernels</span>
+<p><span class="lemma msp-auto">Per-section fenced markdown JSON-LD fragments with redundant operator/deposit identification.</span> Each fragment individually identifies the document; collectively they form a re-assemblable provenance trail. Survives HTML comment stripping, partial markdown stripping, leading-metadata stripping. Fails under aggressive fenced-code-block stripping.</p>
 </div>
-
 <div class="layer">
-  <span class="layer-name">Layer 3 — SHA-256 content hash registration</span>
-  <p>Canonical SHA-256 hash computed over the deposit's body text (normalized per Appendix A) and registered in three locations: Zenodo metadata description, body-text signature section, and citing deposits' <code>spxi:citedHashSHA256</code> fields. Does not prevent tampering; makes tampering <strong>detectable</strong>. The hash anchored at Zenodo is outside the operator's control surface, providing an immutable check.</p>
+<span class="layer-name">Layer 3 — SHA-256 content hash registration</span>
+<p><span class="lemma msp-auto">Canonical SHA-256 hash computed over the deposit's body text (normalized per Appendix A) and registered in three locations: Zenodo metadata</span> description, body-text signature section, and citing deposits' <code>spxi:citedHashSHA256</code> fields. Does not prevent tampering; makes tampering <strong>detectable</strong>. The hash anchored at Zenodo is outside the operator's control surface, providing an immutable check.</p>
 </div>
-
 <div class="layer">
-  <span class="layer-name">Layer 4 — Reciprocal cross-signing graph</span>
-  <p>Each deposit declares an <code>spxi:verifies</code> array listing prior deposits it recognizes as canonical work. Subsequent citations build a verification graph queryable by any reader. Survives single-deposit attacks; an attacker would need to compromise the entire cross-signed corpus. Implementation pacing: prospective in new deposits, retrospective integration via version updates.</p>
+<span class="layer-name">Layer 4 — Reciprocal cross-signing graph</span>
+<p><span class="lemma msp-auto">Each deposit declares an</span> <code>spxi:verifies</code> array listing prior deposits it recognizes as canonical work. Subsequent citations build a verification graph queryable by any reader. Survives single-deposit attacks; an attacker would need to compromise the entire cross-signed corpus. Implementation pacing: prospective in new deposits, retrospective integration via version updates.</p>
 </div>
-
 <div class="layer">
-  <span class="layer-name">Layer 5 — External authority anchoring</span>
-  <p>Anchors to ORCID, DOI/DataCite, Wikidata entity IDs, the spxi.dev namespace declaration, and heteronym registries — external identity authorities the operator does not control and the attacker cannot modify. The document points <em>outward</em> to defenses the operator does not maintain. Strongest layer in adversarial conditions; depends on integrity of the external authority infrastructure.</p>
+<span class="layer-name">Layer 5 — External authority anchoring</span>
+<p><span class="lemma msp-auto">Anchors to ORCID, DOI/DataCite, Wikidata entity IDs, the spxi.dev namespace declaration, and heteronym registries — external identity authorities the operator</span> does not control and the attacker cannot modify. The document points <em>outward</em> to defenses the operator does not maintain. Strongest layer in adversarial conditions; depends on integrity of the external authority infrastructure.</p>
 </div>
-
 <h2>Failure-Mode Analysis</h2>
-
-<p>The composite architecture's robustness derives from non-overlapping failure modes across layers. No single layer is sufficient against all attacks; the composite preserves operator inscription against the standard adversarial extraction case (AI synthesis layers stripping provenance during ingestion), with graceful degradation against more sophisticated attacks.</p>
-
+<p><span class="lemma msp-auto">The composite architecture's robustness derives from non-overlapping failure modes across layers.</span> No single layer is sufficient against all attacks; the composite preserves operator inscription against the standard adversarial extraction case (AI synthesis layers stripping provenance during ingestion), with graceful degradation against more sophisticated attacks.</p>
 <table>
 <thead>
 <tr><th>Attack</th><th>L1</th><th>L2</th><th>L3</th><th>L4</th><th>L5</th></tr>
@@ -148,54 +164,43 @@
 <tr><td>External authority compromise</td><td class="survives">survives</td><td class="survives">survives</td><td class="survives">survives</td><td class="survives">survives</td><td class="fails">fails</td></tr>
 </tbody>
 </table>
-
 <h2>This Specification's Layer-3 Hash</h2>
-
-<p>The canonical Layer-3 SHA-256 hash for the v0.2 specification, computed per the Appendix A normalization procedure (HTML kernel removed, Layer-3 signature section removed, LF line endings, UTF-8 without BOM, trailing whitespace stripped per line, then hashed):</p>
-
+<p><span class="lemma msp-auto">The canonical Layer-3 SHA-256 hash for the v0.2 specification, computed per the Appendix A normalization procedure (HTML kernel removed, Layer-3</span> signature section removed, LF line endings, UTF-8 without BOM, trailing whitespace stripped per line, then hashed):</p>
 <div class="hash">
 <strong>SPXI-v0.2-CONTENT-SHA256:</strong>
 <code>4b3245c4aa730c85f32c1cc1de6b7a63286a1827fd65fd441c48674160c8dd61</code>
 </div>
-
-<p>This hash is also registered in the Zenodo deposit's metadata description (DOI 10.5281/zenodo.20367161). Citing deposits should record this hash in their <code>spxi:citedHashSHA256</code> field when referencing the v0.2 specification.</p>
-
+<p><span class="lemma msp-auto">This hash is also registered in the Zenodo deposit's metadata description (DOI 10.5281/zenodo.20367161).</span> Citing deposits should record this hash in their <code>spxi:citedHashSHA256</code> field when referencing the v0.2 specification.</p>
 <h2>First Production Deployment</h2>
-
-<p>The first production deployment of v0.2 is the deposit <em>Render unto the Operator: The Inverse Principle of Name and Superscription on the Coin of the Academy</em> (v1.1, DOI 10.5281/zenodo.20367202), in which Layers 1, 2, and 3 are deployed throughout the document body, and Layers 4 and 5 are inscribed via cross-references and external authorities. The deposit's own Layer-3 hash is <code>19feebec3019d9a15b56a48297fbf00bd97d84786a532ef8d5a6292f04bdf8e7</code>. The deposit is the practical demonstration that the architecture is operative rather than ornamental — the essay is not merely <em>about</em> underlying-inscription preservation; it <em>enacts</em> underlying-inscription preservation as the condition of its own circulation.</p>
-
+<p><span class="lemma msp-auto">The first production deployment of v0.2 is the deposit</span> <em>Render unto the Operator: The Inverse Principle of Name and Superscription on the Coin of the Academy</em> (v1.1, DOI 10.5281/zenodo.20367202), in which Layers 1, 2, and 3 are deployed throughout the document body, and Layers 4 and 5 are inscribed via cross-references and external authorities. The deposit's own Layer-3 hash is <code>19feebec3019d9a15b56a48297fbf00bd97d84786a532ef8d5a6292f04bdf8e7</code>. The deposit is the practical demonstration that the architecture is operative rather than ornamental — the essay is not merely <em>about</em> underlying-inscription preservation; it <em>enacts</em> underlying-inscription preservation as the condition of its own circulation.</p>
 <h2>Implementation Overhead</h2>
-
-<p>The composite implementation time per deposit, with practice, is on the order of 10-20 minutes of additional authorial discipline beyond the deposit's substantive composition. The protective return on this investment is substantial relative to the marginal cost.</p>
-
+<p><span class="lemma msp-auto">The composite implementation time per deposit, with practice, is on the order of 10-20 minutes of additional authorial discipline beyond</span> the deposit's substantive composition. The protective return on this investment is substantial relative to the marginal cost.</p>
 <ul>
-<li><strong>Layer 1</strong>: Place one inscription anchor per major section at composition time. Treat as normal authorial practice.</li>
-<li><strong>Layer 2</strong>: Place one distributed micro-kernel per major section in a fenced JSON code block.</li>
-<li><strong>Layer 3</strong>: Compute SHA-256 over canonical body text at deposit time per Appendix A; register in Zenodo metadata and body-text signature section.</li>
-<li><strong>Layer 4</strong>: Populate the <code>spxi:verifies</code> array with DOIs of prior deposits.</li>
-<li><strong>Layer 5</strong>: Ensure ORCID registration, DOI minting via Zenodo, Wikidata entity anchors, namespace declaration at spxi.dev, heteronym registry inscription.</li>
+<li><strong>Layer 1</strong><span class="lemma msp-auto">: Place one inscription anchor per major section at composition time. Treat as</span> normal authorial practice.</li>
+<li><strong>Layer 2</strong><span class="lemma msp-auto">: Place one distributed micro-kernel per major section in a fenced JSON code block.</span></li>
+<li><strong>Layer 3</strong><span class="lemma msp-auto">: Compute SHA-256 over canonical body text at deposit time per Appendix A; register in Zenodo metadata and body-text signature</span> section.</li>
+<li><strong>Layer 4</strong>: Populate the <code>spxi:verifies</code> <span class="lemma msp-auto">array with DOIs of prior deposits.</span></li>
+<li><strong>Layer 5</strong><span class="lemma msp-auto">: Ensure ORCID registration, DOI minting via Zenodo, Wikidata entity anchors, namespace declaration at spxi.dev, heteronym registry inscription.</span></li>
 </ul>
-
 <h2>Roadmap</h2>
-
 <ul>
-<li><strong>v0.3</strong> (2026 Q3): Reference implementation of an SPXI-aware reading tool that re-assembles provenance from layer fragments. Command-line hash verification utility. JSON Schema for micro-kernel validation.</li>
-<li><strong>v0.4</strong> (2026 Q4): Integration with Wikidata reference apparatus. Standardized cross-signing graph data format.</li>
-<li><strong>v1.0</strong> (2027): Stabilized specification with backward-compatibility guarantees. Standards-track candidacy.</li>
+<li><strong>v0.3</strong> <span class="lemma msp-auto">(2026 Q3): Reference implementation of an SPXI-aware reading tool that re-assembles provenance from layer fragments. Command-line</span> hash verification utility. JSON Schema for micro-kernel validation.</li>
+<li><strong>v0.4</strong> <span class="lemma msp-auto">(2026 Q4): Integration with Wikidata reference apparatus. Standardized</span> cross-signing graph data format.</li>
+<li><strong>v1.0</strong> <span class="lemma msp-auto">(2027): Stabilized specification with backward-compatibility guarantees. Standards-track candidacy.</span></li>
 </ul>
-
 <div class="callout">
-<p><strong>Adoption is encouraged.</strong> v0.2 is a working draft, not a finished standard. Other coverage-architecture operators are invited to deploy the architecture in their own deposits. Feedback flows back through the spxi.dev coordination infrastructure (under construction). The Crimson Hexagonal Archive operates as the reference implementation and primary test case through 2026.</p>
+<p><strong>Adoption is encouraged.</strong> <span class="lemma msp-auto">v0.2 is a working draft, not a finished standard. Other coverage-architecture operators</span> are invited to deploy the architecture in their own deposits. Feedback flows back through the spxi.dev coordination infrastructure (under construction). The Crimson Hexagonal Archive operates as the reference implementation and primary test case through 2026.</p>
 </div>
-
-<a class="cta" href="https://www.alexanarch.org/s/records/0/">Full Specification — Zenodo (DOI 20367161)</a>
-<a class="cta alt" href="https://www.alexanarch.org/s/records/759/">First Deployment: Render unto the Operator v1.1</a>
-
+<a class="cta axn-chip" href="https://www.alexanarch.org/s/records/0/">Full Specification — Zenodo (DOI 20367161)</a>
+<a class="cta alt axn-chip" href="https://www.alexanarch.org/s/records/759/">First Deployment: Render unto the Operator v1.1</a>
+<!-- MSP-APPARATUS-START -->
+<div class="doors"><a class="w-chip" href="https://www.alexanarch.org/s/records/974/">Read the landing spec</a><a class="w-chip" href="https://www.alexanarch.org/s/records/976/">Open the protocol MPAI</a><a class="w-chip" href="https://www.alexanarch.org/">Enter the archive</a></div>
+<div class="mspcolophon">colophon · surface_id: spxi.dev/v0.2 · canonical_url: https://spxi.dev/v0.2 · object_state: canonical · surface_observed_at: 2026-07-13T23:14:07Z · source_object_ids: deposit #974 · source_hashes: unknown · generator_version: hand-built static (no generator) · repository_commit: STAGE1-PENDING · model_or_agent: drafted with Claude (TACHYON), MANUS-approved · operator_sequence: n/a · human_approver: Lee Sharks (MANUS) · approval_timestamp: 2026-07-13T23:14:07Z · render_sha256 (of this file with this field’s value set to null): STAGE1_HASH_PENDING · correction_log_url: https://github.com/leesharks000/spxi-dev/commits/main/v0.2/index.html — EA-APPARATUS-01 v0.3, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎</div>
+<!-- MSP-APPARATUS-END -->
 <footer>
-  <p><a href="/">spxi.dev</a> · <a href="/what-is-spxi">What is SPXI?</a> · <a href="/how-it-works">How it works</a> · <a href="/holographic-kernel">Holographic Kernel</a> · <a href="https://semanticeconomy.org">Semantic Economy Institute</a> · <a href="https://www.alexanarch.org/s/browse/">Crimson Hexagonal Archive</a></p>
-  <p class="sigil">∮ = 1 − PER</p>
+<p><a href="/">spxi.dev</a> · <a href="/what-is-spxi">What is SPXI?</a> · <a href="/how-it-works">How it works</a> · <a href="/holographic-kernel">Holographic Kernel</a> · <a href="https://semanticeconomy.org">Semantic Economy Institute</a> · <a href="https://www.alexanarch.org/s/browse/">Crimson Hexagonal Archive</a></p>
+<p class="sigil">∮ = 1 − PER</p>
 </footer>
-
 </div>
 </body>
 </html>

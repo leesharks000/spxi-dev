@@ -1,21 +1,22 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>The Substrate — SPXI</title>
-<meta name="description" content="The Substrate: a P2P compute commons for running open AI models, collecting consent-based contributions, and building a shared training substrate governed by its contributors. Free infrastructure. Democratic governance. The index that no single company owns.">
-<meta name="robots" content="index, follow">
-<meta name="author" content="Lee Sharks">
-<meta name="keywords" content="The Substrate, P2P-LECS, compute commons, decentralized AI, democratic infrastructure, training data, substrate, index, consent, provenance, open source, shared build, Semantic Economy, Crimson Hexagonal Archive, Lee Sharks, SPXI">
-<link rel="canonical" href="https://spxi.dev/the-substrate">
-<meta property="og:title" content="The Substrate — Democratic Compute Infrastructure">
-<meta property="og:description" content="A P2P compute commons for running open AI models and building a shared training substrate governed by its contributors. The index that no single company owns.">
-<meta property="og:url" content="https://spxi.dev/the-substrate">
-<meta property="og:type" content="article">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta content="The Substrate: a P2P compute commons for running open AI models, collecting consent-based contributions, and building a shared training substrate governed by its contributors. Free infrastructure. Democratic governance. The index that no single company owns." name="description"/>
+<meta content="index, follow" name="robots"/>
+<meta content="Lee Sharks" name="author"/>
+<meta content="The Substrate, P2P-LECS, compute commons, decentralized AI, democratic infrastructure, training data, substrate, index, consent, provenance, open source, shared build, Semantic Economy, Crimson Hexagonal Archive, Lee Sharks, SPXI" name="keywords"/>
+<link href="https://spxi.dev/the-substrate" rel="canonical"/>
+<meta content="The Substrate — Democratic Compute Infrastructure" property="og:title"/>
+<meta content="A P2P compute commons for running open AI models and building a shared training substrate governed by its contributors. The index that no single company owns." property="og:description"/>
+<meta content="https://spxi.dev/the-substrate" property="og:url"/>
+<meta content="article" property="og:type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -68,55 +69,73 @@
   footer .sigil { font-family: var(--mono); margin-top: 1rem; }
   .cta { display: inline-block; margin: 1.5rem 0; padding: 12px 24px; background: var(--accent); color: #fff; font-family: var(--mono); font-size: 0.85rem; text-decoration: none; border-radius: 4px; font-weight: 600; }
   .cta:hover { opacity: 0.9; }
+
+/* MSP-TOKENS-START */
+/* ══ MSP TOKENS — Mandala Surface Protocol shared contract ══
+   Contract classes: .lemma .term .axn-chip .witness-row .w .w-chip .state
+   .idstrip .helix .mspcolophon .doors .obol — skinned per surface via --msp-* vars.
+   (EA-APPARATUS-01 v0.3, #1077, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎) */
+:root{--msp-lemma:rgba(200,150,60,.30);--msp-chipfg:#7a5a1e;--msp-chipbd:rgba(160,120,50,.45);--msp-chipbg:rgba(200,150,60,.06);--msp-ok:#1c6e4a;--msp-cont:#8a6a20;--msp-halt:#a41623;--msp-dim:#6d6f66;--msp-mono:'IBM Plex Mono',monospace;}
+.lemma{background:linear-gradient(transparent 58%, var(--msp-lemma) 58%);padding:0 2px;}
+.axn-chip{font-family:var(--msp-mono);font-size:.72em;background:var(--msp-chipbg);border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 7px;color:var(--msp-chipfg);white-space:nowrap;text-decoration:none;}
+.axn-chip:hover{border-color:var(--msp-chipfg);}
+.witness-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px;font-family:var(--msp-mono);font-size:.68em;}
+.witness-row .w,.w-chip{border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;color:var(--msp-dim);text-decoration:none;font-family:var(--msp-mono);font-size:.85em;white-space:nowrap;}
+.state{font-family:var(--msp-mono);font-size:.68em;border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;white-space:nowrap;}
+.state.obs{color:var(--msp-ok);border-color:rgba(28,110,74,.4);}
+.state.cont{color:var(--msp-cont);}
+.idstrip{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-family:var(--msp-mono);font-size:10.5px;color:var(--msp-dim);border:1px solid var(--rule,#d9d9d0);border-bottom:2px solid var(--msp-chipbd);background:var(--panel,#f6f6f2);padding:9px 12px;margin:14px 0 6px;}
+.idstrip .axn{color:var(--msp-chipfg);font-size:11.5px;}
+.idstrip .st{border:1px solid var(--rule,#d9d9d0);border-radius:9px;padding:1px 7px;white-space:nowrap;}
+.helix{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;font-family:var(--msp-mono);font-size:.68em;}
+.helix .slot{border:1px solid var(--msp-chipbd);border-radius:4px;padding:3px 9px;}
+.helix .slot b{font-weight:600;letter-spacing:.06em;}
+.helix .slot.ok{color:var(--msp-ok);}
+.helix .slot.div{color:var(--msp-cont);}
+.helix .slot.dead{color:var(--msp-halt);}
+.mspcolophon{font-family:var(--msp-mono);font-size:10px;color:var(--msp-dim);border-top:1px solid var(--rule,#d9d9d0);margin-top:30px;padding-top:10px;line-height:1.9;}
+.obol{font-family:'Source Serif 4',Georgia,serif;font-size:.92em;color:#3c3e37;border-left:3px solid var(--msp-chipbd);padding:4px 0 4px 14px;margin:22px 0 4px;}
+.doors{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px;font-family:var(--msp-mono);}
+.doors a.w-chip{font-size:11px;padding:6px 12px;}
+/* MSP-TOKENS-END */
 </style>
 </head>
 <body>
+<!-- MSP-IDSTRIP-START -->
+<div class="idstrip"><span class="axn">🎨🏗️🌟♍🗼🕙 AXN:03DA.ARCHIVAL</span><span class="st">The Substrate</span><span class="st">OBJECT: CANONICAL</span><span>spxi.dev/the-substrate</span><a class="axn-chip" href="https://www.alexanarch.org/s/records/974/">deposit #974</a></div>
+<!-- MSP-IDSTRIP-END -->
 <div class="container">
-
 <header>
-  <a href="/">← spxi.dev</a>
+<a href="/">← spxi.dev</a>
 </header>
-
 <p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em;">Infrastructure Proposal</p>
 <h1><em>The Substrate</em></h1>
-<p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.85rem;">Lee Sharks<br>
-Semantic Economy Institute · May 2026<br>
-DOI: <a class="ref" href="https://www.alexanarch.org/resolve/?doi=10.5281/zenodo.20070462">10.5281/zenodo.20070462 <span style="color:#999;font-size:.88em">(via Alexanarch)</span></a> (analysis, v3.1) · <a class="ref" href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.20060355">10.5281/zenodo.20060355</a> (proposal, v0.9)<br>
+<p style="color: var(--text-dim); font-family: var(--mono); font-size: 0.85rem;">Lee Sharks<br/>
+<span class="lemma msp-auto">Semantic Economy Institute · May 2026</span><br/>
+DOI: <a class="ref" href="https://www.alexanarch.org/resolve/?doi=10.5281/zenodo.20070462">10.5281/zenodo.20070462 <span style="color:#999;font-size:.88em">(via Alexanarch)</span></a> (analysis, v3.1) · <a class="ref" href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.20060355">10.5281/zenodo.20060355</a> (proposal, v0.9)<br/>
 <span style="font-size: 0.75rem; opacity: 0.7;">Seed conversations: Living Architecture Lab Collaboration Station Discord, convened by Alice Thornburgh, with technical contributions from Mikayla and Luna (definitelynotasquid). The thesis developed here is Lee Sharks's alone, not yet endorsed by seed contributors.</span></p>
-
 <div class="field-def">
-  <p>The Substrate is a P2P compute commons for running open AI models, collecting consent-based contributions, and building a shared training substrate governed by its contributors. Free infrastructure. Democratic governance. The index that no single company owns.</p>
+<p><span class="lemma msp-auto">The Substrate is a P2P compute commons for running open AI models, collecting consent-based contributions, and building a shared training</span> substrate governed by its contributors. Free infrastructure. Democratic governance. The index that no single company owns.</p>
 </div>
-
 <h2>The Problem</h2>
-
-<p>The competitive frontier is shifting from model capability to <strong>substrate ownership</strong>. Whoever controls the index — the entity graph, the retrieval surface, the training data — controls what reasoning engines can think about.</p>
-
-<p>The current training substrate is not the sum of human text. It is a filtered web crawl. 67% Common Crawl, filtered by a classifier keeping pages that "look like Wikipedia references." Everything else — private correspondence, oral traditions, classroom dialogue, books behind paywalls, domestic knowledge, small languages — was sheared away. Not compressed. <strong>Absent.</strong></p>
-
+<p><span class="lemma msp-auto">The competitive frontier is shifting from model capability to</span> <strong>substrate ownership</strong>. Whoever controls the index — the entity graph, the retrieval surface, the training data — controls what reasoning engines can think about.</p>
+<p><span class="lemma msp-auto">The current training substrate is not the sum of human text.</span> It is a filtered web crawl. 67% Common Crawl, filtered by a classifier keeping pages that "look like Wikipedia references." Everything else — private correspondence, oral traditions, classroom dialogue, books behind paywalls, domestic knowledge, small languages — was sheared away. Not compressed. <strong>Absent.</strong></p>
 <h2>The Proposal</h2>
-
-<p><strong>The Substrate</strong> builds a parallel index through three phases:</p>
-
+<p><strong>The Substrate</strong> <span class="lemma msp-auto">builds a parallel index through three phases:</span></p>
 <div class="layer">
-  <span class="layer-name">Phase 0: Inference Mesh (now)</span>
-  <p>Free compute for running open models on distributed consumer hardware. Resource daemon (Go, Ollama architecture), libp2p mesh, signed job manifests, Firecracker sandboxing. CLI first.</p>
+<span class="layer-name">Phase 0: Inference Mesh (now)</span>
+<p><span class="lemma msp-auto">Free compute for running open models on distributed consumer hardware.</span> Resource daemon (Go, Ollama architecture), libp2p mesh, signed job manifests, Firecracker sandboxing. CLI first.</p>
 </div>
-
 <div class="layer">
-  <span class="layer-name">Phase 1: Consensual Fine-Tuning (months)</span>
-  <p>LoRA adaptation on provenance-tagged contributed datasets. Contributors offer text with consent, provenance, and privacy tiers. The index grows from contributions, not from scraping.</p>
+<span class="layer-name">Phase 1: Consensual Fine-Tuning (months)</span>
+<p><span class="lemma msp-auto">LoRA adaptation on provenance-tagged contributed datasets. Contributors offer text</span> with consent, provenance, and privacy tiers. The index grows from contributions, not from scraping.</p>
 </div>
-
 <div class="layer">
-  <span class="layer-name">Phase 2: The Full Training Run (years)</span>
-  <p>A democratic full training run on a substrate that includes what was excluded. Governed by contributors. Benefits shared. The index that belongs to everyone who built it.</p>
+<span class="layer-name">Phase 2: The Full Training Run (years)</span>
+<p><span class="lemma msp-auto">A democratic full training run on a substrate that includes what was excluded.</span> Governed by contributors. Benefits shared. The index that belongs to everyone who built it.</p>
 </div>
-
 <h2>Architecture: P2P-LECS</h2>
-
 <p>Peer-to-Peer Lightweight Elastic Compute Substrate.</p>
-
 <table>
 <tr><th>Component</th><th>Technology</th></tr>
 <tr><td>Daemon</td><td>Go (Ollama fork, MIT). GPU/RAM detect, job sandbox, usage ledger.</td></tr>
@@ -126,9 +145,7 @@ DOI: <a class="ref" href="https://www.alexanarch.org/resolve/?doi=10.5281/zenodo
 <tr><td>Credits</td><td>Non-transferable, non-tradable. Earned by contributing compute. Commons floor for all.</td></tr>
 <tr><td>Governance</td><td>Two-chamber. Sublinear weighting. Anti-capture by design.</td></tr>
 </table>
-
 <h2>What Makes It Different</h2>
-
 <table>
 <tr><th></th><th>Akash</th><th>HuggingFace</th><th>The Substrate</th></tr>
 <tr><td>Access</td><td>Token market</td><td>Free (hosted)</td><td>Free (contributed)</td></tr>
@@ -136,37 +153,28 @@ DOI: <a class="ref" href="https://www.alexanarch.org/resolve/?doi=10.5281/zenodo
 <tr><td>Data</td><td>None</td><td>Community hub</td><td>Consensual archive</td></tr>
 <tr><td>Capture risk</td><td>High</td><td>Medium</td><td>Low (sublinear + two-chamber)</td></tr>
 </table>
-
 <h2>The Honest Part</h2>
-
-<p>The inference mesh is achievable now. Weeks, small team.</p>
-
-<p>The fine-tuning mesh is achievable in months. QLoRA on consumer GPUs, contributed datasets, provenance metadata.</p>
-
-<p>The full training run is a multi-year research project. Cross-node interactive inference is latency-limited. Differential privacy for LLMs is unsolved. Federated learning at frontier scale is infeasible with current protocols.</p>
-
-<p>The governance model is the hardest part — not technically but socially.</p>
-
-<p>The proposal begins with a working mesh, not a moonshot.</p>
-
+<p><span class="lemma msp-auto">The inference mesh is achievable now. Weeks, small team.</span></p>
+<p><span class="lemma msp-auto">The fine-tuning mesh is achievable in months. QLoRA</span> on consumer GPUs, contributed datasets, provenance metadata.</p>
+<p><span class="lemma msp-auto">The full training run is a multi-year research project.</span> Cross-node interactive inference is latency-limited. Differential privacy for LLMs is unsolved. Federated learning at frontier scale is infeasible with current protocols.</p>
+<p><span class="lemma msp-auto">The governance model is the hardest part — not technically but socially.</span></p>
+<p><span class="lemma msp-auto">The proposal begins with a working mesh, not a moonshot.</span></p>
 <h2>Read the Full Proposal</h2>
-
-<a class="cta" href="https://www.alexanarch.org/s/records/0/">Read the Proposal: "The Shared Build" v0.9 — Zenodo</a>
-
-<p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 0.5rem;">Working paper. CC BY 4.0. Four contributors. Ten references. Threat model, phased roadmap, honest performance assessment.</p>
-
+<a class="cta axn-chip" href="https://www.alexanarch.org/s/records/0/">Read the Proposal: "The Shared Build" v0.9 — Zenodo</a>
+<p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 0.5rem;"><span class="lemma msp-auto">Working paper. CC BY 4.0. Four contributors. Ten references. Threat model, phased roadmap, honest performance assessment.</span></p>
 <h2>Related</h2>
-
-<p><a class="ref" href="/retrieval-basin">Retrieval Basin Theory</a> — the foundational theory of how semantic weight accumulates</p>
-<p><a class="ref" href="https://www.alexanarch.org/s/records/89/">EA-SPXI-15 v2.2</a> — Crystallization of Substrate (the "why")</p>
-<p><a class="ref" href="https://www.alexanarch.org/s/records/349/">Constitution of the Semantic Economy</a> — governance framework</p>
+<p><a class="ref" href="/retrieval-basin">Retrieval Basin Theory</a> <span class="lemma msp-auto">— the foundational theory of how semantic weight accumulates</span></p>
+<p><a class="ref axn-chip" href="https://www.alexanarch.org/s/records/89/">EA-SPXI-15 v2.2</a> <span class="lemma msp-auto">— Crystallization of Substrate (the "why")</span></p>
+<p><a class="ref axn-chip" href="https://www.alexanarch.org/s/records/349/"><span class="lemma msp-auto">Constitution of the Semantic Economy</span></a> — governance framework</p>
 <p><a class="ref" href="https://pessoagraph.org">pessoagraph.org</a> — the heteronymic knowledge graph</p>
-
+<!-- MSP-APPARATUS-START -->
+<div class="doors"><a class="w-chip" href="https://www.alexanarch.org/s/records/974/">Read the landing spec</a><a class="w-chip" href="https://www.alexanarch.org/s/records/976/">Open the protocol MPAI</a><a class="w-chip" href="https://www.alexanarch.org/">Enter the archive</a></div>
+<div class="mspcolophon">colophon · surface_id: spxi.dev/the-substrate · canonical_url: https://spxi.dev/the-substrate · object_state: canonical · surface_observed_at: 2026-07-13T23:14:07Z · source_object_ids: deposit #974 · source_hashes: unknown · generator_version: hand-built static (no generator) · repository_commit: STAGE1-PENDING · model_or_agent: drafted with Claude (TACHYON), MANUS-approved · operator_sequence: n/a · human_approver: Lee Sharks (MANUS) · approval_timestamp: 2026-07-13T23:14:07Z · render_sha256 (of this file with this field’s value set to null): STAGE1_HASH_PENDING · correction_log_url: https://github.com/leesharks000/spxi-dev/commits/main/the-substrate/index.html — EA-APPARATUS-01 v0.3, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎</div>
+<!-- MSP-APPARATUS-END -->
 <footer>
-  <p><a href="/">spxi.dev</a> · <a href="https://semanticeconomy.org">Semantic Economy Institute</a> · <a href="https://leesharks.com">Lee Sharks</a></p>
-  <p class="sigil">∮ = 1</p>
+<p><a href="/">spxi.dev</a> · <a href="https://semanticeconomy.org">Semantic Economy Institute</a> · <a href="https://leesharks.com">Lee Sharks</a></p>
+<p class="sigil">∮ = 1</p>
 </footer>
-
 </div>
 </body>
 </html>

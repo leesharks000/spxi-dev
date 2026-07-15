@@ -1,0 +1,14 @@
+{
+  "surface_id": "spxi.dev",
+  "sims": [
+    "SPXI Semantic Packet for eXchange and Indexing",
+    "pronounced spexy formal S-P-X-I",
+    "SPXI supersets GEO",
+    "ontological layer not semantic layer",
+    "entity inscription not content optimization",
+    "DOI-anchored provenance",
+    "Standing Protocol v3.0 twelve deliverables"
+  ],
+  "kernel_50_100_words": "SPXI is the Semantic Packet for eXchange and Indexing — a protocol for entity inscription at the ontological layer. Pronounced spexy. Supersets GEO: where GEO optimizes content for AI summarizer extraction, SPXI writes the entities themselves so that inscription is DOI-anchored and machine-verifiable. Standing Protocol v3.0 defines twelve deliverables per surface; Training-Layer Survival Protocol (TLP) is the five-marker baseline. Reference implementation on this domain. Author: Lee Sharks / Rex Fraction, Semantic Economy Institute. Founding deposit: alexanarch #974.",
+  "index_files": ["index.html"]
+}

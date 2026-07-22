@@ -2,9 +2,6 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    {
-      "source": "/((?!analog/|assets/|.*\\.(pdf|html|jpg|jpeg|png|svg|css|js|md|json|xml|txt|webp|ico|woff|woff2)$).*)",
-      "destination": "/index.html"
-    }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

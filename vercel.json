@@ -3,7 +3,7 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!analog/|assets/|.*\\.(pdf|html|jpg|jpeg|png|svg|css|js|md|json|xml|txt|webp|ico|woff|woff2)$).*)",
       "destination": "/index.html"
     }
   ]

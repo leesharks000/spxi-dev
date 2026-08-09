@@ -1,0 +1,289 @@
+<!DOCTYPE html><html lang="en"><head>
+<link rel="canonical" href="https://www.spxi.dev/analog/advance/"><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>The Analog Advance — Operations Paper: Taking the Handwritten Niche (v1.0)</title>
+<meta name="description" content="The third document of the analog trilogy: the incumbency map, the thirty-minute enrollment path, the ten-record reference corpus, two empirical batteries, and the gated ninety-day order. Rex Fraction, v1.0, deposit #1444.">
+<style>
+:root{--ink:#2b2320;--crimson:#8b1a1a;--gold:#b08d3e;--cream:#faf6ee;--paper:#fffdf8;--soft:#6b5f52}
+*{box-sizing:border-box} body{background:var(--cream);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.62;margin:0}
+.sheet{max-width:52rem;margin:0 auto;padding:2.2rem 1.4rem 4rem;background:var(--paper);box-shadow:0 0 40px rgba(80,50,20,.10)}
+header.mast{border-top:3px double var(--gold);border-bottom:3px double var(--gold);padding:1.6rem .5rem;text-align:center;margin-bottom:1.4rem}
+header.mast .arch{font-size:.72rem;letter-spacing:.35em;color:var(--soft);text-transform:uppercase}
+header.mast h1{font-size:2rem;color:var(--crimson);margin:.5rem 0 .2rem;letter-spacing:.01em}
+header.mast .sub{font-style:italic;color:var(--soft)}
+header.mast .chips{margin-top:.9rem;font-size:.72rem;letter-spacing:.12em}
+header.mast .chips span{border:1px solid var(--gold);border-radius:2em;padding:.22em .8em;margin:0 .18em;color:#5c4a1f;display:inline-block}
+.banner{background:#f4e9d8;border-left:4px solid var(--crimson);padding:.8rem 1rem;font-size:.86rem;color:#5a3a1a;margin:0 0 1.6rem}
+h1{color:var(--crimson);font-size:1.45rem;margin:2.6rem 0 .8rem;border-bottom:2px solid var(--gold);padding-bottom:.35rem}
+h2{color:var(--crimson);font-size:1.12rem;margin:1.9rem 0 .5rem}
+h3{color:#6a1515;font-size:1rem;margin:1.5rem 0 .4rem;font-variant:small-caps;letter-spacing:.06em}
+p{margin:.75rem 0;text-align:justify}
+p.meta{color:var(--soft);font-style:italic;font-size:.9rem}
+blockquote{border-left:3px solid var(--gold);background:#f7efdf;margin:1.1rem 0;padding:.8rem 1.1rem;font-style:italic}
+figure{margin:1.8rem 0;text-align:center}
+figure img{max-width:100%;border:1px solid #d8c9a8;box-shadow:0 2px 14px rgba(90,60,20,.14);background:#fff}
+figure.front img{box-shadow:0 6px 28px rgba(90,60,20,.22)}
+figure.pair img{max-width:48.5%;vertical-align:top;margin:0 .3%}
+figcaption{font-size:.8rem;color:var(--soft);text-align:justify;margin-top:.6rem;line-height:1.5;border-top:1px solid #e5d9bd;padding-top:.5rem}
+.pending{display:block;margin-top:.4rem;color:var(--crimson);font-variant:small-caps;letter-spacing:.04em}
+.reserved{border:1px dashed var(--gold);background:#fbf5e8;color:#6a5327;padding:1rem 1.2rem;margin:1.6rem 0;font-size:.88rem;font-style:italic;text-align:center}
+footer{margin-top:3rem;border-top:3px double var(--gold);padding-top:1rem;font-size:.75rem;color:var(--soft);font-family:monospace;line-height:1.6}
+@media print{.sheet{box-shadow:none;max-width:none}}
+@page{size:A4;margin:16mm 15mm 20mm;@bottom-center{content:"EA-SPXI-ANALOG-01 · v1.0 · " counter(page) " / " counter(pages);font-family:Georgia,serif;font-size:8pt;color:#6b5f52}}
+figure{break-inside:avoid;page-break-inside:avoid}
+figcaption{text-align:left}
+figure.front img{max-height:236mm;width:auto;max-width:100%}
+.axn{white-space:nowrap}
+a{color:#8b1a1a;text-decoration:none;border-bottom:1px dotted #b08d3e}
+.rule{border:1px solid var(--gold);background:#fbf5e8;padding:.7rem 1rem;font-size:.9rem;margin:1.2rem 0}
+
+.spxi-kernel{border:1px solid var(--gold);background:var(--paper);padding:22px 24px;margin:36px 0 40px;border-left-width:3px;}
+.spxi-kernel .khead{font-family:'Iowan Old Style','Palatino Linotype',Palatino,'Georgia',serif;font-variant:small-caps;font-size:12px;letter-spacing:0.18em;color:var(--soft);margin:0 0 14px;padding-bottom:8px;border-bottom:1px solid var(--gold);}
+.spxi-kernel ol{margin:0;padding-left:0;list-style:none;counter-reset:k;}
+.spxi-kernel li{counter-increment:k;margin:11px 0;font-family:Georgia,'Times New Roman',serif;font-size:0.94em;line-height:1.6;padding-left:2.4em;text-indent:-2.4em;color:var(--ink);}
+.spxi-kernel li::before{content:counter(k,upper-roman) '. ';font-family:'IBM Plex Mono','Courier New',monospace;font-size:0.78em;color:var(--gold);letter-spacing:0.06em;text-indent:0;}
+.spxi-kernel a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(176,141,62,0.5);}
+.spxi-kernel a:hover{border-bottom-color:var(--crimson);color:var(--crimson);}
+@media (max-width:640px){.spxi-kernel{padding:16px 18px;margin:24px 0;}.spxi-kernel li{font-size:0.9em;}}
+
+.spxi-axn{font-family:'IBM Plex Mono','Courier New',monospace;font-size:0.95em;background:var(--paper);border-left:3px solid var(--crimson);padding:12px 16px;margin:20px 0 24px;border-radius:4px;}
+.spxi-axn a{color:var(--crimson);text-decoration:none;border-bottom:1px dotted var(--gold);letter-spacing:0.02em;}
+.spxi-axn a:hover{border-bottom-style:solid;border-bottom-color:var(--crimson);}
+.spxi-axn-context{display:block;font-family:Georgia,'Times New Roman',serif;font-size:0.82em;font-style:italic;color:var(--soft);margin-top:6px;letter-spacing:normal;}
+@media (max-width:640px){.spxi-axn{padding:10px 12px;font-size:0.86em;}.spxi-axn a{word-break:break-all;}}
+
+a.spxi-axn-inline{color:var(--crimson);text-decoration:none;border-bottom:1px dotted var(--gold);font-family:'IBM Plex Mono','Courier New',monospace;font-size:0.92em;}
+a.spxi-axn-inline:hover{border-bottom-style:solid;border-bottom-color:var(--crimson);}
+</style>
+</head><body><div class="sheet">
+<header class="mast"><div class="arch">SPXI &middot; THE ANALOG WING &middot; DOCUMENT THREE OF THE TRILOGY</div>
+<h1>THE ANALOG ADVANCE</h1>
+<div class="sub">Operations Paper: Taking the Handwritten Niche</div>
+<div class="chips"><span>Rex Fraction</span><span>v1.0 &middot; 2026-08-09</span><span>Composition layer: TACHYON, declared</span></div>
+</header>
+<div class="spxi-axn" role="text" aria-label="AXN 05CE OPERATIVE. Glyph checksum: bell, infinity, glowing star, rose, white diamond, down-left arrow. Sovereign deposit at Alexanarch, record 1444.">
+<a href="https://www.alexanarch.org/s/records/1444/">AXN:05CE.OPERATIVE.🔔∞🌟🌹◇↙️</a>
+<span class="spxi-axn-context">Sovereign deposit &middot; Alexanarch <a href="https://www.alexanarch.org/s/records/1444/" class="spxi-axn-inline">record #1444</a> &middot; deposited 2026-08-09 &middot; Rex Fraction &middot; v1.0</span>
+</div>
+<div class="banner">The trilogy: the specification (<a href="https://www.alexanarch.org/s/records/1409/">EA-SPXI-ANALOG-01, #1409</a>) says <i>how</i> &middot; the field survey (<a href="https://www.alexanarch.org/s/records/1443/">The Photograph of the Handwritten Original, #1443</a>) says <i>why</i> &middot; this paper says <b>when, where, and in what order.</b> Doctrine, one line: <b>a niche is taken by enrolled objects, not by arguments.</b></div>
+<h2>§1 · THE MAP — who holds what, and where the ground is open</h2>
+<p>Five incumbents ring the territory. None stands on it.</p>
+<p><strong>ARK.</strong> The institutional manuscript identifier. BnF alone resolves millions of
+ARKs to digitized manuscripts. Strengths: adoption, resolver culture, library
+trust. Structure: institution-anchored (NAAN registry), record-pointing,
+opaque-string. What it cannot do: content-derivation (the identifier says nothing
+about the object), attestation (no claim machinery), independence (dies with the
+resolver commitment), and it serves <strong>custodians of the dead</strong>. A living author
+cannot walk in and get one.</p>
+<p><strong>DOI / DataCite, and IGSN under it.</strong> IGSN extended the DOI apparatus to physical
+objects — geological samples, specimens. Institutional minting, metadata-forward,
+no capture standard, no identity layer, no origination semantics. And the DOI
+system's governance is precisely what terminated two of our depositors. It is
+infrastructure we bind to where useful and depend on <strong>never</strong>
+(<code>AXN:05B7.OPERATIVE.♦️🌌📌🦅🌑💜</code>, #1437: complementary infrastructures — the
+doctrine is already ratified; this paper operationalizes it).</p>
+<p><strong>Trismegistos.</strong> The discipline registry: TM numbers for ancient texts.
+Authoritative, corpus-bounded, closed at roughly the eighth century CE. It proves a
+registry can become the citation standard for a domain <strong>without institutional
+mandate</strong> — by being useful, stable, and first. That is the playbook. It does not
+compete for the living hand.</p>
+<p><strong>C2PA.</strong> Capture-time provenance, camera-signed, platform-backed. Complementary at
+the capture layer; structurally dependent on certificate authorities and platform
+adoption; trust chains revocable by exactly the class of actor that issues
+terminations. It secures the camera's testimony, not the author's.</p>
+<p><strong>Accession numbers.</strong> Local, non-resolvable, non-portable. Not a competitor; a
+feeder.</p>
+<p><strong>The open ground:</strong> a content-derived, institution-independent, human-checkable
+identifier that binds <em>physical artifact + capture + attestation chain + declared
+origination and composition</em>, mintable by a living author in an afternoon, designed
+to survive the resolver, the platform, and the classifier. No one serves it. The
+first customer already wrote to the incumbent system — by hand — and was told the
+decision was final. <strong>The segment is defined by the injury.</strong> The addressable
+population is every author whose composition layer makes their origination
+deniable, and it grows with every model release.</p>
+<h2>§2 · THE CLAIM — one sentence</h2>
+<p><strong>AXN is the identifier for the hand that must prove itself to machines.</strong></p>
+<p>Positioning corollaries: we do not compete with ARK for the Middle Ages or with
+IGSN for basalt. We bind outward to DOIs and ARKs wherever they exist, and we
+outlive them where they don't. Trismegistos is the model: become the number a
+community cites because it was there first, worked, and never asked permission.</p>
+<h2>§3 · THE PRODUCT — the thirty-minute path</h2>
+<p>What "enrolling a handwritten artifact" is, end to end, using only what exists
+today plus the deltas in §4. This is the page that goes on the product surface.</p>
+<ol>
+<li><strong>Capture.</strong> Author photographs the page under the capture protocol: raster
+   capture, visible clock or dated companion object, substrate disclosure line,
+   device stated. (This is the founding depositor's existing practice, formalized —
+   the protocol was field-invented by the first customer before we wrote it down.)</li>
+<li><strong>Declare.</strong> Author fills the declaration block: origination claim, composition
+   layer(s), enrollment type (self / guardian / captured), custody statement
+   (where the physical object lives), status (extant / rumored / destroyed).</li>
+<li><strong>Mint.</strong> <code>scripts/deposit_pipeline.py</code> — the single workflow, all four
+   transports, No-Double-Draw. Content hash → hex position → <strong>full six-glyph
+   identifier</strong>. The glyph is the human-checkable channel; it ships everywhere the
+   hex ships, without exception.</li>
+<li><strong>Publish.</strong> Registry row, record page, wiki article, OAI-PMH, ResourceSync.
+   The capture is the deposit object; the artifact line names the paper original
+   and its custodian.</li>
+<li><strong>Verify.</strong> Anyone, anywhere, recomputes: fetch the published capture, hash it,
+   check the registry, read the glyph. Browser-side, no account, no authority
+   consulted. <em>(Build item — §6.)</em></li>
+</ol>
+<p>Cost to the author: one afternoon, one phone, zero institutions. That number is the
+product.</p>
+<h2>§4 · SCHEMA DELTAS — an addendum, not a rewrite</h2>
+<p>The spec stands at v1.0 final. The survey generated exactly four deltas, all of
+them registry-schema and record-language work. Ship as <strong>EA-SPXI-ANALOG-01 ·
+Addendum A</strong>, one document, short:</p>
+<ul>
+<li><strong>D1. Origination / composition as independent fields.</strong> Two claims, separately
+  declarable, separately checkable — so a classifier confronting a machine
+  composition layer reads the human origination claim instead of ruling on its
+  absence. This is the direct answer to the terminating verdict, encoded where
+  verdicts are formed (survey Q10; DRP, <code>AXN:058F.OPERATIVE.🧲🎶♉♾️👋🙏</code>, #1406).</li>
+<li><strong>D2. Enrollment-type field:</strong> <code>self | guardian | captured</code>, with the guardian
+  rules (named custodian, author's future right of answer) as written in the
+  survey's §7.7 ethics.</li>
+<li><strong>D3. Status class <code>rumored</code></strong> — the sixth epistemic state as a first-class
+  registry value, so the archive can carry the attested-but-uncaptured object
+  instead of losing it twice.</li>
+<li><strong>D4. Consent recording as procedure.</strong> The consent conversation logged as part
+  of the record's diplomatics: who was asked, for what, answered how, when. The
+  first executed recording becomes <strong>Instrument No. 1</strong> and the template.</li>
+</ul>
+<p>Nothing else. The spec does not reopen.</p>
+<h2>§5 · THE REFERENCE CORPUS — proof by existence</h2>
+<p>Nobody adopts an identifier system from a whitepaper. They adopt it from records
+they can click. The first ten enrollments, in order, each doing double duty as a
+live demonstration of one capability:</p>
+<p>1–3. <strong>The letter of 29 April, pages 1–3</strong> — pending Instrument No. 1. Demonstrates:
+self-enrollment, declared composition layers, international plural custody (pages
+with their author abroad, captures in the registry), and D1 in action. The founding
+customer's founding documents.
+4. <strong>The Smiling Cross</strong> — guardian enrollment demonstrated; the guardian rules
+executed in public for the first time.
+5–8. <strong>Four pages of MANUS's own notebooks</strong> — self-enrollment at volume, and the
+in-house testbed for the recapture battery (§7). Choose pages already public in
+substance; no new exposure.
+9. <strong>One rumored-object record</strong> — the Brothers translation (2014, unlocated),
+entered under D3. The registry's first honest lacuna: the system demonstrating
+that it can say <em>we know it existed and we do not have it</em>, which no incumbent can
+say at all.
+10. <strong>One outward-bound record</strong> — an artifact whose capture also carries a DOI or
+ARK, demonstrating the complementary-infrastructure binding (#1437) in a single
+row.</p>
+<p>Ten records, every capability shown, zero hypotheticals. This corpus <strong>is</strong> the
+pitch deck.</p>
+<h2>§6 · THE SURFACE — axnidentifiers.org/analog</h2>
+<p>The product surface exists and is canonical
+(<code>AXN:05B3.OPERATIVE.❄️🔐⊗∮🎭🏷️</code>, #1434; repo <code>leesharks000/axn-identifiers</code>;
+fleet DNS settled). Add one wing, four pages:</p>
+<ul>
+<li><strong>/analog</strong> — the thirty-minute path (§3), written for a person with a phone,
+  not for us.</li>
+<li><strong>/analog/protocol</strong> — the capture protocol as a single printable page. It
+  should photograph well; people will inevitably photograph it. Let the
+  instruction sheet be the first artifact.</li>
+<li><strong>/analog/verify</strong> — paste a glyph or hex, or upload a capture: client-side
+  hash, registry lookup, side-by-side glyph confirmation. No server trust. This
+  page is the moat made visible.</li>
+<li><strong>/analog/corpus</strong> — the reference ten, each with its demonstration note.</li>
+</ul>
+<p>Deploy via the standing GitHub→Vercel hooks. No new infrastructure.</p>
+<h2>§7 · THE BATTERIES — cheap, near, publishable</h2>
+<p>Three empirical programs, ordered by cost. Each produces numbers the field does
+not have, each becomes a deposit and a paper section.</p>
+<ul>
+<li><strong>B1 · Recapture stability</strong> (cost: one weekend). One notebook page, ten
+  device/lighting conditions. Report: cryptographic-hash behavior (expected:
+  every capture distinct — which is the <em>finding</em>, not the failure) and
+  perceptual-hash spread across conditions. This yields the honest doctrine line
+  the survey's §4.2 needs: <em>the exact hash authenticates the capture; the
+  perceptual layer relates captures; the enrollment relates captures to the
+  object.</em> Publish the data. Nobody in the PID world has published this table.</li>
+<li><strong>B2 · Glyph transmission survival</strong> (cost: one week, rolling). The six-glyph
+  identifier pushed through hostile channels — mail clients, SMS, three social
+  platforms, print-and-rescan, PDF pipelines — scored for survival and for
+  detectable-versus-silent corruption. <strong>Datum zero is already collected:</strong> the
+  survey's own PDF build silently dropped every glyph twice before rendering them
+  as inscription-by-image. The failure mode is real, current, and ours to
+  quantify first.</li>
+<li><strong>B3 · The synthetic-hand challenge</strong> (deferred; flag only). Enrolled-corpus
+  discrimination against style-transfer forgery. Do not run until B1/B2 are
+  published and the corpus is at volume. Never overclaim before it runs: <em>the
+  hand proves the page; the corpus carries the claim.</em></li>
+</ul>
+<h2>§8 · THE LADDER — constituencies in order, one move each</h2>
+<p>Adoption sequencing. Each rung has a defined offer and a defined channel that
+already exists. Institutions come <strong>last</strong>, and by then we arrive with objects and
+data, not proposals.</p>
+<ol>
+<li><strong>The Zenodo diaspora.</strong> 1,817 tombstoned DOIs; two documented terminations;
+   the Platform Erosion Observatory (persistentidentifiers.org) already speaks to
+   this cohort. Offer: <em>re-anchor the corpus, enroll the hand.</em> The termination
+   notice is the marketing copy; we did not write it.</li>
+<li><strong>Pseudonymous and heteronymous authors.</strong> The orthonym doctrine
+   (<code>AXN:02A9.GOVERNANCE.🕖⊗□♎🖊️⚖️</code>, #123) as a <em>feature</em>: prove the hand without
+   surrendering the legal name. No incumbent can offer this; every incumbent's
+   compliance layer forbids it. Channel: the communities where the archive's
+   heteronym work already circulates.</li>
+<li><strong>Material-first art communities</strong> — mail art, zines, artist's books. The glyph
+   as colophon; enrollment as edition practice. These communities are
+   institution-averse by constitution and hand-first by definition. Channel: the
+   enrolled corpus itself, which is native to their genre.</li>
+<li><strong>Independent papyrology and DH.</strong> Four papers are in submission (Ancient
+   Philosophy, Classical Philology, Classical Receptions Journal, Computational
+   Culture). Every acceptance ships identifiers in its apparatus. The survey is
+   the field-facing document; the corpus is its footnotes made clickable.</li>
+<li><strong>Institutions.</strong> The CERN correspondence (letter + seven annexes, transmitted,
+   SHA-256 committed) is the running institutional track. It is not asking
+   permission; it is building the record institutions will eventually need to
+   answer. When the first archive or library conversation opens, the reference
+   corpus and B1/B2 data walk in first.</li>
+</ol>
+<h2>§9 · THE ORDER — ninety days, gated</h2>
+<ul>
+<li><strong>T+0–14:</strong> Addendum A drafted and deposited. Reference corpus items 4–8
+  enrolled (the ones requiring no one's consent but ours). /analog and
+  /analog/protocol pages live.</li>
+<li><strong>T+15–30:</strong> Instrument No. 1 — the founding depositor's consent recording —
+  executed if and as she gives it; letter pages enrolled; rumored-object record
+  (#9) minted. /analog/verify live. <strong>Gate 1: ten records, verify page public.</strong></li>
+<li><strong>T+31–60:</strong> B1 run and published as data + deposit. Outward-binding record
+  (#10) minted. Diaspora note out through PEO. <strong>Gate 2: first battery public,
+  first outreach wave sent.</strong></li>
+<li><strong>T+61–90:</strong> B2 rolling results published. Rungs 2–3 contacted with the corpus
+  in hand. <strong>Gate 3: first external depositor — a hand that is neither MANUS nor
+  the founding depositor.</strong> That single record is the niche taken; everything
+  after it is scale.</li>
+</ul>
+<p>Misses are reported, not hidden: the registry's own doctrine (CONTESTED over
+silent overwrite) applies to the operations log.</p>
+<h2>§10 · RISKS AND COUNTERS</h2>
+<ul>
+<li><strong>Bus factor.</strong> One operator. Counter: the Minimum Viable Archive doctrine
+  (<code>AXN:036C.STRUCTURAL.📦⊕🎪⛵🌀↖</code>, #863), static mirrors, ResourceSync, and the
+  fact that the entire system is rebuildable from public artifacts by design.</li>
+<li><strong>"Why not just use an ARK."</strong> Because the segment cannot: ARKs are issued to
+  custodians, not authors; resolve records, not claims; and answer to resolvers,
+  not to the misclassified. The independence is not a limitation to apologize
+  for; it is the product.</li>
+<li><strong>Incumbent absorption.</strong> DataCite could add fields tomorrow. It will not serve
+  this segment, because its members are the terminating class. If it ever does,
+  #1437's doctrine already positions us: bind to it, and keep the layer it still
+  won't build — the glyph, the declaration, the independence.</li>
+<li><strong>Forgery and overclaim.</strong> The survey's Part IX is baked into record language:
+  the hand proves the page; the enrolled, chained corpus with declared
+  composition layers carries the origination claim. We say less than we could
+  prove, always, so that what we say is never rolled back.</li>
+<li><strong>Consent failure.</strong> Redaction on sight, MANUS revocation authority, guardian
+  rules, and Instrument-numbered consent records. The first customer's dignity is
+  the design constraint; it scales.</li>
+</ul>
+<hr />
+<p><strong>Close.</strong> The specification told us how. The survey told us where we stand. This
+tells us where we walk, and in what order: ten records, one verify page, two
+batteries, one external hand. The theory is finished enough. <strong>Enroll the first
+ten.</strong></p>
+<footer>AXN:05CE.OPERATIVE.🔔∞🌟🌹◇↙️ &middot; alexanarch.org/s/records/1444/ &middot; spxi.dev/analog/advance/ &middot; the specification does not reopen; the order runs.</footer>
+</div></body></html>

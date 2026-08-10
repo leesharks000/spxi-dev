@@ -110,8 +110,22 @@
 }
 /* MSP-SKIN-END */
 </style>
+<style>
+.sitenav{display:flex;gap:0;flex-wrap:wrap;align-items:baseline;font-family:var(--mono);
+font-size:var(--fs-micro);letter-spacing:var(--tr-wide);text-transform:uppercase;
+border-bottom:1px solid var(--border,#1e1e24);margin:0 0 2rem;padding:14px 0 10px}
+.sitenav .wm{color:var(--accent,#c23d2e);text-decoration:none;font-weight:600;
+margin-right:auto;letter-spacing:.24em}
+.sitenav a{color:var(--text-dim,#8a8a8e);text-decoration:none;padding:3px 11px;
+border-left:1px solid var(--border,#1e1e24)}
+.sitenav a:hover{color:var(--text,#e8e6e3)}
+.sitenav a.here{color:var(--accent,#c23d2e)}
+.sitenav a:first-of-type{border-left:0}
+@media(max-width:640px){.sitenav{font-size:9px}.sitenav a{padding:3px 7px}}
+</style>
 </head>
 <body>
+<nav class="sitenav" aria-label="SPXI"><a class="wm" href="/">SPXI</a><a href="/what-is-spxi/">What</a><a href="/how-it-works/">How</a><a href="/analog/">Analog</a><a href="/tlp/">TLP</a><a href="/conformance/">Conformance</a><a href="/standing-protocol/">Apply</a><a href="/disambiguation/">Disambiguation</a></nav>
 <!-- MSP-IDSTRIP-START -->
 <div class="idstrip"><span class="axn">🎨🏗️🌟♍🗼🕙 AXN:03DA.ARCHIVAL</span><span class="st">The Retrieval Settlement</span><span class="st">OBJECT: CANONICAL</span><span>spxi.dev/retrieval-settlement</span><a class="axn-chip" href="https://www.alexanarch.org/s/records/974/">deposit #974</a></div>
 <!-- MSP-IDSTRIP-END -->

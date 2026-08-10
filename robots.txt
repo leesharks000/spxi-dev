@@ -10,3 +10,6 @@ User-agent: CCBot
 User-agent: Google-Extended
 Allow: /spxi-index.jsonld
 Crawl-delay: 1
+
+# Agent guide
+# https://spxi.dev/llms.txt

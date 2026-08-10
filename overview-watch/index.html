@@ -34,8 +34,9 @@
   "keywords": ["AI attribution", "AI Overview", "Chrome extension", "semantic economy", "SPXI", "attribution monitoring", "intellectual property", "provenance"]
 }
 </script>
+<link rel="stylesheet" href="/assets/type.css">
 <style>
-  :root { --bg: #0a0a0c; --surface: #111114; --border: #1e1e24; --text: #e8e6e3; --text-dim: #8a8a8e; --accent: #c23d2e; --accent-dim: rgba(194, 61, 46, 0.15); --mono: 'IBM Plex Mono', monospace; --sans: 'IBM Plex Sans', sans-serif; }
+  :root { --bg: #0a0a0c; --surface: #111114; --border: #1e1e24; --text: #e8e6e3; --text-dim: #8a8a8e; --accent: #c23d2e; --accent-dim: rgba(194, 61, 46, 0.15); --mono: var(--mono); --sans: var(--sans); }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.7; min-height: 100vh; }
   .container { max-width: 680px; margin: 0 auto; padding: 60px 24px; }
@@ -73,7 +74,7 @@
    Contract classes: .lemma .term .axn-chip .witness-row .w .w-chip .state
    .idstrip .helix .mspcolophon .doors .obol — skinned per surface via --msp-* vars.
    (EA-APPARATUS-01 v0.3, #1077, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎) */
-:root{--msp-lemma:rgba(200,150,60,.30);--msp-chipfg:#7a5a1e;--msp-chipbd:rgba(160,120,50,.45);--msp-chipbg:rgba(200,150,60,.06);--msp-ok:#1c6e4a;--msp-cont:#8a6a20;--msp-halt:#a41623;--msp-dim:#6d6f66;--msp-mono:'IBM Plex Mono',monospace;}
+:root{--msp-lemma:rgba(200,150,60,.30);--msp-chipfg:#7a5a1e;--msp-chipbd:rgba(160,120,50,.45);--msp-chipbg:rgba(200,150,60,.06);--msp-ok:#1c6e4a;--msp-cont:#8a6a20;--msp-halt:#a41623;--msp-dim:#6d6f66;--msp-mono:var(--mono);}
 .lemma{background:linear-gradient(transparent 58%, var(--msp-lemma) 58%);padding:0 2px;}
 .axn-chip{font-family:var(--msp-mono);font-size:.72em;background:var(--msp-chipbg);border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 7px;color:var(--msp-chipfg);white-space:nowrap;text-decoration:none;}
 .axn-chip:hover{border-color:var(--msp-chipfg);}
@@ -92,7 +93,7 @@
 .helix .slot.div{color:var(--msp-cont);}
 .helix .slot.dead{color:var(--msp-halt);}
 .mspcolophon{font-family:var(--msp-mono);font-size:10px;color:var(--msp-dim);border-top:1px solid var(--rule,#d9d9d0);margin-top:30px;padding-top:10px;line-height:1.9;}
-.obol{font-family:'Source Serif 4',Georgia,serif;font-size:.92em;color:var(--msp-obol-fg,#3c3e37);border-left:3px solid var(--msp-chipbd);padding:4px 0 4px 14px;margin:22px 0 4px;}
+.obol{font-family:var(--serif);font-size:.92em;color:var(--msp-obol-fg,#3c3e37);border-left:3px solid var(--msp-chipbd);padding:4px 0 4px 14px;margin:22px 0 4px;}
 .doors{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px;font-family:var(--msp-mono);}
 .doors a.w-chip{font-size:11px;padding:6px 12px;}
 /* MSP-TOKENS-END */

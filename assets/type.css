@@ -1,0 +1,58 @@
+/* ══════════════════════════════════════════════════════════════════════════
+   SPXI.DEV — TYPE LAYER
+
+   Loaded BEFORE each page's own <style> block, so nothing here can override
+   an existing page rule. Additive only.
+
+   WHY THIS EXISTS. The site declared --sans and --mono pointing at IBM Plex
+   and carried no @font-face at all. IBM Plex is not a system font on any
+   platform, so on nearly every machine the whole site fell back to a default
+   sans. A protocol surface arguing for machine-legible packets was rendering
+   in a face it never specified.
+
+   'Source Serif 4' was also referenced with no face behind it, and --msp-mono
+   sat alongside --mono as a second name for the same job.
+
+   WHAT IS DELIBERATELY NOT HERE. No colour. spxi.dev is dark — #0a0a0c ground,
+   crimson accent — and that palette is its own. The faces are the fleet's;
+   the ground is not.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+@font-face{font-family:'IBM Plex Sans';src:url('/assets/fonts/IBMPlexSans-400.woff2')
+format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'IBM Plex Mono';src:url('/assets/fonts/IBMPlexMono-400.woff2')
+format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'IBM Plex Mono';src:url('/assets/fonts/IBMPlexMono-600.woff2')
+format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'IBM Plex Serif';src:url('/assets/fonts/IBMPlexSerif-400.woff2')
+format('woff2');font-weight:400;font-display:swap}
+
+:root{
+  --sans:'IBM Plex Sans',ui-sans-serif,system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --serif:'IBM Plex Serif',Georgia,serif;
+  --msp-mono:var(--mono);
+
+  /* one scale, rather than sizes chosen per page across twenty-five pages */
+  --fs-micro:10px;   /* eyebrows, protocol labels, chip text */
+  --fs-fine:11.5px;  /* metadata, captions, table cells */
+  --fs-small:13px;   /* apparatus, notes */
+  --fs-body:16.5px;  /* running prose */
+  --fs-lead:19px;    /* opening statements */
+  --fs-h3:21px;
+  --fs-h2:27px;
+  --fs-h1:clamp(30px,5.6vw,52px);
+
+  --lh-tight:1.18;
+  --lh-body:1.6;
+  --lh-loose:1.72;
+
+  --tr-wide:.16em;
+  --tr-mid:.08em;
+  --tr-tight:-.011em;
+}
+
+/* Baseline only. Page rules that follow win any conflict. */
+body{font-family:var(--sans);font-size:var(--fs-body);line-height:var(--lh-body);
+-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+code,kbd,samp,pre{font-family:var(--mono)}

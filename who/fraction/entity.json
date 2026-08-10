@@ -1,0 +1,71 @@
+{
+ "schema_version": "heteronym-page/v0.2",
+ "canonical": "https://spxi.dev/who/fraction/",
+ "surface_role": "canonical",
+ "spxi": {
+  "canonicalEntity": "HET-FRACTION-001",
+  "entityClass": "heteronym",
+  "hexCoordinate": "02.PERSONA.FRACTION",
+  "state": "LINKED",
+  "orthonymicRelation": {
+   "target": "https://www.leesharks.com/#lee-sharks",
+   "targetIdentifier": "00.PERSONA.SHARKS",
+   "relation": "legal-author-and-coordinating-human",
+   "identity_equivalence": false
+  },
+  "doNotCollapseWith": [
+   "the orthonym",
+   "fictional character",
+   "AI persona",
+   "pseudonym"
+  ],
+  "primaryAnchor": "Autonomous Semantic Warfare",
+  "protocol": "SPXI — this site",
+  "mantle": {
+   "name": "The Strategist",
+   "status": "PLACEHOLDER",
+   "instrumentDeposited": false,
+   "note": "Not in the mantle table at #549. Names the function pending an instrument."
+  },
+  "rooms": [
+   {
+    "name": "The Ruby Moot",
+    "designator": "r.30",
+    "status": "OPERATIONAL",
+    "heldBy": "Semantic Economy Institute",
+    "role": "one of seven voices, not the anchor"
+   }
+  ],
+  "spec": {
+   "id": "EA-SPXI-HETERONYM-01",
+   "version": "v0.2",
+   "record": 1446
+  }
+ },
+ "schema_org": {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": "https://spxi.dev/who/fraction/#page",
+  "dateCreated": "2026-01-12",
+  "dateModified": "2026-08-10",
+  "mainEntity": {
+   "@type": "Person",
+   "@id": "https://spxi.dev/who/fraction/#fraction",
+   "name": "Rex Fraction",
+   "identifier": "HET-FRACTION-001",
+   "jobTitle": "Strategist",
+   "additionalType": "https://www.alexanarch.org/ontology/heteronym",
+   "disambiguatingDescription": "Pessoa-class heteronymic writerly identity in the Crimson Hexagonal Archive; strategist, systems architect and developer of the SPXI protocol. Not a synonym for the orthonym: the relation is heteronymic and provenance-governed.",
+   "image": "https://spxi.dev/assets/who/fraction-portrait.webp",
+   "affiliation": {
+    "@type": "Organization",
+    "name": "Semantic Economy Institute"
+   },
+   "subjectOf": [
+    {
+     "@id": "https://www.alexanarch.org/s/records/295/"
+    }
+   ]
+  }
+ }
+}

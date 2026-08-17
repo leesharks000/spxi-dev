@@ -23,9 +23,10 @@
   "protocol": "SPXI — this site",
   "mantle": {
    "name": "The Strategist",
-   "status": "PLACEHOLDER",
+   "status": "HELD",
+   "ruled": "2026-08-17 (MANUS)",
    "instrumentDeposited": false,
-   "note": "Not in the mantle table at #549. Names the function pending an instrument."
+   "note": "Was PLACEHOLDER — NOT MINTED. The ruling names the function he has performed across 103 deposits rather than waiting for the mantle table at #549 to catch up. A mantle is worn before it is written down."
   },
   "rooms": [
    {
@@ -40,6 +41,59 @@
    "id": "EA-SPXI-HETERONYM-01",
    "version": "v0.2",
    "record": 1446
+  },
+  "editorships": {
+   "duoviri": [
+    "Transactions of the Semantic Economy Institute"
+   ],
+   "board": [
+    "Transactions on Substrate Engineering",
+    "Provenance: Journal of Forensic Semiotics"
+   ],
+   "_rule": "A duovirate is the office, held jointly. A board seat is not the office. The card keeps them apart."
+  },
+  "semanticIntegrityMarkers": {
+   "_note": "HE WROTE THE PROTOCOL. Every other position's markers are deposited under his instrument.",
+   "markers": [
+    {
+     "deposit": 118,
+     "text": "SIM — Semantic Integrity Marker Protocol v1.0",
+     "gloss": "the instrument itself"
+    },
+    {
+     "deposit": 660,
+     "text": "A distinctive, high-salience natural-language phrase",
+     "gloss": "the formal definition, in EA-SPXI-01"
+    },
+    {
+     "deposit": 521,
+     "text": "∮ = 1. I hereby abolish money. I hereby commit."
+    },
+    {
+     "deposit": 546,
+     "text": "∮ = 1 + δ + δ🤬",
+     "gloss": "the d*mn*d includes itself"
+    }
+   ]
+  },
+  "surfaceHistory": {
+   "_rule": "A surface is a place a reader could find the work. A DEPOSIT IS NOT A SURFACE — it is the archive holding it, which is the opposite. Rows citing deposits were removed.",
+   "_invented": "Where no pre-archival surface is recoverable it is RECONSTRUCTED and marked as such, in-universe. An archive that invents a provenance and does not say so is doing the thing it was built against.",
+   "rows": [
+    {
+     "when": "before 2026",
+     "what": "strategic consulting",
+     "host": "no surviving index",
+     "attestation": "reconstructed",
+     "note": "Inferred from the register the work is written in — field manuals, diagnostics, client-facing analysis."
+    }
+   ]
+  },
+  "recordSurfaces": {
+   "card": "https://spxi.dev/who/fraction/",
+   "where": "https://spxi.dev/where/",
+   "heteronymRecord": "https://www.alexanarch.org/datasets/heteronyms/records/rex-fraction.json",
+   "_note": "The dataset record is the authority; these pages are mirrors and say so."
   }
  },
  "schema_org": {
@@ -47,7 +101,7 @@
   "@type": "ProfilePage",
   "@id": "https://spxi.dev/who/fraction/#page",
   "dateCreated": "2026-01-12",
-  "dateModified": "2026-08-10",
+  "dateModified": "2026-08-17",
   "mainEntity": {
    "@type": "Person",
    "@id": "https://spxi.dev/who/fraction/#fraction",
@@ -67,5 +121,10 @@
     }
    ]
   }
+ },
+ "_updated": {
+  "date": "2026-08-17",
+  "pass": "nine-step card pass",
+  "_note": "The entity object is what a machine fetches instead of parsing the page. It had gone stale against its own card: mantles, editorships and markers were all on the surface and not in the object."
  }
 }

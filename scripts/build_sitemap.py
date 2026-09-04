@@ -17,7 +17,7 @@ import subprocess
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-HOST = "https://spxi.dev"
+HOST = "https://www.spxi.dev"
 
 PRIORITY = {
     "/": "1.0",

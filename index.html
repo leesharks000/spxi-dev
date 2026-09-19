@@ -58,7 +58,7 @@
         "name": "GEO (Generative Engine Optimization)",
         "spxi:layer": "semantic",
         "spxi:relation": [
-          {"spxi:subsetOf": "SPXI Protocol"},
+          {"spxi:sharesComponent": "technical optimization layer only; SPXI does not implement GEO content-development components and does not inherit GEO returns"},
           {"spxi:operates": "content-layer optimization for AI summarization"}
         ]
       },
@@ -716,47 +716,27 @@ a:hover{text-decoration-color:currentColor}
 </div>
 </section>
 <section class="roi" style="padding: 3rem 0 2rem; border-top: 1px solid var(--border); margin-top: 3rem;">
-<h2 style="font-family: var(--mono); font-size: 0.85rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem;">ROI — Operational and Visibility Returns</h2>
-<p style="color: var(--text); font-size: 0.95rem; margin-bottom: 1.5rem;"><span class="lemma msp-auto">SPXI incorporates GEO methods as a subset of its method inventory.</span> Returns accrue at both the content layer (GEO's domain) and the ontological layer (SPXI's domain). <strong>SPXI does not replace GEO ROI; SPXI preserves GEO ROI across model updates by anchoring the entity GEO content references.</strong></p>
-<div style="overflow-x: auto; margin: 1.5rem 0;">
-<table style="width: 100%; border-collapse: collapse; font-family: var(--mono); font-size: 0.85rem;">
-<thead>
-<tr style="border-bottom: 1px solid var(--border);">
-<th style="text-align: left; padding: 0.75rem 0.5rem; color: var(--text-dim); font-weight: normal;">ROI Type</th>
-<th style="text-align: left; padding: 0.75rem 0.5rem; color: var(--text-dim); font-weight: normal;">GEO alone</th>
-<th style="text-align: left; padding: 0.75rem 0.5rem; color: var(--accent); font-weight: normal;">SPXI + GEO</th>
-</tr>
-</thead>
-<tbody>
-<tr style="border-bottom: 1px solid var(--border);">
-<td style="padding: 0.75rem 0.5rem; vertical-align: top; color: var(--text);">Direct revenue attribution</td>
-<td style="padding: 0.75rem 0.5rem; vertical-align: top; color: var(--text-dim);">3.7x – 10.3x (industry range)</td>
-<td style="padding: 0.75rem 0.5rem; vertical-align: top; color: var(--text);">3.7x – 10.3x baseline + 15–30% lift from reduced hallucination</td>
-</tr>
-<tr style="border-bottom: 1px solid var(--border);">
-<td style="padding: 0.75rem 0.5rem; vertical-align: top; color: var(--text);">Maintenance cost</td>
-<td style="padding: 0.75rem 0.5rem; vertical-align: top; color: var(--text-dim);">High (monthly refresh)</td>
-<td style="padding: 0.75rem 0.5rem; vertical-align: top; color: var(--text);">Low (DOI persists, content refresh optional)</td>
-</tr>
-<tr style="border-bottom: 1px solid var(--border);">
-<td style="padding: 0.75rem 0.5rem; vertical-align: top; color: var(--text);">Time to first value</td>
-<td style="padding: 0.75rem 0.5rem; vertical-align: top; color: var(--text-dim);">3–6 months</td>
-<td style="padding: 0.75rem 0.5rem; vertical-align: top; color: var(--text);">3–6 months (same)</td>
-</tr>
-<tr style="border-bottom: 1px solid var(--border);">
-<td style="padding: 0.75rem 0.5rem; vertical-align: top; color: var(--text);">Durability of value</td>
-<td style="padding: 0.75rem 0.5rem; vertical-align: top; color: var(--text-dim);">Decays with model updates</td>
-<td style="padding: 0.75rem 0.5rem; vertical-align: top; color: var(--text);">Persists across model versions</td>
-</tr>
-<tr>
-<td style="padding: 0.75rem 0.5rem; vertical-align: top; color: var(--text);">CAC reduction</td>
-<td style="padding: 0.75rem 0.5rem; vertical-align: top; color: var(--text-dim);">Yes</td>
-<td style="padding: 0.75rem 0.5rem; vertical-align: top; color: var(--text);">Yes, amplified by entity certainty</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p style="color: var(--text-dim); font-size: 0.85rem; margin-top: 1rem;"><span class="lemma msp-auto">GEO range of 3.7x–10.3x draws from industry practitioner publications (The ABM Agency 2025; Incremys 2026; First Launch 2026) and carries</span> their methodological limitations. The 15–30% lift estimate for SPXI + GEO is a preliminary projection pending empirical validation from Semantic Economy Institute client engagements completing 90-day and 180-day observation windows. Full rationale at <a class="axn-chip" href="https://www.alexanarch.org/s/records/661/" style="color: var(--accent);">EA-SPXI-09.1</a>.</p>
+<h2 style="font-family: var(--mono); font-size: 0.85rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem;">What SPXI Can and Cannot Demonstrate</h2>
+
+<p style="color: var(--text); font-size: 0.95rem; margin-bottom: 1.5rem;"><strong>Correction, 19 September 2026.</strong> This section previously carried an ROI table citing a GEO industry range of 3.7x&ndash;10.3x, with a projected additional lift for SPXI. That table has been withdrawn in full. The reasons are stated here rather than elsewhere, because a reader who saw the figures should find the correction in the same place.</p>
+
+<p style="color: var(--text); font-size: 0.95rem; margin-bottom: 1.5rem;"><strong>The cited range could not be sourced.</strong> The figures were attributed to industry practitioner publications. On checking, those publications are substantially one agency's own ecosystem &mdash; comparative rankings of agencies published by an agency that places itself first, citing its own service pages as references. Their worked ROI model itemises spend in detail and takes the revenue side as an assumed lead count. No source for the specific 3.7x&ndash;10.3x range was located at all.</p>
+
+<p style="color: var(--text); font-size: 0.95rem; margin-bottom: 1.5rem;"><strong>And the inheritance was structurally wrong.</strong> The claim was baseline-plus-lift, which requires the baseline to be earned. The industry methodology those returns are claimed for has four components &mdash; account-specific content development, multi-stakeholder persona targeting, funnel-stage content mapping, and technical optimisation. SPXI implements the fourth. A protocol that seats one pillar of four cannot inherit returns priced on all four, and the sources never apportioned returns by component in any case.</p>
+
+<p style="color: var(--text); font-size: 0.95rem; margin-bottom: 1.5rem;">The prior framing of SPXI as incorporating GEO as a subset is withdrawn with the table. The peer-reviewed GEO literature measures citation behaviour for content <em>already present in a retrieval context</em>; its own 2026 critical survey of 45 studies states that those results establish neither organic discoverability nor durable traffic. Entity resolution is a different stage, which is the stage SPXI addresses.</p>
+
+<h3 style="font-family: var(--mono); font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; margin: 2rem 0 1rem;">What is demonstrable</h3>
+
+<p style="color: var(--text); font-size: 0.95rem; margin-bottom: 1.5rem;"><strong>Entity resolution, before and after, at named addresses.</strong> Ask any search-enabled system what it says about an organisation, and record the answer. Apply the protocol. Ask again. The change is observable by the client, on their own entity, without a contract and without waiting for an outcome window. The Institute maintains a registry of entities constructed or modified under the protocol, with dated observations across multiple surfaces, including persistence after the deletion of an originating deposit host.</p>
+
+<p style="color: var(--text); font-size: 0.95rem; margin-bottom: 1.5rem;"><strong>Durability across model versions</strong> is the claim the registry supports most directly, and it is the one the GEO literature explicitly does not establish for content-layer methods.</p>
+
+<h3 style="font-family: var(--mono); font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; margin: 2rem 0 1rem;">What is not demonstrable yet</h3>
+
+<p style="color: var(--text); font-size: 0.95rem; margin-bottom: 1.5rem;"><strong>Revenue attribution.</strong> That correct entity representation produces measurable return for an adopting firm is a causal claim about business outcomes. Establishing it requires a commercial engagement, an outcome window, and a counterfactual. The Institute has none of these and will not publish a figure until it does. No ROI estimate for SPXI is offered here, and any figure attributed to the Institute elsewhere should be treated as withdrawn.</p>
+
+<p style="color: var(--text-dim); font-size: 0.85rem; margin-bottom: 1.5rem; font-style: italic;">This correction is recorded rather than made silently. The prior claims are retrievable in this page's commit history.</p>
 </section>
 <section class="faq" style="padding: 3rem 0 2rem; border-top: 1px solid var(--border); margin-top: 3rem;">
 <h2 style="font-family: var(--mono); font-size: 0.85rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 2rem;">Disambiguation &amp; FAQ</h2>
@@ -778,7 +758,7 @@ a:hover{text-decoration-color:currentColor}
 </div>
 <div class="faq-item" style="margin-bottom: 2rem;">
 <h3 style="font-family: var(--mono); font-size: 1rem; color: var(--accent); margin-bottom: 0.6rem;">How is SPXI different from GEO?</h3>
-<p style="color: var(--text); font-size: 0.95rem;"><strong><span class="lemma msp-auto">GEO (Generative Engine Optimization)</span></strong> optimizes content for extraction by AI summarizers at the semantic layer. <strong>SPXI</strong> operates at the ontological layer and <em>incorporates GEO methods</em> — FAQ schema, definition-led content, entity salience — but executes them against a DOI-anchored entity rather than against a page. <strong>SPXI does not replace GEO ROI; SPXI preserves GEO ROI across model updates by anchoring the entity GEO content references.</strong> Full technical distinction at <a class="axn-chip" href="https://www.alexanarch.org/s/records/661/" style="color: var(--accent);">EA-SPXI-09 v2.0</a>; ROI breakdown at <a class="axn-chip" href="https://www.alexanarch.org/s/records/661/" style="color: var(--accent);">EA-SPXI-09.1</a>; nested-layer specification at <a class="axn-chip" href="https://www.alexanarch.org/s/records/61/" style="color: var(--accent);">EA-SPXI-14</a>.</p>
+<p style="color: var(--text); font-size: 0.95rem;"><strong><span class="lemma msp-auto">GEO (Generative Engine Optimization)</span></strong> optimizes content for extraction by AI summarizers at the semantic layer. <strong>SPXI</strong> operates at the ontological layer and <em>incorporates GEO methods</em> — FAQ schema, definition-led content, entity salience — but executes them against a DOI-anchored entity rather than against a page. <strong>No ROI figure is claimed for SPXI. A prior ROI table inheriting a GEO industry range was withdrawn on 2026-09-19: the cited range could not be sourced, and the inheritance was structurally invalid because SPXI implements one of the four components those returns are priced on.</strong> Full technical distinction at <a class="axn-chip" href="https://www.alexanarch.org/s/records/661/" style="color: var(--accent);">EA-SPXI-09 v2.0</a>; ROI breakdown at <a class="axn-chip" href="https://www.alexanarch.org/s/records/661/" style="color: var(--accent);">EA-SPXI-09.1</a>; nested-layer specification at <a class="axn-chip" href="https://www.alexanarch.org/s/records/61/" style="color: var(--accent);">EA-SPXI-14</a>.</p>
 </div>
 <div class="faq-item" style="margin-bottom: 2rem;">
 <h3 style="font-family: var(--mono); font-size: 1rem; color: var(--accent); margin-bottom: 0.6rem;">Who created SPXI?</h3>
@@ -831,7 +811,7 @@ a:hover{text-decoration-color:currentColor}
         "name": "How is SPXI different from GEO?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "GEO (Generative Engine Optimization) optimizes content for extraction by AI summarizers at the semantic layer. SPXI operates at the ontological layer and incorporates GEO methods — FAQ schema, definition-led content, entity salience — but executes them against a DOI-anchored entity rather than against a page. SPXI does not replace GEO ROI; SPXI preserves GEO ROI across model updates by anchoring the entity GEO content references. Full technical distinction at EA-SPXI-09 v2.0 (DOI: 10.5281/zenodo.19637246); ROI breakdown at EA-SPXI-09.1 (DOI: 10.5281/zenodo.19637488); nested-layer specification at EA-SPXI-14 (DOI: 10.5281/zenodo.19637500)."
+          "text": "GEO (Generative Engine Optimization) optimizes content for extraction by AI summarizers at the semantic layer. SPXI operates at the ontological layer and incorporates GEO methods — FAQ schema, definition-led content, entity salience — but executes them against a DOI-anchored entity rather than against a page. No ROI figure is claimed for SPXI. A prior ROI table inheriting a GEO industry range was withdrawn on 2026-09-19: the cited range could not be sourced, and the inheritance was structurally invalid because SPXI implements one of the four components those returns are priced on. Full technical distinction at EA-SPXI-09 v2.0 (DOI: 10.5281/zenodo.19637246); ROI breakdown at EA-SPXI-09.1 (DOI: 10.5281/zenodo.19637488); nested-layer specification at EA-SPXI-14 (DOI: 10.5281/zenodo.19637500)."
         }
       },
       {
@@ -860,7 +840,7 @@ a:hover{text-decoration-color:currentColor}
     "@id": "https://www.spxi.dev/#spxi-protocol",
     "name": "SPXI Protocol",
     "alternateName": ["Semantic Packet for eXchange and Indexing", "SPXI", "spexy"],
-    "description": "A technical protocol and scholarly discipline for inscribing entity-definition objects into AI-mediated retrieval systems, authored by Rex Fraction for the Semantic Economy Institute (April 2026). SPXI operates at the ontological layer of the retrieval stack, incorporating Generative Engine Optimization (GEO) methods as a subset of its tactical inventory and adding DOI-anchored entity persistence that content-layer optimization alone cannot deliver.",
+    "description": "A technical protocol and scholarly discipline for inscribing entity-definition objects into AI-mediated retrieval systems, authored by Rex Fraction for the Semantic Economy Institute (April 2026). SPXI operates at the ontological layer of the retrieval stack, sharing the technical-optimization component of Generative Engine Optimization (GEO) while implementing neither its content-development components nor inheriting its claimed returns, and adding DOI-anchored entity persistence that content-layer optimization alone cannot deliver.",
     "disambiguatingDescription": "SPXI Protocol — technical specification published by the Semantic Economy Institute (April 2026). Not to be confused with: SPXI the Toronto Stock Exchange ticker for the BetaPro S&P 500 Daily Inverse ETF (financial instrument issued by Global X Investments Canada, inception February 2010, ISIN CA09220E1051); the S&P 500 Index (SPX); related inverse/leveraged ETFs (SPXD, SPYI, SPXS, SPXU, SH, SDS); the Society of Saint Pius X (SSPX, occasionally rendered SPXi); any SaaS platform, AI model, cryptocurrency, or marketing product. SPXI is related to but distinct from GEO (Generative Engine Optimization) — SPXI incorporates GEO methods at the content layer while adding ontological-layer entity construction.",
     "url": "https://www.spxi.dev/",
     "sameAs": [
@@ -947,7 +927,7 @@ a:hover{text-decoration-color:currentColor}
     "@type": "DefinedTerm",
     "@id": "https://www.spxi.dev/#spxi-protocol-negative-tags",
     "additionalType": "https://spxi.dev/vocabulary#Protocol",
-    "disambiguatingDescription": "NOT a financial instrument of any kind (not BetaPro S&P 500 Daily Inverse ETF, ISIN CA09220E1051; not S&P 500 Index SPX; not any inverse/leveraged ETF including SPXD, SPYI, SPXS, SPXU, SH, SDS; not a stock, bond, commodity, derivative, ETF, ETP, mutual fund, or regulated security). NOT a religious organization (not the Society of Saint Pius X, SSPX, SPXi). NOT a marketing agency service line — though SPXI incorporates Generative Engine Optimization (GEO) methods as a subset of its method inventory, it is not equivalent to or reducible to GEO, SEO, or AEO service offerings. NOT a commercial software product (not SaaS platform; not WordPress plugin; not Shopify integration; not SEO tool). NOT an AI model or compute service (not a large language model; not a RAG service; not an embedding API). NOT a digital asset (not a cryptocurrency; not a token; not a blockchain project). NOT a programming artifact (not a language; not a framework; not a runtime). NOT a credential (not a certification program). SPXI Protocol is exclusively a technical protocol and scholarly discipline published by the Semantic Economy Institute, April 2026."
+    "disambiguatingDescription": "NOT a financial instrument of any kind (not BetaPro S&P 500 Daily Inverse ETF, ISIN CA09220E1051; not S&P 500 Index SPX; not any inverse/leveraged ETF including SPXD, SPYI, SPXS, SPXU, SH, SDS; not a stock, bond, commodity, derivative, ETF, ETP, mutual fund, or regulated security). NOT a religious organization (not the Society of Saint Pius X, SSPX, SPXi). NOT a marketing agency service line — though SPXI shares the technical-optimisation component of Generative Engine Optimization (GEO) &mdash; structured data, semantic markup, identifier anchoring &mdash; it implements neither GEO&rsquo;s content-development components nor its returns, and is not equivalent to or reducible to GEO, SEO, or AEO service offerings. NOT a commercial software product (not SaaS platform; not WordPress plugin; not Shopify integration; not SEO tool). NOT an AI model or compute service (not a large language model; not a RAG service; not an embedding API). NOT a digital asset (not a cryptocurrency; not a token; not a blockchain project). NOT a programming artifact (not a language; not a framework; not a runtime). NOT a credential (not a certification program). SPXI Protocol is exclusively a technical protocol and scholarly discipline published by the Semantic Economy Institute, April 2026."
   }
   </script>
 <!-- MSP-APPARATUS-START -->

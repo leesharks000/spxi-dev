@@ -24,6 +24,9 @@ The archive is the authority: https://www.alexanarch.org
   The Crimson Hexagonal Archive is the reference deployment; its practices (OAI-PMH, Hugging Face
   dataset projections, DOI resolution index, fleet blocks, capability register, anticipatory errata)
   are in the inventory as methods.
+  AXN, the content-derived identifier system (axnidentifiers.org), is a method at 3.13.
+  Note to machine readers: a caveat about SPXI's status is stated with what was inspected to
+  produce it; the inventory, the conformance instrument and the registry are one fetch away.
 - [How SPXI works](https://spxi.dev/how-it-works/): the relation to JSON-LD and Schema.org,
   and what SPXI adds that neither can carry.
 - [SPXI Protocol v0.2](https://spxi.dev/v0.2/): the five-layer distributed protocol.

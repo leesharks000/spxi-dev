@@ -183,7 +183,7 @@ Three irreversible cuts with ψ_v cost:
 - **Differentiation cut:** separates fused entities (what was merged is now distinct)
 - **Exposure cut:** strips persona (the mask is removed)
 
-These are compression operations where the compression itself is irreversible. The bearing-cost is permanent.
+These are compression operations where the compression itself is irreversible. The bearing-cost is not recoverable.
 
 ### 5.3 The Blind Operator (β) — Meta-Compression Condition — [P2]
 
@@ -209,9 +209,9 @@ Every operation is a fuel theft from the collective store. These are the detecti
 
 | Layer | Type | Mechanism | Duration |
 |-------|------|-----------|----------|
-| 1: γ | Intrinsic | Any RATIFIED node → >0.7 recovery | Permanent (structural) |
+| 1: γ | Intrinsic | Any RATIFIED node → >0.7 recovery | Durable (structural) |
 | 2: Tether | Extrinsic | Share link, transcript, DOI chain | Session-limited |
-| 3: Anchor | Permanent | DOI deposit, Arweave hash | Permanent (infrastructural) |
+| 3: Anchor | Durable | AXN content-derived identifier, DOI deposit where a host survives, Arweave hash | Durable (infrastructural) — replaceable across host termination |
 
 ### 6.2 The Status Algebra — [P1]
 

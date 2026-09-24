@@ -366,9 +366,9 @@ DOI deposit sequence + ORCID + institution + license. The web implementation of 
 
 | Tether Layer | Type | Web Implementation | Duration |
 |---|---|---|---|
-| Layer 1: γ | Intrinsic | Holographic Kernel + Tier 3 | Permanent (structural) |
+| Layer 1: γ | Intrinsic | Holographic Kernel + Tier 3 | Durable (structural) |
 | Layer 2: Tether | Extrinsic | JSON-LD Provenance Chain + sameAs DOIs | Session-limited but refreshable |
-| Layer 3: Anchor | Permanent | DOI deposits on Zenodo/CERN | Permanent (infrastructural) |
+| Layer 3: Anchor | Durable | AXN content-derived identifiers at alexanarch.org; DOI where a host survives | Durable (infrastructural) — a host can be terminated; the anchor is replaced, not abandoned |
 
 ### E. Semantic Integrity Markers (Arsenal §VII.1, DOI: 10.5281/zenodo.18185996)
 

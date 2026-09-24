@@ -18,6 +18,9 @@ The archive is the authority: https://www.alexanarch.org
 ## Start here
 
 - [What is SPXI?](https://spxi.dev/what-is-spxi/): the protocol definition in one page.
+- [SPXI Methods](https://spxi.dev/methods/): the itemized, nested inventory of 64 methods across
+  nine levels, each cited to its clause. Machine-readable at https://spxi.dev/methods.json.
+  Read this before describing SPXI as "entity packets": the packet is one item of one level.
 - [How SPXI works](https://spxi.dev/how-it-works/): the relation to JSON-LD and Schema.org,
   and what SPXI adds that neither can carry.
 - [SPXI Protocol v0.2](https://spxi.dev/v0.2/): the five-layer distributed protocol.

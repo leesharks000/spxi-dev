@@ -1,0 +1,589 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "spxi": "https://spxi.dev/vocabulary#"
+  },
+  "@type": "DefinedTermSet",
+  "@id": "https://www.spxi.dev/methods.json",
+  "name": "SPXI Method Inventory",
+  "description": "The itemized, nested inventory of SPXI methods, by operational level. Built from the deposited specifications; every item cites the clause that specifies it. JSON-LD entity packets are one item at one level. Rendered at https://www.spxi.dev/methods/.",
+  "version": "1.0",
+  "dateModified": "2026-09-24",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Semantic Economy Institute",
+    "url": "https://semanticeconomy.org"
+  },
+  "spxi:levelCount": 9,
+  "spxi:itemCount": 64,
+  "spxi:readingRule": "An implementation applies a subset of these methods chosen from the measurement level; the protocol does not require every method on every entity. A description of SPXI that names only the entity packet (level 3, item 3.1) describes one item of one level.",
+  "spxi:sources": [
+    {
+      "id": "EA-SPXI-01",
+      "title": "SPXI — A Formal Specification",
+      "deposit": 660,
+      "url": "https://www.alexanarch.org/s/records/660/"
+    },
+    {
+      "id": "EA-SPXI-15",
+      "title": "JSON-LD ⊂ SPXI ⊄ Schema: The Operational Depth",
+      "deposit": 673,
+      "url": "https://www.alexanarch.org/s/records/673/"
+    },
+    {
+      "id": "EA-SPXI-WEB-01 v4.0",
+      "title": "SPXI for Websites: Standing Protocol",
+      "deposit": 72,
+      "url": "https://www.spxi.dev/standing-protocol"
+    },
+    {
+      "id": "EA-COMPRESSION-ARSENAL-01 v2.1",
+      "title": "The Compression Arsenal",
+      "url": "https://www.spxi.dev/compression-arsenal"
+    },
+    {
+      "id": "SPXI v0.2",
+      "title": "Five-Layer Distributed Provenance Architecture",
+      "deposit": 755,
+      "url": "https://www.spxi.dev/v0.2"
+    },
+    {
+      "id": "EA-SPXI-SITEMAP-01",
+      "title": "SPXI-Sitemap Protocol",
+      "deposit": 705,
+      "url": "https://www.alexanarch.org/s/records/705/"
+    },
+    {
+      "id": "SPXI-TLP v2.2",
+      "title": "Inscriptions That Survive the Tokenizer",
+      "deposit": 127,
+      "url": "https://www.spxi.dev/tlp"
+    },
+    {
+      "id": "SIM v1.0",
+      "title": "Semantic Integrity Marker Protocol",
+      "deposit": 118,
+      "url": "https://www.alexanarch.org/s/records/118/"
+    },
+    {
+      "id": "EA-SPXI-CONF-01",
+      "title": "SPXI Conformance Instrument",
+      "deposit": 143,
+      "url": "https://www.spxi.dev/conformance"
+    },
+    {
+      "id": "EA-SPXI-SELFAUDIT-01",
+      "title": "SPXI Self-Audit Protocol",
+      "deposit": 204,
+      "url": "https://www.alexanarch.org/s/records/204/"
+    },
+    {
+      "id": "EA-SPXI-RSF-01",
+      "title": "Retrieval Settlement Fortification Protocol",
+      "deposit": 173,
+      "url": "https://www.spxi.dev/retrieval-settlement"
+    },
+    {
+      "id": "EA-SPXI-HETERONYM-01",
+      "title": "The Heteronym Surface Specification",
+      "deposit": 1446,
+      "url": "https://www.alexanarch.org/s/records/1446/"
+    },
+    {
+      "id": "EA-CONSTITUTIVE-PROVENANCE",
+      "title": "Constitutive Provenance: A Sentence-Level Countermeasure",
+      "deposit": 145,
+      "url": "https://www.alexanarch.org/s/records/145/"
+    },
+    {
+      "id": "AXN-SYMBOLON-SPEC v0.2",
+      "title": "The Symbolon as Split-Identity Verification Primitive",
+      "deposit": 1432,
+      "url": "https://www.spxi.dev/symbolon"
+    },
+    {
+      "id": "EA-SEMANTIC-ADDRESSES-01",
+      "title": "The Semantic Addresses Framework",
+      "deposit": 1084,
+      "url": "https://www.alexanarch.org/s/records/1084/"
+    },
+    {
+      "id": "CSP",
+      "title": "The Claim Status Packet",
+      "deposit": 1529,
+      "url": "https://www.spxi.dev/csp"
+    },
+    {
+      "id": "EA-SPXI-ANALOG-01",
+      "title": "Machine-Eligible Handwritten Artifacts",
+      "deposit": 1409,
+      "url": "https://www.spxi.dev/analog"
+    },
+    {
+      "id": "EA-SPXI-15A",
+      "title": "Substrate Audit Protocol",
+      "deposit": 97,
+      "url": "https://www.alexanarch.org/s/records/97/"
+    },
+    {
+      "id": "EA-SPXI-16",
+      "title": "Withdrawing the External Figures; Specifying the Technical Contribution",
+      "url": "https://www.spxi.dev/#roi"
+    },
+    {
+      "id": "EA-WG-CAPTURES-01",
+      "title": "Capture Registry",
+      "url": "https://www.machinemediation.org/data/registry.json"
+    }
+  ],
+  "spxi:levels": [
+    {
+      "level": 0,
+      "name": "Measurement",
+      "summary": "Scored before anything is built, and re-scored after. Denominators and correctness criteria are fixed in advance. The protocol declares what must be preserved; the audit tests whether it was.",
+      "items": [
+        {
+          "id": "0.1",
+          "name": "γ — the Sharks-Function",
+          "what": "Compression-survival score on a 0–1 scale, decomposed as scope overlap S, provenance fidelity P, consensus deviation D. Thresholds: γ<0.3 ghost meaning; γ<0.7 repair; γ>0.7 survivable. Parameters (embedding model, source/summary pair, S/P/D rubric) are frozen and logged before scoring.",
+          "source": "Arsenal §3.1; WEB-01 §III"
+        },
+        {
+          "id": "0.2",
+          "name": "The Drowning Test",
+          "what": "Declared correctness criterion. Minimum three systems; fixed five-prompt set (what is / who created / how differs from neighbor / used for / open or commercial); five-level rubric 4 Exact → 0 Absent.",
+          "source": "Arsenal §3.2; WEB-01 §III"
+        },
+        {
+          "id": "0.3",
+          "name": "Back-Projection Test",
+          "what": "From the kernel or Tier 3 alone, can the entity's architecture be reconstructed? Non-lossy yield ≥ 0.85.",
+          "source": "Arsenal §3.3; WEB-01 §VI.A"
+        },
+        {
+          "id": "0.4",
+          "name": "Density Score Δ",
+          "what": "Ratio of load-bearing content to total content; target > 0.6.",
+          "source": "Arsenal §3.9"
+        },
+        {
+          "id": "0.5",
+          "name": "Semantic Decay Delta",
+          "what": "Monthly rate of change in retrieval-layer presence; the urgency metric.",
+          "source": "Arsenal §3.6"
+        },
+        {
+          "id": "0.6",
+          "name": "Provenance Erasure Rate (PER, with PER-M / PER-C / PER-D)",
+          "what": "Frequency with which attribution is dropped from compositions that use the entity's content; target < 0.2. Three atomic dimensions (mention, citation, definition) scored separately.",
+          "source": "Arsenal §3.7; deposit 1469"
+        },
+        {
+          "id": "0.7",
+          "name": "ASPI, Semantic Debt Ratio, NLCC validity",
+          "what": "Advanced instruments: canonical persistence ≥ 0.80; debt ratio; ten-condition validity test.",
+          "source": "Arsenal §3.4, §3.5, §3.8"
+        },
+        {
+          "id": "0.8",
+          "name": "Semantic Addresses Framework",
+          "what": "A query string plus its operators is an address; observations at an address are classed and canonicalized; one record per address. The unit the Capture Registry is keyed on.",
+          "source": "EA-SEMANTIC-ADDRESSES-01 §1–§6"
+        },
+        {
+          "id": "0.9",
+          "name": "Capture Registry (longitudinal observation)",
+          "what": "Dated compositions at named addresses with surface, sign-in condition, verbatim transcript, re-run URL. Nulls recorded as nulls. 469 addresses, 634 observations at v11.7.",
+          "source": "EA-WG-CAPTURES-01; EA-SPXI-16 §7"
+        },
+        {
+          "id": "0.10",
+          "name": "Conformance Instrument",
+          "what": "Runnable audit of the twelve deliverables of the standing protocol against server-delivered HTML; per-deliverable pass/fail and a score. JS-dependent identity content scores absent by design.",
+          "source": "EA-SPXI-CONF-01; WEB-01 §XIV"
+        },
+        {
+          "id": "0.11",
+          "name": "Substrate Audit Protocol H1–H4",
+          "what": "Operative deployment, cross-substrate concordance with suppression probe, provenance retention, relational extension: four hypotheses for measuring whether a form is structurally integrated in a substrate.",
+          "source": "EA-SPXI-15A §4–§8"
+        },
+        {
+          "id": "0.12",
+          "name": "Reference inventory and preregistration",
+          "what": "Client-supplied inventory of capabilities, locations, credentials, named staff and known collisions, fixed before any query; every measure's denominator declared before work begins and never expanded by discretionary query activity afterward.",
+          "source": "Sales Kit §④; EA-SPXI-16 §5"
+        }
+      ]
+    },
+    {
+      "level": 1,
+      "name": "Web compliance foundation",
+      "summary": "Google-facing controls. Documented, necessary, and not what SPXI adds.",
+      "items": [
+        {
+          "id": "1.1",
+          "name": "Required meta tags, canonical URL, Open Graph and Twitter Card",
+          "what": "Baseline machine-readable identity for the page.",
+          "source": "WEB-01 §IV.A–C"
+        },
+        {
+          "id": "1.2",
+          "name": "Rendering doctrine",
+          "what": "Identity content is server-delivered HTML. What only a JavaScript-executing crawler can see does not count as inscribed.",
+          "source": "WEB-01 §IV.F; §XIV"
+        },
+        {
+          "id": "1.3",
+          "name": "Infrastructure and technical SEO",
+          "what": "HTTPS, sitemaps, robots, response codes, redirects; validation surfaces.",
+          "source": "WEB-01 §IV.D–E, G"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "name": "Extraction layer",
+      "summary": "What the GEO practitioner recipe does, transformed into compression engineering. The GEO → SPXI transformation matrix maps nine practitioner techniques to SPXI provisions and declines two.",
+      "items": [
+        {
+          "id": "2.1",
+          "name": "Schema.org structured data",
+          "what": "Type declaration in JSON-LD; the component the Holographic Kernel extends with relations.",
+          "source": "WEB-01 §V.A"
+        },
+        {
+          "id": "2.2",
+          "name": "Extraction-ready Q/A surfaces",
+          "what": "FAQ blocks structured for extraction, mapped to entity-boundary defence.",
+          "source": "WEB-01 §V.B"
+        },
+        {
+          "id": "2.3",
+          "name": "Operative Caption κ_O (definition-first paragraphs)",
+          "what": "\"[Entity] is [category] that [function]\", with creator and date; the description is the operation.",
+          "source": "WEB-01 §V.C; Arsenal §V.1"
+        },
+        {
+          "id": "2.4",
+          "name": "Tier-2 survival engineering",
+          "what": "The canonical summary written to survive featured-snippet-scale compression.",
+          "source": "WEB-01 §V; Arsenal §IV.1"
+        },
+        {
+          "id": "2.5",
+          "name": "Declined techniques",
+          "what": "Keyword density and arbitrary content updates are explicitly avoided; six content-transformation heuristics of the KDD 2024 GEO framework (fluency, simplification, unique words, technical terms, statistics addition, quotation addition) are outside the protocol's scope.",
+          "source": "WEB-01 §V matrix; EA-SPXI-16 §4.1"
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "name": "Entity packet construction",
+      "summary": "The entity, addressable independently of any document, as a structured object. JSON-LD is the serialization; the design of what the packet includes, excludes, relates and denies is the method.",
+      "items": [
+        {
+          "id": "3.1",
+          "name": "Entity Definition Block",
+          "what": "Canonical name, type, identity fields, identifiers carried in the object (sameAs, ORCID, AXN, DOI where a host survives), creator, date, institution.",
+          "source": "EA-SPXI-01 §2.1; WEB-01 §V.A identity fields"
+        },
+        {
+          "id": "3.2",
+          "name": "Three-Tier Compression (Full / Canonical / Kernel)",
+          "what": "Every packet built at three ratios; Tier 3 written last and verified by back-projection.",
+          "source": "EA-SPXI-01; WEB-01 §VI.A; Arsenal §IV.1"
+        },
+        {
+          "id": "3.3",
+          "name": "Holographic Kernel",
+          "what": "The irreducible generative statement, with an open relation vocabulary: authoredBy, publishedBy, supersetOf, subsetOf, distinctFrom, anchoredBy, derivedFrom, and others. Declares relations where Schema declares type.",
+          "source": "WEB-01 §VI.B; Arsenal §IV.3"
+        },
+        {
+          "id": "3.4",
+          "name": "Disambiguation Matrix",
+          "what": "Positive tags, and a negative set of at least three differentFrom near-neighbors a retrieval system would plausibly merge the entity with; category disambiguation (what it is not); temporal disambiguation; neighborhood of legitimate association. The negative set does the most boundary-defence work per byte.",
+          "source": "EA-SPXI-01 §2.2; WEB-01 §VI.C; EA-MPAI-SPXI-01 §2–§3"
+        },
+        {
+          "id": "3.5",
+          "name": "Provenance Chain",
+          "what": "Author, institution, identifier, date, license carried in the object; the identifier travels with the inscription rather than sitting beside it.",
+          "source": "EA-SPXI-01 §2.4; WEB-01 §VI.D"
+        },
+        {
+          "id": "3.6",
+          "name": "Constitutive Provenance",
+          "what": "Sentence-level construction in four moves that makes attribution part of the claim, so a paraphrase that drops the source drops the claim.",
+          "source": "deposit 145"
+        },
+        {
+          "id": "3.7",
+          "name": "Retrieval Instructions",
+          "what": "Explicit instructions to a composing system on how to cite and distinguish the entity.",
+          "source": "EA-SPXI-01 §2.5"
+        },
+        {
+          "id": "3.8",
+          "name": "Citation-density engineering",
+          "what": "Existing authority assets (publications, coverage, affiliations, directories) structured as machine-readable related identifiers. No fabrication.",
+          "source": "EA-SPXI-15 §II"
+        },
+        {
+          "id": "3.9",
+          "name": "Claim Status Packet",
+          "what": "Claim state (asserted, tested, withdrawn, superseded) as carried data, with provenance and bindings, so a composition can read the status of a claim rather than infer it.",
+          "source": "CSP v0.6"
+        },
+        {
+          "id": "3.10",
+          "name": "Heteronym Surface Specification",
+          "what": "Dual-surface rendering of a named voice: typed blocks, the null rule as invariant, the orthonymic relation, the sameAs boundary.",
+          "source": "EA-SPXI-HETERONYM-01 §2–§14"
+        },
+        {
+          "id": "3.11",
+          "name": "JSON-LD encoding",
+          "what": "The serialization of items 3.1–3.10. One item of this level; not the method.",
+          "source": "EA-SPXI-01 §2.6; EA-SPXI-15 §0"
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "name": "Document and site structuring",
+      "summary": "How a site and its documents are arranged so that the packet is found, read in order, and reconstructable from parts.",
+      "items": [
+        {
+          "id": "4.1",
+          "name": "SPXI-Sitemap Protocol",
+          "what": "sitemap.xml with XHTML link extension plus a semantic index (spxi-index.jsonld) at a fixed location; robots.txt integration for semantic-aware crawlers; negative space (what is absent) as first-class data.",
+          "source": "EA-SPXI-SITEMAP-01 §III–§VII"
+        },
+        {
+          "id": "4.2",
+          "name": "llms.txt",
+          "what": "Plain-text reading order for machine readers, naming the authority and the start pages.",
+          "source": "spxi.dev/llms.txt"
+        },
+        {
+          "id": "4.3",
+          "name": "Visible body-text inscription anchors",
+          "what": "Layer 1 of v0.2: provenance stated in the running text, not only in metadata that a tokenizer strips.",
+          "source": "SPXI v0.2 §2"
+        },
+        {
+          "id": "4.4",
+          "name": "Distributed micro-kernels",
+          "what": "Layer 2 of v0.2: per-section kernels so any excerpt carries identity.",
+          "source": "SPXI v0.2 §3"
+        },
+        {
+          "id": "4.5",
+          "name": "Content-hash registration",
+          "what": "Layer 3 of v0.2: SHA-256 of normalized text registered so a copy can be matched to its original; the basis of the content-derived AXN.",
+          "source": "SPXI v0.2 §4, App. A"
+        },
+        {
+          "id": "4.6",
+          "name": "Reciprocal cross-signing graph",
+          "what": "Layer 4 of v0.2: documents cite one another both ways, so a single removed node does not orphan the rest.",
+          "source": "SPXI v0.2 §5"
+        },
+        {
+          "id": "4.7",
+          "name": "Typed blocks and diagrams as data",
+          "what": "Different objects look different on the page; a diagram carries its own data, never decoration.",
+          "source": "EA-SPXI-HETERONYM-01 §4, §13"
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "name": "Protection",
+      "summary": "What defends the packet after deployment, in a retrieval layer that compresses, merges and re-composes on cycles of weeks.",
+      "items": [
+        {
+          "id": "5.1",
+          "name": "Semantic Integrity Markers (SIMs)",
+          "what": "Three classes: provenance markers, diagnostic canaries, lock phrases; 3–7 per page as meta spxi:sim; survival rate SIMSR target > 0.6; markers must be sourced.",
+          "source": "SIM v1.0; WEB-01 §VI.E; Arsenal §VII.1"
+        },
+        {
+          "id": "5.2",
+          "name": "Integrity Lock Architecture",
+          "what": "Key claims entangled across surfaces so altering one without the others is detectable.",
+          "source": "Arsenal §VII.2; WEB-01 §VI.E"
+        },
+        {
+          "id": "5.3",
+          "name": "Self-Audit block",
+          "what": "Embedded provenance verification a composing system can run on the document itself; the non-erasure condition; defence against RAG chunking.",
+          "source": "EA-SPXI-SELFAUDIT-01 §2–§4"
+        },
+        {
+          "id": "5.4",
+          "name": "Canary sequences and the Canary Registry",
+          "what": "Planted strings whose appearance in a model's output is evidence of ingestion; public audit surface.",
+          "source": "SPXI-TLP §V.1; spxi.dev/canary-registry"
+        },
+        {
+          "id": "5.5",
+          "name": "Training-Layer Provenance (SPXI-TLP)",
+          "what": "Inscriptions that survive tokenization: what does not survive (signatures, meta tags, sidecar JSON-LD, zero-width steganography) and what does (canaries, fictitious-knowledge watermarks, statistical carrier waves); Operative Philology Marks in four types.",
+          "source": "SPXI-TLP v2.2 §IV–§VI"
+        },
+        {
+          "id": "5.6",
+          "name": "Supraliminal Inscription",
+          "what": "Explicit, inspectable signals structurally carried by content rather than by an algorithm's current weighting.",
+          "source": "EA-SPXI-13; WEB-01 §III"
+        },
+        {
+          "id": "5.7",
+          "name": "Sovereign Provenance Protocol",
+          "what": "Machine-readable license terms for use, compression and citation; an auditable signal of whether provenance was respected.",
+          "source": "Arsenal §VII.6"
+        },
+        {
+          "id": "5.8",
+          "name": "The Symbolon",
+          "what": "Split-identity verification: the content-derived AXN and its emoji half verify each other; reconstruction classes declared, never conflated.",
+          "source": "AXN-SYMBOLON-SPEC v0.2 §2–§9"
+        },
+        {
+          "id": "5.9",
+          "name": "Immanent Execution",
+          "what": "The document performs the operation it describes, so reading it is executing it.",
+          "source": "WEB-01 §VI.G; Arsenal §IX.3"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "name": "Dispersal and cross-surface propagation",
+      "summary": "A packet on one surface is a single point of failure. Consistency across surfaces is what the retrieval layer consolidates on.",
+      "items": [
+        {
+          "id": "6.1",
+          "name": "Identifier anchoring",
+          "what": "Content-derived AXN as sovereign identifier; DOI where a host survives; ORCID work linking. Replaceable across host termination: 278 of 469 registry addresses first composed after the original host was terminated.",
+          "source": "WEB-01 §VI.F; EA-SPXI-16 §7"
+        },
+        {
+          "id": "6.2",
+          "name": "Wikidata inscription",
+          "what": "Create the item where notable, carrying the same differentFrom assertions as the packet's disambiguation matrix.",
+          "source": "WEB-01 §VI.F dispersal table"
+        },
+        {
+          "id": "6.3",
+          "name": "Repository and network surfaces",
+          "what": "GitHub README with the definition and the same relation graph; LinkedIn and institutional pages with the same author attribution; knowledge graphs, directories, academic repositories, professional networks, regulatory databases where applicable. Each surface checked for consistency with Tier 2.",
+          "source": "WEB-01 §VI.F; EA-SPXI-15 §IV"
+        },
+        {
+          "id": "6.4",
+          "name": "Retrocausal Canon Formation σ_RCF",
+          "what": "Sequenced deposits, linked both ways, that cause the retrieval layer to re-categorize earlier content without deleting it.",
+          "source": "Arsenal §VI.4; WEB-01 §VI.F"
+        },
+        {
+          "id": "6.5",
+          "name": "The Self-Reading Library loop",
+          "what": "Write → summarizers process → summarizers teach → users search → searches lead back. Engineered deliberately.",
+          "source": "Arsenal §IX.2; WEB-01 §VI.F"
+        },
+        {
+          "id": "6.6",
+          "name": "Retrieval Settlement Fortification",
+          "what": "Detection → attractor analysis → identity packet → \"X is not Y\" paired comparison → territory occupation → executive summary → monitoring; for entities being pulled into a neighbor's basin.",
+          "source": "EA-SPXI-RSF-01 Phases 0–5"
+        },
+        {
+          "id": "6.7",
+          "name": "Multi-surface inscription of the analog",
+          "what": "Handwritten artifacts made machine-eligible without dissolving them into text.",
+          "source": "EA-SPXI-ANALOG-01"
+        },
+        {
+          "id": "6.8",
+          "name": "External authority anchoring",
+          "what": "Layer 5 of v0.2: anchors in authorities the entity does not control.",
+          "source": "SPXI v0.2 §6"
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "name": "Durability testing and maintenance",
+      "summary": "Structural survival is not semantic coherence; coherence is continuous. Nulls are data, and a negative result is stated in advance.",
+      "items": [
+        {
+          "id": "7.1",
+          "name": "Scheduled re-scoring",
+          "what": "Baseline at audit, verification pass at publication, then the same preregistered battery at every cycle the scope band specifies; identical queries, identical surfaces, signed out.",
+          "source": "Sales Kit §④; EA-SPXI-15 §V"
+        },
+        {
+          "id": "7.2",
+          "name": "SIM survival rate",
+          "what": "Percentage of deployed markers intact in outputs; decline indicates attribution erosion.",
+          "source": "WEB-01 §VI.E"
+        },
+        {
+          "id": "7.3",
+          "name": "Quarterly Drowning Test and cross-surface audit",
+          "what": "Full test across systems; compression-damage review.",
+          "source": "WEB-01 §IX maintenance loop"
+        },
+        {
+          "id": "7.4",
+          "name": "Failure modes and repair",
+          "what": "Named failure modes with named repairs; supersession and erratum discipline (bytes of a deposit unchanged; correction at a new address that the old one carries).",
+          "source": "WEB-01 §IX; EA-SPXI-16 §9"
+        },
+        {
+          "id": "7.5",
+          "name": "Competitive monitoring",
+          "what": "Position is relative; a better-structured neighbor is preferred by the retrieval layer.",
+          "source": "EA-SPXI-15 §V"
+        },
+        {
+          "id": "7.6",
+          "name": "The evidentiary standard",
+          "what": "Claims of durability and traversability are judged by evidence of durability and traversability, dated, at named addresses, with transcripts and re-run URLs, including after source removal; not by the standing of the claimant.",
+          "source": "spxi.dev §What is demonstrable; EA-SPXI-16 §7.1"
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "name": "Internal SPXI (the entity as its own systems compose it)",
+      "summary": "The same protocol applied to a firm's own retrieval systems. Named, prototyped, not packaged.",
+      "items": [
+        {
+          "id": "8.1",
+          "name": "Inscription boundary",
+          "what": "A system-enforced distinction between a draft the system produced and an answer the organization stands behind.",
+          "source": "Sales Kit §⑤ Internal SPXI"
+        },
+        {
+          "id": "8.2",
+          "name": "Provenance chain the outputs point at",
+          "what": "A machine-readable record of which governing documents authorize an answer, emitted with the answer.",
+          "source": "Sales Kit §⑤; themandalaoracle.org"
+        },
+        {
+          "id": "8.3",
+          "name": "Sealed casting",
+          "what": "Only sealed outputs are inscribed; uninscribed drafting is separated from the casting rite. Prototype runs client-side on the user's own key.",
+          "source": "themandalaoracle.org; EA-MANDALA-SURFACE-01"
+        }
+      ]
+    }
+  ]
+}

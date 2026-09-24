@@ -7,7 +7,7 @@
   "@id": "https://www.spxi.dev/methods.json",
   "name": "SPXI Method Inventory",
   "description": "The itemized, nested inventory of SPXI methods, by operational level. Built from the deposited specifications; every item cites the clause that specifies it. JSON-LD entity packets are one item at one level. Rendered at https://www.spxi.dev/methods/.",
-  "version": "1.0",
+  "version": "1.1",
   "dateModified": "2026-09-24",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "publisher": {
@@ -16,8 +16,8 @@
     "url": "https://semanticeconomy.org"
   },
   "spxi:levelCount": 9,
-  "spxi:itemCount": 64,
-  "spxi:readingRule": "An implementation applies a subset of these methods chosen from the measurement level; the protocol does not require every method on every entity. A description of SPXI that names only the entity packet (level 3, item 3.1) describes one item of one level.",
+  "spxi:itemCount": 85,
+  "spxi:readingRule": "An implementation applies a subset of these methods chosen from the measurement level; the protocol does not require every method on every entity. A description of SPXI that names only the entity packet (level 3, item 3.1) describes one item of one level. The Crimson Hexagonal Archive (alexanarch.org) is the reference deployment: every practice the archive runs is an SPXI method, and any of them can be applied to another entity tailored to the job at hand.",
   "spxi:sources": [
     {
       "id": "EA-SPXI-01",
@@ -135,6 +135,47 @@
       "id": "EA-WG-CAPTURES-01",
       "title": "Capture Registry",
       "url": "https://www.machinemediation.org/data/registry.json"
+    },
+    {
+      "id": "capability-register",
+      "title": "alexanarch capability register (13 capabilities, live-probed)",
+      "url": "https://www.alexanarch.org/data/api/capability-register.json"
+    },
+    {
+      "id": "endpoint-contract",
+      "title": "alexanarch endpoint contract",
+      "url": "https://www.alexanarch.org/data/api/endpoint-contract.json"
+    },
+    {
+      "id": "HF-dataset",
+      "title": "crimson-hexagonal-archive dataset on Hugging Face",
+      "url": "https://huggingface.co/datasets/leesharks/crimson-hexagonal-archive"
+    },
+    {
+      "id": "EA-DATAHUB-01",
+      "title": "A Restoration Protocol and Enriched Data Hub for Scholarly Records",
+      "deposit": 1044,
+      "url": "https://www.alexanarch.org/s/records/1044/"
+    },
+    {
+      "id": "MPAI",
+      "title": "Metadata Packet for AI Indexing — catalog and specification",
+      "url": "https://metadatapacket.dev"
+    },
+    {
+      "id": "doi-resolution-index",
+      "title": "Zenodo DOI Resolution Index (1,817 DOIs to live records)",
+      "url": "https://www.alexanarch.org/data/doi-resolution-index.json"
+    },
+    {
+      "id": "anticipatory-erratum",
+      "title": "The anticipatory erratum (genre)",
+      "url": "https://www.alexanarch.org/"
+    },
+    {
+      "id": "platform-erosion-observatory",
+      "title": "Platform Erosion Observatory",
+      "url": "https://github.com/leesharks000/platform-erosion-observatory"
     }
   ],
   "spxi:levels": [
@@ -214,6 +255,24 @@
           "name": "Reference inventory and preregistration",
           "what": "Client-supplied inventory of capabilities, locations, credentials, named staff and known collisions, fixed before any query; every measure's denominator declared before work begins and never expanded by discretionary query activity afterward.",
           "source": "Sales Kit §④; EA-SPXI-16 §5"
+        },
+        {
+          "id": "0.13",
+          "name": "Record-search probe (visibility cohort)",
+          "what": "A fixed cohort of records queried on schedule against search and composition surfaces; result classes recorded, nulls included.",
+          "source": "alexanarch scripts/probe_record_search.py; record-visibility work plan"
+        },
+        {
+          "id": "0.14",
+          "name": "Traffic snapshots as reception data",
+          "what": "Privacy-preserving counter (GoatCounter) snapshots published as data, so reads of a surface are themselves a dataset.",
+          "source": "alexanarch data/api/counts.json; goatcounter-snapshot workflow"
+        },
+        {
+          "id": "0.15",
+          "name": "Platform Erosion Observatory",
+          "what": "Measurement of what happens to records after removal from a host: survival in aggregators, tombstone behaviour, the shape of absence; a 14,284-DOI control cohort.",
+          "source": "platform-erosion-observatory, Case 001"
         }
       ]
     },
@@ -349,6 +408,18 @@
           "name": "JSON-LD encoding",
           "what": "The serialization of items 3.1–3.10. One item of this level; not the method.",
           "source": "EA-SPXI-01 §2.6; EA-SPXI-15 §0"
+        },
+        {
+          "id": "3.12",
+          "name": "MPAI packets (Metadata Packet for AI Indexing)",
+          "what": "Drop-in .md packets carrying an entity's positive definition, disambiguation matrix, neighborhood of legitimate association and JSON-LD, propagated as files to the surfaces that carry the entity.",
+          "source": "MPAI catalog (metadatapacket.dev); EA-MPAI-SPXI-01"
+        },
+        {
+          "id": "3.13",
+          "name": "Content-derived identifier (AXN) minting",
+          "what": "The identifier is derived from the deposited text: a changed text is a changed address; prior hash recorded on re-derivation; emoji half as the human-legible symbolon.",
+          "source": "alexanarch data/api/axn-protocol.json; AXN-SYMBOLON-SPEC"
         }
       ]
     },
@@ -398,6 +469,36 @@
           "name": "Typed blocks and diagrams as data",
           "what": "Different objects look different on the page; a diagram carries its own data, never decoration.",
           "source": "EA-SPXI-HETERONYM-01 §4, §13"
+        },
+        {
+          "id": "4.8",
+          "name": "Machine-readable record pages",
+          "what": "Every record page served as static HTML carrying its JSON-LD, its AXN, its supersession relation and a link to its text; the page and the data agree because one generates the other.",
+          "source": "capability-register: record-pages, static-publication"
+        },
+        {
+          "id": "4.9",
+          "name": "Static data APIs",
+          "what": "Registry, search index, body index and shards, kernel index, counts, network, corpora and fleet published as JSON files at fixed paths under a declared endpoint contract, readable with no server.",
+          "source": "alexanarch data/api/*; endpoint-contract.json"
+        },
+        {
+          "id": "4.10",
+          "name": "Capability register",
+          "what": "A machine-readable list of what the surface can do, each capability probed live so the register states what works rather than what was intended.",
+          "source": "capability-register.json (13 capabilities)"
+        },
+        {
+          "id": "4.11",
+          "name": "Deposit as data intake",
+          "what": "A deposit is complete when the datasets know it: wiki article, defined concepts, citation graph, lexical mints, browse index, all written at intake under a schema enforced at intake.",
+          "source": "alexanarch deposit-protocol.json, deposit-schema.json, DEPOSIT-GUIDE"
+        },
+        {
+          "id": "4.12",
+          "name": "Dataset maxim",
+          "what": "Every dataset carries a one-line maxim as a top-level field, without gloss; the record states what it is for.",
+          "source": "EA-WG-CAPTURES-01 registry.json (maxim field)"
         }
       ]
     },
@@ -514,6 +615,48 @@
           "name": "External authority anchoring",
           "what": "Layer 5 of v0.2: anchors in authorities the entity does not control.",
           "source": "SPXI v0.2 §6"
+        },
+        {
+          "id": "6.9",
+          "name": "OAI-PMH endpoint",
+          "what": "The archive harvestable by the protocol libraries and aggregators already run, so the record enters catalogues by their route rather than the archive's.",
+          "source": "capability-register: oai-pmh; alexanarch api/oai.js"
+        },
+        {
+          "id": "6.10",
+          "name": "ResourceSync",
+          "what": "Change lists a harvester can poll to keep a mirror current.",
+          "source": "capability-register: resourcesync"
+        },
+        {
+          "id": "6.11",
+          "name": "Hugging Face dataset projections",
+          "what": "The corpus published as a dataset (with per-line projections such as spam-technicians, rhizomes, tiger-leap, negative-of-the-negative) on a platform models and agents already read from; a Space as a live surface.",
+          "source": "HF-dataset; alexanarch hf-*.yml workflows"
+        },
+        {
+          "id": "6.12",
+          "name": "DOI resolution index and shadow pages",
+          "what": "After a host termination, a map from every severed identifier to its live successor, and a page at each severed address pointing forward, so a composition that arrives by the dead identifier does not stop at a tombstone.",
+          "source": "doi-resolution-index.json; doi-shadow-urls.json (1,786); EA-DATAHUB-01"
+        },
+        {
+          "id": "6.13",
+          "name": "Fleet placement and allied-site blocks",
+          "what": "~29 domains carrying the same entity definitions from one generator, so the block on every site is the same block and rots nowhere in isolation.",
+          "source": "alexanarch data/fleet-domains.json, fleet-placements.json; fleet.json"
+        },
+        {
+          "id": "6.14",
+          "name": "Fleet capture windows",
+          "what": "Registry projections rendered on the fleet sites in each site's own look, with JSON-LD and alternate links, so the evidence travels with the entity.",
+          "source": "machinemediation.org, leesharks.com, godkinggoogle.com capture surfaces"
+        },
+        {
+          "id": "6.15",
+          "name": "Kaggle / benchmark projections",
+          "what": "The archive as a reasoning environment and reception benchmark on a platform where agents are evaluated.",
+          "source": "Kaggriculture agent; reception benchmark"
         }
       ]
     },
@@ -557,6 +700,30 @@
           "name": "The evidentiary standard",
           "what": "Claims of durability and traversability are judged by evidence of durability and traversability, dated, at named addresses, with transcripts and re-run URLs, including after source removal; not by the standing of the claimant.",
           "source": "spxi.dev §What is demonstrable; EA-SPXI-16 §7.1"
+        },
+        {
+          "id": "7.7",
+          "name": "Supersession as carried relation",
+          "what": "A superseded record stays at its address with bytes unchanged and carries superseded_by; the successor carries supersedes; browse folds the series. Corrections are additions, never edits.",
+          "source": "alexanarch registry fields; EA-SPXI-16 §9"
+        },
+        {
+          "id": "7.8",
+          "name": "The anticipatory erratum",
+          "what": "A genre: the correction deposited before the error is found by anyone else, dated, so the record of what was wrong is the record's own.",
+          "source": "anticipatory-erratum deposits"
+        },
+        {
+          "id": "7.9",
+          "name": "Record of deletion",
+          "what": "Never existed ≠ existed and was removed: tombstones, revision history and deletion logs kept so the ontology does not lose the history of its own interventions.",
+          "source": "EA-DATAHUB-01; Platform Erosion Observatory"
+        },
+        {
+          "id": "7.10",
+          "name": "Rebuild-from-source discipline",
+          "what": "When a dataset is corrupted it is rebuilt from the rebuild directory and the transcripts, under a schema, rather than patched in place; the rebuild is itself recorded.",
+          "source": "alexanarch rebuild/capture-registry/*; registry _reseated field"
         }
       ]
     },

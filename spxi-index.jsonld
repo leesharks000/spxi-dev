@@ -63,18 +63,23 @@
         "isBasedOn": [
           {
             "@type": "Dataset",
-            "name": "AI Overview Capture Registry (EA-WG-CAPTURES-01)",
-            "url": "https://www.machinemediation.org/captures/",
+            "name": "AI Overview Capture Registry (EA-WG-CAPTURES-01), current version; supersedes the Zenodo releases v1.1–v8.3",
+            "url": "https://www.alexanarch.org/captures/",
             "distribution": {
               "@type": "DataDownload",
               "encodingFormat": "application/json",
-              "contentUrl": "https://www.machinemediation.org/data/registry.json"
+              "contentUrl": "https://www.alexanarch.org/data/EA-WG-CAPTURES-01.json"
             }
           },
           {
             "@type": "WebPage",
-            "name": "Capture gallery with verbatim transcripts",
-            "url": "https://www.alexanarch.org/captures/"
+            "name": "Semantic addresses: one page per query",
+            "url": "https://www.alexanarch.org/addresses/"
+          },
+          {
+            "@type": "Dataset",
+            "name": "Capture Registry as a filterable table (Hugging Face, config captures)",
+            "url": "https://huggingface.co/datasets/leesharks/crimson-hexagonal-archive/viewer/captures"
           }
         ]
       }

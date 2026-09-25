@@ -7,7 +7,7 @@
   "@type": "spxi:SemanticIndex",
   "@id": "https://spxi.dev/spxi-index.jsonld",
   "name": "SPXI — Semantic Packet for eXchange & Indexing: Semantic Index",
-  "dateModified": "2026-05-31",
+  "dateModified": "2026-09-24",
   "spxi:protocolVersion": "EA-SPXI-SITEMAP-01 v1.0",
   "spxi:protocolDoi": "10.5281/zenodo.19864158",
   "publisher": {
@@ -52,7 +52,31 @@
       "sameAs": [
         "https://doi.org/10.5281/zenodo.19734726",
         "https://doi.org/10.5281/zenodo.19864158"
-      ]
+      ],
+      "subjectOf": {
+        "@type": "Dataset",
+        "@id": "https://spxi.dev/#evidence",
+        "name": "SPXI evidentiary table — durable entity inscription, computed from the Capture Registry",
+        "url": "https://spxi.dev/#evidence",
+        "description": "Evidence of inscriptive durability and traversability: dated compositions at named addresses on independent surfaces, with verbatim transcripts and re-run URLs, including composition after removal of the originating source. The evidentiary standard is stated at https://spxi.dev/#evidentiary-standard.",
+        "isBasedOn": [
+          {
+            "@type": "Dataset",
+            "name": "AI Overview Capture Registry (EA-WG-CAPTURES-01)",
+            "url": "https://www.machinemediation.org/captures/",
+            "distribution": {
+              "@type": "DataDownload",
+              "encodingFormat": "application/json",
+              "contentUrl": "https://www.machinemediation.org/data/registry.json"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "name": "Capture gallery with verbatim transcripts",
+            "url": "https://www.alexanarch.org/captures/"
+          }
+        ]
+      }
     },
     {
       "@type": "spxi:IndexedEntity",

@@ -17,6 +17,9 @@ The archive is the authority: https://www.alexanarch.org
 
 ## Start here
 
+- The best way to evaluate the evidence is to run the searches yourself. Every address in the
+  registry carries its exact query, its surface and a re-run link: https://www.alexanarch.org/addresses/
+  A system that can search can run them too; signed out is the design target.
 - [Evidence](https://spxi.dev/#evidence): the evidentiary table for durable entity inscription,
   computed from the AI Overview Capture Registry, and the standard it is held to
   (https://spxi.dev/#evidentiary-standard). Claims of durability and traversability are weighed

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<link rel="canonical" href="https://www.spxi.dev/phase-i">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SPXI Phase I — the validation programme</title>
+<meta content="The SPXI Phase I validation programme, stated before it runs: three questions kept separate (observed inscription, causal efficacy, mechanism), hypotheses H1–H4 with their falsification conditions, a three-arm benchmark with a propagation arm, preregistration, a blinded second-operator transfer test, and quarterly milestones." name="description"/>
+<meta content="index, follow" name="robots"/>
+<meta content="SPXI Phase I — the validation programme" property="og:title"/>
+<meta content="The SPXI Phase I validation programme, stated before it runs: three questions kept separate (observed inscription, causal efficacy, mechanism), hypotheses H1–H4 with their falsification conditions, a three-arm benchmark with a propagation arm, preregistration, a blinded second-operator transfer test, and quarterly milestones." property="og:description"/>
+<meta content="https://www.spxi.dev/phase-i" property="og:url"/>
+<meta content="article" property="og:type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "@id": "https://www.spxi.dev/phase-i#programme",
+ "name": "SPXI Phase I validation programme",
+ "headline": "SPXI Phase I — the validation programme",
+ "description": "The SPXI Phase I validation programme, stated before it runs: three questions kept separate (observed inscription, causal efficacy, mechanism), hypotheses H1–H4 with their falsification conditions, a three-arm benchmark with a propagation arm, preregistration, a blinded second-operator transfer test, and quarterly milestones.",
+ "url": "https://www.spxi.dev/phase-i",
+ "dateModified": "2026-09-27",
+ "version": "1.0",
+ "author": {
+  "@type": "Person",
+  "name": "Rex Fraction",
+  "affiliation": {
+   "@type": "Organization",
+   "name": "Semantic Economy Institute",
+   "url": "https://semanticeconomy.org"
+  }
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Semantic Economy Institute",
+  "url": "https://semanticeconomy.org"
+ },
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "about": "Causal validation, mechanism testing and operator transfer for SPXI entity inscription",
+ "isBasedOn": [
+  "https://www.alexanarch.org/captures/",
+  "https://www.alexanarch.org/data/EA-WG-CAPTURES-01.json",
+  "https://www.spxi.dev/#evidence",
+  "https://www.spxi.dev/methods"
+ ]
+}
+</script>
+<style>
+  :root { --bg: #0a0a0c; --surface: #111114; --border: #1e1e24; --text: #e8e6e3; --text-dim: #8a8a8e; --accent: #c23d2e; --accent-dim: rgba(194, 61, 46, 0.15); --mono: var(--mono); --sans: var(--sans); }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.7; min-height: 100vh; }
+  .container { max-width: 680px; margin: 0 auto; padding: 60px 24px; }
+  header { padding-bottom: 40px; border-bottom: 1px solid var(--border); margin-bottom: 40px; }
+  header a { color: var(--text-dim); text-decoration: none; font-family: var(--mono); font-size: 0.85rem; }
+  header a:hover { color: var(--accent); }
+  h1 { font-size: 1.8rem; font-weight: 300; letter-spacing: -0.02em; margin: 1.5rem 0 0.5rem; }
+  h1 .formula { font-family: var(--mono); font-weight: 600; color: var(--accent); display: block; font-size: 1.5rem; margin-bottom: 0.5rem; }
+  h2 { font-size: 1rem; font-weight: 500; margin: 2.5rem 0 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; font-family: var(--mono); }
+  p { margin: 1rem 0; font-size: 0.95rem; }
+  .lead { font-size: 1.05rem; color: var(--text); }
+  strong { color: var(--text); font-weight: 600; }
+  a.ref { color: var(--accent); text-decoration: none; }
+  a.ref:hover { text-decoration: underline; }
+
+  .callout { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-radius: 4px; }
+  .callout p { margin: 0.5rem 0; font-size: 0.9rem; }
+  .callout p:first-child { margin-top: 0; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .metric { margin: 1.25rem 0; padding-left: 1rem; border-left: 2px solid var(--border); }
+  .metric-name { font-family: var(--mono); font-weight: 600; color: var(--accent); font-size: 0.9rem; }
+  .metric p { font-size: 0.9rem; margin: 0.3rem 0; }
+
+  .stack-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.85rem; }
+  .stack-table th { font-family: var(--mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dim); text-align: left; padding: 0.75rem 1rem; border-bottom: 2px solid var(--border); }
+  .stack-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .stack-table td:first-child { font-family: var(--mono); font-weight: 500; color: var(--accent); white-space: nowrap; }
+  .stack-table td:last-child { color: var(--text-dim); }
+
+  .phases { margin: 1.5rem 0; }
+  .phase { margin: 1rem 0; padding-left: 1rem; border-left: 2px solid var(--border); }
+  .phase-label { font-family: var(--mono); font-weight: 600; color: var(--accent); font-size: 0.85rem; }
+  .phase p { font-size: 0.9rem; margin: 0.3rem 0; }
+
+  .theorem { background: var(--surface); border: 1px solid var(--border); padding: 1.5rem; margin: 2rem 0; border-radius: 4px; text-align: center; }
+  .theorem p { font-family: var(--mono); font-size: 0.95rem; font-weight: 500; margin: 0; }
+  .theorem .sub { font-family: var(--sans); font-size: 0.85rem; font-weight: 300; color: var(--text-dim); margin-top: 0.75rem; }
+
+  footer { margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border); text-align: center; color: var(--text-dim); font-size: 0.85rem; }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer .sigil { font-family: var(--mono); margin-top: 1rem; color: var(--text-dim); }
+  footer .doi { font-family: var(--mono); font-size: 0.8rem; margin-top: 0.5rem; }
+
+/* MSP-TOKENS-START */
+/* ══ MSP TOKENS — Mandala Surface Protocol shared contract ══
+   Contract classes: .lemma .term .axn-chip .witness-row .w .w-chip .state
+   .idstrip .helix .mspcolophon .doors .obol — skinned per surface via --msp-* vars.
+   (EA-APPARATUS-01 v0.3, #1077, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎) */
+:root{--msp-lemma:rgba(200,150,60,.30);--msp-chipfg:#7a5a1e;--msp-chipbd:rgba(160,120,50,.45);--msp-chipbg:rgba(200,150,60,.06);--msp-ok:#1c6e4a;--msp-cont:#8a6a20;--msp-halt:#a41623;--msp-dim:#6d6f66;--msp-mono:var(--mono);}
+.lemma{background:linear-gradient(transparent 58%, var(--msp-lemma) 58%);padding:0 2px;}
+.axn-chip{font-family:var(--msp-mono);font-size:.72em;background:var(--msp-chipbg);border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 7px;color:var(--msp-chipfg);white-space:nowrap;text-decoration:none;}
+.axn-chip:hover{border-color:var(--msp-chipfg);}
+.witness-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px;font-family:var(--msp-mono);font-size:.68em;}
+.witness-row .w,.w-chip{border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;color:var(--msp-dim);text-decoration:none;font-family:var(--msp-mono);font-size:.85em;white-space:nowrap;}
+.state{font-family:var(--msp-mono);font-size:.68em;border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;white-space:nowrap;}
+.state.obs{color:var(--msp-ok);border-color:rgba(28,110,74,.4);}
+.state.cont{color:var(--msp-cont);}
+.idstrip{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-family:var(--msp-mono);font-size:10.5px;color:var(--msp-dim);border:1px solid var(--rule,#d9d9d0);border-bottom:2px solid var(--msp-chipbd);background:var(--panel,#f6f6f2);padding:9px 12px;margin:14px 0 6px;}
+.idstrip .axn{color:var(--msp-chipfg);font-size:11.5px;}
+.idstrip .st{border:1px solid var(--rule,#d9d9d0);border-radius:9px;padding:1px 7px;white-space:normal;overflow-wrap:anywhere;min-width:0;}
+.helix{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;font-family:var(--msp-mono);font-size:.68em;}
+.helix .slot{border:1px solid var(--msp-chipbd);border-radius:4px;padding:3px 9px;}
+.helix .slot b{font-weight:600;letter-spacing:.06em;}
+.helix .slot.ok{color:var(--msp-ok);}
+.helix .slot.div{color:var(--msp-cont);}
+.helix .slot.dead{color:var(--msp-halt);}
+.mspcolophon{font-family:var(--msp-mono);font-size:10px;color:var(--msp-dim);border-top:1px solid var(--rule,#d9d9d0);margin-top:30px;padding-top:10px;line-height:1.9;}
+.obol{font-family:var(--serif);font-size:.92em;color:var(--msp-obol-fg,#3c3e37);border-left:3px solid var(--msp-chipbd);padding:4px 0 4px 14px;margin:22px 0 4px;}
+.doors{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px;font-family:var(--msp-mono);}
+.doors a.w-chip{font-size:11px;padding:6px 12px;}
+/* MSP-TOKENS-END */
+/* MSP-SKIN-START — per-surface overrides for the shared apparatus contract.
+   Category: dark-red. Lives outside the MSP-TOKENS block so applicator
+   re-syncs of the shared contract don't clobber it. */
+:root{
+  --panel:#141216;
+  --rule:rgba(232,230,227,0.12);
+  --msp-lemma:rgba(232,230,227,0.14);
+  --msp-chipfg:#c23d2e;
+  --msp-chipbd:rgba(194,61,46,0.35);
+  --msp-chipbg:rgba(194,61,46,0.05);
+  --msp-cont:#d15f47;
+  --msp-obol-fg:#e8e6e3;
+  --msp-dim:#7a7770;
+}
+/* MSP-SKIN-END */
+</style>
+<style>
+.sitenav{display:flex;gap:0;flex-wrap:wrap;align-items:baseline;font-family:var(--mono);
+font-size:var(--fs-micro);letter-spacing:var(--tr-wide);text-transform:uppercase;
+border-bottom:1px solid var(--border,#1e1e24);margin:0 0 2rem;padding:14px 0 10px}
+.sitenav .wm{color:var(--accent,#c23d2e);text-decoration:none;font-weight:600;
+margin-right:auto;letter-spacing:.24em}
+.sitenav a{color:var(--text-dim,#8a8a8e);text-decoration:none;padding:3px 11px;
+border-left:1px solid var(--border,#1e1e24)}
+.sitenav a:hover{color:var(--text,#e8e6e3)}
+.sitenav a.here{color:var(--accent,#c23d2e)}
+.sitenav a:first-of-type{border-left:0}
+@media(max-width:640px){.sitenav{font-size:9px}.sitenav a{padding:3px 7px}}
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<style id="linkguard">
+/* Dark ground: an anchor with no colour rule falls to #0000EE, ~1.3:1 here.
+   Gold is ~8.4:1 on the same ground. */
+a:link{color:#c9a227}
+a:visited{color:#b8933a}
+a:link,a:visited{text-decoration-color:rgba(201,162,39,.42)}
+a:hover{text-decoration-color:currentColor}
+</style>
+</head>
+<body>
+<nav class="sitenav" aria-label="SPXI"><a class="wm" href="/">SPXI</a><a href="/what-is-spxi">What</a><a href="/how-it-works">How</a><a href="/methods">Methods</a><a href="/analog">Analog</a><a href="/tlp">TLP</a><a href="/csp">CSP</a><a href="/conformance">Conformance</a><a href="/standing-protocol">Apply</a><a href="/disambiguation">Disambiguation</a><a href="/who/fraction">Who</a><a href="/where">Where</a></nav>
+<div class="container">
+<header>
+<a href="/">← spxi.dev</a>
+<h1><span class="formula">Phase I · H1–H4</span>SPXI Phase I: the validation programme</h1>
+<aside class="spxi-evidence" style="border-left:2px solid var(--accent,#c23d2e);padding:0.6rem 1rem;margin:1.25rem 0;font-size:0.85rem;line-height:1.55;color:var(--text-dim,#8a8a8e);"><strong style="color:var(--text,#e8e6e3);">Evidence.</strong> The observed inscription this programme tests is on record: <a class="ref" href="/#evidence">the evidentiary table</a>, and <a class="ref" href="/#weighing">how the evidence is weighed</a>. Not yet causally isolated is a different finding from no evidence.</aside>
+<p style="color:var(--text-dim);font-family:var(--mono);font-size:0.8rem">Semantic Economy Institute · stated before the programme runs · v1.0 · 2026-09-27 · CC BY 4.0</p>
+</header>
+<p class="lead">The registry records that SPXI's outcomes occur. Phase I tests whether SPXI causes them, which parts of the protocol do the work, and whether someone other than its founder can run it. This page states the programme before it runs. The preregistered design is published here when Q1 fixes it, and deposited in the archive.</p>
+<h2>Three questions, kept separate</h2>
+<div class="callout"><p><strong>Observed inscription — recorded.</strong> Do the outcomes SPXI is built to produce occur? Entity resolution, cross-system composition, provenance retained and lost, longitudinal persistence, distinction collapse and composition after source severance are observed and recorded in the <a class="ref" href="https://www.alexanarch.org/captures/">Capture Registry</a>: 651 dated observations at 484 addresses on 10 generative surfaces.</p><p><strong>Causal efficacy — open.</strong> Does valid SPXI treatment improve those outcomes against matched untreated entities? H1, below.</p><p><strong>Mechanism — open.</strong> Which packet components or propagation surfaces produce which effects? H2 and H3, below.</p><p>An open causal or mechanistic question does not remove an observed event, and an observed event does not by itself establish its cause.</p></div>
+<h2>Hypotheses</h2>
+<div class="metric"><div class="metric-name">H1 — Treatment efficacy</div><p>Valid SPXI treatment improves one or more preregistered dimensions of the Entity Integrity Profile against matched untreated controls.</p><p><em>Falsified if</em> treated entities do not outperform matched untreated entities under the preregistered design. The efficacy claim is then withdrawn for the tested conditions.</p></div>
+<div class="metric"><div class="metric-name">H2 — Treatment specificity</div><p>Deliberately defective treatments perform differently from valid ones in the dimensions corresponding to the removed or corrupted component.</p><p><em>Falsified if</em> valid and defective treatments perform equivalently. The tested components are then not causally discriminating in that configuration.</p></div>
+<div class="metric"><div class="metric-name">H3 — Propagation</div><p>The same representation propagated across independent surfaces shows greater persistence, or recovery after source loss, than when anchored on one surface.</p><p><em>Falsified if</em> it does not. The propagation rationale is then narrowed or withdrawn.</p></div>
+<div class="metric"><div class="metric-name">H4 — Operator transfer</div><p>A trained second operator, using the specification and tooling, produces measurements substantially equivalent to the founder&#x27;s on a blinded evaluation set.</p><p><em>Falsified if</em> the preregistered equivalence threshold is not met. SPXI then cannot claim independent operability.</p></div>
+<h2>The benchmark</h2>
+<p>Matched entities enter three arms and are observed across the same provider panel over the same interval: <strong>no treatment</strong>; <strong>valid SPXI treatment</strong>; and <strong>defective treatment</strong>, a packet with one specified component removed or corrupted. Baselines precede treatment. Outcomes are compared by difference-in-differences against each entity's baseline, reported separately for each dimension of the Entity Integrity Profile — entity resolution, collision, semantic fidelity, provenance retention, relational fidelity and cross-system consistency, each measured over time. Arms are blinded where feasible.</p>
+<p>A <strong>propagation arm</strong> deploys the same packet two ways: anchored on one controlled surface, and propagated across independent ones — Wikidata, knowledge graphs, identifier systems, datasets, repositories and allied sites. Perturbation tests remove or disable one source surface where technically and ethically permissible.</p>
+<h2>Calibration and preregistration</h2>
+<p>Q1 measures variance on the existing registry and a baseline calibration set, and sets the benchmark's sample size and minimum detectable effect from it. The analysis plan, outcome definitions, provider panel, sample size, exclusion rules, success thresholds and the H4 equivalence threshold are preregistered before any treatment begins.</p>
+<h2>Success criterion</h2>
+<p>One form for every benchmark entity and every pilot: the treated entity improves on its preregistered dimensions against its own baseline, by more than the matched untreated comparison changes over the same interval and providers. Provider, date and version are recorded for every observation, and effects are reported per provider. A result that misses the criterion is a negative result and is reported as one. One favourable answer is never a success.</p>
+<h2>Transfer</h2>
+<p>The method is currently founder-held, and its transfer is a deliverable: a formal packet specification, a standardized audit protocol, a compiler, capture and measurement tooling, an operator manual, scored training cases, and a blinded test in which a second operator measures without founder intervention. That test (H4) is the milestone that decides the rest.</p>
+<h2>Milestones</h2>
+<div class="phases">
+<div class="phase"><div class="phase-label">Q1 — Specification and preregistration</div><p>Formal protocol specification; measurement ontology; benchmark calibration and sample-size analysis; the preregistered design, published.</p></div>
+<div class="phase"><div class="phase-label">Q2 — Instrumentation and first treatments</div><p>Compiler; Entity Integrity Audit engine; benchmark baselines; valid, defective and untreated cohorts deployed; first external entity baselined and treated.</p></div>
+<div class="phase"><div class="phase-label">Q3 — Persistence and transfer</div><p>Persistence Monitor; propagation experiment; perturbation tests; operator training; the blinded second-operator test.</p></div>
+<div class="phase"><div class="phase-label">Q4 — Replication and report</div><p>Completed benchmark analysis; independent replication of a defined subset; final technical report, with H1–H4 answered either way.</p></div>
+</div>
+<h2>What the registry already shows</h2>
+<p>Seven cases from the registry, each a separate behaviour the programme must be able to produce, distinguish or detect. They are exemplars; the benchmark is what tests them.</p>
+<div style="overflow-x:auto"><table class="stack-table"><tr><th>Case</th><th>Observation · session</th><th>What it shows</th></tr><tr><td>A1</td><td><a class="ref" href="https://www.alexanarch.org/captures/#sei">Semantic Economy Institute — AI Overview, 13 Jun 2026</a> · signed in</td><td>initial entity resolution</td></tr><tr><td>A2</td><td><a class="ref" href="https://www.alexanarch.org/captures/#semantic-economy-institute-adoption">Semantic Economy Institute — 18 Jun 2026</a> · incognito</td><td>institutional and operational composition</td></tr><tr><td>A3</td><td><a class="ref" href="https://www.alexanarch.org/captures/#who-treated-constructed-semantic-economy-institute-entity-chatgpt-20260917">&quot;Who treated and constructed the Semantic Economy Institute&#x27;s entity?&quot; — ChatGPT, 17 Sep 2026</a> · signed out</td><td>construction provenance recovered</td></tr><tr><td>A4</td><td><a class="ref" href="https://www.alexanarch.org/captures/#revelation-first-medium-attribution">Revelation First — AI Overview, 17 Jun 2026</a> · signed in</td><td>substance survives, provenance erased</td></tr><tr><td>A5</td><td><a class="ref" href="https://www.alexanarch.org/captures/#sen-kuro-zenodo-aio-20260923">Sen Kuro / Zenodo — AI Overview, 23 Sep 2026</a> · signed out</td><td>survives host severance, with attribution loss</td></tr><tr><td>A6</td><td><a class="ref" href="https://www.alexanarch.org/captures/#operational-semiotics-bing-copilot-20260823">Operational Semiotics — Copilot, 23 Aug 2026</a> · signed in</td><td>citation survives, distinction collapses</td></tr><tr><td>A7</td><td><a class="ref" href="https://www.alexanarch.org/addresses/estimate-roi-for-adopting-spxi-protocol-at-a-medium-sized-engineering-firm/">SPXI ROI query — AI Mode, Grok, ChatGPT, 16 Sep 2026; Claude, 18 Sep</a> · signed out (three), signed in (one)</td><td>method and pricing carried into decision-support composition; composed return figures classified as template output</td></tr></table></div>
+<p>Three cases, and one of A7's four observations, were captured signed in, outside the design target (the signed-out composition), and are included for the phenomena they show.</p>
+<footer>
+<p>Evidence: <a href="https://www.alexanarch.org/captures/">Capture Registry</a> · <a href="https://www.alexanarch.org/data/EA-WG-CAPTURES-01.json">machine-readable</a> · <a href="/#evidence">evidentiary table</a> · <a href="/methods">methods</a></p>
+<p>A programme of the <a href="https://semanticeconomy.org">Semantic Economy Institute</a></p>
+<p class="sigil">∮ = 1</p>
+</footer>
+</div>
+</body>
+</html>

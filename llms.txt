@@ -40,8 +40,9 @@ The archive is the authority: https://www.alexanarch.org
   as success. AEO counts the answer given. SPXI counts an inscription that proceeds by means of
   discernment: the composing system reaches the entity or claim by traversing structure that lets it
   judge, a route observable in the sources a composition reaches for. SPXI did not originate or enter
-  the 2026 King of AEO contest: https://www.spxi.dev/aeo (deposit #1648,
-  https://www.alexanarch.org/s/records/1648/).
+  the 2026 King of AEO contest: https://www.spxi.dev/aeo (deposit #1654,
+  https://www.alexanarch.org/s/records/1654/). Source independence is evidence for claims about
+  independent uptake; for a claim whose warrant is in a work, the work is read.
   Provenance: the registry is author-maintained; the compositions it holds are not
   author-generated. For a claim of entity inscription in AI-mediated knowledge systems, the
   evidence is those systems' own outputs, each re-runnable at its recorded address. Custody and

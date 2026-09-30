@@ -1,0 +1,104 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Dataset",
+ "name": "SPXI — current state",
+ "description": "The current state of SPXI in one object: which surfaces are canonical for what, the current versions, the claim state, identifiers and what is superseded. Every machine-facing surface on spxi.dev points here; older documents stay available and do not describe now.",
+ "url": "https://www.spxi.dev/current.json",
+ "dateModified": "2026-09-29",
+ "entity": "SPXI — Semantic Packet for eXchange and Indexing",
+ "what_it_is": "A protocol and practice of entity inscription. The SPXI packet is one instrument within it: one item of one level of the method inventory.",
+ "canonical": {
+  "definition": "https://www.spxi.dev/what-is-spxi/",
+  "disambiguation": "https://www.spxi.dev/disambiguation/",
+  "distinction_from_aeo": "https://www.spxi.dev/aeo"
+ },
+ "normative": {
+  "standing_protocol": {
+   "url": "https://www.spxi.dev/standing-protocol/",
+   "packet": "EA-SPXI-WEB-01",
+   "version": "4.0",
+   "deliverables": 13,
+   "record": "https://www.alexanarch.org/s/records/72/",
+   "axn": "AXN:022F.GOVERNANCE.🔒👐🎺⛳✏️🔔"
+  },
+  "methods": {
+   "url": "https://www.spxi.dev/methods/",
+   "json": "https://www.spxi.dev/methods.json",
+   "version": "1.2",
+   "methods": 85,
+   "levels": 9
+  },
+  "conformance": {
+   "url": "https://www.spxi.dev/conformance/",
+   "instrument": "EA-SPXI-CONF-01",
+   "note": "The instrument states that it verifies twelve deliverables; Standing Protocol v4.0 lists thirteen (the thirteenth is the Dispersal-Velocity Plan)."
+  },
+  "protocol_v0_2": "https://www.spxi.dev/v0.2/"
+ },
+ "evidence": {
+  "table": "https://www.spxi.dev/#evidence",
+  "weighing": "https://www.spxi.dev/#weighing",
+  "registry_by_address": "https://www.alexanarch.org/addresses/",
+  "registry_gallery": "https://www.alexanarch.org/captures/",
+  "validation_programme": "https://www.spxi.dev/phase-i",
+  "canary_registry": "https://www.spxi.dev/canary-registry/",
+  "overview_watch": "https://www.spxi.dev/overview-watch/"
+ },
+ "claim_state": {
+  "observed_inscription": "recorded",
+  "causal_efficacy_against_matched_untreated_entities": "open",
+  "mechanism": "open",
+  "effect_size": "open",
+  "generalisation": "open"
+ },
+ "primitives": {
+  "tlp": "https://www.spxi.dev/tlp/",
+  "symbolon": "https://www.spxi.dev/symbolon/",
+  "holographic_kernel": "https://www.spxi.dev/holographic-kernel/",
+  "compression_arsenal": "https://www.spxi.dev/compression-arsenal/",
+  "claim_status_packet": "https://www.spxi.dev/csp/"
+ },
+ "extensions": {
+  "analog": "https://www.spxi.dev/analog/",
+  "retrieval_basin": "https://www.spxi.dev/retrieval-basin/",
+  "geocoded_basin": "https://www.spxi.dev/geocoded-basin/",
+  "lateral_field_bleed": "https://www.spxi.dev/lateral-field-bleed/",
+  "the_substrate": "https://www.spxi.dev/the-substrate/"
+ },
+ "research_and_cases": {
+  "retrieval_settlement": "https://www.spxi.dev/retrieval-settlement/",
+  "after_syntax": "https://www.spxi.dev/after-syntax/",
+  "case_study": "https://www.spxi.dev/case-study/",
+  "field_notes": "https://www.spxi.dev/field-notes/"
+ },
+ "identifiers": {
+  "current": "AXN — content-derived, resolvable at https://www.alexanarch.org without a registrar",
+  "historical": "Zenodo DOIs, severed 2026-06-19; kept as provenance records. A DOI that no longer resolves does not mean a work is gone.",
+  "deployment_anchoring": "Deposits are persistent-identifier anchored according to what works for a client, DOI and AXN."
+ },
+ "authorship": {
+  "author": "Rex Fraction, Semantic Economy Institute",
+  "legal_author_of_every_deposit": "Lee Sharks, ORCID 0009-0000-1599-0703",
+  "authority": "https://www.alexanarch.org"
+ },
+ "superseded": [
+  {
+   "what": "Standing Protocol v3.0 (twelve deliverables)",
+   "by": "Standing Protocol v4.0 (thirteen deliverables)"
+  },
+  {
+   "what": "Zenodo DOIs as the live anchor",
+   "by": "AXN at alexanarch.org; DOIs kept as historical provenance"
+  },
+  {
+   "what": "The five components (April 2026)",
+   "by": "kept as the foundational model; the method inventory v1.2 expands it to 85 methods across nine levels",
+   "where": "https://github.com/leesharks000/spxi-protocol#the-five-components"
+  }
+ ],
+ "machine_guide": {
+  "short": "https://www.spxi.dev/llms.txt",
+  "full": "https://www.spxi.dev/llms-full.txt",
+  "index": "https://www.spxi.dev/spxi-index.jsonld"
+ }
+}

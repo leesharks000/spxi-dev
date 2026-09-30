@@ -7,13 +7,13 @@
   "@type": "spxi:SemanticIndex",
   "@id": "https://spxi.dev/spxi-index.jsonld",
   "name": "SPXI — Semantic Packet for eXchange & Indexing: Semantic Index",
-  "dateModified": "2026-09-24",
+  "dateModified": "2026-09-29",
   "spxi:protocolVersion": "EA-SPXI-SITEMAP-01 v1.0",
   "spxi:protocolDoi": "10.5281/zenodo.19864158",
   "publisher": {
     "@type": "Organization",
     "name": "Crimson Hexagonal Archive · Pergamon Press · Semantic Economy Institute",
-    "url": "https://zenodo.org/communities/crimsonhexagonal"
+    "url": "https://www.alexanarch.org/"
   },
   "author": {
     "@type": "Person",
@@ -49,7 +49,7 @@
       ],
       "spxi:basinState": "sovereign",
       "spxi:bdrEstimate": 0.85,
-      "spxi:verificationLevel": "doi_anchored",
+      "spxi:verificationLevel": "persistent_identifier_anchored",
       "sameAs": [
         "https://doi.org/10.5281/zenodo.19734726",
         "https://doi.org/10.5281/zenodo.19864158"
@@ -82,25 +82,28 @@
             "url": "https://huggingface.co/datasets/leesharks/crimson-hexagonal-archive/viewer/captures"
           }
         ]
-      }
+      },
+      "spxi:identifierNote": "AXN (content-derived, alexanarch.org) is current; historical Zenodo DOIs are provenance records, severed 2026-06-19."
     },
     {
       "@type": "spxi:IndexedEntity",
       "@id": "https://spxi.dev/standing-protocol/",
       "spxi:entityType": "TechArticle",
-      "spxi:canonicalName": "SPXI for Websites Standing Protocol v3.0 (EA-SPXI-WEB-01)",
+      "spxi:canonicalName": "SPXI for Websites Standing Protocol v4.0 (EA-SPXI-WEB-01)",
       "spxi:negativeTag": [
         "NOT a draft — this is the standing protocol",
         "NOT an SEO checklist"
       ],
       "spxi:semanticIntegrityMarker": [
-        "EA-SPXI-WEB-01 v3.0",
+        "EA-SPXI-WEB-01 v4.0",
+        "Thirteen deliverables",
         "Twelve-step implementation order ending with gamma measurement"
       ],
       "spxi:basinState": "sovereign",
       "spxi:bdrEstimate": 0.9,
       "sameAs": [
-        "https://doi.org/10.5281/zenodo.19734726"
+        "https://doi.org/10.5281/zenodo.19734726",
+        "https://www.alexanarch.org/s/records/72/"
       ]
     },
     {
@@ -250,5 +253,6 @@
       "@id": "https://spxi.dev/conformance",
       "name": "SPXI Conformance Instrument"
     }
-  ]
+  ],
+  "spxi:currentState": "https://www.spxi.dev/current.json"
 }

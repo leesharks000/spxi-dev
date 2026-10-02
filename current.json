@@ -36,6 +36,7 @@
   "protocol_v0_2": "https://www.spxi.dev/v0.2/"
  },
  "evidence": {
+  "page": "https://www.spxi.dev/evidence",
   "table": "https://www.spxi.dev/#evidence",
   "weighing": "https://www.spxi.dev/#weighing",
   "registry_by_address": "https://www.alexanarch.org/addresses/",

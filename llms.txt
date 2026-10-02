@@ -18,7 +18,8 @@ Current state, one object: https://www.spxi.dev/current.json
 - Conformance: https://www.spxi.dev/conformance/
 
 ## Verify
-- Evidence: https://www.spxi.dev/#evidence
+- Evidence, by what each kind measures (GEO, AEO, the Capture Registry): https://www.spxi.dev/evidence
+- Evidentiary table on the front page: https://www.spxi.dev/#evidence
 - The Capture Registry, one address at a time, each with its exact query, surface and re-run link: https://www.alexanarch.org/addresses/
 - Phase I, the causal programme, stated before it runs: https://www.spxi.dev/phase-i
 

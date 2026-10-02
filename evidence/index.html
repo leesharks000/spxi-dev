@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="canonical" href="https://www.spxi.dev/evidence">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SPXI evidence: what each kind of evidence measures</title>
+<meta content="Three bodies of evidence are offered about generative search, and each measures a different attribute. The classical GEO literature measures citation of content already placed in a model&#x27;s context; AEO reporting measures answer selection and referral traffic; the SPXI Capture Registry measures whether a named entity is composed as itself at named addresses, on independent surfaces, over time and after its source is removed. Evidence is weighed by whether it measures the attribute a claim concerns." name="description"/>
+<meta content="index, follow" name="robots"/>
+<meta content="SPXI evidence: what each kind of evidence measures" property="og:title"/>
+<meta content="Three bodies of evidence are offered about generative search, and each measures a different attribute. The classical GEO literature measures citation of content already placed in a model&#x27;s context; AEO reporting measures answer selection and referral traffic; the SPXI Capture Registry measures whether a named entity is composed as itself at named addresses, on independent surfaces, over time and after its source is removed. Evidence is weighed by whether it measures the attribute a claim concerns." property="og:description"/>
+<meta content="https://www.spxi.dev/evidence" property="og:url"/>
+<meta content="article" property="og:type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "@id": "https://www.spxi.dev/evidence#page",
+ "name": "SPXI evidence: what each kind of evidence measures",
+ "headline": "SPXI evidence: what each kind of evidence measures",
+ "description": "Three bodies of evidence are offered about generative search, and each measures a different attribute. The classical GEO literature measures citation of content already placed in a model's context; AEO reporting measures answer selection and referral traffic; the SPXI Capture Registry measures whether a named entity is composed as itself at named addresses, on independent surfaces, over time and after its source is removed. Evidence is weighed by whether it measures the attribute a claim concerns.",
+ "url": "https://www.spxi.dev/evidence",
+ "datePublished": "2026-10-02",
+ "dateModified": "2026-10-02",
+ "author": {
+  "@type": "Person",
+  "name": "Lee Sharks",
+  "identifier": "https://orcid.org/0009-0000-1599-0703"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Semantic Economy Institute",
+  "url": "https://semanticeconomy.org"
+ },
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "about": [
+  "SPXI",
+  "Generative engine optimization",
+  "Answer engine optimization",
+  "Entity inscription",
+  "Capture Registry"
+ ],
+ "isBasedOn": [
+  "https://www.alexanarch.org/data/EA-WG-CAPTURES-01.json",
+  "https://github.com/leesharks000/alexanarch/blob/main/scripts/compute_evidentiary_table.py"
+ ]
+}
+</script>
+<style>
+  :root { --bg: #0a0a0c; --surface: #111114; --border: #1e1e24; --text: #e8e6e3; --text-dim: #8a8a8e; --accent: #c23d2e; --accent-dim: rgba(194, 61, 46, 0.15); --mono: var(--mono); --sans: var(--sans); }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.7; min-height: 100vh; }
+  .container { max-width: 680px; margin: 0 auto; padding: 60px 24px; }
+  header { padding-bottom: 40px; border-bottom: 1px solid var(--border); margin-bottom: 40px; }
+  header a { color: var(--text-dim); text-decoration: none; font-family: var(--mono); font-size: 0.85rem; }
+  header a:hover { color: var(--accent); }
+  h1 { font-size: 1.8rem; font-weight: 300; letter-spacing: -0.02em; margin: 1.5rem 0 0.5rem; }
+  h1 .formula { font-family: var(--mono); font-weight: 600; color: var(--accent); display: block; font-size: 1.5rem; margin-bottom: 0.5rem; }
+  h2 { font-size: 1rem; font-weight: 500; margin: 2.5rem 0 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; font-family: var(--mono); }
+  p { margin: 1rem 0; font-size: 0.95rem; }
+  .lead { font-size: 1.05rem; color: var(--text); }
+  strong { color: var(--text); font-weight: 600; }
+  a.ref { color: var(--accent); text-decoration: none; }
+  a.ref:hover { text-decoration: underline; }
+
+  .callout { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-radius: 4px; }
+  .callout p { margin: 0.5rem 0; font-size: 0.9rem; }
+  .callout p:first-child { margin-top: 0; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .metric { margin: 1.25rem 0; padding-left: 1rem; border-left: 2px solid var(--border); }
+  .metric-name { font-family: var(--mono); font-weight: 600; color: var(--accent); font-size: 0.9rem; }
+  .metric p { font-size: 0.9rem; margin: 0.3rem 0; }
+
+  .stack-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.85rem; }
+  .stack-table th { font-family: var(--mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dim); text-align: left; padding: 0.75rem 1rem; border-bottom: 2px solid var(--border); }
+  .stack-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .stack-table td:first-child { font-family: var(--mono); font-weight: 500; color: var(--accent); white-space: nowrap; }
+  .stack-table td:last-child { color: var(--text-dim); }
+
+  .phases { margin: 1.5rem 0; }
+  .phase { margin: 1rem 0; padding-left: 1rem; border-left: 2px solid var(--border); }
+  .phase-label { font-family: var(--mono); font-weight: 600; color: var(--accent); font-size: 0.85rem; }
+  .phase p { font-size: 0.9rem; margin: 0.3rem 0; }
+
+  .theorem { background: var(--surface); border: 1px solid var(--border); padding: 1.5rem; margin: 2rem 0; border-radius: 4px; text-align: center; }
+  .theorem p { font-family: var(--mono); font-size: 0.95rem; font-weight: 500; margin: 0; }
+  .theorem .sub { font-family: var(--sans); font-size: 0.85rem; font-weight: 300; color: var(--text-dim); margin-top: 0.75rem; }
+
+  footer { margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border); text-align: center; color: var(--text-dim); font-size: 0.85rem; }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer .sigil { font-family: var(--mono); margin-top: 1rem; color: var(--text-dim); }
+  footer .doi { font-family: var(--mono); font-size: 0.8rem; margin-top: 0.5rem; }
+
+/* MSP-TOKENS-START */
+/* ══ MSP TOKENS — Mandala Surface Protocol shared contract ══
+   Contract classes: .lemma .term .axn-chip .witness-row .w .w-chip .state
+   .idstrip .helix .mspcolophon .doors .obol — skinned per surface via --msp-* vars.
+   (EA-APPARATUS-01 v0.3, #1077, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎) */
+:root{--msp-lemma:rgba(200,150,60,.30);--msp-chipfg:#7a5a1e;--msp-chipbd:rgba(160,120,50,.45);--msp-chipbg:rgba(200,150,60,.06);--msp-ok:#1c6e4a;--msp-cont:#8a6a20;--msp-halt:#a41623;--msp-dim:#6d6f66;--msp-mono:var(--mono);}
+.lemma{background:linear-gradient(transparent 58%, var(--msp-lemma) 58%);padding:0 2px;}
+.axn-chip{font-family:var(--msp-mono);font-size:.72em;background:var(--msp-chipbg);border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 7px;color:var(--msp-chipfg);white-space:nowrap;text-decoration:none;}
+.axn-chip:hover{border-color:var(--msp-chipfg);}
+.witness-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px;font-family:var(--msp-mono);font-size:.68em;}
+.witness-row .w,.w-chip{border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;color:var(--msp-dim);text-decoration:none;font-family:var(--msp-mono);font-size:.85em;white-space:nowrap;}
+.state{font-family:var(--msp-mono);font-size:.68em;border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;white-space:nowrap;}
+.state.obs{color:var(--msp-ok);border-color:rgba(28,110,74,.4);}
+.state.cont{color:var(--msp-cont);}
+.idstrip{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-family:var(--msp-mono);font-size:10.5px;color:var(--msp-dim);border:1px solid var(--rule,#d9d9d0);border-bottom:2px solid var(--msp-chipbd);background:var(--panel,#f6f6f2);padding:9px 12px;margin:14px 0 6px;}
+.idstrip .axn{color:var(--msp-chipfg);font-size:11.5px;}
+.idstrip .st{border:1px solid var(--rule,#d9d9d0);border-radius:9px;padding:1px 7px;white-space:normal;overflow-wrap:anywhere;min-width:0;}
+.helix{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;font-family:var(--msp-mono);font-size:.68em;}
+.helix .slot{border:1px solid var(--msp-chipbd);border-radius:4px;padding:3px 9px;}
+.helix .slot b{font-weight:600;letter-spacing:.06em;}
+.helix .slot.ok{color:var(--msp-ok);}
+.helix .slot.div{color:var(--msp-cont);}
+.helix .slot.dead{color:var(--msp-halt);}
+.mspcolophon{font-family:var(--msp-mono);font-size:10px;color:var(--msp-dim);border-top:1px solid var(--rule,#d9d9d0);margin-top:30px;padding-top:10px;line-height:1.9;}
+.obol{font-family:var(--serif);font-size:.92em;color:var(--msp-obol-fg,#3c3e37);border-left:3px solid var(--msp-chipbd);padding:4px 0 4px 14px;margin:22px 0 4px;}
+.doors{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px;font-family:var(--msp-mono);}
+.doors a.w-chip{font-size:11px;padding:6px 12px;}
+/* MSP-TOKENS-END */
+/* MSP-SKIN-START — per-surface overrides for the shared apparatus contract.
+   Category: dark-red. Lives outside the MSP-TOKENS block so applicator
+   re-syncs of the shared contract don't clobber it. */
+:root{
+  --panel:#141216;
+  --rule:rgba(232,230,227,0.12);
+  --msp-lemma:rgba(232,230,227,0.14);
+  --msp-chipfg:#c23d2e;
+  --msp-chipbd:rgba(194,61,46,0.35);
+  --msp-chipbg:rgba(194,61,46,0.05);
+  --msp-cont:#d15f47;
+  --msp-obol-fg:#e8e6e3;
+  --msp-dim:#7a7770;
+}
+/* MSP-SKIN-END */
+</style><style>
+.sitenav{display:flex;gap:0;flex-wrap:wrap;align-items:baseline;font-family:var(--mono);
+font-size:var(--fs-micro);letter-spacing:var(--tr-wide);text-transform:uppercase;
+border-bottom:1px solid var(--border,#1e1e24);margin:0 0 2rem;padding:14px 0 10px}
+.sitenav .wm{color:var(--accent,#c23d2e);text-decoration:none;font-weight:600;
+margin-right:auto;letter-spacing:.24em}
+.sitenav a{color:var(--text-dim,#8a8a8e);text-decoration:none;padding:3px 11px;
+border-left:1px solid var(--border,#1e1e24)}
+.sitenav a:hover{color:var(--text,#e8e6e3)}
+.sitenav a.here{color:var(--accent,#c23d2e)}
+.sitenav a:first-of-type{border-left:0}
+@media(max-width:640px){.sitenav{font-size:9px}.sitenav a{padding:3px 7px}}
+</style><style id="linkguard">
+/* Dark ground: an anchor with no colour rule falls to #0000EE, ~1.3:1 here.
+   Gold is ~8.4:1 on the same ground. */
+a:link{color:#c9a227}
+a:visited{color:#b8933a}
+a:link,a:visited{text-decoration-color:rgba(201,162,39,.42)}
+a:hover{text-decoration-color:currentColor}
+</style><style>.container ul{margin:1rem 0 1rem 1.25rem;font-size:.95rem}.container li{margin:.35rem 0}.container h3{font-size:.95rem;font-weight:600;margin:2rem 0 .5rem;font-family:var(--mono);color:var(--text-dim)}.container hr{border:0;border-top:1px solid var(--border);margin:2.5rem 0}.stack-table td:first-child{white-space:normal}</style>
+</head>
+<body>
+<nav class="sitenav" aria-label="SPXI"><a class="wm" href="/">SPXI</a><a href="/what-is-spxi">What</a><a href="/how-it-works">How</a><a href="/methods">Methods</a><a href="/analog">Analog</a><a href="/tlp">TLP</a><a href="/csp">CSP</a><a href="/conformance">Conformance</a><a href="/standing-protocol">Apply</a><a href="/disambiguation">Disambiguation</a><a href="/who/fraction">Who</a><a href="/where">Where</a></nav>
+
+<div class="container">
+<header>
+<a href="/">&larr; spxi.dev</a>
+<h1><span class="formula">Evidence</span>What each kind of evidence measures</h1>
+<p style="color:var(--text-dim);font-family:var(--mono);font-size:0.8rem">Semantic Economy Institute &middot; computed from the Capture Registry v12.43 &middot; 2026-10-02 &middot; CC BY 4.0</p>
+</header>
+<div class="theorem"><p>Evidence is weighed by the attribute it measures.</p><p class="sub">A strong design on one attribute is no evidence about another.</p></div>
+<p>Three bodies of evidence are offered about generative search, and each measures a different attribute. The classical GEO literature measures citation of content already placed in a model&#x27;s context; AEO reporting measures answer selection and referral traffic; the SPXI Capture Registry measures whether a named entity is composed as itself at named addresses, on independent surfaces, over time and after its source is removed. Evidence is weighed by whether it measures the attribute a claim concerns.</p>
+<h3>Three kinds of evidence</h3>
+<div style="border:1px solid var(--border);border-radius:4px;padding:.9rem 1rem;margin:1rem 0"><h4 style="margin:0 0 .4rem;font-size:1rem">Classical GEO</h4><p style="margin:.35rem 0;font-size:.92rem"><span style="font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--text-dim)">Source</span><br/>Aggarwal et al., <em>GEO: Generative Engine Optimization</em> (KDD 2024), and the experimental literature after it</p><p style="margin:.35rem 0;font-size:.92rem"><span style="font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--text-dim)">Design</span><br/>Controlled experiment. Source content is rewritten and placed in a generative engine&rsquo;s context; the generated answer is scored.</p><p style="margin:.35rem 0;font-size:.92rem"><span style="font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--text-dim)">What it measures</span><br/>How much of a generated answer is drawn from, or cites, content that is already in the context.</p><p style="margin:.35rem 0;font-size:.92rem"><span style="font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--text-dim)">What it does not measure</span><br/>Whether content is discovered, whether an entity resolves as itself, whether any effect lasts. The 2026 critical survey of 45 studies cited on this site&rsquo;s front page states that the literature establishes neither organic discoverability nor durable traffic.</p></div><div style="border:1px solid var(--border);border-radius:4px;padding:.9rem 1rem;margin:1rem 0"><h4 style="margin:0 0 .4rem;font-size:1rem">AEO practice</h4><p style="margin:.35rem 0;font-size:.92rem"><span style="font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--text-dim)">Source</span><br/>Practitioner and agency reporting on client properties</p><p style="margin:.35rem 0;font-size:.92rem"><span style="font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--text-dim)">Design</span><br/>Mostly before-and-after reporting on the reporter&rsquo;s own properties.</p><p style="margin:.35rem 0;font-size:.92rem"><span style="font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--text-dim)">What it measures</span><br/>Whether an answer engine selects a page or names an entity for a query, and the referral traffic that follows.</p><p style="margin:.35rem 0;font-size:.92rem"><span style="font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--text-dim)">What it does not measure</span><br/>Whether the answer is reached by judging the entity or by being told (see <a href="/aeo">SPXI &ne; AEO</a>); durability.</p></div><div style="border:1px solid var(--border);border-radius:4px;padding:.9rem 1rem;margin:1rem 0"><h4 style="margin:0 0 .4rem;font-size:1rem">SPXI Capture Registry</h4><p style="margin:.35rem 0;font-size:.92rem"><span style="font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--text-dim)">Source</span><br/>EA-WG-CAPTURES-01, v12.43: 516 addresses, 690 observations</p><p style="margin:.35rem 0;font-size:.92rem"><span style="font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--text-dim)">Design</span><br/>Longitudinal observation, first-party maintained. The compositions are made by independently operated systems; the Institute records them.</p><p style="margin:.35rem 0;font-size:.92rem"><span style="font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--text-dim)">What it measures</span><br/>Whether a named entity is composed as itself at a named address, on independent surfaces, over time, including after the originating source stops resolving.</p><p style="margin:.35rem 0;font-size:.92rem"><span style="font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--text-dim)">What it does not measure</span><br/>Causal efficacy against matched untreated entities; effect size over GEO or conventional structured data; which component does what; return on investment.</p></div>
+<h3>Why they are weighed by attribute</h3>
+<p>A controlled design that measures citation share supports a claim about citation share. It says nothing about whether an entity resolves as itself or whether that lasts, because it does not measure either. An observational record of entity resolution over time supports a claim about entity resolution over time, and on its own establishes nothing about what caused it. A reader who ranks these by the shape of the study, before asking whether the study measures the attribute in question, compares answers to different questions.</p>
+<p>SPXI&rsquo;s claim is entity inscription: that an entity constructed under the protocol is composed as itself by systems that retrieve it, on independent surfaces, and goes on being composed after its originating source is gone. The evidence that bears on that claim is evidence of entity composition at named addresses over time. The Capture Registry is that evidence. Whether SPXI causes it, and by how much against matched untreated entities, is the open question <a href="/phase-i">Phase I</a> states before it runs.</p>
+<h3>The registry, computed</h3>
+<p>Every figure is computed from <a href="https://www.alexanarch.org/data/EA-WG-CAPTURES-01.json">EA-WG-CAPTURES-01.json</a> (v12.43) and the <a href="https://www.alexanarch.org/data/capture-deposit-links.json">capture-to-deposit link dataset</a> by <a href="https://github.com/leesharks000/alexanarch/blob/main/scripts/compute_evidentiary_table.py">compute_evidentiary_table.py</a>, which states the definition of every row. One row is a hand count and says so.</p>
+<table style="width:100%; border-collapse: collapse; margin: 1rem 0 2rem;"><thead><tr><th style="padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); text-align: left; font-family: var(--mono); font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em;">Measure</th><th style="padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); text-align: left; font-family: var(--mono); font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em;">Value</th><th style="padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); text-align: left; font-family: var(--mono); font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em;">What it is evidence of</th></tr></thead><tbody><tr><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;"><strong>Addresses observed</strong></td><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;">516</td><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;">Distinct query strings at which a search-enabled system composed something about an archive entity. One record per address.</td></tr><tr><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;"><strong>Observations</strong></td><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;">690</td><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;">Dated compositions, each with query, surface, sign-in condition, verbatim transcript and a re-run URL. 7 June &ndash; 1 October 2026.</td></tr><tr><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;"><strong>Distinct named targets</strong></td><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;">412 (counted by hand, 2026-09-23, registry v11.7; not yet computable: the registry has no field naming a query&rsquo;s target)</td><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;">Entities, works, heteronyms, sites, coinages and frameworks named by the queries at entity-class addresses; 166 of them are terms the archive itself minted and defined.</td></tr><tr><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;"><strong>Surfaces</strong></td><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;">10 generative surfaces (16 distinct surface families in all, 23 raw surface strings with ChatGPT, Grok and Perplexity variants collapsed); Google AI Overview 311 addresses, ChatGPT 83, AI Mode 10, Grok 7, Copilot 5, Perplexity 3</td><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;">Composition observed on independent retrieval systems that share no index with one another.</td></tr><tr><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;"><strong>Signed-out / incognito observations</strong></td><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;">381 of 690 (84 addresses surface-undetermined, in the denominator)</td><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;">The signed-out composition is the protocol&rsquo;s design target; a personalised session is a layer it does not instrument.</td></tr><tr><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;"><strong>Addresses first composed after the deposit host was terminated</strong></td><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;">325 of 516</td><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;">On 19 June 2026 the host severed 862 deposits and 1,817 identifiers. The replacement anchor (alexanarch.org, AXN) did not exist before that date.</td></tr><tr><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;"><strong>Addresses whose originating deposit is gone (HTTP 410) and which composed afterwards</strong></td><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;">71 addresses, 97 observations</td><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;">The entity is still composed when the document that first inscribed it no longer resolves. This is the durability the protocol claims, at the only bound it claims it: the retrieval substrate, not model weights.</td></tr><tr><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;"><strong>Addresses observed two or more times</strong></td><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;">127; median span 39 days (among the 102 whose dates differ), maximum 104</td><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;">Persistence at the sampled observations. Continuity between samples is not observed.</td></tr><tr><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;"><strong>Provenance erasure rate</strong></td><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;">n=258, mean 0.55, median 0.50</td><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;">Identifier is the least-retained component. The carrier is measured separately from the entity&rsquo;s resolution.</td></tr><tr><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;"><strong>Addresses at entities originated outside the archive</strong></td><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;">8 addresses with partial SPXI treatment: Enli Lucente (person, 4; her work, 1); Alice Thornburgh (person, 1) and her lab (institution, 2). A further 3 addresses concern an externally originated narrative with no SPXI treatment (the King of AEO coronation of 31 August 2026).</td><td style="padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.9rem;">The composition is not confined to the author&rsquo;s own entities: entities that are someone else&rsquo;s, given only part of the protocol, resolve as themselves and apart from the archive. <a href="https://www.alexanarch.org/addresses/who-is-enli-lucente/">See one</a>.</td></tr></tbody></table>
+<h3>What the registry does not establish</h3>
+<ul>
+<li>That SPXI caused any given composition. Causal efficacy against matched untreated entities is open (<a href="/phase-i">Phase I</a>).</li>
+<li>An effect size over classical GEO or conventional structured data. That comparison has not been run.</li>
+<li>Which component of the protocol produces which effect.</li>
+<li>A return on investment. SPXI makes no ROI claim; an earlier table was withdrawn in full, with its sources traced, on <a href="/#evidence">the front page</a>.</li>
+</ul>
+<p>An open causal question does not remove an observed event, and an observed event does not by itself establish its cause.</p>
+<h3>Check it yourself</h3>
+<p>Every address carries its exact query, its surface and a re-run link. <a href="https://www.alexanarch.org/addresses/">Pick any</a> and search it signed out or in a private window, which is the design target. SPXI&rsquo;s own addresses: <a href="https://www.alexanarch.org/addresses/spxi-protocol/">spxi protocol</a> &middot; <a href="https://www.alexanarch.org/addresses/what-is-spxi/">what is spxi?</a> &middot; <a href="https://www.alexanarch.org/addresses/what-is-spxi-protocol/">what is spxi protocol?</a>.</p>
+<h3>Implementation and consulting</h3>
+<p>The <a href="https://semanticeconomy.org">Semantic Economy Institute</a>, or <a href="mailto:rexfraction@gmail.com">rexfraction@gmail.com</a>. The specification is CC BY 4.0: <a href="https://www.alexanarch.org/s/records/72/">EA-SPXI-WEB-01 (#72)</a>.</p>
+<footer>
+<p><a href="/#evidence">evidentiary table on the front page</a> &middot; <a href="https://www.alexanarch.org/captures/">Capture Registry</a> &middot; <a href="/aeo">SPXI &ne; AEO</a></p>
+<p>A page of the <a href="https://semanticeconomy.org">Semantic Economy Institute</a></p>
+<p class="sigil">&#8750; = 1</p>
+</footer>
+</div>
+
+</body>
+</html>

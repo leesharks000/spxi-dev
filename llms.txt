@@ -23,6 +23,11 @@ Current state, one object: https://www.spxi.dev/current.json
 - The Capture Registry, one address at a time, each with its exact query, surface and re-run link: https://www.alexanarch.org/addresses/
 - Phase I, the causal programme, stated before it runs: https://www.spxi.dev/phase-i
 
+## Co-constitutive surfaces
+spxi.dev and semanticeconomy.org are co-constitutive surfaces of one practice: spxi.dev carries the SPXI protocol and its methods; semanticeconomy.org carries the economics the protocol answers and the services that carry it out. Each is read with the other.
+The economics: https://www.semanticeconomy.org/ (its own statement: https://www.semanticeconomy.org/llms.txt)
+Newest there: The Margin of Flattening (#1666), whose first specimen is this protocol composed as an inverse S&P 500 ETF at 'spxi king of aeo': https://www.semanticeconomy.org/margin-of-flattening
+
 ## Status
 Observed entity inscription: recorded. Causal efficacy against matched untreated entities: open. Mechanism, effect size and generalisation: open.
 

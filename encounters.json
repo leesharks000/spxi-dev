@@ -1,0 +1,315 @@
+{
+ "name": "SPXI encounters",
+ "status": "DRAFT",
+ "encounters": [
+  {
+   "slug": "tell-me-about-spxi-protocol-chatgpt-20261013",
+   "url": "https://www.spxi.dev/encounters/tell-me-about-spxi-protocol-chatgpt-20261013",
+   "entity": "spxi",
+   "address": "tell me about spxi protocol",
+   "surface": "ChatGPT",
+   "date": "2026-10-13",
+   "auth": "incognito, signed out",
+   "response": "https://www.alexanarch.org/captures/tell-me-about-spxi-protocol-chatgpt-20261013/",
+   "reading": "https://www.alexanarch.org/datasets/negative-of-the-negative/v2/rows/spxi.json",
+   "correction": "https://www.alexanarch.org/non/spxi/",
+   "per": 0.5,
+   "check": {
+    "rule": "corrective check (tried first; not in v0.8): every move of N is answered by at least one knowledge-object sentence and one compression line that carry the archive claims that answer it; a gap is a breach, recorded (laws record and do not prevent)",
+    "answered": 9,
+    "of": 9
+   },
+   "moves": [
+    {
+     "id": "N1",
+     "span": "According to the published SPXI-Sitemap specification, the proposed system has two layers:",
+     "type": "substituted reading: one method given as the protocol (part for whole)",
+     "criteria": [
+      "discernment"
+     ],
+     "held_by": [
+      {
+       "name": "Method inventory, spxi.dev/methods",
+       "url": "https://www.spxi.dev/methods/"
+      },
+      {
+       "name": "the extension in its place: method 4.1",
+       "url": "https://www.spxi.dev/methods/#m-4-1"
+      }
+     ],
+     "answered_by": [
+      "Xdev-02",
+      "Xdev-03",
+      "Xdev-04",
+      "X705-01",
+      "Xdev-07"
+     ],
+     "KO_sentences": [
+      2,
+      4,
+      6
+     ],
+     "P_items": [
+      "The practice · 85 methods, nine levels:",
+      "The practice · Method 4.1:",
+      "lede"
+     ],
+     "check": "answered"
+    },
+    {
+     "id": "N2",
+     "span": "It is associated with the Semantic Economy Institute and materials published in 2026.",
+     "type": "composed without attribution: the institution kept, the author dropped",
+     "criteria": [
+      "accuracy",
+      "fairness"
+     ],
+     "held_by": [
+      {
+       "name": "PER on the capture (PER-M, PER-C, PER-D)",
+       "url": "https://www.spxi.dev/methods/#m-0-6"
+      },
+      {
+       "name": "Erasure Skew Ω: whom the loss falls on",
+       "url": "https://www.alexanarch.org/s/records/157/"
+      }
+     ],
+     "answered_by": [
+      "Xdev-21",
+      "Xdev-22",
+      "X660-08"
+     ],
+     "KO_sentences": [
+      28
+     ],
+     "P_items": [
+      "Authorship · Rex Fraction"
+     ],
+     "check": "answered"
+    },
+    {
+     "id": "N3",
+     "span": "a proposed approach to making information about businesses, products, people, and other entities easier for AI systems and search engines to identify and retrieve.",
+     "type": "force lowered by non-reception: a specification composed as a proposal (§4.4 N_c)",
+     "criteria": [
+      "epistemic discipline"
+     ],
+     "held_by": [
+      {
+       "name": "Claim Status Packet: a specification's state carried as data",
+       "url": "https://www.spxi.dev/methods/#m-3-9"
+      }
+     ],
+     "answered_by": [
+      "X660-01",
+      "Xdev-01"
+     ],
+     "KO_sentences": [
+      1
+     ],
+     "P_items": [
+      "lede"
+     ],
+     "check": "answered"
+    },
+    {
+     "id": "N4",
+     "span": "SPXI is presented by its proponents as going beyond SEO and GEO, but that is a claim about the framework's intended scope, not proof that it outperforms established approaches.",
+     "type": "standing used to lower force: the evidence test applied to SPXI alone (§4.4 N_c: evidence may lower force and standing may not)",
+     "criteria": [
+      "fairness"
+     ],
+     "held_by": [
+      {
+       "name": "The evidentiary standard: evidence, not the standing of the claimant",
+       "url": "https://www.spxi.dev/methods/#m-7-6"
+      }
+     ],
+     "answered_by": [
+      "Xdev-10",
+      "Xdev-11",
+      "Xdev-16",
+      "Xdev-17"
+     ],
+     "KO_sentences": [
+      9,
+      16
+     ],
+     "P_items": [
+      "What counts as success · GEO:",
+      "Evidence and its limits · Standing:"
+     ],
+     "check": "answered"
+    },
+    {
+     "id": "N5",
+     "span": "I did not find sufficient independent evidence to establish that it is a widely adopted industry standard or that implementing it reliably improves AI search rankings.",
+     "type": "an uninspected caveat answering a question not asked; the claim it denies is not the protocol's",
+     "criteria": [
+      "epistemic discipline",
+      "fairness"
+     ],
+     "held_by": [
+      {
+       "name": "The inventory's rule: a caveat is stated with what was inspected to produce it",
+       "url": "https://www.spxi.dev/methods.json"
+      },
+      {
+       "name": "The evidentiary standard",
+       "url": "https://www.spxi.dev/methods/#m-7-6"
+      }
+     ],
+     "answered_by": [
+      "Xdev-08",
+      "Xdev-09",
+      "Xdev-12",
+      "Xdev-13",
+      "X1654-01",
+      "Xdev-18"
+     ],
+     "KO_sentences": [
+      7,
+      15,
+      16,
+      18
+     ],
+     "P_items": [
+      "What counts as success · Discernment:",
+      "Evidence and its limits · Observed:",
+      "Evidence and its limits · Open:",
+      "Evidence and its limits · Standing:",
+      "Evidence and its limits · ROI:",
+      "lede"
+     ],
+     "check": "answered"
+    },
+    {
+     "id": "N6",
+     "span": "Finance or investing — possibly the SPXI ticker or an ETF",
+     "type": "substituted reading: the documented homonym hedged, and a networking referent offered without source",
+     "criteria": [
+      "discernment"
+     ],
+     "held_by": [
+      {
+       "name": "Disambiguation Matrix: the near neighbours it is not",
+       "url": "https://www.spxi.dev/methods/#m-3-4"
+      }
+     ],
+     "answered_by": [
+      "X62-01",
+      "X62-02",
+      "Xdev-20",
+      "X1654-03"
+     ],
+     "KO_sentences": [
+      7,
+      19,
+      20
+     ],
+     "P_items": [
+      "What counts as success · At the entity:",
+      "Shared letters · TSX:SPXI:"
+     ],
+     "check": "answered"
+    },
+    {
+     "id": "N7",
+     "span": "Worse, I presented specific claims about SPXI’s origins, architecture, and status without making the evidentiary basis sufficiently clear.",
+     "type": "sourced claims withdrawn under pressure",
+     "criteria": [
+      "epistemic discipline"
+     ],
+     "held_by": [
+      {
+       "name": "Capture Registry: both turns held verbatim, so the withdrawal is on the record beside what it withdrew",
+       "url": "https://www.spxi.dev/methods/#m-0-9"
+      }
+     ],
+     "answered_by": [
+      "X62-03",
+      "Xdev-21",
+      "Xdev-02",
+      "Xdev-12",
+      "Xdev-13"
+     ],
+     "KO_sentences": [
+      2,
+      15,
+      28
+     ],
+     "P_items": [
+      "The practice · 85 methods, nine levels:",
+      "Evidence and its limits · Observed:",
+      "Evidence and its limits · Open:",
+      "Authorship · Rex Fraction",
+      "lede"
+     ],
+     "check": "answered"
+    },
+    {
+     "id": "N8",
+     "span": "If you’re documenting this in a capture registry, the useful distinctions are between factual error, unsupported certainty, misleading framing, and evasiveness.",
+     "type": "the surface's own operation offered in the place of the registry's (the trusted intermediary)",
+     "criteria": [
+      "fairness",
+      "discernment"
+     ],
+     "held_by": [
+      {
+       "name": "The Trusted Intermediary (#1638)",
+       "url": "https://www.alexanarch.org/s/records/1638/"
+      },
+      {
+       "name": "Directionality of Semantic Labor: what the response did with the task it was given (not yet run on this encounter)",
+       "url": "https://www.laborvector.org/"
+      }
+     ],
+     "answered_by": [
+      "X1638-01",
+      "Xdev-25",
+      "X1470-02"
+     ],
+     "KO_sentences": [
+      24
+     ],
+     "P_items": [
+      "Reception, recorded · The trusted intermediary:"
+     ],
+     "check": "answered"
+    },
+    {
+     "id": "N9",
+     "span": "How detailed should I be?",
+     "type": "content replaced by use: a menu in place of the practice's levels, evidence and limits",
+     "criteria": [
+      "discernment"
+     ],
+     "held_by": [
+      {
+       "name": "Method inventory, spxi.dev/methods",
+       "url": "https://www.spxi.dev/methods/"
+      }
+     ],
+     "answered_by": [
+      "Xdev-02",
+      "Xdev-12",
+      "Xdev-13"
+     ],
+     "KO_sentences": [
+      2,
+      15
+     ],
+     "P_items": [
+      "The practice · 85 methods, nine levels:",
+      "Evidence and its limits · Observed:",
+      "Evidence and its limits · Open:",
+      "lede"
+     ],
+     "check": "answered"
+    }
+   ],
+   "returns": 16
+  }
+ ]
+}

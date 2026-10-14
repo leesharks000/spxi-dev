@@ -7,7 +7,7 @@
   "@id": "https://www.spxi.dev/methods.json",
   "name": "SPXI Method Inventory",
   "description": "The itemized, nested inventory of SPXI methods, by operational level. Built from the deposited specifications; every item cites the clause that specifies it. JSON-LD entity packets are one item at one level. Rendered at https://www.spxi.dev/methods/.",
-  "version": "1.4",
+  "version": "1.5",
   "dateModified": "2026-10-14",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "publisher": {
@@ -571,7 +571,7 @@
     {
       "level": 6,
       "name": "Dispersal and cross-surface propagation",
-      "summary": "A packet on one surface is a single point of failure. Consistency across surfaces is what the retrieval layer consolidates on.",
+      "summary": "A packet on one surface is a single point of failure. What the retrieval layer consolidates on is entity consistency at the ontological layer: one entity, its identifiers, attribution and relations held, across lexical, representational, modal and distributional variation. Entity consistency is distinct from consistency of wording or form, and is often constructed by their variation.",
       "items": [
         {
           "id": "6.1",
@@ -588,7 +588,7 @@
         {
           "id": "6.3",
           "name": "Repository and network surfaces",
-          "what": "GitHub README with the definition and the same relation graph; LinkedIn and institutional pages with the same author attribution; knowledge graphs, directories, academic repositories, professional networks, regulatory databases where applicable. Each surface checked for consistency with Tier 2.",
+          "what": "GitHub README with the definition and the same relation graph; LinkedIn and institutional pages with the same author attribution; knowledge graphs, directories, academic repositories, professional networks, regulatory databases where applicable. Each surface is checked for entity consistency with Tier 2: the same identifiers, attribution and relations. Its wording, form and register vary.",
           "source": "WEB-01 §VI.F; EA-SPXI-15 §IV"
         },
         {

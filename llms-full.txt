@@ -1,7 +1,9 @@
 # SPXI — Semantic Packet for eXchange and Indexing
 
-> Pronounced "spexy". A packet format for making a work's identity, provenance and
-> composition layer legible to a machine that reads it, rather than inferring them.
+> Pronounced "spexy". A protocol and practice of entity inscription: 85 methods in nine
+> levels (https://www.spxi.dev/methods/) that make a work's identity, provenance and
+> composition layer legible to a machine that reads it, rather than inferring them. The
+> packet is one method of one level.
 
 SPXI is a protocol, not a platform. It specifies what a document should carry so that a
 retrieval or composition layer encountering it can answer three questions without guessing:

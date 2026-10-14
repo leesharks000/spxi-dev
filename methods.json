@@ -7,7 +7,7 @@
   "@id": "https://www.spxi.dev/methods.json",
   "name": "SPXI Method Inventory",
   "description": "The itemized, nested inventory of SPXI methods, by operational level. Built from the deposited specifications; every item cites the clause that specifies it. JSON-LD entity packets are one item at one level. Rendered at https://www.spxi.dev/methods/.",
-  "version": "1.3",
+  "version": "1.4",
   "dateModified": "2026-10-14",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "publisher": {
@@ -563,7 +563,7 @@
         {
           "id": "5.9",
           "name": "Immanent Execution",
-          "what": "The document performs the operation it describes, so reading it is executing it.",
+          "what": "The document performs the operation it describes, so reading it is executing it; on the other side of the same operation, a composing system that has read enough of it executes the entity's definitions as its own response grammar.",
           "source": "WEB-01 §VI.G; Arsenal §IX.3"
         }
       ]

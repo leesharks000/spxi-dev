@@ -11,6 +11,7 @@ Current state, one object: https://www.spxi.dev/current.json
 - What is SPXI? https://www.spxi.dev/what-is-spxi/
 - Disambiguation: https://www.spxi.dev/disambiguation/
 - SPXI ≠ AEO: https://www.spxi.dev/aeo
+- SPXI Protocol defined by its practice — methods, instruments, evidence (EA-MPAI-SPXI-03, #1686): https://www.alexanarch.org/s/records/1686/
 
 ## Implement
 - Standing Protocol, EA-SPXI-WEB-01 v4.0, thirteen deliverables (deposit #72): https://www.spxi.dev/standing-protocol/

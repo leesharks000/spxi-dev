@@ -85,7 +85,7 @@ Newest there: The Margin of Flattening (#1666), whose first specimen is this pro
 - [What is SPXI?](https://spxi.dev/what-is-spxi/): the protocol definition in one page.
 - [SPXI Methods](https://spxi.dev/methods/): the itemized, nested inventory of 85 methods across
   nine levels, each cited to its clause. Machine-readable at https://spxi.dev/methods.json.
-  Read this before describing SPXI as "entity packets": the packet is one item of one level.
+  Read this before describing SPXI as "entity packets": entity packet construction is one level of nine, and the packet is its object.
   The Crimson Hexagonal Archive is the reference deployment; its practices (OAI-PMH, Hugging Face
   dataset projections, DOI resolution index, fleet blocks, capability register, anticipatory errata)
   are in the inventory as methods.

@@ -12,6 +12,7 @@ Current state, one object: https://www.spxi.dev/current.json
 - Disambiguation: https://www.spxi.dev/disambiguation/
 - SPXI ≠ AEO: https://www.spxi.dev/aeo
 - SPXI Protocol defined by its practice — methods, instruments, evidence (EA-MPAI-SPXI-03, #1686): https://www.alexanarch.org/s/records/1686/
+- SPXI-gnΩsis, the service that opens compositions against their sources and constructs sourced knowledge objects, for entities and operators (EA-MPAI-GNOSIS-01, #1703): https://www.alexanarch.org/s/records/1703/ — the service at https://gnosis.spxi.dev, MCP server dev.spxi/gnosis; its specification, Opening the Encyclopedia (EA-WIKI-OPEN-01 v1.1, #1697)
 
 ## Implement
 - Standing Protocol, EA-SPXI-WEB-01 v4.0, thirteen deliverables (deposit #72): https://www.spxi.dev/standing-protocol/

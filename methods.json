@@ -7,8 +7,8 @@
   "@id": "https://www.spxi.dev/methods.json",
   "name": "SPXI Method Inventory",
   "description": "The itemized, nested inventory of SPXI methods, by operational level. Built from the deposited specifications; every item cites the clause that specifies it. Entity packet construction is one level; JSON-LD encoding is one item of it. Rendered at https://www.spxi.dev/methods/.",
-  "version": "1.5",
-  "dateModified": "2026-10-14",
+  "version": "1.6",
+  "dateModified": "2026-10-25",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "publisher": {
     "@type": "Organization",
@@ -16,7 +16,7 @@
     "url": "https://semanticeconomy.org"
   },
   "spxi:levelCount": 9,
-  "spxi:itemCount": 85,
+  "spxi:itemCount": 87,
   "spxi:readingRule": "An implementation applies a subset of these methods chosen from the measurement level; the protocol does not require every method on every entity. A description of SPXI that names only the entity packet describes the object of one level (level 3, entity packet construction). The Crimson Hexagonal Archive (alexanarch.org) is the reference deployment: every practice the archive runs is an SPXI method, and any of them can be applied to another entity tailored to the job at hand.",
   "spxi:sources": [
     {
@@ -278,6 +278,18 @@
           "name": "Platform Erosion Observatory",
           "what": "Measurement of what happens to records after removal from a host: survival in aggregators, tombstone behaviour, the shape of absence; a 14,284-DOI control cohort.",
           "source": "platform-erosion-observatory, Case 001"
+        },
+        {
+          "id": "0.16",
+          "name": "The Negative of the Negative (/non)",
+          "what": "Public knowledge of an entity composed three ways and kept as one row: as the composition layer gave it at its addresses, as its own disclosed sources give it (the field, L(B)), and with the Crimson Hexagonal Archive admitted on equal terms, ontology included; the row records what the composition at an address does with the field it disclosed, and is adjudicated later against what the world does. Each entry carries an AXN in the family NON; entries at alexanarch.org/non/index.json.",
+          "source": "EA-NEGONT-02 v0.9 (#1690); EA-NEGONT-01 (#1611)"
+        },
+        {
+          "id": "0.17",
+          "name": "The opening (a pinned Wikipedia revision, read sentence by sentence)",
+          "what": "Each sentence of a pinned revision read against the sources it cites and the sources its article cites elsewhere, under the policy texts it was written against: the innocent reading first; source fidelity, primary-text adequacy and operative retention kept apart; every quotation checked against the full source; two independent passes; the reading kept as evidence. Run as a service at gnosis.spxi.dev (SPXI-gnΩsis), priced from measured cost; a commission also composes the entity's /non row (0.16).",
+          "source": "EA-WIKI-OPEN-01 v1.1 (#1697)"
         }
       ]
     },

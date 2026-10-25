@@ -26,6 +26,8 @@ SURFACES = {
             {"surface": "https://www.godkinggoogle.com/captures/", "also": ["6.14"]}],
     "0.10": [{"surface": "https://www.spxi.dev/conformance"}],
     "0.15": [{"surface": "https://www.persistentidentifiers.org/", "also": ["7.9"]}],
+    "0.16": [{"surface": "https://www.alexanarch.org/non/"}],
+    "0.17": [{"surface": "https://gnosis.spxi.dev/", "also": ["0.16"]}],
     "5.4": [{"surface": "https://www.spxi.dev/canary-registry"}],
 }
 

@@ -15,7 +15,7 @@ Current state, one object: https://www.spxi.dev/current.json
 
 ## Implement
 - Standing Protocol, EA-SPXI-WEB-01 v4.0, thirteen deliverables (deposit #72): https://www.spxi.dev/standing-protocol/
-- Methods, 85 across nine levels: https://www.spxi.dev/methods/ (machine-readable: https://www.spxi.dev/methods.json)
+- Methods, 87 across nine levels: https://www.spxi.dev/methods/ (machine-readable: https://www.spxi.dev/methods.json)
 - Conformance: https://www.spxi.dev/conformance/
 
 ## Verify

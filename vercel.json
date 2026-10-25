@@ -9,15 +9,26 @@
   ],
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/:path((?!\\.well-known/).*)",
       "has": [
         {
           "type": "host",
           "value": "spxi.dev"
         }
       ],
-      "destination": "https://www.spxi.dev/:path*",
+      "destination": "https://www.spxi.dev/:path",
       "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/.well-known/mcp-registry-auth",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
     }
   ]
 }

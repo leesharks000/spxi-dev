@@ -4,7 +4,7 @@
  "name": "SPXI — current state",
  "description": "The current state of SPXI in one object: which surfaces are canonical for what, the current versions, the claim state, identifiers and what is superseded. Every machine-facing surface on spxi.dev points here; older documents stay available and do not describe now.",
  "url": "https://www.spxi.dev/current.json",
- "dateModified": "2026-10-18",
+ "dateModified": "2026-10-26",
  "entity": "SPXI — Semantic Packet for eXchange and Indexing",
  "what_it_is": "A protocol and practice of entity inscription. Entity packet construction is one level of its method inventory, and the SPXI packet is that level's object.",
  "canonical": {
@@ -24,7 +24,7 @@
   "methods": {
    "url": "https://www.spxi.dev/methods/",
    "json": "https://www.spxi.dev/methods.json",
-   "version": "1.5",
+   "version": "1.7",
    "methods": 88,
    "levels": 9
   },

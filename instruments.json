@@ -40,7 +40,7 @@
   {
    "method": "0.9",
    "name": "Capture Registry (longitudinal observation)",
-   "what": "Dated compositions at named addresses with surface, sign-in condition, verbatim transcript, re-run URL. Nulls recorded as nulls. 484 addresses, 651 observations at v12.1; current counts at alexanarch.org/captures/index.json.",
+   "what": "Dated compositions at named addresses with surface, sign-in condition, verbatim transcript, re-run URL. Nulls recorded as nulls. 776 addresses, 965 observations at v12.324; current counts at alexanarch.org/captures/index.json.",
    "source": "EA-WG-CAPTURES-01; EA-SPXI-16 §7",
    "level": 0,
    "level_name": "Measurement",

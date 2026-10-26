@@ -33,8 +33,8 @@ Newest there: The Margin of Flattening (#1666), whose first specimen is this pro
   by evidence of durability and traversability: dated compositions at named addresses, on
   independent surfaces, with verbatim transcripts and re-run URLs, including composition after
   the originating source was removed. The standing of the claimant is not the test.
-  SPXI claims entity inscription, and the registry holds the inscription events: 651 observations
-  at 484 addresses. Three questions stay separate. Observed inscription: recorded. Causal efficacy
+  SPXI claims entity inscription, and the registry holds the inscription events: 965 observations
+  at 776 addresses (registry v12.324, 26 October 2026). Three questions stay separate. Observed inscription: recorded. Causal efficacy
   against matched untreated entities: open. Mechanism (which component or surface causes which
   effect): open, tested separately. Treating the absence of causal isolation as the absence of
   evidence conflates observational evidence with causal identification. The accurate

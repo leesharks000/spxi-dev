@@ -240,7 +240,7 @@
         {
           "id": "0.9",
           "name": "Capture Registry (longitudinal observation)",
-          "what": "Dated compositions at named addresses with surface, sign-in condition, verbatim transcript, re-run URL. Nulls recorded as nulls. 484 addresses, 651 observations at v12.1; current counts at alexanarch.org/captures/index.json.",
+          "what": "Dated compositions at named addresses with surface, sign-in condition, verbatim transcript, re-run URL. Nulls recorded as nulls. 776 addresses, 965 observations at v12.324; current counts at alexanarch.org/captures/index.json.",
           "source": "EA-WG-CAPTURES-01; EA-SPXI-16 §7"
         },
         {
@@ -594,7 +594,7 @@
         {
           "id": "6.1",
           "name": "Identifier anchoring",
-          "what": "Content-derived AXN as sovereign identifier; DOI where a host survives; ORCID work linking. Replaceable across host termination: 293 of 484 registry addresses (v12.1) first composed after the original host was terminated.",
+          "what": "Content-derived AXN as sovereign identifier; DOI where a host survives; ORCID work linking. Replaceable across host termination: 585 of 776 registry addresses (v12.324) first composed after the original host was terminated.",
           "source": "WEB-01 §VI.F; EA-SPXI-16 §7"
         },
         {

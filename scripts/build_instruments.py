@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """build_instruments.py — which surfaces carry which SPXI method, as data (2026-10-14).
 
-spxi.dev/methods.json itemizes SPXI's 85 methods. Several are instruments that live on other surfaces (the Capture
+spxi.dev/methods.json itemizes SPXI's methods. Several are instruments that live on other surfaces (the Capture
 Registry on alexanarch.org and its windows, the Provenance Erasure Rate on provenanceerasure.org, the Semantic
 Addresses Framework, the PID Erosion Observatory). Until now the claim ran one way: the inventory named them, and
 they did not name it. This script writes instruments.json, the single source each of those surfaces reads to label
@@ -28,6 +28,7 @@ SURFACES = {
     "0.15": [{"surface": "https://www.persistentidentifiers.org/", "also": ["7.9"]}],
     "0.16": [{"surface": "https://www.alexanarch.org/non/"}],
     "0.17": [{"surface": "https://gnosis.spxi.dev/", "also": ["0.16"]}],
+    "2.6": [{"surface": "https://www.spxi.dev/ranking"}],
     "5.4": [{"surface": "https://www.spxi.dev/canary-registry"}],
 }
 

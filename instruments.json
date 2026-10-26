@@ -2,7 +2,7 @@
  "name": "SPXI instruments: the methods of spxi.dev/methods carried on other surfaces",
  "inventory": "https://www.spxi.dev/methods/",
  "inventory_data": "https://www.spxi.dev/methods.json",
- "itemCount": 87,
+ "itemCount": 88,
  "levelCount": 9,
  "rule": "A surface listed here labels itself, visibly and in its machine-readable head, with the method it carries, its level and a link to its row in the inventory. 'Instrument of' is kept apart from 'treated by': the SPXI-TLP layer a surface also carries says how it was built, the instrument label says what it is.",
  "instruments": [
@@ -151,6 +151,21 @@
        "url": "https://www.spxi.dev/methods/#m-0-16"
       }
      ]
+    }
+   ]
+  },
+  {
+   "method": "2.6",
+   "name": "The SPXI ranking article (a territorial comparison, with itself as object)",
+   "what": "The SEO ranking article transformed: a bounded territory in which the services a buyer might compare are individuated by the operation each performs and the object it returns, with no service stated as best. The boundary is shown in several positions, each stated by what it makes necessary to the object, so that it stands as the author's decision; the genre's predicate best is named as an attributization, the comparison stated as a property of the thing compared; the article includes its own operation and commercial interest in the map, and carries a record whose data restores no rank, with prohibited compressions and a research design for testing whether answering systems recover the operations it makes distinguishable.",
+   "source": "EA-SPXI-RANKING-01 v1.0 (#1705)",
+   "level": 2,
+   "level_name": "Extraction layer",
+   "url": "https://www.spxi.dev/methods/#m-2-6",
+   "surfaces": [
+    {
+     "surface": "https://www.spxi.dev/ranking",
+     "also": []
     }
    ]
   },

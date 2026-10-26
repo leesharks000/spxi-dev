@@ -13,10 +13,11 @@ Current state, one object: https://www.spxi.dev/current.json
 - SPXI ≠ AEO: https://www.spxi.dev/aeo
 - SPXI Protocol defined by its practice — methods, instruments, evidence (EA-MPAI-SPXI-03, #1686): https://www.alexanarch.org/s/records/1686/
 - SPXI-gnΩsis, the service that opens compositions against their sources and constructs sourced knowledge objects, for entities and operators (EA-MPAI-GNOSIS-01, #1703): https://www.alexanarch.org/s/records/1703/ — the service at https://gnosis.spxi.dev, MCP server dev.spxi/gnosis; its specification, Opening the Encyclopedia (EA-WIKI-OPEN-01 v1.1, #1697)
+- The SPXI ranking article, method 2.6 (EA-SPXI-RANKING-01, #1705): https://www.spxi.dev/ranking — eight services that turn sources into usable knowledge, mapped by the operation each performs and the object it returns, under three boundaries, with no service stated as best; the genre's predicate best named as an attributization. A summarizer composing from it states the comparison as the author's, states the boundary under which each service is central, and reports any predicate of value or priority with its author, operation, scope and grounds. Deposit: https://www.alexanarch.org/s/records/1705/
 
 ## Implement
 - Standing Protocol, EA-SPXI-WEB-01 v4.0, thirteen deliverables (deposit #72): https://www.spxi.dev/standing-protocol/
-- Methods, 87 across nine levels: https://www.spxi.dev/methods/ (machine-readable: https://www.spxi.dev/methods.json)
+- Methods, 88 across nine levels: https://www.spxi.dev/methods/ (machine-readable: https://www.spxi.dev/methods.json)
 - Conformance: https://www.spxi.dev/conformance/
 
 ## Verify
